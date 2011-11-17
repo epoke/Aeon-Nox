@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
-  id="skin.aeon.nox"
+  id="skin.aeon.nox.korean"
   version="2.0.0"
-  name="Aeon Nox"
+  name="Aeon Nox Korean"
   provider-name="Big_Noid">
   <requires>
     <import addon="xbmc.gui" version="3.00"/>
