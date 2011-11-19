@@ -448,7 +448,8 @@
   <string id="31634">메인메뉴 변경</string>
   <string id="31635">메뉴 항목 이름을 변경하려면 아래 화살표를 누르세요</string>
   <string id="31636">엔터키를 눌러 메뉴 항목의 표시 여부와 기본 동작을 선택합니다</string>
-
+  <string id="31637">지금 시청하고 있는 TV 쇼의 시즌 포스터 보기</string>
+  <string id="31638">비디오 라이브러리에 Next Aired 정보 보기</string>
 
   <!-- Weather plugin -->
   <string id="31900">지도</string>
