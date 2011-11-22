@@ -39,7 +39,8 @@
   <string id="31050">이전</string>
   <string id="31051">다음</string>
   <string id="31052">남은 시간</string>
-
+  <string id="31053">종료 시간</string>
+  
   <!-- Playlist Editor labels -->
   <string id="31055">재생 목록 열기</string>
   <string id="31056">재생 목록 저장</string>
@@ -240,7 +241,7 @@
   <string id="31191">팬아트 어둡게</string>
   <string id="31192">아이콘: TV Show 썸네일</string>
   <string id="31193">아이콘: TV Show 로고</string>
-  <string id="31194">기본 선택 메뉴 항목 설정 (-2 에서 14 사이의 숫자)</string>
+  <string id="31194">-</string>
   <string id="31195">홈 메뉴에 즐겨찾기 추가</string>
   <string id="31196">경로</string>
   <string id="31197">즐겨찾기 버튼</string>
@@ -327,7 +328,7 @@
   <string id="31290">TV 가이드</string>
   <string id="31291">큰 팬아트</string>
   <string id="31292">움직이는 날씨 아이콘 사용</string>
-  <string id="31293">정사각형</string>
+  <string id="31293">유지</string>
   <string id="31294">루트</string>
   <string id="31295">위젯</string>
   <string id="31296">움직이는 날씨 아이콘</string>
@@ -423,7 +424,7 @@
   <string id="31609">항목을 사용하거나 사용하지 않으려면 엔터키를 누르세요.</string>
   <string id="31610">메뉴바의 네온 색상 선택</string>
   <string id="31611">전체 화면 비디오 사용</string>
-  <string id="31612">이동할 위치를 입력하세요 (범위 -2 에서 19)</string>
+  <string id="31612">이동할 위치를 입력하세요 (범위 0 에서 22)</string>
   <string id="31613">메인 메뉴 포커스 기본값 변경</string>
   <string id="31614">배경화면 애니메이션 사용</string>
   <string id="31615">오디오 시각화 사용</string>
@@ -450,7 +451,10 @@
   <string id="31636">엔터키를 눌러 메뉴 항목의 표시 여부와 기본 동작을 선택합니다</string>
   <string id="31637">지금 시청하고 있는 TV 쇼의 시즌 포스터 보기</string>
   <string id="31638">비디오 라이브러리에 Next Aired 정보 보기</string>
+  <string id="31639">정보 화면에서 미리보기 숨김</string>
+  <string id="31640">정보 화면에서 재생 시간 대신 남은 시간 보기.</string>
 
+  
   <!-- Weather plugin -->
   <string id="31900">지도</string>
   <string id="31901">36 시간</string>
