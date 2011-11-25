@@ -53,9 +53,15 @@
     <value condition="SubString(ListItem.mpaa,UK:18)">BBFC_18_Certificate_UK</value>
     <value condition="SubString(ListItem.mpaa,Germany:0) | SubString(ListItem.mpaa,o.A)">FSK-0</value>
     <value condition="SubString(ListItem.mpaa,Germany:6) | SubString(ListItem.mpaa,ab 6) | StringCompare(ListItem.mpaa,6)">FSK-6</value>
-    <value condition="[SubString(ListItem.mpaa,Germany:12) | SubString(ListItem.mpaa,ab 12) | SubString(ListItem.mpaa,12)]+!SubString(ListItem.mpaa,UK:12)">FSK-12</value>
+    <value condition="[SubString(ListItem.mpaa,Germany:12) | SubString(ListItem.mpaa,ab 12) | StringCompare(ListItem.mpaa,12)]">FSK-12</value>
     <value condition="SubString(ListItem.mpaa,Germany:16) | SubString(ListItem.mpaa,ab 16) | StringCompare(ListItem.mpaa,16)">FSK-16</value>
-    <value condition="[SubString(ListItem.mpaa,Germany:18) | SubString(ListItem.mpaa,ab 18) | StringCompare(ListItem.mpaa,18)]+!SubString(ListItem.mpaa,UK:18)">FSK-18</value>
+    <value condition="[SubString(ListItem.mpaa,Germany:18) | SubString(ListItem.mpaa,ab 18) | StringCompare(ListItem.mpaa,18)]">FSK-18</value>
+    <value condition="SubString(ListItem.mpaa,besorolás alatt)">HU_BA</value>
+    <value condition="SubString(ListItem.mpaa,korhatárra való tekintett nélkül megtekintethető)">HU_KN</value>
+    <value condition="SubString(ListItem.mpaa,6 éven aluliak számára nem ajánlott)">HU_06</value>
+    <value condition="SubString(ListItem.mpaa,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">HU_12</value>
+    <value condition="SubString(ListItem.mpaa,16 éven aluliak számára nem ajánlott)">HU_16</value>
+    <value condition="SubString(ListItem.mpaa,18 éven aluliak számára nem ajánlott)">HU_18</value>
   </variable>
  
   <variable name="VideoRatingFlagVar">
@@ -85,9 +91,14 @@
     <value condition="SubString(VideoPlayer.mpaa,UK:18)">BBFC_18_Certificate_UK</value>
     <value condition="SubString(VideoPlayer.mpaa,Germany:0) | SubString(VideoPlayer.mpaa,o.A)">FSK-0</value>
     <value condition="SubString(VideoPlayer.mpaa,Germany:6) | SubString(VideoPlayer.mpaa,ab 6) | StringCompare(VideoPlayer.mpaa,6)">FSK-6</value>
-    <value condition="[SubString(VideoPlayer.mpaa,Germany:12) | SubString(VideoPlayer.mpaa,ab 12) | SubString(VideoPlayer.mpaa,12)]+!SubString(VideoPlayer.mpaa,UK:12)">FSK-12</value>
+    <value condition="[SubString(VideoPlayer.mpaa,Germany:12) | SubString(VideoPlayer.mpaa,ab 12) | StringCompare(VideoPlayer.mpaa,12)]">FSK-12</value>
     <value condition="SubString(VideoPlayer.mpaa,Germany:16) | SubString(VideoPlayer.mpaa,ab 16) | StringCompare(VideoPlayer.mpaa,16)">FSK-16</value>
-    <value condition="[SubString(VideoPlayer.mpaa,Germany:18) | SubString(VideoPlayer.mpaa,ab 18) | StringCompare(VideoPlayer.mpaa,18)]+!SubString(VideoPlayer.mpaa,UK:18)">FSK-18</value>
+    <value condition="[SubString(VideoPlayer.mpaa,Germany:18) | SubString(VideoPlayer.mpaa,ab 18) | StringCompare(VideoPlayer.mpaa,18)]">FSK-18</value>
+    <value condition="SubString(VideoPlayer.mpaa,korhatárra való tekintett nélkül megtekintethető)">HU_KN</value>
+    <value condition="SubString(VideoPlayer.mpaa,6 éven aluliak számára nem ajánlott)">HU_06</value>
+    <value condition="SubString(VideoPlayer.mpaa,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">HU_12</value>
+    <value condition="SubString(VideoPlayer.mpaa,16 éven aluliak számára nem ajánlott)">HU_16</value>
+    <value condition="SubString(VideoPlayer.mpaa,18 éven aluliak számára nem ajánlott)">HU_18</value>
   </variable>
  
   <variable name="AudioFlagVar">
@@ -293,6 +304,12 @@
     <value>$INFO[ListItem.Plot]</value>
   </variable>
 
+  <variable name="GlobalPlotOutlineVar">
+    <value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
+    <value condition="Container.Content(seasons)">$INFO[Container.ShowPlot]</value>
+    <value>$INFO[ListItem.Plot]</value>
+  </variable>
+ 
   <variable name="FanartTextureVar">
     <value condition="Container.Content(movies)+IsEmpty(ListItem.property(fanart_image))">special://skin/backgrounds/fallback_movies.jpg</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)|[Container.Content(episodes)+!Skin.HasSetting(LandscapeThumb)]]+IsEmpty(ListItem.property(fanart_image))">special://skin/backgrounds/fallback_tvshows.jpg</value>
@@ -631,5 +648,15 @@
     <value condition="Container.Content(artists)+!IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
     <value condition="Container.Content(artists)+!IsEmpty(ListItem.Property(Artist_Description))">$LOCALIZE[547]</value>
     <value condition="Substring(Container.FolderPath,advanced.launcher)">$INFO[ListItem.Plot]</value>
+  </variable>
+
+  <variable name="EpisodeTitleVar">
+    <value condition="IsEmpty(ListItem.Title)">$INFO[ListItem.Label]</value>
+    <value>$INFO[ListItem.Title]</value>
+  </variable>
+  <variable name="EpisodeSubTitleVar">
+    <value condition="SubString(Container.FolderPath,videodb://5/)+!SubString(ListItem.Episode,S)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Season, • $LOCALIZE[20373] ]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)+SubString(ListItem.Episode,S)">$INFO[ListItem.TVShowTitle,, • $LOCALIZE[20381]]</value>
+    <value>$INFO[ListItem.Date]$INFO[ListItem.Rating, • ]</value>
   </variable>
 </includes>
