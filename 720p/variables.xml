@@ -133,9 +133,14 @@
     <value condition="!Skin.HasSetting(wallgenretv)+Container.Content(seasons)+!IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
     <value condition="[Window.IsActive(1)+Substring(Container.FolderPath,advanced.launcher)]|[Skin.HasSetting(wallgenre)+Container.Content(movies)]|[Skin.HasSetting(wallgenretv)+[Container.Content(tvshows)|Container.Content(seasons)]+!IsEmpty(ListItem.TVShowTitle)]">$INFO[ListItem.Genre]</value>
     <value condition="Window.IsActive(pictures)+[Control.IsVisible(501)|Control.IsVisible(560)]">$INFO[ListItem.FolderName]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem.TvShowTitle]</value>
     <value>$INFO[ListItem.Label2]</value>
   </variable>
-  
+  <variable name="FirstLabelVar">
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem.Title]</value>
+    <value>$INFO[ListItem.Label]</value>
+  </variable>
+
   <variable name="PosterVar">
     <value condition="!Skin.HasSetting(TVShowsUsePosters)+Container.Content(tvshows)">$INFO[ListItem.FileNameAndPath,,poster.jpg]</value>
     <value condition="Container.Content(episodes)+[[!Skin.HasSetting(TVShowsUsePosters)+IsEmpty(Container.SeasonThumb)]|SubString(Container.FolderPath,videodb://5/)]">$INFO[ListItem.Path,,../poster.jpg]</value>
@@ -220,73 +225,73 @@
   
   <!--Infopanel variables-->
   <variable name="FanartPanelDetail1Var">
-    <value condition="Container.Content(movies)|Container.Content(episodes)">$LOCALIZE[20339]:</value>
+    <value condition="Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[20339]:</value>
     <value condition="Container.Content(tvshows)">$LOCALIZE[312576]:</value>
     <value condition="Container.Content(seasons)">$LOCALIZE[20364]:</value>
   </variable>
   <variable name="FanartPanelValue1Var">
-    <value condition="Container.Content(movies)|Container.Content(episodes)">$INFO[ListItem.Director]</value>
+    <value condition="Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Director]</value>
     <value condition="Container.Content(tvshows)">$INFO[ListItem.Premiered]</value>
     <value condition="Container.Content(seasons)">$INFO[ListItem.TVShowTitle]</value>
   </variable>
 
   <variable name="FanartPanelDetail2Var">
-    <value condition="Container.Content(movies)|Container.Content(episodes)">$LOCALIZE[20417]:</value>
+    <value condition="Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[20417]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+ !Skin.HasSetting(NextAiredInfo)">$LOCALIZE[31188]:</value>
     <value condition="Container.Content(tvshows)|Container.Content(seasons)">$LOCALIZE[13279]:</value>
   </variable>
   <variable name="FanartPanelValue2Var">
-    <value condition="Container.Content(movies)|Container.Content(episodes)">$INFO[ListItem.Writer]</value>
+    <value condition="Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Writer]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+ !Skin.HasSetting(NextAiredInfo)">$VAR[ShowStatusVar]</value>
     <value condition="Container.Content(tvshows)|Container.Content(seasons)">$INFO[ListItem.Studio]</value>
   </variable>
  
   <variable name="FanartPanelDetail3Var">
-    <value condition="Container.Content(movies)+Skin.HasSetting(wallgenre)">$LOCALIZE[345]:</value>
-    <value condition="Container.Content(movies)+!Skin.HasSetting(wallgenre)">$LOCALIZE[515]:</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+Skin.HasSetting(wallgenre)">$LOCALIZE[345]:</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+!Skin.HasSetting(wallgenre)">$LOCALIZE[515]:</value>
     <value condition="Container.Content(episodes)">$LOCALIZE[20416]:</value>
     <value condition="Container.Content(tvshows)|Container.Content(seasons)">$LOCALIZE[563]:</value>
   </variable>
   <variable name="FanartPanelValue3Var">
-    <value condition="Container.Content(movies)+Skin.HasSetting(wallgenre)">$INFO[ListItem.Year]</value>
-    <value condition="Container.Content(movies)+!Skin.HasSetting(wallgenre)">$INFO[ListItem.Genre]</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+Skin.HasSetting(wallgenre)">$INFO[ListItem.Year]</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+!Skin.HasSetting(wallgenre)">$INFO[ListItem.Genre]</value>
     <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
     <value condition="Container.Content(tvshows)">$INFO[ListItem.Rating]</value>
     <value condition="Container.Content(seasons)">$INFO[ListItem.Mpaa]</value>
   </variable>
 
   <variable name="FanartPanelDetail4Var">
-    <value condition="Container.Content(movies)">$LOCALIZE[368]:</value>
+    <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[368]:</value>
     <value condition="Container.Content(episodes)">$LOCALIZE[563]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+[Skin.HasSetting(wallgenretv)|Control.IsVisible(503)|Skin.HasSetting(NextAiredInfo)]">$LOCALIZE[20360]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+!Skin.HasSetting(wallgenretv)+!Control.IsVisible(503)">$LOCALIZE[515]:</value>
   </variable>
   <variable name="FanartPanelValue4Var">
-    <value condition="Container.Content(movies)|Container.Content(episodes)">$INFO[ListItem.RatingAndVotes]</value>
+    <value condition="Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.RatingAndVotes]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+[Skin.HasSetting(wallgenretv)|Control.IsVisible(503)|Skin.HasSetting(NextAiredInfo)]">$INFO[ListItem.Property(TotalEpisodes)]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+!Skin.HasSetting(wallgenretv)">$INFO[ListItem.Genre]</value>
   </variable>
 
   <variable name="FanartPanelDetail5Var">
-    <value condition="Container.Content(movies)|Container.Content(episodes)">$LOCALIZE[2050]:</value>
+    <value condition="Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[2050]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$LOCALIZE[31189]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$LOCALIZE[20074]:</value>
   </variable> 
   <variable name="FanartPanelValue5Var">
-    <value condition="[Container.Content(movies)|Container.Content(episodes)]+!Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
-    <value condition="[Container.Content(movies)|Container.Content(episodes)]+Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR abFFFFFF]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
+    <value condition="[Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)]+!Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
+    <value condition="[Container.Content(movies)|Container.Content(episodes)|IsEmpty(ListItem.TvShowTitle)]+Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR abFFFFFF]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$VAR[LastEpisodeVar]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
   </variable>
  
   <variable name="FanartPanelDetail6Var">
-    <value condition="Container.Content(movies)">$LOCALIZE[21875]:</value>
+    <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[21875]:</value>
     <value condition="Container.Content(episodes)">$LOCALIZE[20352]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$LOCALIZE[31190]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$LOCALIZE[515]:</value>
   </variable>
   <variable name="FanartPanelValue6Var">
-    <value condition="Container.Content(movies)">$INFO[ListItem.Country]</value>
+    <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Country]</value>
     <value condition="Container.Content(episodes)+!SubString(ListItem.Episode,S)">$INFO[ListItem.Season,$LOCALIZE[20373] ], $INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
     <value condition="Container.Content(episodes)+SubString(ListItem.Episode,S)">$LOCALIZE[20381],$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$VAR[NextEpisodeVar]</value>
@@ -313,51 +318,51 @@
   <variable name="FanartTextureVar">
     <value condition="Container.Content(movies)+IsEmpty(ListItem.property(fanart_image))">special://skin/backgrounds/fallback_movies.jpg</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)|[Container.Content(episodes)+!Skin.HasSetting(LandscapeThumb)]]+IsEmpty(ListItem.property(fanart_image))">special://skin/backgrounds/fallback_tvshows.jpg</value>
-    <value condition="[Container.Content(episodes)+Skin.HasSetting(LandscapeThumb)]+IsEmpty(ListItem.Thumb)">special://skin/backgrounds/fallback_tvshows.jpg</value>
-    <value condition="[Container.Content(episodes)+Skin.HasSetting(LandscapeThumb)]+!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+    <value condition="Container.Content(episodes)+Skin.HasSetting(LandscapeThumb)+IsEmpty(ListItem.Thumb)">special://skin/backgrounds/fallback_tvshows.jpg</value>
+    <value condition="Container.Content(episodes)+Skin.HasSetting(LandscapeThumb)+!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
     <value condition="[[Container.Content(tvshows)|Container.Content(seasons)]+Skin.HasSetting(TVLandscapeThumb)]">$INFO[ListItem.Path,,landscape.jpg]</value>
     <value>$INFO[ListItem.property(fanart_image)]</value>
   </variable>
 
   <variable name="PosterPanelValue4Var">
-    <value condition="Container.Content(movies)">$INFO[ListItem.RatingAndVotes]$INFO[ListItem.Top250, / $LOCALIZE[13409] #]</value>
+    <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.RatingAndVotes]$INFO[ListItem.Top250, / $LOCALIZE[13409] #]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+[Skin.HasSetting(wallgenretv)|Control.IsVisible(503)|Skin.HasSetting(NextAiredInfo)]">$INFO[ListItem.Property(TotalEpisodes)]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]+!Skin.HasSetting(wallgenretv)">$INFO[ListItem.Genre]</value>
   </variable>
 
   <variable name="PosterPanelDetail5Var">
-    <value condition="Container.Content(movies)">$LOCALIZE[2050]:</value>
+    <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[2050]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$LOCALIZE[31190]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$LOCALIZE[515]:</value>
   </variable>
   <variable name="PosterPanelValue5Var">
-    <value condition="Container.Content(movies)+!Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
-    <value condition="Container.Content(movies)+Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR abFFFFFF]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+!Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+Container.ListItem.IsResumable">$INFO[ListItem.Duration,, $LOCALIZE[12391]][COLOR abFFFFFF]$INFO[ListItem.PercentPlayed, (,%)][/COLOR]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$VAR[NextEpisodeVar]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$INFO[Listitem.Genre]</value>
   </variable>
 
   <variable name="PosterPanelDetail6Var">
-    <value condition="Container.Content(movies)">$LOCALIZE[21875]:</value>
+    <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[21875]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$LOCALIZE[31189]:</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$LOCALIZE[20074]:</value>
   </variable>
   <variable name="PosterPanelValue6Var">
-    <value condition="Container.Content(movies)">$INFO[ListItem.Country]</value>
+    <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Country]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$VAR[LastEpisodeVar]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
   </variable>
 
   <variable name="PosterPanelDetail7Var">
-    <value condition="[Container.Content(movies)+Skin.HasSetting(wallgenre)+!Control.IsVisible(503)]">$LOCALIZE[20074]:</value>
-    <value condition="[Container.Content(movies)+[!Skin.HasSetting(wallgenre)|Control.IsVisible(503)]]|[Container.Content(tvshows)+Control.isVisible(503)]">$LOCALIZE[515]:</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+Skin.HasSetting(wallgenre)+!Control.IsVisible(503)">$LOCALIZE[20074]:</value>
+    <value condition="[[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+[!Skin.HasSetting(wallgenre)|Control.IsVisible(503)]]|[Container.Content(tvshows)+Control.isVisible(503)]">$LOCALIZE[515]:</value>
     <value condition="[Container.Content(tvshows)+!Control.IsVisible(503) + !Skin.HasSetting(NextAiredInfo)]">$LOCALIZE[2050]:</value>
     <value condition="[Container.Content(tvshows)+!Control.IsVisible(503)]">$LOCALIZE[33054]:</value>
   </variable>
   <variable name="PosterPanelValue7Var">
-    <value condition="Container.Content(movies)+Skin.HasSetting(wallgenre)+!Control.IsVisible(503)+IsEmpty(ListItem.Mpaa)">$LOCALIZE[31452]</value>|
-    <value condition="[Container.Content(movies)+Skin.HasSetting(wallgenre)+!Control.IsVisible(503)+!IsEmpty(ListItem.Mpaa)]">$INFO[ListItem.Mpaa]</value>
-    <value condition="[Container.Content(movies)+[!Skin.HasSetting(wallgenre)|Control.IsVisible(503)]]|[Container.Content(tvshows)+Control.isVisible(503)]">$INFO[ListItem.Genre]</value>
+    <value condition="[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+Skin.HasSetting(wallgenre)+!Control.IsVisible(503)+IsEmpty(ListItem.Mpaa)">$LOCALIZE[31452]</value>|
+    <value condition="[[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+Skin.HasSetting(wallgenre)+!Control.IsVisible(503)+!IsEmpty(ListItem.Mpaa)]">$INFO[ListItem.Mpaa]</value>
+    <value condition="[[Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)]+[!Skin.HasSetting(wallgenre)|Control.IsVisible(503)]]|[Container.Content(tvshows)+Control.isVisible(503)]">$INFO[ListItem.Genre]</value>
     <value condition="[Container.Content(tvshows)+!Control.isVisible(503) + !Skin.HasSetting(NextAiredInfo)]">$INFO[Window(Home).Property(NextAired.Runtime),, $LOCALIZE[12391]]</value>
     <value condition="[Container.Content(tvshows)+!Control.isVisible(503)]">$INFO[ListItem.Property(TotalSeasons)]</value>
   </variable>
@@ -659,4 +664,96 @@
     <value condition="SubString(Container.FolderPath,videodb://5/)+SubString(ListItem.Episode,S)">$INFO[ListItem.TVShowTitle,, • $LOCALIZE[20381]]</value>
     <value>$INFO[ListItem.Date]$INFO[ListItem.Rating, • ]</value>
   </variable>
+
+  <variable name="ShowcaseItem-7Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(-7).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(-7).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-7).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-7).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem-6Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(-6).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(-6).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-6).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-6).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem-5Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(-5).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(-5).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-5).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-5).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem-4Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(-4).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(-4).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-4).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-4).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem-3Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(-3).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(-3).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-3).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-3).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem-2Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(-2).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(-2).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-2).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-2).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem-1Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(-1).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(-1).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-1).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(-1).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem0Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem.Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem.Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem.Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem1Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(1).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(1).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(1).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(1).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem2Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(2).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(2).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(2).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(2).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem3Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(3).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(3).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(3).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(3).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem4Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(4).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(4).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(4).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(4).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem5Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(5).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(5).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(5).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(5).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem6Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(6).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(6).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(6).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(6).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+  <variable name="ShowcaseItem7Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(7).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="!IsEmpty(ListItem(7).Thumb) + !SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(7).Thumb]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(7).Path,,../poster.jpg]</value>
+    <value>DefaultVideoBigPoster.png</value>
+  </variable>
+
 </includes>
