@@ -62,6 +62,11 @@
     <value condition="SubString(ListItem.mpaa,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">HU_12</value>
     <value condition="SubString(ListItem.mpaa,16 éven aluliak számára nem ajánlott)">HU_16</value>
     <value condition="SubString(ListItem.mpaa,18 éven aluliak számára nem ajánlott)">HU_18</value>
+    <value condition="substring(ListItem.mpaa,France:U) | substring(ListItem.mpaa,partir de 3 ans) | substring(ListItem.mpaa,partir de 6 ans)">csaU</value>
+    <value condition="substring(ListItem.mpaa,France:-10) | substring(ListItem.mpaa,Interdit aux moins de 10 ans) | substring(ListItem.mpaa,des propos ou des images peuvent heurter)">csa10</value>
+    <value condition="substring(ListItem.mpaa,France:-12) | substring(ListItem.mpaa,Interdit aux moins de 12 ans)">csa12</value>
+    <value condition="substring(ListItem.mpaa,France:-16) | substring(ListItem.mpaa,Interdit aux moins de 16 ans)">csa16</value>
+    <value condition="substring(ListItem.mpaa,France:-18) | substring(ListItem.mpaa,Interdit aux moins de 18 ans)">csa18</value>
   </variable>
  
   <variable name="VideoRatingFlagVar">
@@ -99,6 +104,11 @@
     <value condition="SubString(VideoPlayer.mpaa,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">HU_12</value>
     <value condition="SubString(VideoPlayer.mpaa,16 éven aluliak számára nem ajánlott)">HU_16</value>
     <value condition="SubString(VideoPlayer.mpaa,18 éven aluliak számára nem ajánlott)">HU_18</value>
+    <value condition="substring(VideoPlayer.mpaa,France:U) | substring(VideoPlayer.mpaa,partir de 3 ans) | substring(VideoPlayer.mpaa,partir de 6 ans)">csaU</value>
+    <value condition="substring(VideoPlayer.mpaa,France:-10) | substring(VideoPlayer.mpaa,Interdit aux moins de 10 ans) | substring(VideoPlayer.mpaa,des propos ou des images peuvent heurter)">csa10</value>
+    <value condition="substring(VideoPlayer.mpaa,France:-12) | substring(VideoPlayer.mpaa,Interdit aux moins de 12 ans)">csa12</value>
+    <value condition="substring(VideoPlayer.mpaa,France:-16) | substring(VideoPlayer.mpaa,Interdit aux moins de 16 ans)">csa16</value>
+    <value condition="substring(VideoPlayer.mpaa,France:-18) | substring(VideoPlayer.mpaa,Interdit aux moins de 18 ans)">csa18</value> 
   </variable>
  
   <variable name="AudioFlagVar">
@@ -198,13 +208,20 @@
     <value condition="Container.Content(directors)+IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20348]</value>
     <value>$LOCALIZE[31025]</value>
   </variable>
- 
+
+  <variable name="VideoLibraryBackground">
+    <value condition="Container.Content(movies)+!IsEmpty(Skin.String(Home_Custom_Back_Movies_Folder))">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</value>
+    <value condition="Container.Content(movies)+IsEmpty(Skin.String(Home_Custom_Back_Movies_Folder))">special://skin/backgrounds/movies.jpg</value>
+    <value condition="[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]+!IsEmpty(Skin.String(Home_Custom_Back_TVShow_Folder))">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</value>
+    <value condition="[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]+!IsEmpty(Skin.String(Home_Custom_Back_TVShow_Folder))">special://skin/backgrounds/tvshows.jpg</value>
+    <value>$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</value>
+  </variable>
   <variable name="VideoFanartVar">
     <value condition="Container.Content(movies)]+IsEmpty(Listitem.Property(Fanart_Image))">special://skin/backgrounds/fallback_movies.jpg</value>
     <value condition="[Container.Content(Seasons)|Container.Content(TVShows) | Container.Content(Episodes)]+IsEmpty(Listitem.Property(Fanart_Image))">special://skin/backgrounds/fallback_tvshows.jpg</value>
     <value condition="[Container.Content(MusicVideos) | Container.Content(Artists) | Container.Content(Albums)]+IsEmpty(Listitem.Property(Fanart_Image))">special://skin/backgrounds/music.jpg</value>
     <value condition="Container.Content(addons)+IsEmpty(Listitem.Property(Fanart_Image))">special://skin/backgrounds/addons.jpg</value>
-    <value condition="Container.Content(files)+IsEmpty(Listitem.Property(Fanart_Image))">special://skin/backgrounds/videos.jpg</value>
+    <value condition="IsEmpty(Listitem.Property(Fanart_Image))">special://skin/backgrounds/videos.jpg</value>
     <value>$INFO[Listitem.Property(Fanart_Image)]</value>
   </variable>
  
