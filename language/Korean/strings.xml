@@ -106,7 +106,7 @@
   <string id="31313">자료수집기 선택</string>
   <string id="31314">컨텐츠 검색 옵션</string>
   <string id="31315">기본</string>
-  <string id="31316">추가 팬아트 가져오기</string>
+  <string id="31316">아트웍 가져오기</string>
   <string id="31317">팬아트 경로 설정</string>
   <string id="31319">선택된 프로파일</string>
   <string id="31320">마지막 로그인</string>
@@ -453,7 +453,8 @@
   <string id="31638">비디오 라이브러리에 Next Aired 정보 보기</string>
   <string id="31639">정보 화면에서 미리보기 숨김</string>
   <string id="31640">정보 화면에서 재생 시간 대신 남은 시간 보기.</string>
-
+  <string id="31641">Flip CD cover to show artist slideshow</string>
+  
   
   <!-- Weather plugin -->
   <string id="31900">지도</string>

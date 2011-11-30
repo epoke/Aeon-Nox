@@ -106,7 +106,7 @@
   <string id="31313">Choose a Scraper</string>
   <string id="31314">Content Scanning Options</string>
   <string id="31315">Basic</string>
-  <string id="31316">Get extrafanart</string>
+  <string id="31316">Get artwork</string>
   <string id="31317">Set Fanart Path</string>
   <string id="31319">Selected Profile</string>
   <string id="31320">Last Logged In</string>
@@ -173,7 +173,7 @@
   <string id="41003">EXIT XBMC</string>
   <string id="31700">CODEC</string>
   <string id="31702">SAMPLERATE</string>
-  <string id="31703">CHANNELS</string>
+  <string id="31703">Channels</string>
   <string id="31713">ITEMS IN PLAYLIST</string>
   <string id="31714">CURRENT POSITION</string>
   <string id="31131">Lower main menu while locked</string>
@@ -342,7 +342,7 @@
   <string id="31362">Round Covers</string>
   <string id="31363">Enable covers in now playing widget</string>
   <string id="31364">Platform</string>
-  <string id="31365">Get Tune</string>
+  <string id="31365">Get tune</string>
   <string id="31366">Select default action</string>
   <string id="31367">Show random add-ons widget</string>
   <string id="31368">Press RIGHT to see trailer</string>
@@ -453,6 +453,7 @@
   <string id="31638">Show Next Aired information in videolibrary</string>
   <string id="31639">Hide video thumb on info screen</string>
   <string id="31640">Show remaining time instead of duration on info screen.</string>
+  <string id="31641">Flip CD cover to show artist slideshow</string>
 
 
   <!-- Weather plugin -->
