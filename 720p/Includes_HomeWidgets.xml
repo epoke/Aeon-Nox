@@ -1196,7 +1196,7 @@
       </control>
       <control type="label">
         <posx>777</posx>
-        <posy>525</posy>
+        <posy>530</posy>
         <width>483</width>
         <height>25</height>
         <aligny>left</aligny>
@@ -1207,7 +1207,7 @@
       </control>
       <control type="label">
         <posx>777</posx>
-        <posy>540</posy>
+        <posy>550</posy>
         <width>483</width>
         <height>25</height>
         <aligny>left</aligny>
@@ -1218,7 +1218,7 @@
       </control>
       <control type="label">
         <posx>777</posx>
-        <posy>555</posy>
+        <posy>570</posy>
         <width>483</width>
         <height>25</height>
         <aligny>left</aligny>
@@ -1229,7 +1229,7 @@
       </control>
       <control type="label">
         <posx>777</posx>
-        <posy>570</posy>
+        <posy>590</posy>
         <width>483</width>
         <height>25</height>
         <aligny>left</aligny>
@@ -1242,7 +1242,7 @@
         <visible>!Skin.HasSetting(tenitemsplaylist)</visible>
         <control type="label">
           <posx>777</posx>
-          <posy>585</posy>
+          <posy>610</posy>
           <width>483</width>
           <height>25</height>
           <aligny>left</aligny>
@@ -1253,7 +1253,7 @@
         </control>
         <control type="label">
           <posx>777</posx>
-          <posy>600</posy>
+          <posy>630</posy>
           <width>483</width>
           <height>25</height>
           <aligny>left</aligny>
@@ -1264,7 +1264,7 @@
         </control>
         <control type="label">
           <posx>777</posx>
-          <posy>615</posy>
+          <posy>650</posy>
           <width>483</width>
           <height>25</height>
           <aligny>left</aligny>
@@ -1275,7 +1275,7 @@
         </control>
         <control type="label">
           <posx>777</posx>
-          <posy>630</posy>
+          <posy>670</posy>
           <width>483</width>
           <height>25</height>
           <aligny>left</aligny>
@@ -1286,7 +1286,7 @@
         </control>
         <control type="label">
           <posx>777</posx>
-          <posy>645</posy>
+          <posy>690</posy>
           <width>483</width>
           <height>25</height>
           <aligny>left</aligny>
