@@ -71,11 +71,11 @@
   <string id="31120">버튼 제목</string>
   <string id="31121">애드온 경로</string>
   <string id="31122">날씨 화면</string>
-  <string id="31123">TV 쇼에 "배너" 대신 "포스터" 사용</string>
+  <string id="31123">배너 보기에서 "banner.jpg" 사용</string>
   <string id="31126">홈 화면 영화 서브 메뉴</string>
   <string id="31127">가사 애드온</string>
   <string id="31128">가사</string>
-  <string id="31129">-</string>
+  <string id="31129">포스터 보기에서 "poster.jpg" 사용</string>
   <string id="31130">자막 애드온</string>
 
   <string id="31132">-</string>
@@ -454,7 +454,8 @@
   <string id="31639">정보 화면에서 미리보기 숨김</string>
   <string id="31640">정보 화면에서 재생 시간 대신 남은 시간 보기.</string>
   <string id="31641">Flip CD cover to show artist slideshow</string>
-  
+  <string id="31642">Enable weather icons from 'Weather fanart pda style' add-on</string>  
+
   
   <!-- Weather plugin -->
   <string id="31900">지도</string>

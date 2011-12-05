@@ -55,40 +55,19 @@
           <animation effect="slide" start="0,0" end="0,-143" time="150" condition="Skin.HasSetting(lowlist)+Control.HasFocus(7002)">Conditional</animation>
           <animation effect="slide" start="0,0" end="0,-33" time="150" condition="!Skin.HasSetting(lowlist)+Control.HasFocus(7002)">Conditional</animation>
           <animation effect="slide" start="0,0" end="0,-110" time="150" condition="!Skin.HasSetting(lowlist)">Conditional</animation>
-          <!--<control type="image">
-					<description>Low List Spot Light</description>
-					<posx>30</posx>
-					<posy>503</posy>
-					<width>1350</width>
-					<height>404</height>
-					<texture>views/showcase_spot.png</texture>
-					<include>Animation_CommonFade</include>
-					<animation effect="fade" start="100" end="55" time="50" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
-					<animation effect="fade" start="100" end="30" time="50" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
-				</control>-->
           <control type="image">
             <description>Low List Background Panel</description>
             <posx>0</posx>
-            <posy>475</posy>
+            <posy>473</posy>
             <width>1280</width>
-            <height>404</height>
-            <aspectratio scalediffuse="false">stretch</aspectratio>
-            <texture>views/lowlist_panelback_shadow.png</texture>
-            <include>Animation_CommonFade</include>
-          </control>
-          <control type="image">
-            <description>Low List Background Panel</description>
-            <posx>0</posx>
-            <posy>503</posy>
-            <width>1280</width>
-            <height>404</height>
+            <height>434</height>
             <aspectratio scalediffuse="false">stretch</aspectratio>
             <texture>views/lowlist_panelback.png</texture>
             <include>Animation_CommonFade</include>
             <animation effect="fade" start="100" end="80" time="50" condition="!Skin.HasSetting(listpanelthin)">Conditional</animation>
             <animation effect="fade" start="100" end="35" time="50" condition="Skin.HasSetting(listpanelthin)">Conditional</animation>
           </control>
-          <include>Neon_Floor</include>
+          <include>Neon_LowList</include>
           <control type="image">
             <description>Right Full Background Bar</description>
             <posx>1143</posx>

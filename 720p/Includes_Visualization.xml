@@ -285,11 +285,12 @@
         <posy>0</posy>
         <control type="image">
           <description>time background</description>
-          <posx>0</posx>
+          <posx>-30</posx>
           <posy>0</posy>
-          <width>499</width>
-          <height>27</height>
+          <width>529</width>
+          <height>58</height>
           <texture flipy="true">home/timepanel_mid.png</texture>
+          <colordiffuse>$INFO[Skin.String(diffuse_home)]</colordiffuse>
         </control>
         <control type="label">
           <description>time label</description>
@@ -744,6 +745,8 @@
       <visible>Player.HasAudio + Skin.HasSetting(Viz-CDWall)</visible>
       <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
       <animation effect="slide" start="-10,-10" end="10,10" time="7500" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+      <include>Animation_OpenCloseZoom</include>
+      <include>Animation_VisibleChange400</include>
       <control type="multiimage">
         <posx>0</posx>
         <posy>0</posy>
@@ -1241,10 +1244,9 @@
       </control>
     </control>
     <control type="image">
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>1280</width>
-      <height>720</height>
+      <include>FullscreenDimensions</include>      
+      <include>Animation_WindowFade200</include>
+      <include>Animation_VisibleChange200</include>
       <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
       <animation effect="slide" start="-10,-10" end="10,10" time="7500" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
       <texture background="true">cdwall-grid.png</texture>
