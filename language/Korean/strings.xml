@@ -63,9 +63,9 @@
   <string id="31112">옵션</string>
   <string id="31113">단일 이미지</string>
   <string id="31114">다중 이미지</string>
-  <string id="31115">사용자 지정</string>
+  <string id="31115">사용자 설정</string>
   <string id="31116"></string>
-  <string id="31117">새로 추가된 비디오 보이기</string>
+  <string id="31117">새로 추가/무작위 미디어 위젯 보이기</string>
   <string id="31118">홈 화면 프로그램 서브 메뉴</string>
   <string id="31119">사용자 애드온 버튼 사용</string>
   <string id="31120">버튼 제목</string>
@@ -154,8 +154,8 @@
   <string id="31408">[B]추가기능 설정[/B][CR][CR]설치된 추가기능 관리 · xbmc.org 에서 추가기능 찾기 및 설치 · 추가기능 설정 변경</string>
   <string id="31409">[B]시스템 정보 확인[/B][CR][CR]하드웨어 확인 · CPU 사용 확인 · XBMC 버전 확인</string>
   <string id="31410">인터페이스</string>
-  <string id="31411">매니저</string>
-  <string id="31412">ACCESS</string>
+  <string id="31411">관리</string>
+  <string id="31412">연결</string>
   <string id="31413">모니터</string>
   
   <string id="31421">로그인할 XBMC 사용자 프로파일을 선택하고 계속하세요</string>
@@ -284,7 +284,7 @@
   <string id="31241">'Watched' 표시</string>
   <string id="31242">-</string>
   <string id="31243">스케쥴</string>
-  <string id="31244">'지금재생중' 위젯에 CDArt 사용</string>
+  <string id="31244">'지금 재생중' 위젯에 CDArt 사용</string>
   <string id="31245">-</string>
   <string id="31246">-</string>
   <string id="31247">장르 보이기</string>
@@ -439,7 +439,7 @@
   <string id="31617">위</string>
   <string id="31618">전체 화면 비디오 정보 사용</string>
   <string id="31619">전체 화면 비디오 옵션</string>
-  <string id="31620">시청하지 않은 모든 항목에 "New" 표시 (기본값은 새로 추가된 항목만 "New" 표시)</string>
+  <string id="31620">시청하지 않은 모든 항목에 'New' 표시 (기본값은 새로 추가된 항목만 'New' 표시)</string>
   <string id="31621">비디오 OSD에 알라스카 스타일의 일시정지 표시</string>
   <string id="31622">화면 왼쪽의 미디어 메뉴 표시 툴팁 숨기기</string>
   <string id="31623">홈화면에 표시할 미디어 위젯 선택</string>
@@ -461,7 +461,7 @@
   <string id="31639">정보 화면에서 미리보기 숨김</string>
   <string id="31640">정보 화면에서 재생 시간 대신 남은 시간 보기.</string>
   <string id="31641">Flip CD cover to show artist slideshow</string>
-  <string id="31642">Enable weather icons from 'Weather fanart pda style' add-on</string>  
+  <string id="31642">'Weather Fanart PDA Style' 애드온의 날씨 아이콘 사용</string>  
 
   
   <!-- Weather plugin -->
