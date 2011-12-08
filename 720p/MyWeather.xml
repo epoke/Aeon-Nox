@@ -214,7 +214,7 @@
           <control type="radiobutton" id="306">
             <description>Maps button</description>
             <include>Objects_MediaMenuButtonAlt</include>
-            <label>31900</label>
+            <label>$LOCALIZE[31900] &amp; $LOCALIZE[31907]</label>
             <onclick>SetProperty(Weather.CurrentView,maps)</onclick>
             <selected>SubString(Window.Property(Weather.CurrentView),maps)</selected>
             <visible>SubString(Weather.Plugin,weather.weatherplus)</visible>

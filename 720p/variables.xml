@@ -289,8 +289,8 @@
   </variable>
   <variable name="FanartPanelValue6Var">
     <value condition="Container.Content(movies)|IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Country]</value>
-    <value condition="Container.Content(episodes)+!SubString(ListItem.Episode,S)">$INFO[ListItem.Season,$LOCALIZE[20373] ], $INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
-    <value condition="Container.Content(episodes)+SubString(ListItem.Episode,S)">$LOCALIZE[20381],$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
+    <value condition="Container.Content(episodes)+!ListItem.Property(IsSpecial)">$INFO[ListItem.Season,$LOCALIZE[20373] ], $INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
+    <value condition="Container.Content(episodes)+ListItem.Property(IsSpecial)">$LOCALIZE[20381],$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$VAR[NextEpisodeVar]</value>
     <value condition="[Container.Content(tvshows)|Container.Content(seasons)]">$INFO[Listitem.Genre]</value>
   </variable>
@@ -409,7 +409,6 @@
     <value condition="Player.HasAudio+!IsEmpty(MusicPlayer.Property(Album_Description))+!IsEmpty(MusicPlayer.Property(Artist_Description))">$INFO[MusicPlayer.Property(Album_Description)]$INFO[MusicPlayer.Property(Artist_Description)]</value>
     <value condition="Player.HasAudio+!IsEmpty(MusicPlayer.Property(Album_Description))+IsEmpty(MusicPlayer.Property(Artist_Description))">$INFO[MusicPlayer.Property(Album_Description)]</value>
     <value condition="Player.HasVideo+!IsEmpty(VideoPlayer.Plot)">$INFO[VideoPlayer.Plot]</value>
-    <!--<value condition="Container(9000).HasFocus(25)">$INFO[Window(Home).Property(NextAired.TodayTotal)]</value>-->
     <value condition="Control.HasFocus(8003)+!IsEmpty(Container(8003).ListItem.Property(Plot))">$INFO[Container(8003).ListItem.Property(Plot)]</value>
     <value></value>
   </variable>
@@ -485,7 +484,7 @@
     <value condition="Skin.HasSetting(HomeRandomMusic)+Container(9000).HasFocus(3)">$LOCALIZE[31163] $LOCALIZE[179]</value>
     <value condition="Skin.HasSetting(HomeLatestAlbums)+Container(9000).HasFocus(3)">$LOCALIZE[31358]</value>
     <value condition="Skin.HasSetting(HomeRandomAlbums)+Container(9000).HasFocus(3)">$LOCALIZE[31163] $LOCALIZE[558]</value>
-    <value condition="Skin.HasSetting(HomeRandomAddons)+Container(9000).HasFocus(8)">$LOCALIZE[31163] $LOCALIZE[24000]</value>
+    <value condition="Skin.HasSetting(HomeRandomAddons)+Container(9000).HasFocus(1)">$LOCALIZE[31163] $LOCALIZE[24000]</value>
     <value condition="Skin.HasSetting(HomeSystemInfo)+Container(9000).HasFocus(5)">$LOCALIZE[138]</value>
   </variable>
 
@@ -500,7 +499,7 @@
     <value condition="Skin.HasSetting(HomeRandomMusic)+Container(9000).HasFocus(3)">$LOCALIZE[31163] $LOCALIZE[134]</value>
     <value condition="Skin.HasSetting(HomeLatestAlbums)+Container(9000).HasFocus(3)">$LOCALIZE[31359]</value>
     <value condition="Skin.HasSetting(HomeRandomAlbums)+Container(9000).HasFocus(3)">$LOCALIZE[31163] $LOCALIZE[132]</value>
-    <value condition="Skin.HasSetting(HomeRandomAddons)+Container(9000).HasFocus(8)">$LOCALIZE[31163] $LOCALIZE[24001]</value>
+    <value condition="Skin.HasSetting(HomeRandomAddons)+Container(9000).HasFocus(1)">$LOCALIZE[31163] $LOCALIZE[24001]</value>
   </variable>
 
   <variable name="FlagDiffuseVar">
@@ -855,8 +854,8 @@
   </variable>
   <variable name="BreadcrumbsVideoVar">
     <value condition="Container.Content(movies)">$LOCALIZE[20342]</value>
-    <value condition="Container.Content(tvshows)|Container.Content(seasons)">$LOCALIZE[20343]</value>
-    <value condition="Container.Content(episodes)">$LOCALIZE[20343]$INFO[ListItem.TVShowTitle, / ]</value>
+    <value condition="Container.Content(tvshows)|Container.Content(seasons)|SubString(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]</value>
+    <value condition="Container.Content(episodes)+!SubString(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]$INFO[ListItem.TVShowTitle, / ]</value>
     <value>$LOCALIZE[3]</value>
   </variable>
   
@@ -886,10 +885,32 @@
   <variable name="ListPosterVar">
     <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/icons/,.jpg]</value>
     <value condition="Skin.HasSetting(TVShowsUsePoster)+Container.Content(tvshows)">$INFO[ListItem.Path,,poster.jpg]</value>
+    <value condition="!Control.IsVisible(50)+SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem.Path,,../poster.jpg]</value>
     <value>$INFO[ListItem.Thumb]</value>
   </variable>
   <variable name="ListAlbumVar">
     <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/music/icons/,.jpg]</value>
     <value>$INFO[ListItem.Icon]</value>
+  </variable>
+  
+  <!-- Settings -->
+  <variable name="SettingsDescVar">
+    <value condition="Container(9000).HasFocus(1)">$LOCALIZE[31400]</value>
+    <value condition="Container(9000).HasFocus(2)">$LOCALIZE[31401]</value>
+    <value condition="Container(9000).HasFocus(3)">$LOCALIZE[31402]</value>
+    <value condition="Container(9000).HasFocus(4)">$LOCALIZE[31403]</value>
+    <value condition="Container(9000).HasFocus(5)">$LOCALIZE[31404]</value>
+    <value condition="Container(9000).HasFocus(6)">$LOCALIZE[31408]</value>
+    <value condition="Container(9000).HasFocus(7)">$LOCALIZE[31405]</value>
+    <value condition="Container(9000).HasFocus(8)">$LOCALIZE[31406]</value>
+    <value condition="Container(9000).HasFocus(9)">$LOCALIZE[31407]</value>
+    <value condition="Container(9000).HasFocus(10)">$LOCALIZE[31409]</value>
+  </variable>
+  
+  <!-- VideoInfo-->
+  <variable name="ExtraFanartPreviewVar">
+    <value condition="Container(5000).HasFocus(8) + Container.Content(movies)">$INFO[ListItem.Path,,extrafanart]</value>
+    <value condition="Container(5000).HasFocus(8) + Container.Content(tvshows)">$INFO[ListItem.FileNameAndPath,,extrafanart]</value>
+    <value condition="Container(5000).HasFocus(11)">$INFO[ListItem.Path,,extrathumbs]</value>
   </variable>
 </includes>
