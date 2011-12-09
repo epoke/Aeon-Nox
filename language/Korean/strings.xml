@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
   <!-- Misc labels -->
   <string id="31000">변경</string>
@@ -142,7 +142,7 @@
   <string id="31972">Greek</string>
   <string id="31973">Greek Light</string>
 
-  <!-- Description Labels  -->	
+  <!-- Description Labels  -->  
   <string id="31400">[B]모양새 설정[/B][CR][CR]스킨 변경 · 언어 및 지역 설정 · 파일 목록 옵션 변경 · 화면보호기 설정</string>
   <string id="31401">[B]비디오 설정[/B][CR][CR]비디오 라이브러리 관리 · 비디오 재생 옵션 변경 · 비디오 목록 옵션 변경 · 자막 글꼴 설정</string>
   <string id="31402">[B]음악 설정[/B][CR][CR]음악 라이브러리 관리 · 음악 재생 옵션 변경 · 음악 목록 옵션 변경 · 노래 전송 설정 · 노래방 옵션 설정</string>
@@ -504,3 +504,4 @@
   <string id="31971">재생하려면 비디오 버튼을 누르세요</string>
 
 </strings>
+
