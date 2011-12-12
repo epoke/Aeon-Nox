@@ -139,8 +139,6 @@
   <string id="31390">Skin default</string>
   <string id="31391">Light</string>
   <string id="31392">Arial based</string>
-  <string id="31972">Greek</string>
-  <string id="31973">Greek Light</string>
   
   <!-- Description Labels  -->
   <string id="31400">[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver</string>
@@ -157,6 +155,7 @@
   <string id="31411">MANAGER</string>
   <string id="31412">ACCESS</string>
   <string id="31413">MONITOR</string>
+  <string id="31414">HOME WINDOW</string>
 
   <string id="31421">Select your XBMC user Profile[CR]to login and continue</string>
   
