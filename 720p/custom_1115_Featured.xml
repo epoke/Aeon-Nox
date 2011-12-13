@@ -1,6 +1,6 @@
 <window id="1115" type="window">
-  <defaultcontrol always="true">5000</defaultcontrol>
-  <!--<onload>XBMC.RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=25)</onload>-->
+  <defaultcontrol>5000</defaultcontrol>
+  <onload condition="![Skin.HasSetting(HomeRandomMovies)|Skin.HasSetting(HomeRandomTV)|Skin.HasSetting(HomeRandomMusic)|Skin.HasSetting(HomeRandomAddons)|Skin.HasSetting(HomeRandomAlbums)|Skin.HasSetting(HomeRandomPoster)]">XBMC.RunScript(script.randomitems,limit=8&amp;unplayed=True)</onload>
   <coordinates>
     <system>1</system>
     <posx>0</posx>
@@ -68,6 +68,64 @@
         <height>405</height>
         <texture>views/showcase_floor.png</texture>
       </control>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>464</width>
+        <height>720</height>
+        <texture>views/showcase_vignette.png</texture>
+        <colordiffuse>vignette</colordiffuse>
+        <visible>true</visible>
+        <animation type="Conditional" condition="Control.HasFocus(109)">
+          <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="0,0" end="-464,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="Visible">
+          <effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="-464,0" end="0,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="Hidden">
+          <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="0,0" end="-464,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="WindowOpen">
+          <effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="-464,0" end="0,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="WindowClose">
+          <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="0,0" end="-464,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+      </control>
+      <control type="image">
+        <posx>816</posx>
+        <posy>0</posy>
+        <width>464</width>
+        <height>720</height>
+        <visible>true</visible>
+        <colordiffuse>vignette</colordiffuse>
+        <texture flipx="true">views/showcase_vignette.png</texture>
+        <animation type="Conditional" condition="Control.HasFocus(109)">
+          <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="0,0" end="464,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="Visible">
+          <effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="464,0" end="0,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="Hidden">
+          <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="0,0" end="464,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="WindowOpen">
+          <effect type="fade" start="0" end="100" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="464,0" end="0,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+        <animation type="WindowClose">
+          <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
+          <effect type="slide" start="0,0" end="464,0" time="400" easing="inout" tween="cubic" />
+        </animation>
+      </control>
       <include>Neon_Floor</include>
       <control type="image">
         <posx>136</posx>
@@ -75,6 +133,15 @@
         <width>1008</width>
         <height>692</height>
         <texture>wall/wall_bg.png</texture>
+        <include>Animation_OpenCloseZoom_New</include>
+      </control>
+      <control type="image">
+        <posx>136</posx>
+        <posy>45</posy>
+        <width>1008</width>
+        <height>692</height>
+        <texture>wall/wall_bg_reflection.png</texture>
+        <colordiffuse>panelreflect</colordiffuse>
         <include>Animation_OpenCloseZoom_New</include>
       </control>
     </control>
@@ -158,7 +225,7 @@
               <font>Font_Info_Caps</font>
               <textcolor>white2</textcolor>
               <shadowcolor>-</shadowcolor>
-              <label>IN PROGRESS</label>
+              <label>$LOCALIZE[31335]</label>
             </control>
             <control type="image">
               <description>Nav item</description>
@@ -329,7 +396,7 @@
               <font>Font_Info_Caps</font>
               <textcolor>white2</textcolor>
               <shadowcolor>-</shadowcolor>
-              <label>LATEST MOVIE</label>
+              <label>$LOCALIZE[31331]</label>
             </control>
             <control type="image">
               <description>Nav item</description>
@@ -485,7 +552,7 @@
               <font>Font_Info_Caps</font>
               <textcolor>white2</textcolor>
               <shadowcolor>-</shadowcolor>
-              <label>FEATURED MOVIE</label>
+              <label>$LOCALIZE[31221]</label>
             </control>
             <control type="image">
               <description>Nav item</description>
@@ -646,7 +713,7 @@
               <font>Font_Info_Caps</font>
               <textcolor>white2</textcolor>
               <shadowcolor>-</shadowcolor>
-              <label>RECOMMENDED</label>
+              <label>$LOCALIZE[31464]</label>
             </control>
             <control type="image">
               <description>Nav item</description>
@@ -822,7 +889,7 @@
               <font>Font_Info_Caps</font>
               <textcolor>white2</textcolor>
               <shadowcolor>-</shadowcolor>
-              <label>LATEST EPISODE</label>
+              <label>$LOCALIZE[31332]</label>
             </control>
             <control type="image">
               <description>Nav item</description>
@@ -973,7 +1040,7 @@
               <font>Font_Info_Caps</font>
               <textcolor>white2</textcolor>
               <shadowcolor>-</shadowcolor>
-              <label>FEATURED EPISODE</label>
+              <label>$LOCALIZE[31219]</label>
             </control>
             <control type="image">
               <description>Nav item</description>
@@ -1650,6 +1717,7 @@
       <width>1280</width>
       <height>130</height>
       <texture>home/homemenu_gradient.png</texture>
+      <visible>!Skin.HasTheme(Lite_Floor)</visible>
     </control>
 
 
@@ -1681,7 +1749,7 @@
           </control>
           <control type="label">
             <include>BreadcrumbsLabel</include>
-            <label>Featured items</label>
+            <label>$LOCALIZE[31163] [LOWERCASE]$LOCALIZE[31025][/LOWERCASE]</label>
           </control>
         </control>
       </control>
@@ -1711,8 +1779,8 @@
           <scrollspeed>100</scrollspeed>
           <pauseatend>2500</pauseatend>
           <include>BreadcrumbsLabel</include>
-          <label>Press DOWN/UP to navigate between items</label>
-          <label>Press LEFT/RIGHT to browse in the highlighted item</label>
+          <label>$LOCALIZE[31643]</label>
+          <label>$LOCALIZE[31644]</label>
           <visible>!System.IdleTime(5)</visible>
         </control>
       </control>
