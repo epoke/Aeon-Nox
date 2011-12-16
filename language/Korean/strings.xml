@@ -402,14 +402,14 @@
   <string id="31466">사용자 즐겨찾기</string>
   <string id="31467">추가 팬아트 가져오기</string>
   <string id="31468">추가 썸네일 가져오기</string>
-  <string id="31469">MOVIES THAT HAVEN'T FINISHED PLAYING YET</string>
-  <string id="31470">FEATURED ALBUMS WITH UNPLAYED SONGS</string>
-  <string id="31471">FEATURED UNWATCHED MOVIES</string>
-  <string id="31472">UNWATCHED EPISODES OF RECENTLY WATCHED TV SHOWS</string>
-  <string id="31473">FEATURED UNWATCHED EPISODES</string>
-  <string id="31474">FEATURED INSTALLED ADD-ONS</string>
-  <string id="31475">MOST PLAYED ALBUMS</string>
-  <string id="31476">FEATURED UNPLAYED SONGS</string>
+  <string id="31469">감상을 완료하지 않은 영화</string>
+  <string id="31470">듣지 않은 앨범 추천</string>
+  <string id="31471">감상하지 않은 영화 추천</string>
+  <string id="31472">최근에 시청한 TV쇼의 시청하지 않은 에피소드</string>
+  <string id="31473">시청하지 않은 에피소드</string>
+  <string id="31474">설치된 애드온 추천</string>
+  <string id="31475">가장 자주 들은 앨범 추천</string>
+  <string id="31476">듣지 않은 노래 추천</string>
   
   <!-- Home Menu -->
   <string id="31500">사진</string>
@@ -469,8 +469,8 @@
   <string id="31640">정보 화면에서 재생 시간 대신 남은 시간 보기.</string>
   <string id="31641">Flip CD cover to show artist slideshow</string>
   <string id="31642">'Weather Fanart PDA Style' 애드온의 날씨 아이콘 사용</string>  
-  <string id="31643">Press DOWN/UP to navigate between items</string>
-  <string id="31644">Press LEFT/RIGHT to browse in the highlighted item</string>
+  <string id="31643">항목 사이을 전환하려면 위/아래 화살표를 누르세요</string>
+  <string id="31644">선택한 항목 내에서 탐색하려면 왼쪽/오른쪽 화살표를 누르세요</string>
 
   
   <!-- Weather plugin -->
