@@ -416,12 +416,12 @@
     </control>
   </include>
   <include name="Furniture_Showcase">
-    <control type="group">
+    <control type="group" id="8857">
       <description>Furniture Showcase</description>
       <include>Animation_OpenClose_Furniture</include>
       <include>Animation_HideMultiplex</include>
       <include>Animation_HideMusic</include>
-      <visible>![Control.IsVisible(503)+!Skin.HasSetting(showcaseinfoontv)+Container.Content(tvshows)+Skin.HasSetting(landscapelogo)]</visible>
+      <visible>![Control.IsVisible(516)|Control.IsVisible(514)|Control.IsVisible(517)|Control.IsVisible(550)|Control.IsVisible(511)|Control.IsVisible(506)|Control.IsVisible(8858)]</visible>
       <control type="image">
         <posx>0</posx>
         <posy>315</posy>
@@ -461,7 +461,7 @@
           <texture>views/showcase_vignette.png</texture>
           <colordiffuse>vignette</colordiffuse>
           <visible>true</visible>
-          <animation type="Conditional" condition="Control.HasFocus(109)">
+          <animation type="Conditional" condition="Control.HasFocus(109)|Control.HasFocus(110)">
             <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
             <effect type="slide" start="0,0" end="-464,0" time="400" easing="inout" tween="cubic" />
           </animation>
@@ -490,7 +490,7 @@
           <visible>true</visible>
           <colordiffuse>vignette</colordiffuse>
           <texture flipx="true">views/showcase_vignette.png</texture>
-          <animation type="Conditional" condition="Control.HasFocus(109)">
+          <animation type="Conditional" condition="Control.HasFocus(109)|Control.HasFocus(110)">
             <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
             <effect type="slide" start="0,0" end="464,0" time="400" easing="inout" tween="cubic" />
           </animation>
@@ -514,7 +514,7 @@
       </control>
       <include>Neon_Floor</include>
     </control>
-    <control type="group">
+    <control type="group" id="8858">
       <visible>[Control.IsVisible(503)+!Skin.HasSetting(showcaseinfoontv)+Container.Content(tvshows)+Skin.HasSetting(landscapelogo)]</visible>
       <include>Animation_HideMultiplex</include>
       <include>Animation_CommonFade</include>
@@ -669,7 +669,7 @@
       <texture>views/showcase_gradient.png</texture>
       <include>Animation_CommonFade</include>
       <include>Animation_HideMultiplex</include>
-      <visible>!COntrol.HasFocus(70)</visible>
+      <visible>Control.IsVisible(8857)+Control.IsVisible(8860)+![Control.IsVisible(50)|Control.IsVisible(57)]</visible>
       <animation effect="slide" time="200" start="0" end="960" tween="cubic" easing="out" condition="Control.IsVisible(510)+!Skin.HasSetting(posterslide)">Conditional</animation>
       <animation effect="slide" time="200" start="0" end="-520" tween="cubic" easing="out" condition="Control.IsVisible(512)">Conditional</animation>
     </control>
@@ -684,58 +684,25 @@
     </control>
   </include>
   <include name="WallPanel">
-    <control type="image">
-      <posx>75</posx>
-      <posy>45</posy>
-      <width>1130</width>
-      <height>692</height>
-      <texture>wall/wall_bg.png</texture>
-      <animation effect="zoom" start="75,45,1130,692" end="25,45,1230,692" time="250" reversible="false" condition="Control.IsVisible(512)">Conditional</animation>
-      <include>Animation_OpenCloseZoom_New</include>
-    </control>
-    <control type="image">
-      <posx>75</posx>
-      <posy>45</posy>
-      <width>1130</width>
-      <height>692</height>
-      <texture>wall/wall_bg_reflection.png</texture>
-      <animation effect="zoom" start="75,45,1130,692" end="25,45,1230,692" time="250" reversible="false" condition="Control.IsVisible(512)">Conditional</animation>
-      <colordiffuse>panelreflect</colordiffuse>
-      <include>Animation_OpenCloseZoom_New</include>
-    </control>
-  </include>
-  <include name="VideoWindowPosters">
     <control type="group">
-      <posx>420</posx>
-      <posy>-420</posy>
-      <visible>Player.Hasvideo+!VideoPlayer.IsFullscreen</visible>
-      <animation effect="slide" start="0,0" end="390,-18" reversible="true" condition="Control.IsVisible(514)">Conditional</animation>
-      <animation effect="slide" start="0,0" end="390,343" reversible="true" condition="Control.IsVisible(512)">Conditional</animation>
-      <animation effect="slide" start="0,0" end="390,360" reversible="true" condition="Control.IsVisible(50)">Conditional</animation>
-      <include>Animation_DialogPopup</include>
-      <include>Animation_OpenCloseZoom</include>
-      <include>Animation_CommonFade</include>
+      <include>Animation_OpenCloseZoom_New</include>
+      <visible>Control.IsVisible(551)|Control.IsVisible(560)|Control.IsVisible(51)|Control.IsVisible(512)|Control.IsVisible(500)</visible>
       <control type="image">
-        <description>gradient</description>
-        <posx>10</posx>
-        <posy>456</posy>
-        <width>420</width>
-        <height>245</height>
-        <texture>home/nowplaying/OverlayDialogBackground.png</texture>
+        <posx>75</posx>
+        <posy>45</posy>
+        <width>1130</width>
+        <height>692</height>
+        <texture>wall/wall_bg.png</texture>
+        <animation effect="zoom" start="75,45,1130,692" end="25,45,1230,692" time="250" reversible="false" condition="Control.IsVisible(512)">Conditional</animation>
       </control>
       <control type="image">
-        <posx>25</posx>
-        <posy>471</posy>
-        <width>390</width>
-        <height>215</height>
-        <texture>common/black.png</texture>
-      </control>
-      <control type="videowindow" id="40001">
-        <posx>25</posx>
-        <posy>471</posy>
-        <width>390</width>
-        <height>215</height>
-        <visible>Player.Hasvideo+!VideoPlayer.IsFullscreen</visible>
+        <posx>75</posx>
+        <posy>45</posy>
+        <width>1130</width>
+        <height>692</height>
+        <texture>wall/wall_bg_reflection.png</texture>
+        <animation effect="zoom" start="75,45,1130,692" end="25,45,1230,692" time="250" reversible="false" condition="Control.IsVisible(512)">Conditional</animation>
+        <colordiffuse>panelreflect</colordiffuse>
       </control>
     </control>
   </include>
@@ -1351,7 +1318,7 @@
     </control>
     <control type="button" id="805">
       <include>HiddenObject</include>
-      <visible>Player.HasVideo+[Control.IsVisible(803)|Control.IsVisible(804)]</visible>
+      <visible>Player.HasVideo</visible>
       <animation effect="fade" start="100" end="0" time="550">Hidden</animation>
     </control>
     <control type="group">

@@ -9,15 +9,9 @@
       <imagepath fallback="special://skin/backgrounds/videos.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</imagepath>
     </control>
     <include>CommonCurtainBackdrop</include>
-    <control type="group">
-      <include>Animation_OpenCloseZoom</include>
-      <visible>Control.IsVisible(50)|Control.IsVisible(551)</visible>
-      <include>Furniture_Showcase</include>
-    </control>
-    <control type="group">
-      <visible>Control.isVisible(551)</visible>
-      <include>WallPanel</include>
-    </control>
+    <include>CommonMediaPlayingBackground</include>
+    <include>Furniture_Showcase</include>
+    <include>WallPanel</include>
     <control type="group">
 			<include>Animation_OpenCloseZoom</include>		
 			<include>CommonRootView</include> <!-- view id = 50 -->
@@ -25,11 +19,8 @@
       <include>ThumbnailView</include>
     </control>
     <include condition="!Skin.HasSetting(kioskmode)">Media_Menu</include>
-    <control type="group">
-      <visible>Control.IsVisible(50)</visible>
-      <include>VideoWindowPosters</include>
-    </control>
     <include>ScrollOffsetLabel</include>
+    <include>Furniture_DarkGradient</include>
 
     <control type="group">
       <description>Breadcrumbs</description>

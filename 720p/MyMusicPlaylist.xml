@@ -17,16 +17,9 @@
         <visible>!Skin.HasSetting(MusicLibraryFanart) + !IsEmpty(Fanart.Image)</visible>
       </control>
     </control>
-    <control type="group">
-      <include>Animation_OpenCloseZoom</include>
-      <include>Animation_HideMusic</include>
-      <visible>[Control.IsVisible(513)|Control.IsVisible(509)|Control.IsVisible(50)|Control.isVisible(500)|Control.IsVisible(551)|Control.IsVisible(512)]+!Control.HasFocus(110)</visible>
-      <include>Furniture_Showcase</include>
-    </control>
-    <control type="group">
-      <visible>Control.isVisible(500)|Control.isVisible(551)|Control.IsVisible(512)</visible>
-      <include>WallPanel</include>
-    </control>
+    <include>CommonMediaPlayingBackground</include>
+    <include>Furniture_Showcase</include>
+    <include>WallPanel</include>
     <control type="group">
 			<include>Animation_OpenCloseZoom</include>		
 			<include>CommonRootView</include> <!-- view id = 50 -->
@@ -66,6 +59,7 @@
     </control>
     <include>FloorLabels</include>
     <include>MusicMediaFlags</include>
+    <include>Furniture_DarkGradient</include>
     <include>ScrollOffsetLabel</include>
     <include condition="!Skin.HasSetting(kioskmode)">Media_Menu</include>
 

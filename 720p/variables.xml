@@ -294,6 +294,7 @@
   <variable name="FanartPanelPlotVar">
     <value condition="Container.Content(movies)+!Skin.HasSetting(preferplot)+!IsEmpty(ListItem.PlotOutline)+Control.IsVisible(7550)">$INFO[ListItem.PlotOutline]</value>
     <value condition="Container.Content(seasons)">$INFO[Container.ShowPlot]</value>
+    <value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>
     <value>$INFO[ListItem.Plot]</value>
   </variable>
 
@@ -555,11 +556,12 @@
     <value>white2</value>
   </variable>
   <variable name="HomeMenuTextUnFocusVar">
-    <value condition="Skin.HasSetting(aurahome)">DD2e2e2e</value>
+    <value condition="Skin.HasSetting(aurahome)">a9000000</value>
     <value>white5</value>
   </variable>
   <variable name="HomeMenuTextFocusVar">
-    <value condition="Skin.HasSetting(aurahome)">ff2e2e2e</value>
+    <value condition="Skin.HasSetting(aurahome)+![Window.IsVisible(1113) | ControlGroup(9001).HasFocus | Control.HasFocus(8000)]">ff2e2e2e</value>
+    <value condition="Skin.HasSetting(aurahome)+[Window.IsVisible(1113) | ControlGroup(9001).HasFocus | Control.HasFocus(8000)]">a9000000</value>
     <value>white</value>
   </variable>
   <variable name="WeatherWidgetTextVar">
@@ -567,7 +569,7 @@
     <value>grey2</value>
   </variable>
   <variable name="HomeMenuShadowVar">
-    <value condition="Skin.HasSetting(aurahome)">22FFFFFF</value>
+    <value condition="Skin.HasSetting(aurahome)">87FFFFFF</value>
     <value>-</value>
   </variable>
   <variable name="WeatherShadowVar">
@@ -852,8 +854,9 @@
   </variable>
   <variable name="BreadcrumbsVideoVar">
     <value condition="Container.Content(movies)">$LOCALIZE[20342]</value>
-    <value condition="Container.Content(tvshows)|Container.Content(seasons)|SubString(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]</value>
-    <value condition="Container.Content(episodes)+!SubString(Container.FolderPath,videodb://5/)">$LOCALIZE[20343]$INFO[ListItem.TVShowTitle, / ]</value>
+    <value condition="Container.Content(musicvideos)">$LOCALIZE[20389]</value>
+    <value condition="Container.Content(tvshows)|Container.Content(seasons)|[Container.Content(episodes)+!SubString(Container.FolderName,$LOCALIZE[20373])]">$LOCALIZE[20343]</value>
+    <value condition="Container.Content(episodes)+!SubString(Container.FolderPath,videodb://5/) + SubString(Container.FolderName,$LOCALIZE[20373])">$INFO[ListItem.TVShowTitle,$LOCALIZE[20343] / ]</value>
     <value>$LOCALIZE[3]</value>
   </variable>
   
