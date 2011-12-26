@@ -10,10 +10,7 @@
   </animation>
   <controls>
     <control type="group">
-      <animation effect="fade" time="250" start="100" end="0" reversible="true" condition="Window.IsVisible(addonsettings)">Conditional</animation>
-      <animation effect="fade" time="200">Visible</animation>
-      <animation effect="fade" time="200">Hidden</animation>
-      <visible>!Window.IsActive(TextViewer)</visible>
+      <visible>![Window.IsVisible(addonsettings)|Window.IsVisible(textviewer)]</visible>
       <include>Furniture_SettingsBackPanel</include>
       <include>Furniture_SettingsLogo</include>
       <control type="label">
@@ -165,11 +162,10 @@
         </control>
         <control type="image">
           <posx>0</posx>
-          <posy>160</posy>
+          <posy>112</posy>
           <width>936</width>
-          <height>1</height>
-          <texture>home/nowplaying/nowplayline.png</texture>
-          <colordiffuse>44FFFFFF</colordiffuse>
+          <height>49</height>
+          <texture>settings/settings_separator.png</texture>
         </control>
         <control type="label">
           <description>Description txt</description>
@@ -197,19 +193,14 @@
             <pagecontrol>60</pagecontrol>
           </control>
           <control type="scrollbar" id="60">
-            <posx>920</posx>
+            <posx>950</posx>
             <posy>195</posy>
-            <width>65</width>
+            <width>6</width>
             <height>250</height>
-            <texturesliderbackground>views/scrollbarbacklist.png</texturesliderbackground>
-            <texturesliderbar>-</texturesliderbar>
-            <texturesliderbarfocus>-</texturesliderbarfocus>
-            <textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
-            <textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
             <onleft>9000</onleft>
             <onright>9000</onright>
             <showonepage>false</showonepage>
-            <orientation>vertical</orientation>
+            <include>CommonVerticalScrollbar</include>
           </control>
           <control type="label">
             <description>Disclaimer txt</description>

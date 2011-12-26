@@ -9,17 +9,28 @@
   <controls>
     <control type="group">
       <visible>!Skin.HasSetting(Show_Info_Paused)</visible>
-      <control type="image">
-        <description>ClearART</description>
-        <posx>950</posx>
-        <posy>534</posy>
-        <width>330</width>
-        <height>185</height>
-        <texture background="true">$INFO[Player.FolderPath]/clearart.png</texture>
-        <aspectratio>keep</aspectratio>
+      <control type="group">
         <visible>VideoPlayer.Content(episodes)</visible>
         <visible>Player.Paused</visible>
         <include>Animation_CommonFade</include>
+        <control type="image">
+          <description>ClearART</description>
+          <posx>950</posx>
+          <posy>534</posy>
+          <width>330</width>
+          <height>185</height>
+          <texture background="true">$INFO[Player.FolderPath]/clearart.png</texture>
+          <aspectratio>keep</aspectratio>
+        </control>
+        <control type="image">
+          <description>ClearART</description>
+          <posx>950</posx>
+          <posy>534</posy>
+          <width>330</width>
+          <height>185</height>
+          <texture background="true">$INFO[Player.FolderPath]../clearart.png</texture>
+          <aspectratio>keep</aspectratio>
+        </control>
       </control>
       <control type="image">
         <description>ClearART</description>
@@ -27,13 +38,12 @@
         <posy>534</posy>
         <width>330</width>
         <height>185</height>
-        <texture background="true">$INFO[Player.FolderPath]../clearart.png</texture>
+        <texture background="true">$INFO[Player.FolderPath]/logo.png</texture>
         <aspectratio>keep</aspectratio>
-        <visible>VideoPlayer.Content(episodes)</visible>
+        <visible>VideoPlayer.Content(movies)</visible>
         <visible>Player.Paused</visible>
         <include>Animation_CommonFade</include>
       </control>
-
       <control type="group">
         <description>Top bar</description>
         <animation type="WindowOpen">
@@ -893,20 +903,12 @@
                 <posy>400</posy>
                 <width>207</width>
                 <height>310</height>
-                <texture>thumbs/poster_glass.png</texture>
+                <texture diffuse="thumbs/movieposter_mask.png">thumbs/thumb_glass_noreflect.png</texture>
                 <bordertexture border="-26">thumbs/poster_shadow.png</bordertexture>
               </control>
             </control>
-            <control type="image" >
+            <control type="group">
               <visible>![VideoPlayer.Content(movies)|VideoPlayer.Content(MusicVideos)]</visible>
-              <description>Cover Image</description>
-              <posx>1030</posx>
-              <posy>575</posy>
-              <width>245</width>
-              <height>138</height>
-              <texture background="true" diffuse="thumbs/multiplex_tvmask.png">$INFO[VideoPlayer.Cover]</texture>
-              <aspectratio scalediffuse="false">scale</aspectratio>
-              <bordertexture border="-16">thumbs/multiplex_tvborder.png</bordertexture>
               <animation type="WindowOpen">
                 <effect type="slide" start="300,0" end="0,0" time="600" tween="cubic" easing="out"/>
               </animation>
@@ -914,6 +916,25 @@
                 <effect type="slide" start="0,0" end="300,0" time="600" tween="cubic" easing="out"/>
                 <effect type="fade" start="100" end="0" time="600"/>
               </animation>
+              <control type="image" >
+                <description>Cover Image</description>
+                <posx>1030</posx>
+                <posy>575</posy>
+                <width>245</width>
+                <height>138</height>
+                <texture background="true" diffuse="thumbs/multiplex_tvmask.png">$INFO[VideoPlayer.Cover]</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+              </control>
+              <control type="image" >
+                <description>Cover Image</description>
+                <posx>1030</posx>
+                <posy>575</posy>
+                <width>245</width>
+                <height>138</height>
+                <texture background="true" diffuse="thumbs/multiplex_tvmask.png">thumbs/multiplex_tv_glass_reflect.png</texture>
+                <aspectratio scalediffuse="false">scale</aspectratio>
+                <bordertexture border="-16">thumbs/multiplex_tvborder.png</bordertexture>
+              </control>
             </control>
           </control>
 

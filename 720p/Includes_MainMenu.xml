@@ -697,7 +697,6 @@
     </item>
     <item id="90106">
       <label>31507</label>
-      <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
       <onclick>ActivateWindow(Videos,Addons,return)</onclick>
       <visible>Container(9000).HasFocus(2)+!Skin.HasSetting(VideosSub6)</visible>
     </item>
@@ -954,7 +953,7 @@
     <item id="12">
       <label>31508</label>
       <onclick condition="!Skin.HasSetting(shutdownwarning)">Shutdown()</onclick>
-      <onclick condition="Skin.HasSetting(shutdownwarning)">ActivateWindow(shutdownmenu)</onclick>
+      <onclick condition="Skin.HasSetting(shutdownwarning)">ActivateWindow(1113)</onclick>
       <icon>special://skin/backgrounds/shutdown.jpg</icon>
       <thumb>$INFO[Skin.String(Home_Custom_Back_Shutdown_Folder)]</thumb>
       <visible>!Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
@@ -1080,6 +1079,15 @@
       <height>150</height>
       <texture>home/homemenu_gradient.png</texture>
       <visible>!Skin.HasSetting(aurahome)</visible>
+    </control>
+    <control type="image">
+      <posx>0</posx>
+      <posy>302</posy>
+      <width>1280</width>
+      <height>150</height>
+      <texture>home/homemenu_overlay.png</texture>
+      <colordiffuse>$INFO[Skin.String(diffuse_home)]</colordiffuse>
+      <visible>Skin.HasSetting(glasshome)</visible>
     </control>
   </include>
   <include name="MainMenuLabels">

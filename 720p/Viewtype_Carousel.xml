@@ -8,7 +8,7 @@
   <include name="CarouselGlassOverlay">
     <control type="image">
       <include>CarouselThumbDimensions</include>
-      <texture diffuse="thumbs/thumb_mask.png">thumbs/poster_glass.png</texture>
+      <texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
       <bordersize>16</bordersize>
     </control>
   </include>
@@ -397,10 +397,10 @@
         <onright>55</onright>
         <onup condition="!IsEmpty(ListItem.Trailer)">7001</onup>
         <onup condition="IsEmpty(ListItem.Trailer)">9000</onup>
-        <ondown>73</ondown>
+        <ondown>61</ondown>
         <scrolltime tween="quadratic" easing="out">300</scrolltime>
         <preloaditems>2</preloaditems>
-        <pagecontrol>73</pagecontrol>
+        <pagecontrol>61</pagecontrol>
         <orientation>horizontal</orientation>
         <focusposition>3</focusposition>
         <include>Animation_OpenCloseZoom_New</include>
@@ -435,7 +435,7 @@
               <posy>0</posy>
               <width>196</width>
               <height>276</height>
-              <texture diffuse="thumbs/thumb_mask.png">thumbs/poster_glass.png</texture>
+              <texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
               <bordersize>16</bordersize>
             </control>
             <control type="image">
@@ -483,7 +483,7 @@
               <posy>0</posy>
               <width>196</width>
               <height>276</height>
-              <texture diffuse="thumbs/thumb_mask.png">thumbs/poster_glass.png</texture>
+              <texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
               <bordersize>16</bordersize>
             </control>
             <control type="image">
@@ -496,12 +496,6 @@
             </control>
           </control>
         </focusedlayout>
-      </control>
-      <control type="scrollbar" id="73">
-        <animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(73)">Conditional</animation>
-        <onup>55</onup>
-        <showonepage>true</showonepage>
-        <ondown>Skin.ToggleSetting(carouselflow)</ondown>
       </control>
     </control>
   </include>

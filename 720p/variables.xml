@@ -214,7 +214,11 @@
     <value condition="Container.Content(episodes)+Skin.HasSetting(extrafanartepisodes)+System.IdleTime(10)">$INFO[ListItem.Path,,../extrafanart]</value>
     <value>$INFO[Listitem.Property(Fanart_Image)]</value>
   </variable>
- 
+
+  <variable name="BigFanListVar">
+    <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/fanart/,.jpg]</value>
+    <value>$INFO[Listitem.Property(Fanart_Image)]</value>
+  </variable>
   
   <!--Infopanel variables-->
   <variable name="FanartPanelDetail1Var">
@@ -364,6 +368,7 @@
   <variable name="TVShowLogoVar">
     <value condition="Container.Content(tvshows)|Container.Content(seasons)">$INFO[ListItem.path,,logo.png]</value>
     <value condition="Container.Content(episodes)">$INFO[ListItem.path,,../logo.png]</value>
+    <value condition="Container.Content(movies)">$INFO[ListItem.Path,,logo.png]</value>
   </variable>
 
   <variable name="TVGuideInfoFanart">
@@ -755,6 +760,18 @@
     <value condition="Skin.HasSetting(TVShowsUsePoster)+Container.Content(tvshows)">$INFO[ListItem(7).Path,,poster.jpg]</value>
     <value>$INFO[ListItem(7).Thumb]</value>
   </variable>
+  <variable name="ShowcaseItem8Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(8).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(8).Path,,../poster.jpg]</value>
+    <value condition="Skin.HasSetting(TVShowsUsePoster)+Container.Content(tvshows)">$INFO[ListItem(8).Path,,poster.jpg]</value>
+    <value>$INFO[ListItem(8).Thumb]</value>
+  </variable>
+  <variable name="ShowcaseItem9Var">
+    <value condition="Container.Content(genres)">$INFO[ListItem(9).Label,special://skin/extras/genre/video/icons/,.jpg]</value>
+    <value condition="SubString(Container.FolderPath,videodb://5/)">$INFO[ListItem(9).Path,,../poster.jpg]</value>
+    <value condition="Skin.HasSetting(TVShowsUsePoster)+Container.Content(tvshows)">$INFO[ListItem(9).Path,,poster.jpg]</value>
+    <value>$INFO[ListItem(9).Thumb]</value>
+  </variable>
 
   <variable name="MusicShowcaseItem-6Var">
     <value condition="Container.Content(genres)">$INFO[ListItem(-6).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
@@ -815,7 +832,7 @@
     <value>$INFO[ListItem.Label]</value>
   </variable>
   <variable name="ListLabel2Var">
-    <value condition="Container.Content(songs)">$INFO[ListItem.Album]</value>
+    <value condition="Container.Content(songs)">$INFO[ListItem.Artist]</value>
     <value condition="Container.Content(albums)">$INFO[ListItem.Label2]</value>
     <value condition="Container.Content(movies)|Container.Content(tvshows)">$INFO[ListItem.Genre]</value>
     <value condition="Container.Content(seasons)">[LOWERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]][/LOWERCASE]</value>
@@ -849,7 +866,7 @@
   <variable name="BreadcrumbsTrailerVar">
     <value condition="Control.IsVisible(511)+!Control.HasFocus(7001)">$LOCALIZE[31237]</value>
     <value condition="[Control.IsVisible(50)|Control.IsVisible(550)] + !Control.HasFocus(7001)">$LOCALIZE[31368]</value>
-    <value condition="[Control.IsVisible(517)|Control.IsVisible(55)|Control.IsVisible(510)|Control.IsVisible(516)|Control.IsVisible(501)|Control.IsVisible(503)|Control.IsVisible(504)] + !Control.HasFocus(7001)">$LOCALIZE[312573]</value>
+    <value condition="[Control.IsVisible(517)|Control.IsVisible(55)|Control.IsVisible(510)|Control.IsVisible(516)|Control.IsVisible(501)|Control.IsVisible(503)|Control.IsVisible(504)|Control.IsVisible(57)] + !Control.HasFocus(7001)">$LOCALIZE[312573]</value>
     <value condition="Control.HasFocus(7001)">$LOCALIZE[312575]</value>
   </variable>
   <variable name="BreadcrumbsVideoVar">
@@ -891,6 +908,11 @@
   </variable>
   <variable name="ListAlbumVar">
     <value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+    <value>$INFO[ListItem.Icon]</value>
+  </variable>
+  <variable name="ThumbnailVar">
+    <value condition="Window.IsActive(musiclibrary) + Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+    <value condition="Window.IsActive(videos) + Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/icons/,.jpg]</value>
     <value>$INFO[ListItem.Icon]</value>
   </variable>
   <variable name="LandscapeThumbVar">

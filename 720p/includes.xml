@@ -23,7 +23,7 @@
   <include file="Viewtype_Carousel.xml" />
   <include file="Viewtype_Stripshow.xml" />
   <include file="Viewtype_Thumbnail.xml" />
-  <include file="Viewtype_Albums.xml" />
+  <include file="Viewtype_Shift.xml" />
   <include file="IncludesHomeRecentlyAdded.xml" />
   <include file="Includes_MediaFlags.xml" />
   <include file="Includes_Animations.xml" />
@@ -42,7 +42,7 @@
 
   <include name="VideoBackground">
     <control type="group">
-      <visible>Player.HasVideo+[Control.IsVisible(506)|Control.IsVisible(511)|Control.IsVisible(50)|Control.IsVisible(500)|Control.IsVisible(514)|Control.IsVisible(516)|Control.IsVisible(551)|Control.IsVisible(560)|Control.IsVisible(510)]</visible>
+      <visible>Player.HasVideo+[Control.IsVisible(506)|Control.IsVisible(511)|Control.IsVisible(50)|Control.IsVisible(500)|Control.IsVisible(514)|Control.IsVisible(516)|Control.IsVisible(551)|Control.IsVisible(560)|Control.IsVisible(510)|Control.IsVisible(57)]</visible>
       <include>Animation_VisibleChange200</include>
       <control type="image">
         <posx>0</posx>
@@ -518,37 +518,29 @@
   </include>
   <include name="Objects_KeyOffVars">
     <textcolor>77FFFFFF</textcolor>
-    <focusedcolor>77FFFFFF</focusedcolor>
+    <focusedcolor>FFFFFFFF</focusedcolor>
     <selectedcolor>77FFFFFF</selectedcolor>
     <align>center</align>
     <aligny>top</aligny>
     <textoffsety>21</textoffsety>
     <font>Font_Reg19</font>
   </include>
-  <include name="Objects_KeyOnVars">
-    <textcolor>FFFFFFFF</textcolor>
-    <focusedcolor>FFFFFFFF</focusedcolor>
-    <selectedcolor>FFFFFFFF</selectedcolor>
-    <align>center</align>
-    <aligny>top</aligny>
-    <textoffsety>21</textoffsety>
-    <include>Animation_VisibleChange200</include>
-    <include>Animation_WindowFade200</include>
-    <font>Font_Reg19</font>
-  </include>
   <include name="Objects_DoubleKeyOff">
+    <posx>-86</posx>
     <posy>0</posy>
-    <width>110</width>
+    <width>200</width>
     <height>68</height>
-    <texturefocus>keyboard/keyboard_doublenf.png</texturefocus>
-    <texturenofocus>keyboard/keyboard_doublenf.png</texturenofocus>
+    <texturefocus>keyboard/keyboard_triplef.png</texturefocus>
+    <texturenofocus>keyboard/keyboard_triplenf.png</texturenofocus>
+    <alttexturefocus>keyboard/keyboard_triplef.png</alttexturefocus>
+    <alttexturenofocus>keyboard/keyboard_triplenf.png</alttexturenofocus>
     <include>Objects_KeyOffVars</include>
   </include>
   <include name="Objects_DoubleKeyOffSymbol">
     <posy>0</posy>
     <width>110</width>
     <height>68</height>
-    <texturefocus>keyboard/keyboard_doublenf.png</texturefocus>
+    <texturefocus>keyboard/keyboard_doublef.png</texturefocus>
     <texturenofocus>keyboard/keyboard_doublenf.png</texturenofocus>
     <textcolor>77FFFFFF</textcolor>
     <focusedcolor>77FFFFFF</focusedcolor>
@@ -562,49 +554,9 @@
     <posy>0</posy>
     <width>68</width>
     <height>68</height>
-    <texturefocus>keyboard/keyboard_singlenf.png</texturefocus>
+    <texturefocus>keyboard/keyboard_singlef.png</texturefocus>
     <texturenofocus>keyboard/keyboard_singlenf.png</texturenofocus>
     <include>Objects_KeyOffVars</include>
-  </include>
-  <include name="Objects_DoubleKeyOn">
-    <posy>0</posy>
-    <width>110</width>
-    <height>68</height>
-    <texturefocus>keyboard/keyboard_doublef.png</texturefocus>
-    <texturenofocus>keyboard/keyboard_doublef.png</texturenofocus>
-    <include>Objects_KeyOnVars</include>
-  </include>
-  <include name="Objects_DoubleKeyOnSymbol">
-    <posy>0</posy>
-    <width>110</width>
-    <height>68</height>
-    <texturefocus>keyboard/keyboard_doublef.png</texturefocus>
-    <texturenofocus>keyboard/keyboard_doublef.png</texturenofocus>
-    <textcolor>FFFFFFFF</textcolor>
-    <focusedcolor>FFFFFFFF</focusedcolor>
-    <selectedcolor>FFFFFFFF</selectedcolor>
-    <align>center</align>
-    <aligny>top</aligny>
-    <textoffsety>21</textoffsety>
-    <include>Animation_VisibleChange200</include>
-    <include>Animation_WindowFade200</include>
-    <font>Font_Reg19</font>
-  </include>
-  <include name="Objects_SingleKeyOn">
-    <posy>0</posy>
-    <width>68</width>
-    <height>68</height>
-    <texturefocus>keyboard/keyboard_singlef.png</texturefocus>
-    <texturenofocus>keyboard/keyboard_singlef.png</texturenofocus>
-    <include>Objects_KeyOnVars</include>
-  </include>
-  <include name="Objects_TripleKeyOn">
-    <posy>0</posy>
-    <width>152</width>
-    <height>68</height>
-    <texturefocus>keyboard/keyboard_triplef.png</texturefocus>
-    <texturenofocus>keyboard/keyboard_triplef.png</texturenofocus>
-    <include>Objects_KeyOnVars</include>
   </include>
   <include name="Furniture_Clock">
     <control type="group">
@@ -774,7 +726,7 @@
         <width>130</width>
         <height>130</height>
         <aspectratio scalediffuse="false" align="right">scale</aspectratio>
-        <texture diffuse="thumbs/cdcover_mask.png">thumbs/poster_glass.png</texture>
+        <texture diffuse="thumbs/cdcover_mask.png">thumbs/cdcover_glass_aa.png</texture>
         <bordertexture border="-7">thumbs/cd_shadow.png</bordertexture>
       </control>
       <control type="label">
@@ -1052,5 +1004,15 @@
         <textcolor>44ffffff</textcolor>
       </control>
     </control>
+  </include>
+
+  <include name="CommonVerticalScrollbar">
+    <texturesliderbackground border="0,4,0,4">views/texturesliderbackground.png</texturesliderbackground>
+    <texturesliderbar border="0,4,0,4">views/texturesliderbar.png</texturesliderbar>
+    <texturesliderbarfocus border="0,4,0,4">views/texturesliderbarfocus.png</texturesliderbarfocus>
+    <textureslidernib>views/ScrollBarNib.png</textureslidernib>
+    <textureslidernibfocus>views/ScrollBarNib.png</textureslidernibfocus>
+    <showonepage>true</showonepage>
+    <orientation>vertical</orientation>
   </include>
 </includes>

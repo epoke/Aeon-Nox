@@ -1,5 +1,13 @@
+[B]2.0.1[/B]
+- Changed: Second label in Songs list view now shows artist instead of album.
+- Fixed: Settings separator caused scrollbar to show when there was only one page.
+- Fixed: Floor vignettes were visible on Shift view.
+- Fixed: Music visualization fanart was stretched instead of scaled like in the rest of the skin.
+- Fixed: Changelog text would overlap panel.
+- Corrected Spanish summary - thx PatOso
+
 [B]2.0.0[/B]
-[B]*This update will make you loose all your custom favorites assigned in the main menu due to changes in the favourites script*[/B]
+[B]*This update will make you lose all your custom favorites assigned in the main menu due to changes in the favourites script*[/B]
 - Branched off eden-pre branch.
 - Removed favourites and playlists shortcuts in the skin settings menu. Everything in the main menu can now be customized through "Customize Main Menu" in the Home Window Options. This will require script.playlists, available on eden-pre repo. (Shortcut available in the shutdown menu if accessed on Home window)
 - All sub-menu items can now be disabled or enabled.
@@ -10,7 +18,8 @@
 - Added Korean fontset - thx francisx.
 - Added Hungarian rating flags - thx Attila.
 - Added Greek language - thx CutSickAss.
-- Updated Spanish language strings - thx tocinillo.
+- Added Italian language - thx liltee89.
+- Updated Spanish language strings - thx tocinillo, PatOso.
 - Updated French language strings - thx Rififi77.
 - Added German language support - thx alexr.
 - Added Dutch language strings - thx Flipje, Machine-Sanctum.
@@ -28,14 +37,16 @@
 - Disabled busy dialog when Cinema Experience is running.
 - Added TV show logo and posterlayout for TV show infopanel.
 - Weather window redesigned.
+- Next Aired window redesigned.
 - Added new viewtype Thumbnail.
-- Added new viewtype Albums.
+- Added new viewtype Shift.
+- Removed "Poster Slide" option; Posters view is now only Poster slide.
+- "Watched" and "New" overlays redesigned.
 - Updated Panel viewtype which removes detail info option.
 - Unified look of all Wall views.
 - Slim list has different selectbar.
 - Added option to show remaining time in Video Info/Seekbar.
 - Added option to remove playercontrols in Music and Video OSD.
-- Disabling 'Poster Slide' in Posters view now gives a different Poster view layout.
 - Added Korean and French rating flags - thx francisx and Rififi77/Maxoo
 - Added Flip CD Cover option in Music Visualization. (needs artist slideshow script).
 - Videolibrary now has one global option to disable fanart instead of separate options for movies/tvshows/other.
@@ -47,6 +58,10 @@
 - More views available in poster format for Music Videos.
 - Replaced video window in List and LowList view with fullscreen background video.
 - New InfoList layout: fewer options, also selectable for add-ons.
+- Showcase, Posters and DVDCase view can now also be selected in recently added episodes (needs poster.jpg in root of tvshow).
+- Replaced option "Use Posters instead of banners for TV Shows" with "use poster.jpg" and "use banner.jpg"; 
+  Poster.jpg will try to load poster.jpg from the root of your tv show in (most) poster shaped views, banner.jpg will try to load banner.jpg from the root of your tv show in banner shaped views.
+- Genre icons are now available in Showcase(2)/DVD Case/List/Shift/Thumbnail/Wall view.
 
 [B]1.7.0[/B]
 - Hungarian language updated - thx frodo19
