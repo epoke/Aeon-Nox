@@ -403,8 +403,8 @@
   <string id="31467">추가 팬아트 가져오기</string>
   <string id="31468">추가 썸네일 가져오기</string>
   <string id="31469">감상을 완료하지 않은 영화</string>
-  <string id="31470">듣지 않은 앨범 추천</string>
-  <string id="31471">감상하지 않은 영화 추천</string>
+  <string id="31470">추천 앨범</string>
+  <string id="31471">추천 영화</string>
   <string id="31472">최근에 시청한 TV쇼의 시청하지 않은 에피소드</string>
   <string id="31473">시청하지 않은 에피소드</string>
   <string id="31474">설치된 애드온 추천</string>
@@ -466,7 +466,7 @@
   <string id="31637">지금 시청하고 있는 TV 쇼의 시즌 포스터 보기</string>
   <string id="31638">비디오 라이브러리에 Next Aired 정보 보기</string>
   <string id="31639">정보 화면에서 미리보기 숨김</string>
-  <string id="31640">정보 화면에서 재생 시간 대신 남은 시간 보기.</string>
+  <string id="31640">재생 시간 대신 남은 시간 보기.</string>
   <string id="31641">Flip CD cover to show artist slideshow</string>
   <string id="31642">'Weather Fanart PDA Style' 애드온의 날씨 아이콘 사용</string>  
   <string id="31643">항목 사이을 전환하려면 위/아래 화살표를 누르세요</string>
