@@ -4,6 +4,11 @@
 - Added 'Power off system' button to shutdown submenu.
 - Added Chines language - thx taxigps.
 - More conventional progress bar on volume bar and music/video scan.
+- Added new fontset: Condensed (Ubuntu Condensed font).
+- 'Featured' item redesigned based on the Metro homestyle of Xperience1080.
+- Updated German language - thx Alex.
+- New Fast Forward / Rewind design + updated seekbar graphics.
+- Added automatic rotation of list content on the Home widgets. (enabled by default, can be turned off in the widget options)
 
 [B]2.0.1[/B]
 - Changed: Second label in Songs list view now shows artist instead of album.
