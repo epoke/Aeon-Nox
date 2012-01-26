@@ -1,7 +1,17 @@
 <window id="1115" type="window">
-  <defaultcontrol always="true">5012</defaultcontrol>
+  <defaultcontrol>40</defaultcontrol>
   <onload condition="![Skin.HasSetting(HomeRandomMovies)|Skin.HasSetting(HomeRandomTV)|Skin.HasSetting(HomeRandomMusic)|Skin.HasSetting(HomeRandomAddons)|Skin.HasSetting(HomeRandomAlbums)|Skin.HasSetting(HomeRandomPoster)]">XBMC.RunScript(script.randomitems,limit=8&amp;unplayed=True)</onload>
   <onload condition="System.HasAddon(script.watchlist) + IsEmpty(Window(Home).Property(WatchList_Running)">RunScript(script.watchlist,movies=true&amp;episodes=true&amp;albums=true&amp;limit=8)</onload>
+  <onload condition="ControlGroup(5000).HasFocus">AlarmClock(Tile,Control.Move(5002,1),00:04,silent,loop)</onload>
+  <onload condition="ControlGroup(5000).HasFocus">AlarmClock(TileTwo,Control.Move(5003,1),00:07,silent,loop)</onload>
+  <onload condition="ControlGroup(6000).HasFocus">AlarmClock(Tile,Control.Move(6002,1),00:04,silent,loop)</onload>
+  <onload condition="ControlGroup(6000).HasFocus">AlarmClock(TileTwo,Control.Move(6003,1),00:07,silent,loop)</onload>
+  <onload condition="ControlGroup(7000).HasFocus">AlarmClock(Tile,Control.Move(7002,1),00:04,silent,loop)</onload>
+  <onload condition="ControlGroup(8000).HasFocus">AlarmClock(Tile,Control.Move(8002,1),00:04,silent,loop)</onload>
+  <onload condition="ControlGroup(9000).HasFocus">AlarmClock(Tile,Control.Move(9002,1),00:04,silent,loop)</onload>
+  <onload condition="ControlGroup(10000).HasFocus">AlarmClock(Tile,Control.Move(10002,1),00:04,silent,loop)</onload>
+  <onload condition="ControlGroup(11000).HasFocus">AlarmClock(Tile,Control.Move(11002,1),00:04,silent,loop)</onload>
+  <onload condition="ControlGroup(11000).HasFocus">AlarmClock(TileTwo,Control.Move(11003,1),00:07,silent,loop)</onload>
   <onunload>CancelAlarm(Tile,true)</onunload>
   <onunload>CancelAlarm(TileTwo,true)</onunload>
   <coordinates>
@@ -14,82 +24,11 @@
   <controls>
 
     <!-- Fanart -->
-    <control type="group">
+    <control type="multiimage">
       <description>Fanart</description>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Container(5001).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(5001)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Container(5002).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(5010)|Control.HasFocus(5012)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_tvshows.jpg">$INFO[Container(5003).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(5011)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true">$INFO[Container(6001).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(6001)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Container(6002).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(6010)|Control.HasFocus(6012)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Container(6003).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(6011)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true">$INFO[Container(7001).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(7001)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_tvshows.jpg">$INFO[Container(7002).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(7010)|Control.HasFocus(7012)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_tvshows.jpg">$INFO[Container(7003).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(7003)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true">$INFO[Container(8001).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(8001)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[Container(8002).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(8010)|Control.HasFocus(8012)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[Container(8003).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(8003)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true">$INFO[Container(9001).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(9001)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[Container(9002).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(9010)|Control.HasFocus(9012)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[Container(9003).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(9003)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true">$INFO[Container(10001).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(10001)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/addons.jpg">$INFO[Container(10002).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(10010)|Control.HasFocus(10012)</visible>
-      </control>
-      <control type="multiimage">
-        <imagepath background="true" fallback="special://skin/backgrounds/addons.jpg">$INFO[Container(10003).ListItem.Property(Fanart)]</imagepath>
-        <visible>Control.HasFocus(10003)</visible>
-      </control>
+      <imagepath background="true">$VAR[FeaturedFanartVar]</imagepath>
     </control>
-   
+
     <include>CommonMediaPlayingBackground</include>
     
     <!-- Furniture -->
@@ -147,6 +86,8 @@
       <control type="group" id="5000">
         <width>1550</width>
         <height>520</height>
+        <onfocus>AlarmClock(Tile,Control.Move(5002,1),00:04,silent,loop)</onfocus>
+        <onfocus>AlarmClock(TileTwo,Control.Move(5003,1),00:07,silent,loop)</onfocus>
         <animation type="Conditional" condition="![ControlGroup(5000).HasFocus|Control.HasFocus(5012)]">
           <effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
           <effect type="zoom" start="100" end="70" time="500" tween="cubic" easing="inout" center="775,260" />
@@ -182,6 +123,7 @@
             <posy>19</posy>
             <width>200</width>
             <height>400</height>
+            <onleft>AlarmClock(Tile,Control.Move(10002,1),00:04,silent,loop)</onleft>
             <onleft>10003</onleft>
             <onright>5010</onright>
             <onup>5012</onup>
@@ -337,7 +279,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -561,7 +503,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -960,7 +902,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -1183,7 +1125,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -1578,7 +1520,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -1991,7 +1933,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -2187,7 +2129,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -2691,7 +2633,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -2887,7 +2829,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -3406,7 +3348,7 @@
               <posy>370</posy>
               <width>572</width>
               <height>25</height>
-              <font>Font_Condensed15</font>
+              <font>Font_Condensed15_Caps</font>
               <textcolor>floor</textcolor>
               <align>left</align>
               <aligny>center</aligny>
@@ -3625,6 +3567,8 @@
               <width>400</width>
               <height>370</height>
               <onleft>10010</onleft>
+              <onright>AlarmClock(Tile,Control.Move(5002,1),00:04,silent,loop)</onright>
+              <onright>AlarmClock(TileTwo,Control.Move(5003,1),00:07,silent,loop)</onright>
               <onright>5001</onright>
               <onup>10012</onup>
               <ondown>-</ondown>
