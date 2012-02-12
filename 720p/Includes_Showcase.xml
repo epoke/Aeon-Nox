@@ -20,17 +20,17 @@
     <align>center</align>
     <bordertexture border="18">thumbs/poster_shadow.png</bordertexture>
     <bordersize>18</bordersize>
-    <aspectratio scalediffuse="false">stretch</aspectratio>
+    <aspectratio scalediffuse="false">scale</aspectratio>
 	</include>
 	<include name="MovieShowcaseThumbReflectionMain">
 		<include>MovieShowcaseThumbReflectionDimensions</include>
 		<colordiffuse>52FFFFFF</colordiffuse>
-		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 	</include>
 	<include name="MovieShowcaseThumbReflection">
 		<include>MovieShowcaseThumbReflectionDimensions</include>
 		<colordiffuse>white6</colordiffuse>
-		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 		<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
 	</include>
   <include name="WatchedOverlayShowCase">
@@ -797,8 +797,8 @@
         <effect type="fade" start="0" end="100" time="300"/>
       </animation>
       <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="130" center="640,360" time="300" tween="cubic" easing="in"/>
         <effect type="fade" start="100" end="0" time="300" delay="300"/>
-        <effect type="zoom" start="100" end="130" center="640,360" time="300" delay="300" tween="cubic" easing="in"/>
       </animation>
       <visible>Control.IsVisible(509) + !Control.IsVisible(7007) + !Control.IsVisible(7002) + Control.IsVisible(970)+!Control.HasFocus(110)</visible>
 			<control type="group">
@@ -1150,8 +1150,8 @@
         <effect type="fade" start="0" end="100" time="300"/>
       </animation>
       <animation type="WindowClose" reversible="false">
+        <effect type="zoom" start="100" end="130" center="640,360" time="300" tween="cubic" easing="in"/>
         <effect type="fade" start="100" end="0" time="300" delay="300"/>
-        <effect type="zoom" start="100" end="130" center="640,360" time="300" delay="300" tween="cubic" easing="in"/>
       </animation>
       <visible>Control.IsVisible(501) + !Control.IsVisible(6001) + !Control.IsVisible(6002) + Control.IsVisible(960) +!Control.HasFocus(109)</visible>
 			<camera x="640" y="540" />
@@ -1348,8 +1348,6 @@
           <effect type="zoom" start="70" end="100" center="auto" easing="in" tween="back" time="450" delay="550"/>
         </animation>
         <animation effect="slide" end="0,-160"  time="550" easing="out" tween="cubic" condition="Player.HasVideo">Conditional</animation>-->
-				<animation effect="fade" start="0" end="100" time="400" condition="!Skin.HasSetting(showcaseinfoon)">WindowOpen</animation>
-				<animation effect="fade" end="0" time="200">WindowClose</animation>
 				<width>1280</width>
 				<height>500</height>
 				<control type="image">
@@ -1391,7 +1389,7 @@
 					<aligny>center</aligny>
 					<align>center</align>
 					<label>$INFO[ListItem.Tagline]</label>
-          <textcolor>panelinfo</textcolor>
+          <textcolor>white3</textcolor>
 					<visible>Container.Content(movies)+!Skin.HasSetting(infopaneltagline)</visible>
 				</control>
 				<control type="label">
@@ -1404,7 +1402,7 @@
 					<aligny>center</aligny>
 					<align>center</align>
 					<label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
-					<textcolor>panelinfo</textcolor>
+					<textcolor>white3</textcolor>
 					<visible>Container.Content(episodes)+!Skin.HasSetting(breadcrumb)</visible>
 				</control>
 				<control type="group">

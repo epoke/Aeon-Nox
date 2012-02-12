@@ -172,7 +172,7 @@
           <posy>38</posy>
           <width>420</width>
           <height>13</height>
-          <texturebg>osd/seek/progress_back_long.png</texturebg>
+          <texturebg>osd/seek/progress_back.png</texturebg>
           <lefttexture>osd/seek/progresscache_left.png</lefttexture>
           <midtexture>osd/seek/progresscache_mid.png</midtexture>
           <righttexture>osd/seek/progresscache_right.png</righttexture>
@@ -185,7 +185,7 @@
           <posy>38</posy>
           <width>420</width>
           <height>13</height>
-          <texturebg>osd/seek/progresscache_back_long.png</texturebg>
+          <texturebg>osd/seek/progresscache_back.png</texturebg>
           <lefttexture>osd/seek/progress_left.png</lefttexture>
           <midtexture>osd/seek/progress_mid.png</midtexture>
           <righttexture>osd/seek/progress_right.png</righttexture>
@@ -392,7 +392,7 @@
               <posy>38</posy>
               <width>420</width>
               <height>13</height>
-              <texturebg>osd/seek/progress_back_long.png</texturebg>
+              <texturebg>osd/seek/progress_back.png</texturebg>
               <lefttexture>osd/seek/progresscache_left.png</lefttexture>
               <midtexture>osd/seek/progresscache_mid.png</midtexture>
               <righttexture>osd/seek/progresscache_right.png</righttexture>
@@ -405,7 +405,7 @@
               <posy>38</posy>
               <width>420</width>
               <height>13</height>
-              <texturebg>osd/seek/progresscache_back_long.png</texturebg>
+              <texturebg>osd/seek/progresscache_back.png</texturebg>
               <lefttexture>osd/seek/progress_left.png</lefttexture>
               <midtexture>osd/seek/progress_mid.png</midtexture>
               <righttexture>osd/seek/progress_right.png</righttexture>
@@ -548,9 +548,9 @@
             <animation effect="slide" start="0,0" end="-150,0" time="200">Hidden</animation>
             <visible>player.chaptercount+![Player.Forwarding | Player.Rewinding]</visible>
             <control type="image">
-              <posx>-181</posx>
+              <posx>160</posx>
               <posy>-30</posy>
-              <width>680</width>
+              <width>342</width>
               <height>58</height>
               <texture>osd/osd_bottom_bar.png</texture>
             </control>

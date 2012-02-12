@@ -253,14 +253,14 @@
 				<control type="progress">
 					<description>CPU BAR</description>
 					<posx>0</posx>
-					<posy>455</posy>
+					<posy>459</posy>
 					<width>320</width>
-					<height>18</height>
-					<texturebg>osd/seek/progress_back.png</texturebg>
-					<lefttexture>osd/seek/progress_left.png</lefttexture>
-					<midtexture>osd/seek/progress_mid.png</midtexture>
-					<righttexture>osd/seek/progress_right.png</righttexture>
-					<info>System.CPUUsage</info>
+					<height>14</height>
+          <texturebg>dialogs/progress/progress_back.png</texturebg>
+          <lefttexture>dialogs/progress/progress_left.png</lefttexture>
+          <midtexture>dialogs/progress/progress_mid.png</midtexture>
+          <righttexture>dialogs/progress/progress_right.png</righttexture>
+          <info>System.CPUUsage</info>
 				</control>
 				<control type="label" id="52">
 					<description>Memory Text</description>
@@ -276,14 +276,14 @@
 				<control type="progress">
 					<description>Memory BAR</description>
 					<posx>0</posx>
-					<posy>505</posy>
+					<posy>509</posy>
 					<width>320</width>
-					<height>18</height>
-					<texturebg>osd/seek/progress_back.png</texturebg>
-					<lefttexture>osd/seek/progress_left.png</lefttexture>
-					<midtexture>osd/seek/progress_mid.png</midtexture>
-					<righttexture>osd/seek/progress_right.png</righttexture>
-					<info>system.memory(used)</info>
+					<height>14</height>
+          <texturebg>dialogs/progress/progress_back.png</texturebg>
+          <lefttexture>dialogs/progress/progress_left.png</lefttexture>
+          <midtexture>dialogs/progress/progress_mid.png</midtexture>
+          <righttexture>dialogs/progress/progress_right.png</righttexture>
+          <info>system.memory(used)</info>
 				</control>
 			</control>
 			<control type="group">
@@ -324,13 +324,10 @@
             <orientation>horizontal</orientation>
             <control type="image">
               <description>Items Icon</description>
-              <posx>0</posx>
-              <posy>0</posy>
               <width>36</width>
               <height>23</height>
-              <aspectratio>keep</aspectratio>
               <texture>common/settings_logo.png</texture>
-              <colordiffuse>bclabel</colordiffuse>
+			<include>BreadcrumbsIcon</include>
               <animation effect="slide" start="0,0" end="-6,1" time="0" condition="true">Conditional</animation>
             </control>
             <control type="label">

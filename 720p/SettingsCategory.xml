@@ -25,13 +25,13 @@
           <posx>42</posx>
           <posy>120</posy>
           <width>217</width>
-          <height>720</height>
+          <height>512</height>
           <itemgap>0</itemgap>
           <onleft>60</onleft>
           <onright>5</onright>
           <onup>3</onup>
           <ondown>3</ondown>
-        </control>
+     </control>
 
         <control type="label">
           <description>header label</description>
@@ -145,13 +145,10 @@
           <orientation>horizontal</orientation>
           <control type="image">
             <description>Items Icon</description>
-            <posx>0</posx>
-            <posy>0</posy>
             <width>36</width>
             <height>23</height>
-            <aspectratio>keep</aspectratio>
             <texture>common/settings_logo.png</texture>
-            <colordiffuse>bclabel</colordiffuse>
+			<include>BreadcrumbsIcon</include>
             <animation effect="slide" start="0,0" end="-6,1" time="0" condition="true">Conditional</animation>
           </control>
           <control type="label">

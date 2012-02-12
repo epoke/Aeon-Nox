@@ -119,20 +119,12 @@
       <visible>[Skin.HasSetting(CurtainBackdropMovies)+Container.Content(movies)]|[Skin.HasSetting(CurtainBackdropTV)+[Container.Content(tvshows)|Container.Content(seasons)|Container.Content(episodes)]]|[!Container.Content(movies)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)+Skin.HasSetting(CurtainBackdrop)]</visible>
     </control>
   </include>
-  <include name="CommonVideoBackground">
-    <control type="multiimage">
-      <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-      <animation effect="slide" start="-10,-10" end="10,10" time="7500" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-      <imagepath fallback="special://skin/backgrounds/videos.jpg" background="true">$VAR[VideoLibraryBackground]</imagepath>
-      <visible>Skin.HasSetting(VideoLibraryFanart) + !Control.IsVisible(516)</visible>
-    </control>
-  </include>
   <include name="CommonMusicBackground">
     <control type="multiimage">
       <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
       <animation effect="slide" start="-10,-10" end="10,10" time="7500" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
       <imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</imagepath>
-      <visible>Skin.HasSetting(MusicLibraryFanart)|Window.IsActive(musicfiles)|Window.IsActive(musicplaylist)</visible>
+      <visible>Window.IsActive(musicfiles)|Window.IsActive(musicplaylist)</visible>
       <animation effect="fade" start="0" end="100" time="1000">Visible</animation>
     </control>
   </include>
@@ -170,12 +162,16 @@
       <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
       <animation effect="slide" start="-10,-10" end="10,10" time="7500" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
       <imagepath fallback="special://skin/backgrounds/weather.jpg" background="true">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</imagepath>
-      <visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
+      <animation effect="fade" time="500" condition="!Window.Previous(1115)">WindowOpen</animation>
+      <animation effect="fade" time="200" condition="!Window.Next(1115)">WindowClose</animation>
+      <visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
     </control>
     <control type="multiimage">
       <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
       <animation effect="slide" start="-10,-10" end="10,10" time="7500" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
       <imagepath background="true">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</imagepath>
+      <animation effect="fade" time="500" condition="!Window.Previous(1115)">WindowOpen</animation>
+      <animation effect="fade" time="200" condition="!Window.Next(1115)">WindowClose</animation>
       <visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
     </control>
   </include>
@@ -237,10 +233,10 @@
   </include>
   <include name="Dialogs_Tablet">
     <control type="image">
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>509</width>
-      <height>91</height>
+      <posx>-3</posx>
+      <posy>-3</posy>
+      <width>517</width>
+      <height>98</height>
       <texture>dialogs/scan_backg.png</texture>
     </control>
   </include>
@@ -298,24 +294,10 @@
     <posy>62</posy>
     <width>385</width>
     <height>14</height>
-    <texturebg>osd/seek/progress_back_long.png</texturebg>
-    <lefttexture>osd/seek/progress_left.png</lefttexture>
-    <midtexture>osd/seek/progress_mid.png</midtexture>
-    <righttexture>osd/seek/progress_right.png</righttexture>
-    <overlaytexture>-</overlaytexture>
-    <colordiffuse>white2</colordiffuse>
-  </include>
-  <include name="Dialogs_Progress_Old">
-    <description>Progressbar</description>
-    <posx>85</posx>
-    <posy>3</posy>
-    <width>422</width>
-    <height>85</height>
-    <reveal>true</reveal>
-    <texturebg>dialogs/scan_blank.png</texturebg>
-    <lefttexture>common/blank.png</lefttexture>
-    <midtexture>dialogs/scan_fill.png</midtexture>
-    <righttexture>common/blank.png</righttexture>
+    <texturebg>dialogs/progress/progress_back.png</texturebg>
+    <lefttexture>dialogs/progress/progress_left.png</lefttexture>
+    <midtexture>dialogs/progress/progress_mid.png</midtexture>
+    <righttexture>dialogs/progress/progress_right.png</righttexture>
     <overlaytexture>-</overlaytexture>
   </include>
   <include name="Dialogs_LabelVars">
@@ -439,10 +421,16 @@
   </include>
   <include name="Furniture_NowPlayingWidget">
     <control type="group">
-      <include>Animation_CommonFade</include>
       <animation type="Conditional" reversible="true" condition="[Control.HasFocus(109)|Control.HasFocus(110)|Control.HasFocus(195)]">
         <effect type="slide" start="0,0" end="0,-35" time="400" tween="cubic" easing="in" />
       </animation>
+      <animation type="WindowClose" reversible="true"  condition="!Window.Next(1111)+!Window.IsActive(1111)+!Window.Next(10012)+!Window.IsActive(10012)+!Window.Next(10013)+!Window.IsActive(10013)+!Window.Next(10014)+!Window.IsActive(10014)+!Window.Next(10015)+!Window.IsActive(10015)+!Window.Next(10016)+!Window.IsActive(10016)+!Window.Next(10017)+!Window.IsActive(10017)+!Window.Next(10018)+!Window.IsActive(10018)+!Window.Next(10019)+!Window.IsActive(10019)+!Window.Next(10007)+!Window.IsActive(10007)">
+        <effect type="slide" start="0,0" end="0,-35" time="300" tween="cubic" easing="in" />
+      </animation>
+      <animation type="WindowOpen" reversible="true" condition="!Window.Previous(settings)+!Window.Previous(1111)+!Window.Previous(10012)+!Window.Previous(10013)+!Window.Previous(10014)+!Window.Previous(10015)+!Window.Previous(10016)+!Window.Previous(10017)+!Window.Previous(10018)+!Window.Previous(10019)+!Window.Previous(10007)">
+        <effect type="slide" start="0,-35" end="0,0" time="400" tween="cubic" easing="in" />
+      </animation>
+      <animation effect="slide" start="-490,0" end="0,0" delay="0" time="300">VisibleChange</animation>
       <visible>Player.HasMedia</visible>
       <visible>!SubString(Window(videolibrary).Property(tvtunesIsAlive),True)</visible>
       <posx>-88</posx>
@@ -486,10 +474,10 @@
       </control>
       <control type="fadelabel">
         <posx>95</posx>
-        <posy>3</posy>
+        <posy>0</posy>
         <width>240</width>
-        <height>18</height>
-        <font>Font_Reg17</font>
+        <height>22</height>
+        <font>Font_Condensed20</font>
         <textcolor>white2</textcolor>
         <scroll>true</scroll>
         <label>[COLOR a8FFFFFF]$INFO[MusicPlayer.Artist][/COLOR]</label>
@@ -501,10 +489,10 @@
       </control>
       <control type="fadelabel">
         <posx>95</posx>
-        <posy>3</posy>
+        <posy>0</posy>
         <width>240</width>
-        <height>18</height>
-        <font>Font_Reg17</font>
+        <height>22</height>
+        <font>Font_Condensed20</font>
         <textcolor>white2</textcolor>
         <scroll>true</scroll>
         <label>[COLOR a8FFFFFF]$INFO[Videoplayer.TVShowTitle][/COLOR]</label>
@@ -516,10 +504,10 @@
       </control>
       <control type="fadelabel">
         <posx>95</posx>
-        <posy>3</posy>
+        <posy>0</posy>
         <width>240</width>
-        <height>18</height>
-        <font>Font_Reg17</font>
+        <height>22</height>
+        <font>Font_Condensed20</font>
         <textcolor>white2</textcolor>
         <scroll>true</scroll>
         <label>$INFO[Videoplayer.Title]</label>
@@ -534,7 +522,7 @@
         <posy>10</posy>
         <width>200</width>
         <height>20</height>
-        <font>Font_Reg14</font>
+        <font>Font_Condensed15</font>
         <label>$VAR[HomeOSDLabelVar]</label>
         <align>center</align>
         <textcolor>white2</textcolor>
@@ -588,8 +576,12 @@
       <posx>499r</posx>
       <posy>0</posy>
       <visible>!Control.HasFocus(109)+!Skin.HasSetting(breadcrumb)</visible>
-      <animation effect="slide" start="0,0" end="500,0" time="300">WindowClose</animation>
-      <animation effect="slide" start="500,0" end="0,0" delay="WidgetSlideDelay" time="300">WindowOpen</animation>
+      <animation type="WindowClose" reversible="true"  condition="!Window.Next(1111)+!Window.IsActive(1111)+!Window.Next(10012)+!Window.IsActive(10012)+!Window.Next(10013)+!Window.IsActive(10013)+!Window.Next(10014)+!Window.IsActive(10014)+!Window.Next(10015)+!Window.IsActive(10015)+!Window.Next(10016)+!Window.IsActive(10016)+!Window.Next(10017)+!Window.IsActive(10017)+!Window.Next(10018)+!Window.IsActive(10018)+!Window.Next(10019)+!Window.IsActive(10019)+!Window.Next(10007)+!Window.IsActive(10007)">
+        <effect type="slide" start="0,0" end="0,-35" time="300" tween="cubic" easing="in" />
+      </animation>
+      <animation type="WindowOpen" reversible="true" condition="!Window.Previous(settings)+!Window.Previous(1111)+!Window.Previous(10012)+!Window.Previous(10013)+!Window.Previous(10014)+!Window.Previous(10015)+!Window.Previous(10016)+!Window.Previous(10017)+!Window.Previous(10018)+!Window.Previous(10019)+!Window.Previous(10007)">
+        <effect type="slide" start="0,-35" end="0,0" time="400" tween="cubic" easing="in" />
+      </animation>
       <animation effect="slide" start="500" end="0" time="300">VisibleChange</animation>
       <control type="image">
         <description>time background</description>
@@ -604,12 +596,12 @@
       <control type="label">
         <description>time label</description>
         <posx>489</posx>
-        <posy>-1</posy>
+        <posy>0</posy>
         <width>400</width>
-        <height>27</height>
+        <height>22</height>
         <align>right</align>
         <aligny>center</aligny>
-        <font>Font_Reg17</font>
+        <font>Font_Condensed20</font>
         <textcolor>white2</textcolor>
         <shadowcolor>-</shadowcolor>
         <label>[COLOR white2]$INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)]  |  [/COLOR][COLOR ffaaaaaa]$INFO[System.Time][/COLOR]</label>
@@ -630,12 +622,12 @@
         <control type="label">
           <description>time label</description>
           <posx>60</posx>
-          <posy>-1</posy>
+          <posy>0</posy>
           <width>200</width>
-          <height>27</height>
+          <height>22</height>
           <align>left</align>
           <aligny>center</aligny>
-          <font>Font_Reg17_Caps</font>
+          <font>Font_Condensed20</font>
           <textcolor>white2</textcolor>
           <shadowcolor>-</shadowcolor>
           <label>$INFO[Window(weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits,,  |  ][COLOR ffaaaaaa]$INFO[Window(Weather).Property(Current.Humidity)][/COLOR]</label>
@@ -913,19 +905,10 @@
   <include name="BG_Effect_InfoList_Panel_Left">
     <control type="multiimage">
       <include>BackgroundEffect</include>
-      <posx>65</posx>
-      <posy>112</posy>
-      <width>541</width>
-      <height>568</height>
-    </control>
-  </include>
-  <include name="BG_Effect_InfoList_Panel_Right">
-    <control type="multiimage">
-      <include>BackgroundEffect</include>
-      <posx>715</posx>
-      <posy>150</posy>
-      <width>472</width>
-      <height>495</height>
+      <posx>5</posx>
+      <posy>214</posy>
+      <width>564</width>
+      <height>434</height>
     </control>
   </include>
 
@@ -1737,5 +1720,83 @@
         </content>
       </control>
     </control>
+  </include>
+
+  <include name="Featured_WeatherPlus">
+    <item id="1">
+      <label>$INFO[Window(weather).Property(Daily.1.LongDay)]</label>
+      <label2>$INFO[Window(weather).Property(Daily.1.LongDate)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Daily.1.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Daily.1.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Daily.1.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Daily.1.LowTemperature)] $INFO[System.TemperatureUnits]</property>
+    </item>
+    <item id="2">
+      <label>$INFO[Window(weather).Property(Daily.2.LongDay)]</label>
+      <label2>$INFO[Window(weather).Property(Daily.2.LongDate)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Daily.2.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Daily.2.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Daily.2.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Daily.2.LowTemperature)] $INFO[System.TemperatureUnits]</property>
+    </item>
+    <item id="3">
+      <label>$INFO[Window(weather).Property(Daily.3.LongDay)]</label>
+      <label2>$INFO[Window(weather).Property(Daily.3.LongDate)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Daily.3.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Daily.3.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Daily.3.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Daily.3.LowTemperature)] $INFO[System.TemperatureUnits]</property>
+    </item>
+    <item id="4">
+      <label>$INFO[Window(weather).Property(Daily.4.LongDay)]</label>
+      <label2>$INFO[Window(weather).Property(Daily.4.LongDate)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Daily.4.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Daily.4.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Daily.4.HighTemperature)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Daily.4.LowTemperature)] $INFO[System.TemperatureUnits]</property>
+    </item>
+  </include>
+
+  <include name="Featured_StandardWeather">
+    <item id="1">
+      <label>$INFO[Window(weather).Property(Day0.Title)]</label>
+      <label2>$INFO[Window(weather).Property(Day0.Outlook)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Day0.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Day0.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Day0.HighTemp)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits]</property>
+    </item>
+    <item id="2">
+      <label>$INFO[Window(weather).Property(Day1.Title)]</label>
+      <label2>$INFO[Window(weather).Property(Day1.Outlook)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Day1.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits]</property>
+    </item>
+    <item id="3">
+      <label>$INFO[Window(weather).Property(Day2.Title)]</label>
+      <label2>$INFO[Window(weather).Property(Day2.Outlook)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Day2.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits]</property>
+    </item>
+    <item id="4">
+      <label>$INFO[Window(weather).Property(Day3.Title)]</label>
+      <label2>$INFO[Window(weather).Property(Day3.Outlook)]</label2>
+      <onclick>-</onclick>
+      <icon>$INFO[Window(weather).Property(Day3.OutlookIcon)]</icon>
+      <thumb>$INFO[Skin.String(AnimatedWeatherIconsDir)]$INFO[Window(weather).Property(Day3.FanartCode)]</thumb>
+      <property name="HighTemp">$INFO[Window(weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits]</property>
+      <property name="LowTemp">$INFO[Window(weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits]</property>
+    </item>
   </include>
 </includes>
