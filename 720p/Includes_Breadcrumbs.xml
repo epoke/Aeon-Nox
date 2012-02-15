@@ -13,7 +13,7 @@
     <height>25</height>
     <aligny>center</aligny>
     <width min="10" max="1280">auto</width>
-    <font>Font_Reg17</font>
+    <font>Font_Reg17_Caps</font>
     <textcolor>bclabel</textcolor>
     <shadowcolor>bcshadow</shadowcolor>
     <scroll>false</scroll>
@@ -45,6 +45,7 @@
       <animation effect="fade" time="400" delay="400">Visible</animation>
       <animation effect="fade" time="400">Hidden</animation>
       <control type="label">
+        <font>Font_Reg17</font>
         <include>BreadcrumbsLabel</include>
         <label>$VAR[BreadcrumbsTrailerVar]</label>
         <visible>!IsEmpty(ListItem.Trailer)</visible>
@@ -59,6 +60,7 @@
         <texture>breadcrumbs/items.png</texture>
         <colordiffuse>bcicon</colordiffuse>
         <include>dialogeffect</include>
+        <animation effect="slide" start="0,0" end="0,-1.5" time="0" condition="true">Conditional</animation>
       </control>
       <control type="label">
         <include>BreadcrumbsLabel</include>
@@ -74,6 +76,7 @@
         <texture>breadcrumbs/pages.png</texture>
         <colordiffuse>bcicon</colordiffuse>
         <include>dialogeffect</include>
+        <animation effect="slide" start="0,0" end="0,-2" time="0" condition="true">Conditional</animation>
       </control>
       <control type="label">
         <include>BreadcrumbsLabel</include>
@@ -97,7 +100,7 @@
           <height>25</height>
           <aligny>center</aligny>
           <width min="10" max="1280">auto</width>
-          <font>Font_Reg17</font>
+          <font>Font_Reg17_Caps</font>
           <textcolor>bclabel</textcolor>
           <shadowcolor>bcshadow</shadowcolor>
           <scroll>false</scroll>

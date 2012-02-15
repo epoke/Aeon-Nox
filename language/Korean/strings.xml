@@ -473,6 +473,12 @@
   <string id="31644">선택한 항목 내에서 탐색하려면 왼쪽/오른쪽 화살표를 누르세요</string>
   <string id="31645">위젯 컨텐츠의 자동 회전 사용하지 않음</string>
   <string id="31646">확인 절차 없이 모든 아트웍을 다운로드하겠습니까?</string>
+  <string id="31647">Show latest added custom movie playlist widget for</string>
+  <string id="31648">Show random custom movie playlist widget for</string>
+  <string id="31649">Press RIGHT to refresh</string>
+  <string id="31670">Show latest added custom movie playlist poster widget for</string>
+  <string id="31671">Show random custom movie playlist poster widget for</string>
+  <string id="31672">Include watched items in the custom playlist widgets</string>
 
   
   <!-- Weather plugin -->
