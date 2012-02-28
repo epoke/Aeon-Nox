@@ -140,7 +140,7 @@
       <!--view id = 55-->
       <include condition="!Skin.HasSetting(DisableCarouselVL)">Carousel</include>
     </control>
-    <include>ScrollOffsetLabel</include>
+    <include condition="Skin.HasSetting(ScrollLabel)">ScrollOffsetLabel</include>
     <control type="group">
       <description>Invisible buttons for trailer</description>
       <control type="button" id="7000">
@@ -174,7 +174,8 @@
       </control>
       <control type="button" id="7001">
         <include>HiddenObject</include>
-        <onleft condition="Control.isVisible(50)|Control.isVisible(550)">50</onleft>
+        <onleft condition="Control.isVisible(50)">62</onleft>
+        <onleft condition="Control.isVisible(550)">50</onleft>
         <onleft condition="!Control.isVisible(50)+!Control.IsVisible(550)">9000</onleft>
         <onright condition="Control.isVisible(50)">9000</onright>
         <onright condition="!Control.isVisible(50)+!Control.IsVisible(550)">50</onright>
