@@ -346,7 +346,7 @@
         <itemlayout height="150" width="346" condition="!Skin.HasSetting(biggergap)">
           <control type="label">
             <posx>173</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>346</width>
             <textcolor>$VAR[HomeMenuTextUnFocusVar]</textcolor>
             <shadowcolor>$VAR[HomeMenuShadowVar]</shadowcolor>
@@ -356,7 +356,7 @@
           </control>
           <control type="label">
             <posx>173</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>346</width>
             <textcolor>white5</textcolor>
             <shadowcolor>black</shadowcolor>
@@ -366,7 +366,7 @@
           </control>
           <control type="label">
             <posx>173</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>346</width>
             <textcolor>white5</textcolor>
             <include>MainMenuLabels</include>
@@ -377,7 +377,7 @@
         <focusedlayout height="150" width="346" condition="!Skin.HasSetting(biggergap)">
           <control type="label">
             <posx>173</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>346</width>
             <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
             <shadowcolor>$VAR[HomeMenuShadowVar]</shadowcolor>
@@ -387,7 +387,7 @@
           </control>
           <control type="label">
             <posx>173</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>346</width>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
@@ -397,7 +397,7 @@
           </control>
           <control type="label">
             <posx>173</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>346</width>
             <textcolor>white</textcolor>
             <include>MainMenuLabels</include>
@@ -408,7 +408,7 @@
         <itemlayout height="150" width="426" condition="Skin.HasSetting(biggergap)">
           <control type="label">
             <posx>213</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>426</width>
             <textcolor>$VAR[HomeMenuTextUnFocusVar]</textcolor>
             <shadowcolor>$VAR[HomeMenuShadowVar]</shadowcolor>
@@ -418,7 +418,7 @@
           </control>
           <control type="label">
             <posx>213</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>426</width>
             <textcolor>white5</textcolor>
             <shadowcolor>black</shadowcolor>
@@ -428,7 +428,7 @@
           </control>
           <control type="label">
             <posx>213</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>426</width>
             <textcolor>white5</textcolor>
             <include>MainMenuLabels</include>
@@ -439,7 +439,7 @@
         <focusedlayout height="150" width="426" condition="Skin.HasSetting(biggergap)">
           <control type="label">
             <posx>213</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>426</width>
             <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
             <shadowcolor>$VAR[HomeMenuShadowVar]</shadowcolor>
@@ -449,7 +449,7 @@
           </control>
           <control type="label">
             <posx>213</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>426</width>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
@@ -459,7 +459,7 @@
           </control>
           <control type="label">
             <posx>213</posx>
-            <posy>-1</posy>
+            <posy>-3</posy>
             <width>426</width>
             <textcolor>white</textcolor>
             <include>MainMenuLabels</include>
