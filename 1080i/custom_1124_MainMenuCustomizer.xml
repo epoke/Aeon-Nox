@@ -76,7 +76,7 @@
         <include condition="System.HasAddon(script.widget.weatherworld)">WorldWeatherIcons</include>
         <control type="image">
             <include>FullscreenDimensions</include>
-            <animation effect="fade" start="100" end="50" time="0" condition="true">conditional</animation>
+            <colordiffuse>$INFO[Skin.String(ColorLevel)]</colordiffuse>
             <texture>$VAR[BGColorTextureVar]</texture>
             <include>Animation_WindowFade200</include>
             <fadetime>600</fadetime>
@@ -241,8 +241,8 @@
             <include>Animation_OpenCloseZoom</include>
             <include>RecentWidget_1124</include>
             <include>RecentWidget2_1124</include>
-            <include condition="!IsEmpty(Weather.Plugin)">Weather_Widget_Standard</include>
-            <include condition="!IsEmpty(Weather.Plugin)">Weather_Widget_Plus</include>
+            <include condition="!IsEmpty(Weather.Plugin)">Weather_Widget</include>
+            <include condition="!IsEmpty(Weather.Plugin)">Weather_Widget2</include>
         </control>
         <!--Main Menu-->
         <control type="group">
