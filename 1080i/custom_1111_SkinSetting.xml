@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <window id="1111">
     <defaultcontrol always="true">9000</defaultcontrol>
-    <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
+    <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include><include condition="!Skin.HasSetting(firstrun3.5)">AutoConfig3.5</include>
     <animation type="WindowOpen" reversible="false" condition="![Window.Previous(10004)|Window.Previous(1116)]">
         <effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" easing="out" />
         <effect type="fade" start="0" end="100" time="300" />
@@ -194,6 +194,12 @@
                         <include>Default_SettingButton</include>
                         <label>$LOCALIZE[31600]</label>
                         <onclick>ActivateWindow(1124)</onclick>
+                    </control>
+                    <control type="button" id="457">
+                        <description>Timepanel high</description>
+                        <label>42277</label>
+                        <include>Default_SettingButton</include>
+                        <onclick>ActivateWindow(1158)</onclick>
                     </control>
                     <control type="button" id="453">
                         <description>Color selector</description>
