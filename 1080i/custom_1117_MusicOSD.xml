@@ -9,13 +9,14 @@
     <include>Animation_DialogPopup</include>
     <controls>
         <control type="group">
+            <posy>-100</posy>
             <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(1134)">Conditional</animation>
             <control type="image">
                 <description>Panel</description>
                 <posx>357</posx>
                 <posy>180</posy>
                 <width>1208</width>
-                <height>722</height>
+                <height>782</height>
                 <texture>osd/osd_settings_back_glow.png</texture>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <include>PanelGlowFade</include>
@@ -26,7 +27,7 @@
                 <posx>357</posx>
                 <posy>180</posy>
                 <width>1208</width>
-                <height>722</height>
+                <height>782</height>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <texture>osd/osd_settings_back.png</texture>
             </control>
@@ -53,7 +54,7 @@
                 <posx>375</posx>
                 <posy>292</posy>
                 <width>1172</width>
-                <height>540</height>
+                <height>600</height>
                 <itemgap>0</itemgap>
                 <aligny>center</aligny>
                 <pagecontrol>60</pagecontrol>
@@ -64,7 +65,7 @@
                 <control type="button" id="458">
                     <description>Background chooser</description>
                     <label>$LOCALIZE[31102] [LOWERCASE]$LOCALIZE[31115][/LOWERCASE]</label>
-                    <label2>[COLOR=$VAR[SelectedColorVar]]$INFO[Skin.String(MusicViz.MultiFanart)][/COLOR]</label2>
+                    <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(MusicViz.MultiFanart)][/COLOR]</label2>
                     <include>Objects_CommonSettingsButton</include>
                     <onclick>SetProperty(MusicVizBG,True,visualisation)</onclick>
                     <onclick>ActivateWindow(1134)</onclick>
@@ -72,7 +73,7 @@
                 <control type="button" id="459">
                     <description>Set CD-Wall Path</description>
                     <label>$LOCALIZE[31039] $LOCALIZE[31456]</label>
-                    <label2>[COLOR=$VAR[SelectedColorVar]]$INFO[Skin.String(CDWall_Folder_Path)][/COLOR]</label2>
+                    <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(CDWall_Folder_Path)][/COLOR]</label2>
                     <include>Objects_CommonSettingsButton</include>
                     <onclick>Skin.SetPath(CDWall_Folder_Path)</onclick>
                     <visible>SubString(Skin.String(MusicViz.MultiFanart),cd-wall)</visible>
@@ -82,7 +83,8 @@
                     <label>42200</label>
                     <include>Objects_CommonSettingsButton</include>
                     <onclick>Skin.ToggleSetting(FadeVizBG)</onclick>
-                    <visible>[StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,projectm)]</visible>
+                    <!--                     <visible>[StringCompare(Visualisation.Name,milkdrop) | StringCompare(Visualisation.Name,projectm)]</visible>
+ -->
                     <selected>Skin.HasSetting(FadeVizBG)</selected>
                 </control>
                 <control type="radiobutton" id="449">
@@ -95,7 +97,7 @@
                 <control type="button" id="451">
                     <description>CDArt</description>
                     <label>$LOCALIZE[31377]:</label>
-                    <label2>[COLOR=$VAR[SelectedColorVar]]$VAR[CDArtLabelVar][/COLOR]</label2>
+                    <label2>[COLOR $VAR[FontColorVar]]$VAR[CDArtLabelVar][/COLOR]</label2>
                     <include>Objects_CommonSettingsButton</include>
                     <onclick condition="!Skin.HasSetting(CDArtinVis)">Skin.SetBool(CDArtinVis)</onclick>
                     <onclick condition="Skin.HasSetting(CDArtinVis) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(vinylart)">Skin.SetBool(blurayart)</onclick>
@@ -114,11 +116,11 @@
                 <control type="button" id="462">
                     <description>Bigger Top Bar</description>
                     <label>$LOCALIZE[31632]:</label>
-                    <label2>[COLOR=$VAR[SelectedColorVar]]$VAR[VisPanelLabelVar][/COLOR]</label2>
+                    <label2>[COLOR $VAR[FontColorVar]]$VAR[VisPanelLabelVar][/COLOR]</label2>
                     <include>Objects_CommonSettingsButton</include>
                     <selected>Skin.HasSetting(activatepanelrotation)</selected>
                     <onclick condition="!Skin.HasSetting(DisablePanelWidgetVis) + !Skin.HasSetting(activatepanelrotation)">Skin.SetBool(activatepanelrotation)</onclick>
-                    <onclick condition="!Skin.HasSetting(DisablePanelWidgetVis) + !Skin.HasSetting(activatepanelrotation)">Notification($LOCALIZE[42002],$LOCALIZE[42016])</onclick>
+                    <onclick condition="!Skin.HasSetting(DisablePanelWidgetVis) + !Skin.HasSetting(activatepanelrotation)">Notification($LOCALIZE[42002],$LOCALIZE[42016],10000)</onclick>
                     <onclick condition="Skin.HasSetting(activatepanelrotation)">Skin.SetBool(DisablePanelWidgetVis)</onclick>
                     <onclick condition="Skin.HasSetting(activatepanelrotation)">Skin.Reset(activatepanelrotation)</onclick>
                     <onclick condition="Skin.HasSetting(DisablePanelWidgetVis)">Skin.Reset(DisablePanelWidgetVis)</onclick>
@@ -146,7 +148,7 @@
                 </control>
                 <control type="button" id="461">
                     <label>$LOCALIZE[31127]</label>
-                    <label2>[COLOR=$VAR[SelectedColorVar]]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
+                    <label2>[COLOR $VAR[FontColorVar]]$INFO[system.addontitle(Skin.String(LyricScript_Path))][/COLOR]</label2>
                     <include>Objects_CommonSettingsButton</include>
                     <onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
                 </control>

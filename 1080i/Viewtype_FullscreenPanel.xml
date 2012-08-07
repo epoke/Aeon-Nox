@@ -6,8 +6,9 @@
             <include>Animation_CommonFade</include>
             <control type="image">
                 <include>FullscreenDimensions</include>
-                <texture>common/black.png</texture>
-                <colordiffuse>aaffffff</colordiffuse>
+                <texture>common/white.png</texture>
+                <colordiffuse>black</colordiffuse>
+                <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
                 <animation effect="fade" time="250">WindowOpen</animation>
                 <animation effect="fade" time="250">WindowClose</animation>
                 <animation effect="fade" start="0" end="100" time="200">Visible</animation>
@@ -202,7 +203,7 @@
                                 <align>justify</align>
                                 <aligny>top</aligny>
                                 <font>Font_Condensed22</font>
-                                <textcolor>ccffffff</textcolor>
+                                <textcolor>white6</textcolor>
                                 <label>$VAR[GlobalPlotVar]</label>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -254,7 +255,7 @@
                                 <align>justify</align>
                                 <aligny>top</aligny>
                                 <font>Font_Condensed22</font>
-                                <textcolor>ccffffff</textcolor>
+                                <textcolor>white6</textcolor>
                                 <label>$VAR[GlobalPlotVar]</label>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -266,7 +267,7 @@
                             <posx>0</posx>
                             <width>1940</width>
                             <height>360</height>
-                            <colordiffuse>$VAR[SelectedColorVar]</colordiffuse>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <bordersize>5</bordersize>
                             <texture>views/tripanel/listselect_fo.png</texture>
                         </control>
@@ -397,7 +398,7 @@
                                 <align>justify</align>
                                 <aligny>top</aligny>
                                 <font>Font_Condensed22</font>
-                                <textcolor>ccffffff</textcolor>
+                                <textcolor>white6</textcolor>
                                 <label>$VAR[GlobalPlotVar]</label>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -449,7 +450,7 @@
                                 <align>justify</align>
                                 <aligny>top</aligny>
                                 <font>Font_Condensed22</font>
-                                <textcolor>ccffffff</textcolor>
+                                <textcolor>white6</textcolor>
                                 <label>$VAR[GlobalPlotVar]</label>
                                 <autoscroll>false</autoscroll>
                             </control>
@@ -462,7 +463,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture border="5">$INFO[ListItem.Icon]</texture>
+                            <texture background="true" border="5">$INFO[ListItem.Icon]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>!Container.Content(tvshows)</visible>
                         </control>
@@ -472,7 +473,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture border="5">$INFO[ListItem.Property(Fanart_Image)]</texture>
+                            <texture background="true" border="5">$INFO[ListItem.Property(Fanart_Image)]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
@@ -492,7 +493,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture border="5">$INFO[ListItem.Path,,landscape.jpg]</texture>
+                            <texture background="true" border="5">$INFO[ListItem.Path,,landscape.jpg]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
@@ -577,7 +578,7 @@
                             <posx>0</posx>
                             <width>1940</width>
                             <height>220</height>
-                            <colordiffuse>$VAR[SelectedColorVar]</colordiffuse>
+                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <bordersize>5</bordersize>
                             <texture>views/tripanel/listselect_fo.png</texture>
                         </control>
@@ -587,7 +588,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture border="5">$INFO[ListItem.Icon]</texture>
+                            <texture background="true" border="5">$INFO[ListItem.Icon]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>!Container.Content(tvshows)</visible>
                         </control>
@@ -597,7 +598,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture border="5">$INFO[ListItem.Property(Fanart_Image)]</texture>
+                            <texture background="true" border="5">$INFO[ListItem.Property(Fanart_Image)]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
@@ -617,7 +618,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture border="5">$INFO[ListItem.Path,,landscape.jpg]</texture>
+                            <texture background="true" border="5">$INFO[ListItem.Path,,landscape.jpg]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
@@ -739,7 +740,7 @@
             <posx>0</posx>
             <width>970</width>
             <height>360</height>
-            <colordiffuse>$VAR[SelectedColorVar]</colordiffuse>
+            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             <bordersize>5</bordersize>
             <texture>views/tripanel/listselect_fo.png</texture>
         </control>
@@ -842,7 +843,7 @@
             <control type="label">
                 <posx>650</posx>
                 <posy>74</posy>
-                <width>600</width>
+                <width>580</width>
                 <height>30</height>
                 <align>center</align>
                 <aligny>center</aligny>
@@ -860,7 +861,7 @@
                 <align>justify</align>
                 <aligny>top</aligny>
                 <font>Font_Condensed22</font>
-                <textcolor>ccffffff</textcolor>
+                <textcolor>white6</textcolor>
                 <label>$VAR[GlobalPlotOutlineVar]</label>
                 <autoscroll>false</autoscroll>
             </control>
@@ -894,7 +895,7 @@
             <control type="label">
                 <posx>415</posx>
                 <posy>84</posy>
-                <width>1500</width>
+                <width>570</width>
                 <height>30</height>
                 <align>left</align>
                 <aligny>center</aligny>
@@ -912,7 +913,7 @@
                 <align>justify</align>
                 <aligny>top</aligny>
                 <font>Font_Condensed22</font>
-                <textcolor>ccffffff</textcolor>
+                <textcolor>white6</textcolor>
                 <label>$VAR[GlobalPlotVar]</label>
                 <autoscroll>false</autoscroll>
             </control>
@@ -1030,7 +1031,7 @@
                 <align>justify</align>
                 <aligny>top</aligny>
                 <font>Font_Condensed22</font>
-                <textcolor>ccffffff</textcolor>
+                <textcolor>white6</textcolor>
                 <label>$VAR[GlobalPlotOutlineVar]</label>
                 <autoscroll>false</autoscroll>
             </control>
@@ -1064,7 +1065,7 @@
             <control type="label">
                 <posx>415</posx>
                 <posy>84</posy>
-                <width>1500</width>
+                <width>570</width>
                 <height>30</height>
                 <align>left</align>
                 <aligny>center</aligny>
@@ -1082,7 +1083,7 @@
                 <align>justify</align>
                 <aligny>top</aligny>
                 <font>Font_Condensed22</font>
-                <textcolor>ccffffff</textcolor>
+                <textcolor>white6</textcolor>
                 <label>$VAR[GlobalPlotVar]</label>
                 <autoscroll>false</autoscroll>
             </control>
@@ -1094,17 +1095,17 @@
             <posx>0</posx>
             <width>970</width>
             <height>220</height>
-            <colordiffuse>$VAR[SelectedColorVar]</colordiffuse>
+            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             <bordersize>5</bordersize>
             <texture>views/tripanel/listselect_fo.png</texture>
         </control>
         <control type="image">
-            <posy>5</posy>
+            <posy>15</posy>
             <posx>5</posx>
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture border="5">$INFO[ListItem.Icon]</texture>
+            <texture background="true" border="5">$INFO[ListItem.Icon]</texture>
             <aspectratio>scale</aspectratio>
             <visible>!Container.Content(tvshows)</visible>
         </control>
@@ -1119,28 +1120,28 @@
             <visible>StringCompare(Container.FolderPath,videodb://5/) | Container.Content(tvshows)</visible>
         </control>
         <control type="image">
-            <posy>5</posy>
+            <posy>15</posy>
             <posx>5</posx>
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture border="5">$INFO[ListItem.Property(Fanart_Image)]</texture>
+            <texture background="true" border="5">$INFO[ListItem.Property(Fanart_Image)]</texture>
             <aspectratio>scale</aspectratio>
             <visible>Container.Content(tvshows)</visible>
         </control>
         <control type="image">
-            <posy>5</posy>
+            <posy>15</posy>
             <posx>5</posx>
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture border="5">$INFO[ListItem.Path,,landscape.jpg]</texture>
+            <texture border="5" background="true">$INFO[ListItem.Path,,landscape.jpg]</texture>
             <aspectratio>scale</aspectratio>
             <visible>Container.Content(tvshows)</visible>
         </control>
         <control type="image">
             <posx>284</posx>
-            <posy>10</posy>
+            <posy>20</posy>
             <width>90</width>
             <height>90</height>
             <include>OverlayVisibility0</include>
@@ -1198,22 +1199,22 @@
     </include>
     <include name="FSPanelTVItemLayout">
         <control type="image">
-            <posy>5</posy>
+            <posy>15</posy>
             <posx>5</posx>
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture border="5">$INFO[ListItem.Icon]</texture>
+            <texture background="true" border="5">$INFO[ListItem.Icon]</texture>
             <aspectratio>scale</aspectratio>
             <visible>!Container.Content(tvshows)</visible>
         </control>
         <control type="image">
-            <posy>5</posy>
+            <posy>15</posy>
             <posx>5</posx>
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture border="5">$INFO[ListItem.Property(Fanart_Image)]</texture>
+            <texture border="5" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
             <aspectratio>scale</aspectratio>
             <visible>Container.Content(tvshows)</visible>
         </control>
@@ -1228,24 +1229,24 @@
             <visible>StringCompare(Container.FolderPath,videodb://5/) | Container.Content(tvshows)</visible>
         </control>
         <control type="image">
-            <posy>5</posy>
+            <posy>15</posy>
             <posx>5</posx>
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture border="5">$INFO[ListItem.Path,,landscape.jpg]</texture>
+            <texture border="5" background="true">$INFO[ListItem.Path,,landscape.jpg]</texture>
             <aspectratio>scale</aspectratio>
             <visible>Container.Content(tvshows)</visible>
         </control>
         <control type="image">
             <posx>284</posx>
-            <posy>10</posy>
+            <posy>20</posy>
             <width>90</width>
             <height>90</height>
             <include>OverlayVisibility0</include>
         </control>
         <control type="image">
-            <posy>5</posy>
+            <posy>15</posy>
             <posx>5</posx>
             <width>374</width>
             <height>210</height>

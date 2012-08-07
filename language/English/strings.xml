@@ -198,7 +198,7 @@
     <string id="31175">Big list</string>
     <string id="31176">General options</string>
     <string id="31177">Random color mode</string>
-    <string id="31178">Choose color</string>
+    <string id="31178">Choose main color</string>
     <string id="31181">Activate 'Glow Mode'</string>
     <string id="31182">Colored</string>
     <string id="31184">Unwatched icon</string>
@@ -208,6 +208,7 @@
     <string id="31189">Previous Episode</string>
     <string id="31190">Next Episode</string>
     <string id="31191">Use as icon</string>
+    <string id="31192">Choose font color</string>
     <string id="31194">Delayed</string>
     <string id="31195">No background panel</string>
     <string id="31196">Small Shift view</string>
@@ -513,6 +514,8 @@
     <string id="42277">Home NowPlaying Customizer</string>
     <string id="42278">Click on "Play" buttons To preview settings</string>
     <string id="42279">Fade background in video</string>
+    <string id="42280">RSS Feed</string>
+    <string id="42281">Click on buttons to customize them</string>
 
 
 </strings>
