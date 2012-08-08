@@ -28,8 +28,8 @@
 	<string id="31325">재생목록 옵션</string>
 	<string id="31326">많이 재생한 앨범</string>
 	<string id="31328">새로 추가됨</string>
-	<string id="31333">최근</string>
-	<string id="31334">최근</string>
+	<string id="31333">최근 재생</string>
+	<string id="31334">최근 추가</string>
 	<string id="31335">감상 중</string>
     <string id="31336">오늘의 배우</string>
 	<string id="312576">개봉</string>
@@ -53,9 +53,9 @@
 	<string id="31031">NAVIGATE</string>
 	<string id="31032">없음</string>
 	<string id="31035">Conditional Weather</string>
-	<string id="31036">Breadcrumbs Classic</string>
-	<string id="31037">Default Breadcrumbs</string>
-	<string id="31038">Classic Top Panels</string>
+	<string id="31036">클래식 Breadcrumbs</string>
+	<string id="31037">기본 Breadcrumbs</string>
+	<string id="31038">클래식 상단 패널</string>
 	<string id="31044">아티스트 슬라이드쇼</string>
 	<string id="31045">Entries</string>
 	<string id="31046">Breadcrumbs</string>
@@ -67,13 +67,13 @@
 	<string id="31061">텍스트</string>
 	<string id="31062">Reset Icon</string>
 	<string id="31063">스타일 선택</string>
-	<string id="31064">Press SELECT for alternative layout</string>
+	<string id="31064">다른 구성을 사용하려면 누르세요</string>
 	<string id="31065">정보</string>
 	<string id="31066">Back</string>
-	<string id="31067">Random songs</string>
-	<string id="31068">Random albums</string>
-	<string id="31069">Icon panel</string>
-	<string id="31070">Random add-ons</string>
+	<string id="31067">무작위 트랙</string>
+	<string id="31068">무작위 앨범</string>
+	<string id="31069">아이콘 패널</string>
+	<string id="31070">무작위 애드온</string>
 	<string id="31071">Default weather</string>
 	<string id="31072">시스템 정보</string>
 	<string id="31073">배우 정보</string>
@@ -89,13 +89,13 @@
 	<string id="31086">클리어아트</string>
 	<string id="31087">Randomize All</string>
 	<string id="31088">모든 영역에 색상 사용</string>
-	<string id="31089">Both</string>
+	<string id="31089">모두</string>
 	<string id="31090">투명도 조정</string>
 	<string id="31091">Random MusicVids</string>
 	<string id="31092">아티스트 팬아트 (추가 팬아트, fanart.jpg, 기본 팬아트)</string>
 	<string id="31093">오늘 출생한 배우</string>
 	<string id="31094">위젯 팬아트</string>
-	<string id="31095">Rating</string>
+	<string id="31095">평점</string>
 	<string id="31096">유투브에서 검색</string>
 	
     <!-- Playlist Editor labels -->
@@ -140,9 +140,9 @@
     <string id="31039">CD-Wall</string>
     <string id="31041">비디오 팬아트 슬라이드쇼</string>
     <string id="31042">음악 팬아트 슬라이드쇼</string>
-    <string id="31632">Enable Extended Info widget</string>
+    <string id="31632">확장 정보 위젯 사용</string>
     <string id="31635">유사한 아티스트</string>
-    <string id="31636">Rotating</string>
+    <string id="31636">회전</string>
 
 	
 	<!-- Skin Fontsets -->
@@ -182,8 +182,8 @@
 	<string id="31283">정보표시 월</string>
 	<string id="31291">큰 팬아트</string>
 	<string id="31380">스트립쇼</string>
-	<string id="31477">TriPanel</string>
-    <string id="31381">InfoPanel</string>
+	<string id="31477">3단 패널</string>
+    <string id="31381">정보표시 패널</string>
 
     <!--MediaMenu-->
 	<string id="31165">간단한 목록</string>
@@ -208,10 +208,10 @@
 	<string id="31189">이전 에피소드</string>
 	<string id="31190">다음 에피소드</string>
 	<string id="31191">아이콘으로 사용</string>
-    <string id="31192">Choose font color</string>
-	<string id="31194">Delayed</string>
-	<string id="31195">No Background panel</string>
-	<string id="31196">Small Shift view</string>
+    <string id="31192">글꼴 색상 선택</string>
+	<string id="31194">지연</string>
+	<string id="31195">배경 패널 없음</string>
+	<string id="31196">작은 시프트 보기</string>
 	<string id="31198">추가 썸네일</string>
 	<string id="31228">상하</string>
 	<string id="31229">좌우</string>
@@ -263,9 +263,9 @@
 	<string id="31466">사용자 즐겨찾기</string>
 	<string id="31467">추가 팬아트 가져오기</string>
 	<string id="31468">추가 썸네일 가져오기</string>
-	<string id="31478">Setup</string>
+	<string id="31478">설정</string>
     <string id="31479">위젯</string>
-    <string id="31480">Custom playlist</string>
+    <string id="31480">사용자 재생목록</string>
     <string id="31481">로고 대신 배너 보기</string>
     <string id="31482">케이스</string>
     <string id="31483">Show icon label</string>
@@ -332,8 +332,8 @@
     <string id="31681">위젯 선택</string>
     <string id="31682">사용자 설정</string>
     <string id="31683">라이브러리 통계</string>
-    <string id="31684">Glass</string>
-    <string id="31685">Classic</string>
+    <string id="31684">글래스</string>
+    <string id="31685">클래식</string>
     <string id="31686">Nox</string>
     <string id="31687">구성 설정</string>
     <string id="31688">시간 패널 숨김</string>
@@ -345,7 +345,7 @@
     <string id="31694">고정 목록</string>
     <string id="31695">서브메뉴</string>
     <string id="31696">Alternative layout</string>
-    <string id="31697">Disable navigation hints</string>
+    <string id="31697">네비게이션 힌트 숨기기</string>
     <string id="31698">Show list of actors/artists birthdays</string>
     <string id="31699">메인 메뉴 작게</string>
     <string id="31700">패널</string>
@@ -399,27 +399,27 @@
 	<string id="41150">음악 재생목록</string>
 	<string id="41151">Custom</string>
 	<string id="41153">즐겨찾기</string>
-    <string id="41154">Function</string>
+    <string id="41154">기능</string>
     <string id="41156">Choose Type</string>
     <string id="41157">Choose 2nd widget</string>
     <string id="41158">Menu label</string>
-    <string id="41159">Icon</string>
+    <string id="41159">아이콘</string>
     <string id="41160">Set icon</string>
 
     <!--notifications-->
     <string id="42000">Add-on missing</string>
-    <string id="42001">Press RIGHT to adjust Delay</string>
-    <string id="42002">Attention</string>
-    <string id="42003">Press RIGHT to see changes</string>
+    <string id="42001">지연 시간을 변경하려면 오른쪽 화살표를 누르세요</string>
+    <string id="42002">알림</string>
+    <string id="42003">변경을 보려면 오른쪽 화살표를 누르세요</string>
     <string id="42004">Extra/Season-FanArt are not supported by XBMC natively</string>
     <string id="42005">Needs script.cinema.experience to be available</string>
     <string id="42006">Needs script.randommovie to be available</string>
     <string id="42007">Press RIGHT to select path to wall viz</string>
     <string id="42008">You need to set a path</string>
-    <string id="42010">This feature requires the ColorPicker add-on</string>
+    <string id="42010">이 기능에는 ColorPicker 애드온이 필요합니다</string>
     <string id="42011">Updating add-on repos</string>
     <string id="42012">Updating local add-ons</string>
-    <string id="42013">Click on furniture to see available options</string>
+    <string id="42013">사용가능한 옵션을 보려면 선택하세요</string>
     <string id="42014">Click on menu items to see available options</string>
     <string id="42015">Play some Music to get live Preview of Settings</string>
     <string id="42016">Needs "Additional Artist Info" activated in Artistslideshow Plugin</string>

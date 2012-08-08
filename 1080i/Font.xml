@@ -81,9 +81,7 @@
         <font>
             <name>Font_MainClassic</name>
             <filename>NanumGothicBold.ttf</filename>
-            <aspect>0.75</aspect>
-            <style>bold</style>
-            <size>94</size>
+            <size>84</size>
         </font>
         <font>
             <name>Font_MainClassic2</name>
@@ -148,8 +146,8 @@
         <font>
             <name>Font_Reg18</name>
             <filename>NanumGothic.ttf</filename>
+			<linespacing>1.2</linespacing>
             <size>27</size>
-            <aspect>0.75</aspect>
         </font>
         <font>
             <name>Font_Reg19</name>
