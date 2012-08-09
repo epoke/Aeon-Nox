@@ -13,7 +13,6 @@
                 <texture>wall/wall_bg_reflection.png</texture>
             </control>
             <control type="image">
-                <description>background image</description>
                 <posx>36</posx>
                 <posy>36</posy>
                 <width>1846</width>
@@ -24,7 +23,6 @@
                 <texture>settings/settings_panelback_shadow.png</texture>
             </control>
             <control type="image">
-                <description>background image</description>
                 <posx>34</posx>
                 <posy>34</posy>
                 <width>1850</width>
@@ -69,7 +67,6 @@
                 <animation effect="fade" start="100" end="0" time="200" condition="Player.HasVideo">Conditional</animation>
             </control>
             <control type="textbox">
-                <description>Plot</description>
                 <posx>527</posx>
                 <posy>810</posy>
                 <width>1200</width>
@@ -109,7 +106,6 @@
                         <height>74</height>
                         <font>Font_Condensed22</font>
                         <textcolor>white2</textcolor>
-                        <selectedcolor>selected</selectedcolor>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                         <animation effect="fade" start="50" end="50" time="50" delay="0" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
@@ -132,7 +128,6 @@
                         <height>74</height>
                         <font>Font_Condensed22</font>
                         <textcolor>white</textcolor>
-                        <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -184,14 +179,14 @@
                 <posy>87</posy>
                 <width>40</width>
                 <height>888</height>
-                <showonepage>false</showonepage>
+                
                 <texturesliderbackground>-</texturesliderbackground>
                 <texturesliderbar>-</texturesliderbar>
                 <texturesliderbarfocus>-</texturesliderbarfocus>
                 <textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
                 <textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <showonepage>true</showonepage>
+                
                 <orientation>vertical</orientation>
                 <onleft>550</onleft>
                 <onright>9000</onright>

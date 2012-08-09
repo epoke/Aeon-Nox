@@ -128,7 +128,6 @@
     <include name="MusicExtraFanartHome">
         <control type="multiimage">
             <fadetime>600</fadetime>
-            <description>extrafanart</description>
             <randomize>true</randomize>
             <imagepath background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
             <aspectratio align="center" aligny="top">scale</aspectratio>
@@ -141,7 +140,6 @@
     <include name="MusicArtistSlideshowHome">
         <control type="multiimage">
             <fadetime>600</fadetime>
-            <description>extrafanart</description>
             <randomize>true</randomize>
             <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
             <visible>Player.HasAudio + Skin.HasSetting(artistslideshowhome)</visible>
@@ -180,43 +178,45 @@
     </include>
     <include name="Dialogs_Exclam">
         <control type="image">
-            <posx>14</posx>
-            <posy>14</posy>
-            <width>110</width>
-            <height>110</height>
-            <texture>dialogs/exclam_icon.png</texture>
+            <posx>4</posx>
+            <posy>18</posy>
+            <width>133</width>
+            <height>100</height>
+            <aspectratio aligny="top">scale</aspectratio>
+            <texture>special://skin/extras/BigIcons/Exclamation.png</texture>
             <animation effect="fade" start="100" end="70" time="600" pulse="true" condition="true">Conditional</animation>
         </control>
     </include>
     <include name="Dialogs_HardDrive">
         <control type="image">
-            <posx>18</posx>
-            <posy>6</posy>
-            <width>100</width>
-            <height>124</height>
-            <texture>dialogs/scan_icon.png</texture>
+            <posx>4</posx>
+            <posy>18</posy>
+            <width>133</width>
+            <height>100</height>
+            <aspectratio aligny="top">scale</aspectratio>
+            <texture>special://skin/extras/BigIcons/Search.png</texture>
         </control>
     </include>
     <include name="Dialogs_VolumeIcon">
         <control type="image">
-            <posx>9</posx>
-            <posy>6</posy>
-            <width>122</width>
-            <height>123</height>
-            <texture>dialogs/volume_icon.png</texture>
+            <posx>4</posx>
+            <posy>8</posy>
+            <width>130</width>
+            <height>130</height>
+            <texture>special://skin/extras/BigIcons/Speaker.png</texture>
         </control>
     </include>
     <include name="Dialogs_Settings">
         <control type="image">
-            <posx>14</posx>
-            <posy>14</posy>
-            <width>110</width>
-            <height>110</height>
-            <texture>dialogs/settings_icon.png</texture>
+            <posx>4</posx>
+            <posy>0</posy>
+            <width>133</width>
+            <height>100</height>
+            <aspectratio aligny="top">scale</aspectratio>
+            <texture>special://skin/extras/BigIcons/Gears.png</texture>
         </control>
     </include>
     <include name="Dialogs_Progress">
-        <description>Progressbar</description>
         <posx>150</posx>
         <posy>96</posy>
         <width>578</width>
@@ -377,7 +377,6 @@
         <alttexturenofocus>dialogs/shutdown_nofocus_glow.png</alttexturenofocus>
     </include>
     <include name="Objects_ContextMenuButton">
-        <description>button template</description>
         <posx>0</posx>
         <posy>0</posy>
         <height>59</height>
@@ -406,10 +405,8 @@
     </include>
     <include name="subcolornofocus">
         <textcolor>ff969696</textcolor>
-        <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
     </include>
     <include name="listcolornofocus">
-        <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
         <textcolor>white2</textcolor>
     </include>
     <include name="subcolorfocus">
@@ -418,11 +415,9 @@
     </include>
     <include name="listcolorfocus">
         <textcolor>white</textcolor>
-        <selectedcolor>white</selectedcolor>
     </include>
     <include name="detailcolornofocus">
         <textcolor>grey2</textcolor>
-        <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
     </include>
     <include name="TvTunesVisibleCondition">
         <visible>IsEmpty(Window(videolibrary).Property(tvtunesIsAlive))</visible>
@@ -516,7 +511,6 @@
     </include>
     <include name="Furniture_SettingsBackPanel">
         <control type="image">
-            <description>background image</description>
             <posx>36</posx>
             <posy>36</posy>
             <width>1846</width>
@@ -527,7 +521,6 @@
             <texture>settings/settings_panelback_shadow.png</texture>
         </control>
         <control type="image">
-            <description>background image</description>
             <posx>34</posx>
             <posy>34</posy>
             <width>1850</width>
@@ -652,7 +645,6 @@
         </control>
     </include>
     <include name="Default_SettingRadioButton">
-        <description>Default Action</description>
         <posx>0</posx>
         <posy>0</posy>
         <width>1469</width>
@@ -672,7 +664,6 @@
         <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
     </include>
     <include name="Default_SettingRadioButtonShort">
-        <description>Default Action</description>
         <posx>0</posx>
         <posy>0</posy>
         <width>734</width>
@@ -872,7 +863,7 @@
         <texturesliderbarfocus>-</texturesliderbarfocus>
         <textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
         <textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
-        <showonepage>false</showonepage>
+        
         <orientation>vertical</orientation>
     </include>
     <include name="AlaskaPausedLabel">
@@ -900,7 +891,7 @@
         <textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
         <textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-        <showonepage>true</showonepage>
+        
         <orientation>vertical</orientation>
     </include>
     <include name="Featured_WeatherPlus">
@@ -1045,7 +1036,6 @@
         <control type="group">
             <visible>Skin.HasSetting(unwatchedicon) + [Container.Content(tvshows) | Container.Content(seasons)] + !StringCompare(ListItem.Label,..)</visible>
             <control type="image">
-                <description>Items Icon</description>
                 <posx>10</posx>
                 <posy>5</posy>
                 <width>35</width>
@@ -1069,7 +1059,6 @@
         </control>
     </include>
     <include name="ColorChooserButton">
-        <description>Color Labels</description>
         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
         <height>60</height>
         <width>603</width>
@@ -1092,7 +1081,6 @@
     </include>
     <include name="ActorMetaDataContextButton">
         <control type="button" id="2001">
-            <description>actor/director info button (visible only container is MovieActors, MovieDirectors or TvShowActors)</description>
             <posx>0</posx>
             <posy>0</posy>
             <height>58</height>
