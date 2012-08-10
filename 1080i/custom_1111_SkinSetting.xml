@@ -52,7 +52,7 @@
                         <height>74</height>
                         <texture>views/tripanel/listselect_fo.png</texture>
                         <animation effect="fade" start="100" end="50" time="50" condition="!Control.HasFocus(9000)">Conditional</animation>
-                        <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     </control>
                     <control type="label">
                         <posx>30</posx>
@@ -92,7 +92,7 @@
                 <label>$LOCALIZE[20077] - $INFO[Container(9000).ListItem.Label] $INFO[Container(9000).ListItem.Label2]</label>
                 <align>center</align>
                 <aligny>center</aligny>
-                <textcolor>white</textcolor>
+                
                 <shadowcolor>black</shadowcolor>
                 <visible>!Container(9000).Hasfocus(5)</visible>
             </control>
@@ -247,7 +247,7 @@
                     <onright>9000</onright>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
-                    <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <textcolor>grey2</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -663,7 +663,7 @@
                     <posx>22</posx>
                     <posy>0</posy>
                     <width>750</width>
-                    <align>left</align>
+                    
                     <visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)] + Skin.HasSetting(breadcrumbslabel)</visible>
                     <itemgap>0</itemgap>
                     <orientation>horizontal</orientation>

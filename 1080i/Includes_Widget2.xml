@@ -221,7 +221,7 @@
                         <posy>0</posy>
                         <width>1050</width>
                         <height>45</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Reg24_Caps</font>
                         <textcolor>white2</textcolor>
@@ -593,9 +593,9 @@
                             <width>375</width>
                             <height>34</height>
                             <font>Font_Info_Caps</font>
-                            <textcolor>white</textcolor>
+                            
                             <shadowcolor>-</shadowcolor>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                         </control>
@@ -607,7 +607,7 @@
                             <width>390</width>
                             <height>34</height>
                             <texture>views/tripanel/listselect_fo.png</texture>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <include>VisibleFadeEffect</include>
                             <animation effect="fade" start="100" end="70" time="1000" pulse="true" condition="!IsEmpty(Container(7000).ListItem.Property(Trailer))">Conditional</animation>
                         </control>
@@ -617,9 +617,9 @@
                             <width>368</width>
                             <height>34</height>
                             <font>Font_Info_Caps</font>
-                            <textcolor>white</textcolor>
+                            
                             <shadowcolor>-</shadowcolor>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                         </control>
@@ -830,7 +830,7 @@
                                 <posy>0</posy>
                                 <width>319</width>
                                 <height>319</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 <texture border="5">views/addonwall_select.png</texture>
                                 <include>Animation_VisibleChange200</include>
                                 <visible>Control.HasFocus(6019)</visible>
@@ -992,7 +992,7 @@
                                 <posy>0</posy>
                                 <width>319</width>
                                 <height>319</height>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 <texture border="5">views/addonwall_select.png</texture>
                                 <include>Animation_VisibleChange200</include>
                                 <visible>Control.HasFocus(6020)</visible>
@@ -1085,10 +1085,10 @@
                                 <width>390</width>
                                 <height>40</height>
                                 <font>Font_Condensed18</font>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <info>ListItem.Label</info>
-                                <textcolor>white</textcolor>
+                                
                                 <shadowcolor>black</shadowcolor>
                             </control>
                             <control type="label">
@@ -1097,7 +1097,7 @@
                                 <width>390</width>
                                 <height>40</height>
                                 <font>font12</font>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_Condensed18</font>
                                 <info>ListItem.Label2</info>
@@ -1110,7 +1110,7 @@
                                 <width>390</width>
                                 <height>40</height>
                                 <font>font12</font>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_Condensed18</font>
                                 <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
@@ -1134,7 +1134,7 @@
                                 <height>116</height>
                                 <visible>Control.HasFocus(6010)</visible>
                                 <texture>views/tripanel/listselect_fo.png</texture>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             </control>
                             <control type="label">
                                 <posx>10</posx>
@@ -1142,10 +1142,10 @@
                                 <width>390</width>
                                 <height>40</height>
                                 <font>Font_Condensed18</font>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <info>ListItem.Label</info>
-                                <textcolor>white</textcolor>
+                                
                                 <shadowcolor>black</shadowcolor>
                             </control>
                             <control type="label">
@@ -1154,7 +1154,7 @@
                                 <width>390</width>
                                 <height>40</height>
                                 <font>font12</font>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_Condensed18</font>
                                 <info>ListItem.Label2</info>
@@ -1167,7 +1167,7 @@
                                 <width>390</width>
                                 <height>40</height>
                                 <font>font12</font>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_Condensed18</font>
                                 <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
@@ -1228,7 +1228,7 @@
                                 <posy>31</posy>
                                 <width>340</width>
                                 <height>50</height>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_ShowcaseMainLabel2</font>
                                 <textcolor>white2</textcolor>
@@ -1241,7 +1241,7 @@
                                 <posy>70</posy>
                                 <width>340</width>
                                 <height>50</height>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_Condensed20</font>
                                 <textcolor>white2</textcolor>
@@ -1254,7 +1254,7 @@
                                 <posy>140</posy>
                                 <width>300</width>
                                 <height>205</height>
-                                <align>left</align>
+                                
                                 <label>$INFO[ListItem.Label2][CR]$INFO[ListItem.Property(RunningTime),, $LOCALIZE[12391] • ]$INFO[ListItem.Property(Network)][CR][CR]Previous Episode:[CR]$INFO[ListItem.Property(LatestTitle)] $INFO[ListItem.Property(LatestDate), •][CR]</label>
                                 <font>Font_Condensed18</font>
                                 <include>listcolornofocus</include>
@@ -1289,7 +1289,7 @@
                                 <posy>31</posy>
                                 <width>340</width>
                                 <height>50</height>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_ShowcaseMainLabel2</font>
                                 <textcolor>white2</textcolor>
@@ -1302,7 +1302,7 @@
                                 <posy>70</posy>
                                 <width>340</width>
                                 <height>50</height>
-                                <align>left</align>
+                                
                                 <aligny>center</aligny>
                                 <font>Font_Condensed20</font>
                                 <textcolor>white2</textcolor>
@@ -1315,7 +1315,7 @@
                                 <posy>140</posy>
                                 <width>300</width>
                                 <height>205</height>
-                                <align>left</align>
+                                
                                 <label>$INFO[ListItem.Label2][CR]$INFO[ListItem.Property(RunningTime),, $LOCALIZE[12391] • ]$INFO[ListItem.Property(Network)][CR][CR]Previous Episode:[CR]$INFO[ListItem.Property(LatestTitle)] $INFO[ListItem.Property(LatestDate), •][CR]</label>
                                 <font>Font_Condensed18</font>
                                 <include>listcolornofocus</include>
@@ -1327,7 +1327,7 @@
                                 <width>532</width>
                                 <height>319</height>
                                 <aspectratio>stretch</aspectratio>
-                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 <texture border="5">views/addonwall_select.png</texture>
                                 <include>Animation_VisibleChange200</include>
                                 <visible>Control.HasFocus(6010)</visible>
@@ -1361,7 +1361,7 @@
                         <font>Font_Condensed15_Caps</font>
                         <textcolor>white3</textcolor>
                         <shadowcolor>black</shadowcolor>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <textoffsetx>15</textoffsetx>
                         <label>[UPPERCASE]$LOCALIZE[31163][/UPPERCASE]</label>
@@ -1452,10 +1452,10 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed18</font>
-                        <textcolor>white</textcolor>
+                        
                         <shadowcolor>-</shadowcolor>
                         <label>$INFO[Container(6001).ListItem.Label]$INFO[Container(6001).ListItem.Label2, - ]</label>
                         <textoffsetx>15</textoffsetx>
@@ -1466,7 +1466,7 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed18</font>
                         <textcolor>$VAR[FontColorVar]</textcolor>
@@ -1595,10 +1595,10 @@
                         <posy>300</posy>
                         <width>246</width>
                         <height>40</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed18</font>
-                        <textcolor>white</textcolor>
+                        
                         <shadowcolor>-</shadowcolor>
                         <label>$INFO[Container(6002).ListItem.Label]</label>
                         <visible>![Control.HasFocus(6011) | Control.HasFocus(6002)]</visible>
@@ -1609,7 +1609,7 @@
                         <posy>300</posy>
                         <width>246</width>
                         <height>40</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed18</font>
                         <textcolor>$VAR[FontColorVar]</textcolor>
@@ -1746,10 +1746,10 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed18</font>
-                        <textcolor>white</textcolor>
+                        
                         <shadowcolor>-</shadowcolor>
                         <label>$INFO[Container(6003).ListItem.Label]$INFO[Container(6003).ListItem.Label2, - ]</label>
                         <textoffsetx>15</textoffsetx>
@@ -1760,7 +1760,7 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed18</font>
                         <textcolor>$VAR[FontColorVar]</textcolor>
@@ -1801,7 +1801,7 @@
                     <posy>26</posy>
                     <width>624</width>
                     <height>350</height>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texture border="5">views/addonwall_select.png</texture>
                     <include>Animation_VisibleChange200</include>
                     <visible>Control.HasFocus(6010) + SubString(Control.GetLabel(4325),featured)</visible>
@@ -1811,7 +1811,7 @@
                     <posx>650</posx>
                     <width>350</width>
                     <height>350</height>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texture border="5">views/addonwall_select.png</texture>
                     <include>Animation_VisibleChange200</include>
                     <visible>Control.HasFocus(6011) | Control.HasFocus(6002)</visible>
@@ -1822,7 +1822,7 @@
                     <posy>26</posy>
                     <width>624</width>
                     <height>350</height>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texture border="5">views/addonwall_select.png</texture>
                     <include>Animation_VisibleChange200</include>
                     <visible>Control.HasFocus(6012)</visible>
@@ -1891,7 +1891,7 @@
                         <posy>5</posy>
                         <width>1373</width>
                         <height>50</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Reg24</font>
                         <textcolor>white2</textcolor>
@@ -1904,7 +1904,7 @@
                         <posy>58</posy>
                         <width>1373</width>
                         <height>30</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed22</font>
                         <textcolor>grey2</textcolor>
@@ -1946,7 +1946,7 @@
                         <onup>SetFocus(6010)</onup>
                         <ondown>ClearProperty(PanelWidget2Info,Home)</ondown>
                         <ondown>SetFocus(6010)</ondown>
-                        <align>left</align>
+                        
                         <orientation>horizontal</orientation>
                         <itemgap>50</itemgap>
                         <control type="button" id="6015">
@@ -2033,7 +2033,7 @@
                         <posx>238</posx>
                         <posy>98</posy>
                         <width>1373</width>
-                        <align>left</align>
+                        
                         <itemgap>40</itemgap>
                         <orientation>horizontal</orientation>
                         <control type="label">
@@ -2111,7 +2111,7 @@
                         <posy>5</posy>
                         <width>986</width>
                         <height>50</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Reg24</font>
                         <textcolor>white2</textcolor>
@@ -2124,7 +2124,7 @@
                         <posy>58</posy>
                         <width>986</width>
                         <height>30</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed22</font>
                         <textcolor>grey2</textcolor>
@@ -2167,7 +2167,7 @@
                         <onup>SetFocus(6010)</onup>
                         <ondown>ClearProperty(PanelWidget2Info,Home)</ondown>
                         <ondown>SetFocus(6010)</ondown>
-                        <align>left</align>
+                        
                         <orientation>horizontal</orientation>
                         <itemgap>50</itemgap>
                         <control type="button" id="6022">
@@ -2223,7 +2223,7 @@
                         <posx>625</posx>
                         <posy>98</posy>
                         <width>1373</width>
-                        <align>left</align>
+                        
                         <itemgap>40</itemgap>
                         <orientation>horizontal</orientation>
                         <control type="label">
@@ -2272,7 +2272,7 @@
                         <posy>5</posy>
                         <width>1251</width>
                         <height>50</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Reg24</font>
                         <textcolor>white2</textcolor>
@@ -2285,7 +2285,7 @@
                         <posy>58</posy>
                         <width>1251</width>
                         <height>30</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed22</font>
                         <textcolor>grey2</textcolor>
@@ -2298,7 +2298,7 @@
                         <posy>150</posy>
                         <width>1251</width>
                         <height>30</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed22</font>
                         <textcolor>grey2</textcolor>
@@ -2341,7 +2341,7 @@
                         <onup>SetFocus(6010)</onup>
                         <ondown>ClearProperty(PanelWidget2Info,Home)</ondown>
                         <ondown>SetFocus(6010)</ondown>
-                        <align>left</align>
+                        
                         <orientation>horizontal</orientation>
                         <itemgap>50</itemgap>
                         <control type="button" id="6032">
@@ -2398,7 +2398,7 @@
                         <posx>360</posx>
                         <posy>98</posy>
                         <width>1373</width>
-                        <align>left</align>
+                        
                         <itemgap>40</itemgap>
                         <orientation>horizontal</orientation>
                         <control type="label">
@@ -2447,7 +2447,7 @@
                         <posy>5</posy>
                         <width>1251</width>
                         <height>50</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Reg24</font>
                         <textcolor>white2</textcolor>
@@ -2460,7 +2460,7 @@
                         <posy>58</posy>
                         <width>1251</width>
                         <height>30</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Condensed22</font>
                         <textcolor>grey2</textcolor>
@@ -2493,7 +2493,7 @@
                         <onup>SetFocus(6010)</onup>
                         <ondown>ClearProperty(PanelWidget2Info,Home)</ondown>
                         <ondown>SetFocus(6010)</ondown>
-                        <align>left</align>
+                        
                         <orientation>horizontal</orientation>
                         <itemgap>50</itemgap>
                         <control type="button" id="6042">
@@ -2535,7 +2535,7 @@
                         <posx>360</posx>
                         <posy>98</posy>
                         <width>1373</width>
-                        <align>left</align>
+                        
                         <itemgap>40</itemgap>
                         <orientation>horizontal</orientation>
                         <control type="label">
@@ -7336,7 +7336,7 @@
                         <posy>0</posy>
                         <width>228</width>
                         <height>350</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="5">views/addonwall_select.png</texture>
                         <visible>Control.HasFocus(6010)</visible>
                     </control>
@@ -7422,7 +7422,7 @@
                         <posy>0</posy>
                         <width>319</width>
                         <height>319</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="5">views/addonwall_select.png</texture>
                         <visible>Control.HasFocus(6010)</visible>
                     </control>
@@ -7450,7 +7450,7 @@
                             <posy>275</posy>
                             <width>389</width>
                             <height>30</height>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <font>Font_Condensed22</font>
                             <textcolor>white2</textcolor>
@@ -7463,7 +7463,7 @@
                             <posy>305</posy>
                             <width>389</width>
                             <height>40</height>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <font>Font_Condensed18</font>
                             <textcolor>white2</textcolor>
@@ -7506,7 +7506,7 @@
                             <posy>275</posy>
                             <width>389</width>
                             <height>30</height>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <font>Font_Condensed22</font>
                             <textcolor>white2</textcolor>
@@ -7520,7 +7520,7 @@
                             <posy>305</posy>
                             <width>389</width>
                             <height>40</height>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <font>Font_Condensed18</font>
                             <textcolor>white2</textcolor>
@@ -7534,7 +7534,7 @@
                             <posy>275</posy>
                             <width>389</width>
                             <height>30</height>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <font>Font_Condensed22</font>
                             <textcolor>$VAR[FontColorVar]</textcolor>
@@ -7548,7 +7548,7 @@
                             <posy>305</posy>
                             <width>389</width>
                             <height>40</height>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <font>Font_Condensed18</font>
                             <textcolor>$VAR[FontColorVar]</textcolor>
@@ -7563,7 +7563,7 @@
                         <posy>0</posy>
                         <width>399</width>
                         <height>350</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="5">views/addonwall_select.png</texture>
                         <visible>Control.HasFocus(6010)</visible>
                     </control>
@@ -7579,7 +7579,7 @@
                         <width>532</width>
                         <height>334</height>
                         <aspectratio>stretch</aspectratio>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="5">views/addonwall_select.png</texture>
                         <visible>Control.HasFocus(6010)</visible>
                     </control>
@@ -7594,7 +7594,7 @@
                         <posy>0</posy>
                         <width>798</width>
                         <height>350</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="5">views/addonwall_select.png</texture>
                         <visible>Control.HasFocus(6010)</visible>
                     </control>
@@ -7609,7 +7609,7 @@
                         <posy>0</posy>
                         <width>798</width>
                         <height>350</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="5">views/addonwall_select.png</texture>
                         <visible>Control.HasFocus(6010)</visible>
                     </control>
@@ -8570,7 +8570,7 @@
                 <posy>25</posy>
                 <width>450</width>
                 <height>50</height>
-                <align>left</align>
+                
                 <aligny>center</aligny>
                 <font>Font_MainClassic4</font>
                 <textcolor>white2</textcolor>
@@ -8583,7 +8583,7 @@
                 <posy>78</posy>
                 <width>450</width>
                 <height>30</height>
-                <align>left</align>
+                
                 <aligny>center</aligny>
                 <font>Font_Condensed22</font>
                 <textcolor>grey2</textcolor>
@@ -8596,7 +8596,7 @@
                 <posy>124</posy>
                 <width>400</width>
                 <height>210</height>
-                <align>left</align>
+                
                 <label>$INFO[ListItem.Property(Description)]</label>
                 <font>Font_Condensed20</font>
                 <include>listcolornofocus</include>
@@ -8635,7 +8635,7 @@
                 <posy>305</posy>
                 <width>440</width>
                 <height>40</height>
-                <align>left</align>
+                
                 <aligny>center</aligny>
                 <font>Font_Condensed18</font>
                 <textcolor>white2</textcolor>
@@ -8648,7 +8648,7 @@
                 <posy>25</posy>
                 <width>400</width>
                 <height>50</height>
-                <align>left</align>
+                
                 <aligny>center</aligny>
                 <font>Font_MainClassic4</font>
                 <label>$INFO[ListItem.Label2]$INFO[ListItem.Property(Date)]</label>
@@ -8661,7 +8661,7 @@
                 <posy>76</posy>
                 <width>340</width>
                 <height>30</height>
-                <align>left</align>
+                
                 <aligny>center</aligny>
                 <font>Font_Condensed22</font>
                 <textcolor>grey2</textcolor>
@@ -8683,7 +8683,7 @@
                 <posy>112</posy>
                 <width>355</width>
                 <height>205</height>
-                <align>left</align>
+                
                 <label>$INFO[ListItem.Property(Plot)]</label>
                 <font>Font_Condensed20</font>
                 <include>listcolornofocus</include>
@@ -8719,7 +8719,7 @@
             <posy>25</posy>
             <width>340</width>
             <height>50</height>
-            <align>left</align>
+            
             <aligny>center</aligny>
             <font>Font_MainClassic4</font>
             <textcolor>white2</textcolor>
@@ -8732,7 +8732,7 @@
             <posy>77</posy>
             <width>340</width>
             <height>30</height>
-            <align>left</align>
+            
             <aligny>center</aligny>
             <font>Font_Condensed22</font>
             <textcolor>grey2</textcolor>
@@ -8746,7 +8746,7 @@
             <posy>77</posy>
             <width>340</width>
             <height>30</height>
-            <align>left</align>
+            
             <aligny>center</aligny>
             <font>Font_Condensed22</font>
             <textcolor>grey2</textcolor>
@@ -8769,7 +8769,7 @@
             <posy>112</posy>
             <width>300</width>
             <height>205</height>
-            <align>left</align>
+            
             <label>$INFO[ListItem.Label2]</label>
             <font>Font_Condensed20</font>
             <include>listcolornofocus</include>

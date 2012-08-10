@@ -89,7 +89,7 @@
                     <posx>0</posx>
                     <posy>195</posy>
                     <width>276</width>
-                    <align>left</align>
+                    
                     <font>Font_Condensed18</font>
                     <textoffsetx>15</textoffsetx>
                     <textcolor>grey2</textcolor>
@@ -111,7 +111,7 @@
                     <posx>0</posx>
                     <posy>230</posy>
                     <width>276</width>
-                    <align>left</align>
+                    
                     <font>Font_Condensed18</font>
                     <textoffsetx>15</textoffsetx>
                     <textcolor>grey2</textcolor>
@@ -140,7 +140,7 @@
                 <height>268</height>
                 <fadetime>IconCrossfadeTime2</fadetime>
                 <aspectratio>keep</aspectratio>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texture border="5">views/addonwall_select.png</texture>
                 <include>Animation_VisibleChange200</include>
             </control>
@@ -161,7 +161,7 @@
                     <posx>0</posx>
                     <posy>195</posy>
                     <width>276</width>
-                    <align>left</align>
+                    
                     <font>Font_Condensed18</font>
                     <textoffsetx>15</textoffsetx>
                     <textcolor>white2</textcolor>
@@ -183,7 +183,7 @@
                     <posx>0</posx>
                     <posy>230</posy>
                     <width>276</width>
-                    <align>left</align>
+                    
                     <font>Font_Condensed18</font>
                     <textoffsetx>15</textoffsetx>
                     <textcolor>white2</textcolor>
@@ -222,7 +222,7 @@
                     <height>146</height>
                     <aligny>center</aligny>
                     <align>center</align>
-                    <textcolor>white</textcolor>
+                    
                     <label>$INFO[ListItem.Label]</label>
                     <font>Font_Bold24</font>
                 </control>
@@ -265,7 +265,7 @@
                     <height>161</height>
                     <aspectratio align="center">stretch</aspectratio>
                     <texture>common/black.png</texture>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <bordertexture border="5">views/addonwall_select.png</bordertexture>
                     <bordersize>5</bordersize>
                 </control>
@@ -276,7 +276,7 @@
                     <height>146</height>
                     <aligny>center</aligny>
                     <align>center</align>
-                    <textcolor>white</textcolor>
+                    
                     <label>$INFO[ListItem.Label]</label>
                     <font>Font_Bold24</font>
                 </control>

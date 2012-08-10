@@ -163,7 +163,7 @@
                     <height>88</height>
                     <font>Font_Reg21</font>
                     <textcolor>floor</textcolor>
-                    <align>left</align>
+                    
                     <colordiffuse>floor</colordiffuse>
                     <label>$INFO[ListItem.Genre]</label>
                 </control>
@@ -265,7 +265,7 @@
         </control>
     </include>
     <include name="Top250Label2ColorDefault">
-        <textcolor>white</textcolor>
+        
     </include>
     <include name="Top250Label2ColorNoDefault">
         <textcolor>floor</textcolor>

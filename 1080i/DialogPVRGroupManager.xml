@@ -45,7 +45,7 @@
                         <height>105</height>
                         <label>51506</label>
                         <font>Font_Bold22_Caps</font>
-                        <textcolor>white</textcolor>
+                        
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -83,7 +83,7 @@
                                 <align>center</align>
                                 <aligny>center</aligny>
                                 <info>ListItem.Label</info>
-                                <textcolor>white</textcolor>
+                                
                             </control>
                         </itemlayout>
                         <focusedlayout height="68">
@@ -100,6 +100,7 @@
                                 <width>495</width>
                                 <height>66</height>
                                 <texture>views/tripanel/listselect_fo.png</texture>
+                                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 <visible>Control.HasFocus(13)</visible>
                             </control>
                             <control type="label">
@@ -110,7 +111,7 @@
                                 <font>Font_Reg20</font>
                                 <align>center</align>
                                 <aligny>center</aligny>
-                                <textcolor>white</textcolor>
+                                
                                 <info>ListItem.Label</info>
                             </control>
                         </focusedlayout>
@@ -125,7 +126,7 @@
                         <width>510</width>
                         <height>105</height>
                         <font>Font_Bold20_Caps</font>
-                        <textcolor>white</textcolor>
+                        
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -180,6 +181,7 @@
                                 <posy>-6</posy>
                                 <width>495</width>
                                 <height>66</height>
+                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 <texture>views/tripanel/listselect_fo.png</texture>
                                 <visible>Control.HasFocus(11)</visible>
                             </control>
@@ -200,7 +202,7 @@
                                 <font>Font_Reg20</font>
                                 <align>center</align>
                                 <aligny>center</aligny>
-                                <textcolor>white</textcolor>
+                                
                                 <label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
                             </control>
                         </focusedlayout>
@@ -215,7 +217,7 @@
                         <width>510</width>
                         <height>105</height>
                         <font>Font_Bold20_Caps</font>
-                        <textcolor>white</textcolor>
+                        
                         <align>center</align>
                         <aligny>center</aligny>
                     </control>
@@ -268,6 +270,7 @@
                             <control type="image">
                                 <posx>0</posx>
                                 <posy>-6</posy>
+                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 <width>495</width>
                                 <height>66</height>
                                 <texture>views/tripanel/listselect_fo.png</texture>
@@ -290,7 +293,7 @@
                                 <font>Font_Reg20</font>
                                 <align>center</align>
                                 <aligny>center</aligny>
-                                <textcolor>white</textcolor>
+                                
                                 <label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
                             </control>
                         </focusedlayout>

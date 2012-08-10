@@ -51,7 +51,7 @@
                         <font>Font_Info</font>
                         <aligny>center</aligny>
                         <textcolor>9bFFFFFF</textcolor>
-                        <align>left</align>
+                        
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
@@ -64,7 +64,7 @@
                         <font>Font_Info</font>
                         <aligny>center</aligny>
                         <textcolor>white6</textcolor>
-                        <align>left</align>
+                        
                         <info>ListItem.Label</info>
                     </control>
                 </focusedlayout>
@@ -141,7 +141,7 @@
                     <height>62</height>
                     <font>Font_Reg20</font>
                     <label>1024</label>
-                    <align>left</align>
+                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -150,7 +150,7 @@
                     <onup>20</onup>
                     <ondown>13</ondown>
                     <texturenofocus>-</texturenofocus>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 </control>
                 <control type="button" id="13">
@@ -159,7 +159,7 @@
                     <height>62</height>
                     <font>Font_Reg20</font>
                     <label>15019</label>
-                    <align>left</align>
+                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -168,7 +168,7 @@
                     <onup>11</onup>
                     <ondown>14</ondown>
                     <texturenofocus>-</texturenofocus>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 </control>
                 <control type="button" id="14">
@@ -177,7 +177,7 @@
                     <height>62</height>
                     <font>Font_Reg20</font>
                     <label>1210</label>
-                    <align>left</align>
+                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -186,7 +186,7 @@
                     <onup>13</onup>
                     <ondown>19</ondown>
                     <texturenofocus>-</texturenofocus>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 </control>
                 <control type="button" id="19">
@@ -195,7 +195,7 @@
                     <height>62</height>
                     <font>Font_Reg20</font>
                     <label>222</label>
-                    <align>left</align>
+                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -204,7 +204,7 @@
                     <onup>14</onup>
                     <ondown>18</ondown>
                     <texturenofocus>-</texturenofocus>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 </control>
                 <control type="button" id="18">
@@ -213,7 +213,7 @@
                     <height>62</height>
                     <font>Font_Reg20</font>
                     <label>186</label>
-                    <align>left</align>
+                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -222,7 +222,7 @@
                     <onup>19</onup>
                     <ondown>11</ondown>
                     <texturenofocus>-</texturenofocus>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 </control>
             </control>

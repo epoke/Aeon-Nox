@@ -49,9 +49,9 @@
             <height>45</height>
             <font>Font_Bold19</font>
             <label>$LOCALIZE[298]</label>
-            <align>left</align>
+            
             <aligny>center</aligny>
-            <textcolor>white</textcolor>
+            
             <shadowcolor>black</shadowcolor>
         </control>
         <control type="button" id="3">
@@ -84,7 +84,7 @@
             <focusedcolor>white</focusedcolor>
             <textoffsetx>0</textoffsetx>
             <font>Font_Bold19</font>
-            <align>left</align>
+            
             <aligny>center</aligny>
             <onleft>61</onleft>
             <onright>4</onright>
@@ -103,7 +103,7 @@
             <focusedcolor>white</focusedcolor>
             <textoffsetx>0</textoffsetx>
             <font>Font_Bold19</font>
-            <align>left</align>
+            
             <aligny>center</aligny>
             <onleft>61</onleft>
             <onright>4</onright>
@@ -172,7 +172,7 @@
                     <posy>0</posy>
                     <width>345</width>
                     <height>225</height>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texture border="5">views/addonwall_select.png</texture>
                     <include>Animation_VisibleChange200</include>
                 </control>

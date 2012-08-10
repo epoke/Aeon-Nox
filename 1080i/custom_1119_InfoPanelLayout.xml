@@ -66,7 +66,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>Font_Reg19</font>
-                    <textcolor>white</textcolor>
+                    
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>
@@ -218,7 +218,7 @@
             </content>
         </control>
         <control type="radiobutton" id="1625">
-            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <posx>0</posx>
             <posy>1020</posy>
             <height>60</height>
@@ -232,7 +232,7 @@
             <disabledcolor>grey3</disabledcolor>
             <textoffsetx>10</textoffsetx>
             <textoffsety>2</textoffsety>
-            <align>left</align>
+            
             <aligny>center</aligny>
             <onup>450</onup>
             <ondown>450</ondown>

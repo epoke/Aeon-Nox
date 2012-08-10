@@ -119,9 +119,9 @@
                 <font>Font_Reg20</font>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
-                <textcolor>white</textcolor>
+                
                 <focusedcolor>white</focusedcolor>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <textoffsetx>30</textoffsetx>
                 <hinttext>21420</hinttext>
                 <aligny>center</aligny>
@@ -140,9 +140,9 @@
                 <font>Font_Reg20</font>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
-                <textcolor>white</textcolor>
+                
                 <focusedcolor>white</focusedcolor>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <textoffsetx>30</textoffsetx>
                 <hinttext>21420</hinttext>
                 <aligny>center</aligny>
@@ -170,12 +170,12 @@
                     <texturenofocus>-</texturenofocus>
                     <label>186</label>
                     <font>Font_Bold20_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <focusedcolor>white</focusedcolor>
                     <textoffsety>18</textoffsety>
                     <textoffsetx>20</textoffsetx>
                     <aligny>center</aligny>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 </control>
                 <control type="button" id="19">
                     <posx>3</posx>
@@ -186,12 +186,12 @@
                     <texturenofocus>-</texturenofocus>
                     <label>222</label>
                     <font>Font_Bold20_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <focusedcolor>white</focusedcolor>
                     <textoffsety>18</textoffsety>
                     <textoffsetx>20</textoffsetx>
                     <aligny>center</aligny>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 </control>
             </control>
         </control>

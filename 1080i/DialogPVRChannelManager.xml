@@ -119,9 +119,9 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
-                        <textcolor>white</textcolor>
+                        
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
                         <visible>ListItem.Property(ActiveChannel)</visible>
                     </control>
@@ -131,7 +131,7 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <textcolor>grey3</textcolor>
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
@@ -159,6 +159,7 @@
                         <posy>-8</posy>
                         <width>1650</width>
                         <height>75</height>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture>views/tripanel/listselect_fo.png</texture>
                     </control>
                     <control type="image">
@@ -187,7 +188,7 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <textcolor>black</textcolor>
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
@@ -199,7 +200,7 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <textcolor>black</textcolor>
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
@@ -211,7 +212,7 @@
                         <width>525</width>
                         <height>45</height>
                         <font>font12</font>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <textcolor>black</textcolor>
                         <label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>

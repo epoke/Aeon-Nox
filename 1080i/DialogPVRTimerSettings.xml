@@ -107,7 +107,7 @@
                     <height>62</height>
                     <font>Font_SetContentMenu</font>
                     <label>186</label>
-                    <align>left</align>
+                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>FF262728</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -115,6 +115,7 @@
                     <onright>5</onright>
                     <onup>29</onup>
                     <ondown>29</ondown>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 </control>
@@ -125,13 +126,14 @@
                     <height>62</height>
                     <font>Font_SetContentMenu</font>
                     <label>222</label>
-                    <align>left</align>
+                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>FF262728</focusedcolor>
                     <textoffsetx>30</textoffsetx>
                     <onleft>5</onleft>
                     <onright>5</onright>
                     <onup>28</onup>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <ondown>28</ondown>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>

@@ -30,9 +30,9 @@
                     <width>310</width>
                     <height>34</height>
                     <font>Font_Condensed18_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>-</shadowcolor>
-                    <align>left</align>
+                    
                     <aligny>center</aligny>
                     <scroll>true</scroll>
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -61,9 +61,9 @@
                     <width>310</width>
                     <height>34</height>
                     <font>Font_Info_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>-</shadowcolor>
-                    <align>left</align>
+                    
                     <aligny>center</aligny>
                     <scroll>true</scroll>
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -431,7 +431,7 @@
                         <posy>0</posy>
                         <width>1050</width>
                         <height>45</height>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <font>Font_Reg24_Caps</font>
                         <textcolor>white2</textcolor>
@@ -822,7 +822,7 @@
                             <font>Font_Info_Caps</font>
                             <textcolor>grey2</textcolor>
                             <shadowcolor>-</shadowcolor>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                         </control>
@@ -834,7 +834,7 @@
                             <width>390</width>
                             <height>34</height>
                             <texture>views/tripanel/listselect_fo.png</texture>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <include>VisibleFadeEffect</include>
                             <animation effect="fade" start="100" end="70" time="1000" pulse="true" condition="!IsEmpty(Container(8000).ListItem.Property(Trailer))">Conditional</animation>
                         </control>
@@ -846,7 +846,7 @@
                             <font>Font_Info_Caps</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                         </control>

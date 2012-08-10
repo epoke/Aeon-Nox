@@ -346,7 +346,7 @@
                     <ondown>9003</ondown>
                     <onback>50</onback>
                     <control type="button" id="1802">
-                        <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <height>100</height>
                         <width>500</width>
                         <texturenofocus>settings/listselect_nf2.png</texturenofocus>
@@ -356,7 +356,7 @@
                         <disabledcolor>grey3</disabledcolor>
                         <textoffsetx>110</textoffsetx>
                         <textoffsety>28</textoffsety>
-                        <align>left</align>
+                        
                         <onleft>Skin.Reset(viewtypeselect)</onleft>
                         <onleft>ActivateWindow(1121)</onleft>
                         <aligny>top</aligny>
@@ -368,7 +368,7 @@
                         <visible>!Window.IsActive(musicplaylisteditor)</visible>
                     </control>
                     <control type="button" id="1801">
-                        <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <height>100</height>
                         <width>500</width>
                         <texturenofocus>settings/listselect_nf2.png</texturenofocus>
@@ -378,7 +378,7 @@
                         <disabledcolor>grey3</disabledcolor>
                         <textoffsetx>105</textoffsetx>
                         <textoffsety>28</textoffsety>
-                        <align>left</align>
+                        
                         <onleft>Skin.Reset(viewtypeselect)</onleft>
                         <onleft>ActivateWindow(1121)</onleft>
                         <aligny>top</aligny>
@@ -393,7 +393,7 @@
                         <visible>!IsEmpty(ListItem.Trailer)</visible>
                     </control>
                     <control type="button" id="1800">
-                        <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <height>100</height>
                         <width>400</width>
                         <texturenofocus>settings/listselect_nf2.png</texturenofocus>
@@ -403,7 +403,7 @@
                         <disabledcolor>grey3</disabledcolor>
                         <textoffsetx>105</textoffsetx>
                         <textoffsety>28</textoffsety>
-                        <align>left</align>
+                        
                         <onleft>Skin.Reset(viewtypeselect)</onleft>
                         <onleft>ActivateWindow(1121)</onleft>
                         <aligny>top</aligny>
@@ -447,7 +447,7 @@
                         <disabledcolor>grey3</disabledcolor>
                         <textoffsetx>15</textoffsetx>
                         <textoffsety>2</textoffsety>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <onleft>Skin.Reset(viewtypeselect)</onleft>
                         <onleft>ActivateWindow(1121)</onleft>
@@ -725,7 +725,7 @@
         <control type="button">
             <include>HiddenObject</include>
             <visible>!Skin.HasSetting(kioskmode)</visible>
-            <hitrect x="0" y="0" w="50" h="1080" />
+            <hitrect x="-50" y="0" w="50" h="1080" />
             <onfocus>SetFocus(9000)</onfocus>
         </control>
         <control type="button">
@@ -756,7 +756,7 @@
                 <font>Font_Condensed18</font>
                 <include>listcolornofocus</include>
                 <aligny>center</aligny>
-                <align>left</align>
+                
                 <label>[UPPERCASE][COLOR white3]$INFO[MusicPlayer.Artist][/COLOR][/UPPERCASE]</label>
                 <visible>!ControlGroup(3000).HasFocus</visible>
                 <include>Animation_VisibleChange200</include>
@@ -769,7 +769,7 @@
                 <font>Font_Condensed18</font>
                 <include>listcolornofocus</include>
                 <aligny>center</aligny>
-                <align>left</align>
+                
                 <label>[UPPERCASE][COLOR AA777777]$INFO[MusicPlayer.Album][/COLOR][/UPPERCASE]</label>
                 <visible>!ControlGroup(3000).HasFocus</visible>
                 <include>Animation_VisibleChange200</include>
@@ -782,7 +782,7 @@
                 <font>Font_Condensed18</font>
                 <include>listcolornofocus</include>
                 <aligny>center</aligny>
-                <align>left</align>
+                
                 <label>[UPPERCASE][COLOR AA777777]$INFO[MusicPlayer.Title][/COLOR][/UPPERCASE]</label>
                 <visible>!ControlGroup(3000).HasFocus</visible>
                 <include>Animation_VisibleChange200</include>
@@ -886,7 +886,7 @@
                 <height>75</height>
                 <label>210</label>
                 <font>-</font>
-                <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texturefocus>special://skin/extras/BigIcons/ButtonFirst.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
                 <onclick>PlayerControl(Previous)</onclick>
@@ -895,7 +895,7 @@
                 <width>75</width>
                 <height>75</height>
                 <label>31354</label>
-                <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <font>-</font>
                 <texturefocus>special://skin/extras/BigIcons/ButtonFRW.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
@@ -912,7 +912,7 @@
                 <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                 <alttexturefocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturefocus>
                 <alttexturenofocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturenofocus>
-                <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <onclick>PlayerControl(Play)</onclick>
             </control>
             <control type="button" id="603">
@@ -922,7 +922,7 @@
                 <font>-</font>
                 <texturefocus>special://skin/extras/BigIcons/ButtonStop.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
-                <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <onclick>down</onclick>
                 <onclick>PlayerControl(Stop)</onclick>
             </control>
@@ -930,7 +930,7 @@
                 <width>75</width>
                 <height>75</height>
                 <label>31353</label>
-                <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <font>-</font>
                 <texturefocus>special://skin/extras/BigIcons/ButtonFFW.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
@@ -940,7 +940,7 @@
                 <width>75</width>
                 <height>75</height>
                 <label>209</label>
-                <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <font>-</font>
                 <texturefocus>special://skin/extras/BigIcons/ButtonEnd.png</texturefocus>
                 <texturenofocus>-</texturenofocus>

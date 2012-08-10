@@ -80,8 +80,8 @@
                         <width>150</width>
                         <height>45</height>
                         <font>Font_Reg20</font>
-                        <textcolor>white</textcolor>
-                        <align>left</align>
+                        
+                        
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.StartTime]</label>
                     </control>
@@ -107,7 +107,7 @@
                         <width>400</width>
                         <height>45</height>
                         <font>Font_Reg18</font>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <textcolor>grey</textcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -128,7 +128,7 @@
                         <height>51</height>
                         <texture>views/tripanel/listselect_fo.png</texture>
                         <animation effect="fade" start="100" end="50" time="50" condition="!Control.HasFocus(11)">Conditional</animation>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <include>VisibleFadeEffect</include>
                     </control>
                     <control type="label">
@@ -137,8 +137,8 @@
                         <width>150</width>
                         <height>45</height>
                         <font>Font_Reg20</font>
-                        <textcolor>white</textcolor>
-                        <align>left</align>
+                        
+                        
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.StartTime]</label>
                     </control>
@@ -165,7 +165,7 @@
                         <height>45</height>
                         <font>Font_Reg18</font>
                         <textcolor>grey</textcolor>
-                        <align>left</align>
+                        
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
                     </control>

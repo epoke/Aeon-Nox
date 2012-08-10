@@ -80,7 +80,7 @@
                     <posy>0</posy>
                     <height>60</height>
                     <width>219</width>
-                    <align>left</align>
+                    
                     <aligny>center</aligny>
                     <font>Font_Condensed22</font>
                     <include>detailcolornofocus</include>
@@ -92,10 +92,10 @@
                     <posy>0</posy>
                     <height>60</height>
                     <width>219</width>
-                    <align>left</align>
+                    
                     <aligny>center</aligny>
                     <font>Font_Condensed22</font>
-                    <textcolor>white</textcolor>
+                    
                     <info>ListItem.Label</info>
                     <visible>StringCompare(ListItem.Label,Container.Viewmode)</visible>
                 </control>
@@ -107,7 +107,7 @@
                     <width>219</width>
                     <height>60</height>
                     <texture>views/tripanel/listselect_fo.png</texture>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <include>PanelGlowFade</include>
                 </control>
                 <control type="label">
@@ -115,7 +115,7 @@
                     <posy>0</posy>
                     <height>60</height>
                     <width>219</width>
-                    <align>left</align>
+                    
                     <aligny>center</aligny>
                     <font>Font_Condensed22</font>
                     <include>listcolornofocus</include>
@@ -127,10 +127,10 @@
                     <posy>0</posy>
                     <height>60</height>
                     <width>219</width>
-                    <align>left</align>
+                    
                     <aligny>center</aligny>
                     <font>Font_Condensed22</font>
-                    <textcolor>white</textcolor>
+                    
                     <info>ListItem.Label</info>
                     <visible>StringCompare(ListItem.Label,Container.Viewmode)</visible>
                 </control>
@@ -346,7 +346,7 @@
                     <height>115</height>
                     <texture>views/tripanel/listselect_fo.png</texture>
                     <visible>Control.HasFocus(9011)</visible>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <include>PanelGlowFade</include>
                 </control>
                 <control type="image">
@@ -437,7 +437,7 @@
                     <width>219</width>
                     <height>115</height>
                     <texture>views/tripanel/listselect_fo.png</texture>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <include>PanelGlowFade</include>
                     <visible>Control.HasFocus(9011)</visible>
                 </control>
@@ -633,7 +633,7 @@
             <label>$VAR[QuickNavButtonLabelVar]</label>
             <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus border="8">-</texturenofocus>
-            <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
+            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
             <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[42002],$LOCALIZE[42281])</onclick>
             <onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>

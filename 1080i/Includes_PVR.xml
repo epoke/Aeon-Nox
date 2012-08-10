@@ -64,7 +64,7 @@
                 <font>Font_Bold20_Caps</font>
                 <align>right</align>
                 <aligny>center</aligny>
-                <textcolor>white</textcolor>
+                
                 <info>ListItem.ChannelNumber</info>
             </control>
             <control type="label">
@@ -153,7 +153,7 @@
                 <posy>0</posy>
                 <width>923</width>
                 <height>103</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texture>views/tripanel/listselect_fo.png</texture>
                 <animation effect="fade" start="100" end="50" time="50" condition="Control.IsVisible(10) + !Control.HasFocus(10)">Conditional</animation>
                 <animation effect="fade" start="100" end="50" time="50" condition="Control.IsVisible(11) + !Control.HasFocus(11)">Conditional</animation>
@@ -166,7 +166,7 @@
                 <font>Font_Bold20_Caps</font>
                 <align>right</align>
                 <aligny>center</aligny>
-                <textcolor>white</textcolor>
+                
                 <info>ListItem.ChannelNumber</info>
             </control>
             <control type="label">
@@ -258,7 +258,7 @@
                 <font>Font_Bold20_Caps</font>
                 <align>right</align>
                 <aligny>center</aligny>
-                <textcolor>white</textcolor>
+                
                 <info>ListItem.ChannelNumber</info>
             </control>
             <control type="label">
@@ -349,7 +349,7 @@
                 <posy>9</posy>
                 <width>923</width>
                 <height>54</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texture>views/tripanel/listselect_fo.png</texture>
             </control>
             <control type="label">
@@ -360,7 +360,7 @@
                 <font>Font_Bold20_Caps</font>
                 <align>right</align>
                 <aligny>center</aligny>
-                <textcolor>white</textcolor>
+                
                 <info>ListItem.ChannelNumber</info>
             </control>
             <control type="label">
@@ -461,7 +461,7 @@
                     <width>800</width>
                     <height>30</height>
                     <font>Font_Reg22</font>
-                    <textcolor>white</textcolor>
+                    
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>[UPPERCASE][B]$INFO[ListItem.Title][/B][/UPPERCASE]</label>
@@ -487,7 +487,7 @@
                     <height>192</height>
                     <font>Font_Reg18</font>
                     <align>justify</align>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <pagecontrol>-</pagecontrol>
                     <label>$INFO[ListItem.Plot]</label>
@@ -521,7 +521,7 @@
                         <height>38</height>
                         <font>Font_Reg20</font>
                         <aligny>center</aligny>
-                        <textcolor>white</textcolor>
+                        
                         <label>[B]$INFO[ListItem.Label][/B]</label>
                     </control>
                     <control type="label">
@@ -590,7 +590,7 @@
                         <posy>4</posy>
                         <width>818</width>
                         <height>100</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture>views/tripanel/listselect_fo.png</texture>
                         <include>VisibleFadeEffect</include>
                     </control>
@@ -702,7 +702,7 @@
                         <height>44</height>
                         <font>Font_Bold22_Caps</font>
                         <aligny>center</aligny>
-                        <align>left</align>
+                        
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </rulerlayout>
@@ -736,7 +736,7 @@
                         <height>52</height>
                         <font>Font_Reg20</font>
                         <aligny>center</aligny>
-                        <align>left</align>
+                        
                         <label>$INFO[ListItem.ChannelName]</label>
                     </control>
                     <control type="image">
@@ -754,7 +754,7 @@
                         <posy>7</posy>
                         <width>405</width>
                         <height>51</height>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                     </control>
                     <control type="image">
@@ -786,7 +786,7 @@
                         <font>Font_Bold20_Caps</font>
                         <aligny>center</aligny>
                         <include>listcolorfocus</include>
-                        <align>left</align>
+                        
                         <label>$INFO[ListItem.ChannelName]</label>
                     </control>
                     <control type="image">
@@ -813,7 +813,7 @@
                         <height>38</height>
                         <font>Font_Reg20</font>
                         <aligny>center</aligny>
-                        <align>left</align>
+                        
                         <info>ListItem.Label</info>
                     </control>
                     <control type="image">
@@ -839,7 +839,7 @@
                         <height>52</height>
                         <posx>0</posx>
                         <posy>7</posy>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <texture border="8">views/tripanel/listselect_fo.png</texture>
                     </control>
                     <control type="image" id="2">
@@ -858,7 +858,7 @@
                         <font>Font_Reg20</font>
                         <aligny>center</aligny>
                         <include>listcolorfocus</include>
-                        <align>left</align>
+                        
                         <info>ListItem.Label</info>
                     </control>
                     <control type="image">
@@ -901,7 +901,7 @@
                     <width>330</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -913,7 +913,7 @@
                     <width>450</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -925,7 +925,7 @@
                     <width>450</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -937,7 +937,7 @@
                     <width>225</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1020,7 +1020,7 @@
                             <posy>16</posy>
                             <width>1650</width>
                             <height>57</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
                         </control>
                         <control type="image">
@@ -1140,7 +1140,7 @@
                     <width>330</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1152,7 +1152,7 @@
                     <width>450</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1164,7 +1164,7 @@
                     <width>450</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1176,7 +1176,7 @@
                     <width>225</width>
                     <height>30</height>
                     <font>Font_Bold22_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1256,7 +1256,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>19043</label>
                             <visible>ListItem.IsRecording</visible>
@@ -1275,7 +1275,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>52022</label>
                             <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
@@ -1287,7 +1287,7 @@
                             <posy>16</posy>
                             <width>1650</width>
                             <height>57</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
                         </control>
                         <control type="image">
@@ -1348,7 +1348,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <label>19043</label>
@@ -1368,7 +1368,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <label>52022</label>
@@ -1408,7 +1408,7 @@
                     <posy>15</posy>
                     <width>450</width>
                     <height>30</height>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1421,7 +1421,7 @@
                     <width>900</width>
                     <height>30</height>
                     <font>Font_Bold20_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1433,7 +1433,7 @@
                     <width>210</width>
                     <height>30</height>
                     <font>Font_Bold20_Caps</font>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1499,7 +1499,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <textcolor>grey2</textcolor>
                             <label>19043</label>
@@ -1519,7 +1519,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>51510</label>
                             <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
@@ -1538,7 +1538,7 @@
                             <posy>0</posy>
                             <width>1650</width>
                             <height>57</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
                         </control>
                         <control type="label">
@@ -1570,7 +1570,7 @@
                             <height>90</height>
                             <font>Font_Reg20</font>
                             <align>justify</align>
-                            <textcolor>white</textcolor>
+                            
                             <pagecontrol>-</pagecontrol>
                             <label>$INFO[ListItem.Plot]</label>
                         </control>
@@ -1588,7 +1588,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <label>19043</label>
@@ -1608,7 +1608,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <label>51510</label>
@@ -1648,7 +1648,7 @@
                     <posy>15</posy>
                     <width>150</width>
                     <height>30</height>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1660,7 +1660,7 @@
                     <posy>15</posy>
                     <width>375</width>
                     <height>30</height>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1672,7 +1672,7 @@
                     <posy>15</posy>
                     <width>825</width>
                     <height>30</height>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1684,7 +1684,7 @@
                     <posy>15</posy>
                     <width>210</width>
                     <height>30</height>
-                    <textcolor>white</textcolor>
+                    
                     <shadowcolor>black</shadowcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -1740,7 +1740,7 @@
                             <width>285</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <info>ListItem.ChannelName</info>
                         </control>
@@ -1768,7 +1768,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <textcolor>grey2</textcolor>
                             <label>19043</label>
@@ -1788,7 +1788,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <label>51510</label>
                             <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
@@ -1807,7 +1807,7 @@
                             <posy>0</posy>
                             <width>1650</width>
                             <height>57</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
                         </control>
                         <control type="label">
@@ -1834,7 +1834,7 @@
                             <width>285</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <info>ListItem.ChannelName</info>
@@ -1857,7 +1857,7 @@
                             <height>90</height>
                             <font>Font_Reg20</font>
                             <align>justify</align>
-                            <textcolor>white</textcolor>
+                            
                             <shadowcolor>black</shadowcolor>
                             <pagecontrol>-</pagecontrol>
                             <label>$INFO[ListItem.Plot]</label>
@@ -1876,7 +1876,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <label>19043</label>
@@ -1896,7 +1896,7 @@
                             <width>120</width>
                             <height>60</height>
                             <font>Font_Reg20</font>
-                            <align>left</align>
+                            
                             <aligny>center</aligny>
                             <include>listcolorfocus</include>
                             <label>51510</label>

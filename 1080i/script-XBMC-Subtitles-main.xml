@@ -44,10 +44,10 @@
                     <posy>225</posy>
                     <width>600</width>
                     <height>60</height>
-                    <textcolor>white</textcolor>
+                    
                     <font>Font_Bold19</font>
                     <label>XBMC Subtitles</label>
-                    <align>left</align>
+                    
                     <aligny>center</aligny>
                 </control>
                 <control type="label">
@@ -66,7 +66,7 @@
                     <width>900</width>
                     <height>60</height>
                     <font>Font_Reg14</font>
-                    <align>left</align>
+                    
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="image">
@@ -170,7 +170,7 @@
                             <font>Font_Reg19</font>
                             <aligny>center</aligny>
                             <textcolor>grey2</textcolor>
-                            <align>left</align>
+                            
                             <info>ListItem.Label2</info>
                         </control>
                         <control type="image">
@@ -196,7 +196,7 @@
                             <posy>0</posy>
                             <width>1200</width>
                             <height>60</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
                         </control>
                         <control type="label">
@@ -204,7 +204,7 @@
                             <posy>0</posy>
                             <width>105</width>
                             <height>54</height>
-                            <textcolor>white</textcolor>
+                            
                             <aligny>center</aligny>
                             <font>Font_Reg19</font>
                             <info>ListItem.Label</info>
@@ -231,8 +231,8 @@
                             <height>54</height>
                             <font>Font_Reg19</font>
                             <aligny>center</aligny>
-                            <textcolor>white</textcolor>
-                            <align>left</align>
+                            
+                            
                             <info>ListItem.Label2</info>
                         </control>
                         <control type="image">
@@ -310,7 +310,7 @@
                             <font>Font_Reg17</font>
                             <aligny>center</aligny>
                             <include>detailcolornofocus</include>
-                            <align>left</align>
+                            
                             <textoffsetx>15</textoffsetx>
                             <info>ListItem.Label</info>
                             <visible>!ListItem.property(man)</visible>
@@ -323,7 +323,7 @@
                             <font>font10</font>
                             <aligny>center</aligny>
                             <include>detailcolornofocus</include>
-                            <align>left</align>
+                            
                             <textoffsetx>15</textoffsetx>
                             <info>ListItem.Label</info>
                             <visible>ListItem.property(man)</visible>
@@ -342,7 +342,7 @@
                             <posy>0</posy>
                             <width>348</width>
                             <height>60</height>
-                            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
                             <visible>Control.HasFocus(150)</visible>
                         </control>
@@ -354,7 +354,7 @@
                             <font>Font_Reg17</font>
                             <aligny>center</aligny>
                             <include>listcolornofocus</include>
-                            <align>left</align>
+                            
                             <textoffsetx>15</textoffsetx>
                             <info>ListItem.Label</info>
                             <visible>!ListItem.property(man)</visible>
@@ -367,7 +367,7 @@
                             <font>font10</font>
                             <aligny>center</aligny>
                             <include>listcolornofocus</include>
-                            <align>left</align>
+                            
                             <textoffsetx>15</textoffsetx>
                             <info>ListItem.Label</info>
                             <visible>ListItem.property(man)</visible>
