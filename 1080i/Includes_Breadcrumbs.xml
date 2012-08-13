@@ -335,7 +335,7 @@
                         <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
                         <shadowcolor>bcshadow</shadowcolor>
                         <scroll>false</scroll>
-                        <label>[COLOR $VAR[BreadCrumbsContentColorVar]] $INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)]  •  [/COLOR][COLOR=$VAR[TitleColorVar]]$INFO[System.Time][/COLOR]</label>
+                        <label>[COLOR $VAR[BreadCrumbsContentColorVar]] $INFO[System.Date(yyyy)]년 $INFO[System.Date(mmm)] $INFO[System.Date(d)]일 $INFO[System.Date(DDD)]  •  [/COLOR][COLOR=$VAR[TitleColorVar]]$INFO[System.Time][/COLOR]</label>
                     </control>
                 </control>
             </control>
