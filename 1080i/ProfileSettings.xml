@@ -10,7 +10,6 @@
         <control type="group">
             <visible>!Window.IsVisible(LockSettings)</visible>
             <include>Furniture_SettingsBackPanel</include>
-            <include>Furniture_SettingsLogo</include>
             <control type="label" id="1000">
                 <posx>358</posx>
                 <posy>120</posy>
@@ -19,7 +18,6 @@
                 <label>$LOCALIZE[10034]</label>
                 <align>center</align>
                 <aligny>center</aligny>
-                
                 <shadowcolor>black</shadowcolor>
             </control>
             <control type="grouplist" id="5">
@@ -49,8 +47,6 @@
                 <disabledcolor>60d0d0d0</disabledcolor>
                 <aligny>center</aligny>
                 <spinposx>-2</spinposx>
-                <spinwidth>40</spinwidth>
-                <spinheight>65</spinheight>
                 <textoffsetx>75</textoffsetx>
                 <reverse>yes</reverse>
             </control>
@@ -79,7 +75,6 @@
                 <font>Font_Reg14</font>
                 <haspath>yes</haspath>
                 <label>-</label>
-                
             </control>
             <control type="grouplist" id="9000">
                 <posx>63</posx>

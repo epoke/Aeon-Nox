@@ -58,8 +58,6 @@
                     <label>21422</label>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>settings/settings_separator.png</texturenofocus>
-                    <textcolor>grey2</textcolor>
-                    <focusedcolor>white</focusedcolor>
                     <disabledcolor>white2</disabledcolor>
                     <textoffsetx>30</textoffsetx>
                     <aligny>center</aligny>
@@ -119,7 +117,6 @@
                 <font>Font_Reg20</font>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
-                
                 <focusedcolor>white</focusedcolor>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <textoffsetx>30</textoffsetx>
@@ -140,7 +137,6 @@
                 <font>Font_Reg20</font>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
-                
                 <focusedcolor>white</focusedcolor>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <textoffsetx>30</textoffsetx>
@@ -170,7 +166,6 @@
                     <texturenofocus>-</texturenofocus>
                     <label>186</label>
                     <font>Font_Bold20_Caps</font>
-                    
                     <focusedcolor>white</focusedcolor>
                     <textoffsety>18</textoffsety>
                     <textoffsetx>20</textoffsetx>
@@ -186,7 +181,6 @@
                     <texturenofocus>-</texturenofocus>
                     <label>222</label>
                     <font>Font_Bold20_Caps</font>
-                    
                     <focusedcolor>white</focusedcolor>
                     <textoffsety>18</textoffsety>
                     <textoffsetx>20</textoffsetx>

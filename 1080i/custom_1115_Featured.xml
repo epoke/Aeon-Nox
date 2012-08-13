@@ -191,7 +191,7 @@
                             <width min="0" max="700">auto</width>
                             <height>118</height>
                             <aligny>center</aligny>
-                            <font>Font_Condensed60</font>
+                            <font>Font_Reg38</font>
                             <textcolor>white2</textcolor>
                             <label>$LOCALIZE[31021]</label>
                         </control>
@@ -212,7 +212,7 @@
                             <label>$LOCALIZE[132]...</label>
                             <label>$LOCALIZE[134]...</label>
                             <aligny>center</aligny>
-                            <font>Font_Condensed60</font>
+                            <font>Font_Reg38</font>
                             <textcolor>white2</textcolor>
                         </control>
                     </control>
@@ -346,9 +346,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -358,7 +357,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -397,9 +396,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -409,7 +407,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -461,10 +459,9 @@
                             <posy>564</posy>
                             <width>607</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31163][/UPPERCASE]</label>
@@ -644,9 +641,8 @@
                             <posy>510</posy>
                             <width>466</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(5002).ListItem.Label]</label>
@@ -680,10 +676,9 @@
                             <posy>564</posy>
                             <width>607</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31464][/UPPERCASE]</label>
@@ -832,9 +827,8 @@
                             <posy>510</posy>
                             <width>272</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(5003).ListItem.Label]</label>
@@ -968,9 +962,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -980,7 +973,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -1019,9 +1012,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -1031,7 +1023,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -1085,10 +1077,9 @@
                             <posy>564</posy>
                             <width>607</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31323][/UPPERCASE]</label>
@@ -1268,9 +1259,8 @@
                             <posy>510</posy>
                             <width>466</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(6002).ListItem.Label]</label>
@@ -1303,10 +1293,9 @@
                             <posy>564</posy>
                             <width>607</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31335][/UPPERCASE]</label>
@@ -1450,9 +1439,8 @@
                             <posy>510</posy>
                             <width>272</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(6003).ListItem.Label]</label>
@@ -1585,9 +1573,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -1597,7 +1584,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -1636,9 +1623,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -1648,7 +1634,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -1701,10 +1687,9 @@
                             <posy>564</posy>
                             <width>607</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31324][/UPPERCASE]</label>
@@ -1876,9 +1861,8 @@
                             <posy>510</posy>
                             <width>466</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(7002).ListItem.Label]</label>
@@ -1901,10 +1885,9 @@
                             <posy>564</posy>
                             <width>607</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[42102][/UPPERCASE]</label>
@@ -1943,9 +1926,8 @@
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -1956,9 +1938,8 @@
                                         <posy>40</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(NextNumber),, - ]$INFO[ListItem.Property(NextTitle)]</label>
@@ -1969,9 +1950,8 @@
                                         <posy>75</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -2008,9 +1988,8 @@
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -2021,9 +2000,8 @@
                                         <posy>40</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(NextNumber),, - ]$INFO[ListItem.Property(NextTitle)]</label>
@@ -2034,9 +2012,8 @@
                                         <posy>75</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -2052,9 +2029,8 @@
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -2065,9 +2041,8 @@
                                         <posy>40</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(NextNumber),, - ]$INFO[ListItem.Property(NextTitle)]</label>
@@ -2078,9 +2053,8 @@
                                         <posy>75</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -2261,10 +2235,9 @@
                             <posy>564</posy>
                             <width>607</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31220][/UPPERCASE]</label>
@@ -2303,9 +2276,8 @@
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -2316,9 +2288,8 @@
                                         <posy>40</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -2329,9 +2300,8 @@
                                         <posy>75</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
@@ -2368,9 +2338,8 @@
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <scroll>true</scroll>
@@ -2382,9 +2351,8 @@
                                         <posy>40</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <scroll>true</scroll>
@@ -2396,9 +2364,8 @@
                                         <posy>75</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
@@ -2414,9 +2381,8 @@
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -2427,9 +2393,8 @@
                                         <posy>40</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -2440,9 +2405,8 @@
                                         <posy>75</posy>
                                         <width>360</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
@@ -2650,9 +2614,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -2662,7 +2625,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -2701,9 +2664,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -2713,7 +2675,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -2767,10 +2729,9 @@
                             <posy>564</posy>
                             <width>550</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31359][/UPPERCASE]</label>
@@ -2934,9 +2895,8 @@
                             <posy>510</posy>
                             <width>402</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(8002).ListItem.Label]</label>
@@ -2958,10 +2918,9 @@
                             <posy>564</posy>
                             <width>550</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31326][/UPPERCASE]</label>
@@ -3000,9 +2959,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -3013,9 +2971,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -3026,9 +2983,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(Year)]</label>
@@ -3065,9 +3021,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -3078,9 +3033,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -3091,9 +3045,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(Year)]</label>
@@ -3109,9 +3062,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -3122,9 +3074,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -3135,9 +3086,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(Year)]</label>
@@ -3353,9 +3303,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -3365,7 +3314,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -3404,9 +3353,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -3416,7 +3364,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -3445,7 +3393,7 @@
                             <item id="1">
                                 <label>1038</label>
                                 <icon>DefaultAddonMusic.png</icon>
-                                <property name="Fanart" fallback="special://skin/backgrounds/addons/addons.jpg">$INFO[Skin.String(AddonsHomeItem.MultiFanart)]</property>
+                                <property name="Fanart" fallback="special://skin/backgrounds/search/search.jpg">$INFO[Skin.String(SearchHomeItem.MultiFanart)]</property>
                                 <onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
                             </item>
                         </content>
@@ -3469,10 +3417,9 @@
                             <posy>564</posy>
                             <width>550</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31163][/UPPERCASE]</label>
@@ -3636,9 +3583,8 @@
                             <posy>510</posy>
                             <width>402</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(9002).ListItem.Label]</label>
@@ -3660,10 +3606,9 @@
                             <posy>564</posy>
                             <width>550</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
                             <shadowcolor>floorshadow</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>15</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31218][/UPPERCASE]</label>
@@ -3702,9 +3647,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -3715,9 +3659,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -3728,9 +3671,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(Album)]</label>
@@ -3767,9 +3709,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -3780,9 +3721,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -3793,9 +3733,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(Album)]</label>
@@ -3811,9 +3750,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -3824,9 +3762,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -3837,9 +3774,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(Album)]</label>
@@ -4070,9 +4006,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -4082,7 +4017,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -4121,9 +4056,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -4133,7 +4067,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -4156,7 +4090,7 @@
                                 <label>$LOCALIZE[24001]</label>
                                 <label2>$INFO[Window(Home).Property(RandomAddon.Count)]</label2>
                                 <icon>DefaultAddon.png</icon>
-                                <property name="Fanart" fallback="special://skin/backgrounds/addons/addons.jpg">$INFO[Skin.String(AddonsHomeItem.MultiFanart)]</property>
+                                <property name="Fanart" fallback="special://skin/backgrounds/search/search.jpg">$INFO[Skin.String(SearchHomeItem.MultiFanart)]</property>
                                 <onclick>ActivateWindow(AddonBrowser)</onclick>
                             </item>
                             <item id="1">
@@ -4187,9 +4121,8 @@
                             <posy>564</posy>
                             <width>550</width>
                             <height>25</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>5</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31163] $LOCALIZE[24001][/UPPERCASE]</label>
@@ -4361,9 +4294,8 @@
                             <posy>450</posy>
                             <width>409</width>
                             <height>80</height>
-                            
                             <aligny>-</aligny>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(10002).ListItem.Property(Summary)]</label>
@@ -4374,9 +4306,8 @@
                             <posy>389</posy>
                             <width>276</width>
                             <height>40</height>
-                            
                             <aligny>center</aligny>
-                            <font>Font_Condensed18</font>
+                            <font>Font_Reg15</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
                             <label>$INFO[Container(10002).ListItem.Label]</label>
@@ -4437,9 +4368,8 @@
                                         <width>270</width>
                                         <height>60</height>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>white2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <textoffsetx>10</textoffsetx>
                                     </control>
@@ -4449,7 +4379,7 @@
                                         <width>270</width>
                                         <height>60</height>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>grey2</textcolor>
                                         <align>right</align>
                                         <aligny>center</aligny>
@@ -4488,9 +4418,8 @@
                                         <width>270</width>
                                         <height>60</height>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>white2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <textoffsetx>10</textoffsetx>
                                     </control>
@@ -4500,7 +4429,7 @@
                                         <width>270</width>
                                         <height>60</height>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>grey2</textcolor>
                                         <align>right</align>
                                         <aligny>center</aligny>
@@ -4524,28 +4453,28 @@
                                     <icon fallback="DefaultAddon.png">$INFO[system.addonicon(Skin.String(HomeProgramButton1))]</icon>
                                     <onclick condition="!IsEmpty(Skin.String(HomeProgramButton1))">XBMC.RunAddon($INFO[Skin.String(HomeProgramButton1)])</onclick>
                                     <onclick condition="IsEmpty(Skin.String(HomeProgramButton1))">Skin.SetAddon(HomeProgramButton1,xbmc.addon.executable)</onclick>
-                                    <property name="Fanart">special://skin/backgrounds/addons/addons.jpg</property>
+                                    <property name="Fanart">special://skin/backgrounds/search/search.jpg</property>
                                 </item>
                                 <item id="1">
                                     <label fallback="ADD-ON2">$INFO[system.addontitle(Skin.String(HomeProgramButton2))]</label>
                                     <icon fallback="DefaultAddon.png">$INFO[system.addonicon(Skin.String(HomeProgramButton2))]</icon>
                                     <onclick condition="!IsEmpty(Skin.String(HomeProgramButton2))">XBMC.RunAddon($INFO[Skin.String(HomeProgramButton2)])</onclick>
                                     <onclick condition="IsEmpty(Skin.String(HomeProgramButton2))">Skin.SetAddon(HomeProgramButton2,xbmc.addon.executable)</onclick>
-                                    <property name="Fanart">special://skin/backgrounds/addons/addons.jpg</property>
+                                    <property name="Fanart">special://skin/backgrounds/search/search.jpg</property>
                                 </item>
                                 <item id="2">
                                     <label fallback="ADD-ON3">$INFO[system.addontitle(Skin.String(HomeProgramButton3))]</label>
                                     <icon fallback="DefaultAddon.png">$INFO[system.addonicon(Skin.String(HomeProgramButton3))]</icon>
                                     <onclick condition="!IsEmpty(Skin.String(HomeProgramButton3))">XBMC.RunAddon($INFO[Skin.String(HomeProgramButton3)])</onclick>
                                     <onclick condition="IsEmpty(Skin.String(HomeProgramButton3))">Skin.SetAddon(HomeProgramButton3,xbmc.addon.executable)</onclick>
-                                    <property name="Fanart">special://skin/backgrounds/addons/addons.jpg</property>
+                                    <property name="Fanart">special://skin/backgrounds/search/search.jpg</property>
                                 </item>
                                 <item id="3">
                                     <label fallback="ADD-ON4">$INFO[system.addontitle(Skin.String(HomeProgramButton4))]</label>
                                     <icon fallback="DefaultAddon.png">$INFO[system.addonicon(Skin.String(HomeProgramButton4))]</icon>
                                     <onclick condition="!IsEmpty(Skin.String(HomeProgramButton4))">XBMC.RunAddon($INFO[Skin.String(HomeProgramButton4)])</onclick>
                                     <onclick condition="IsEmpty(Skin.String(HomeProgramButton4))">Skin.SetAddon(HomeProgramButton4,xbmc.addon.executable)</onclick>
-                                    <property name="Fanart">special://skin/backgrounds/addons/addons.jpg</property>
+                                    <property name="Fanart">special://skin/backgrounds/search/search.jpg</property>
                                 </item>
                             </content>
                         </control>
@@ -4658,9 +4587,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -4670,7 +4598,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -4709,9 +4637,8 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>$INFO[ListItem.Label]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <textoffsetx>10</textoffsetx>
                                 </control>
@@ -4721,7 +4648,7 @@
                                     <width>270</width>
                                     <height>60</height>
                                     <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                    <font>Font_Condensed22</font>
+                                    <font>Font_Reg19</font>
                                     <textcolor>grey2</textcolor>
                                     <align>right</align>
                                     <aligny>center</aligny>
@@ -4774,9 +4701,8 @@
                             <posy>555</posy>
                             <width>858</width>
                             <height>38</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>8</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31905][/UPPERCASE]</label>
@@ -4808,8 +4734,7 @@
                                     <posy>26</posy>
                                     <height>60</height>
                                     <width>355</width>
-                                    <font>Font_Condensed22</font>
-                                    
+                                    <font>Font_Reg19</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <label>$INFO[Window(Weather).Property(Location)]</label>
@@ -4820,8 +4745,7 @@
                                     <posy>75</posy>
                                     <height>60</height>
                                     <width>504</width>
-                                    <font>Font_Condensed20</font>
-                                    
+                                    <font>Font_Reg17</font>
                                     <aligny>center</aligny>
                                     <label>$INFO[Window(Weather).Property(Updated)]</label>
                                     <textcolor>grey2</textcolor>
@@ -4838,10 +4762,9 @@
                                         <posy>0</posy>
                                         <width>540</width>
                                         <height>60</height>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>99FFFFFF</textcolor>
                                         <scroll>false</scroll>
                                         <textoffsetx>15</textoffsetx>
@@ -4854,7 +4777,7 @@
                                         <align>right</align>
                                         <aligny>center</aligny>
                                         <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>white2</textcolor>
                                         <scroll>false</scroll>
                                         <textoffsetx>15</textoffsetx>
@@ -4873,10 +4796,9 @@
                                         <posy>0</posy>
                                         <width>540</width>
                                         <height>60</height>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>99FFFFFF</textcolor>
                                         <scroll>false</scroll>
                                         <textoffsetx>15</textoffsetx>
@@ -4889,7 +4811,7 @@
                                         <align>right</align>
                                         <aligny>center</aligny>
                                         <label>[B]$INFO[ListItem.Label2][/B]</label>
-                                        <font>Font_Condensed22</font>
+                                        <font>Font_Reg19</font>
                                         <textcolor>white2</textcolor>
                                         <scroll>false</scroll>
                                         <textoffsetx>15</textoffsetx>
@@ -4952,9 +4874,8 @@
                             <posy>555</posy>
                             <width>858</width>
                             <height>38</height>
-                            <font>Font_Condensed15_Caps</font>
+                            <font>Font_Reg14_Caps</font>
                             <textcolor>floor</textcolor>
-                            
                             <aligny>center</aligny>
                             <textoffsetx>8</textoffsetx>
                             <label>[UPPERCASE]$LOCALIZE[31911][/UPPERCASE]</label>
@@ -4992,9 +4913,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -5005,9 +4925,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -5018,9 +4937,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
@@ -5033,7 +4951,7 @@
                                         <height>45</height>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
@@ -5070,9 +4988,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -5083,9 +5000,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -5096,9 +5012,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
@@ -5111,7 +5026,7 @@
                                         <height>45</height>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
@@ -5127,9 +5042,8 @@
                                         <posy>5</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label]</label>
@@ -5140,9 +5054,8 @@
                                         <posy>40</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Label2]</label>
@@ -5153,9 +5066,8 @@
                                         <posy>75</posy>
                                         <width>430</width>
                                         <height>45</height>
-                                        
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
@@ -5168,7 +5080,7 @@
                                         <height>45</height>
                                         <align>right</align>
                                         <aligny>center</aligny>
-                                        <font>Font_Condensed18</font>
+                                        <font>Font_Reg15</font>
                                         <textcolor>white2</textcolor>
                                         <shadowcolor>-</shadowcolor>
                                         <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
@@ -5232,7 +5144,6 @@
                     <posx>8</posx>
                     <posy>0</posy>
                     <width>1290</width>
-                    
                     <visible></visible>
                     <itemgap>20</itemgap>
                     <orientation>horizontal</orientation>
@@ -5248,56 +5159,56 @@
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[137]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[31504]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(5000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[31502]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(6000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[31503]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(7000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[132]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[31501]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[31505]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(10000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <textcolor>white2</textcolor>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <include>BreadcrumbsLabel</include>
                         <label>$LOCALIZE[8]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(4000).HasFocus">Conditional</animation>
@@ -5359,11 +5270,10 @@
                         <height>38</height>
                         <aligny>center</aligny>
                         <width min="15" max="1920">auto</width>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
                         <shadowcolor>bcshadow</shadowcolor>
                         <scroll>false</scroll>
-                        
                         <visible>Skin.HasSetting(breadcrumbsweather)</visible>
                         <visible>Weather.IsFetched</visible>
                         <include>Animation_VisibleChange400</include>
@@ -5375,11 +5285,10 @@
                         <height>38</height>
                         <aligny>center</aligny>
                         <width min="15" max="1920">auto</width>
-                        <font>Font_Condensed22_Caps</font>
+                        <font>Font_Reg19_Caps</font>
                         <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
                         <shadowcolor>bcshadow</shadowcolor>
                         <scroll>false</scroll>
-                        
                         <label>[COLOR $VAR[BreadCrumbsContentColorVar]] $INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)]  •  [/COLOR][COLOR=$VAR[TitleColorVar]]$INFO[System.Time][/COLOR]       </label>
                     </control>
                 </control>
@@ -5446,8 +5355,7 @@
                     <width>603</width>
                     <height>32</height>
                     <textcolor>white3</textcolor>
-                    
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[MusicPlayer.Title]</label>
@@ -5458,8 +5366,7 @@
                     <width>603</width>
                     <height>32</height>
                     <textcolor>white3</textcolor>
-                    
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[MusicPlayer.Artist]</label>
@@ -5470,8 +5377,7 @@
                     <width>603</width>
                     <height>32</height>
                     <textcolor>white3</textcolor>
-                    
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[Player.Time(mm:ss)]</label>
@@ -5496,7 +5402,7 @@
                     <height>32</height>
                     <textcolor>white3</textcolor>
                     <align>right</align>
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[Player.TimeRemaining(mm:ss),-]</label>
@@ -5539,8 +5445,7 @@
                     <width>603</width>
                     <height>32</height>
                     <textcolor>white3</textcolor>
-                    
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[VideoPlayer.Title]</label>
@@ -5551,8 +5456,7 @@
                     <width>603</width>
                     <height>32</height>
                     <textcolor>white3</textcolor>
-                    
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$VAR[NowPlayingVideoLabel2Var]</label>
@@ -5563,8 +5467,7 @@
                     <width>603</width>
                     <height>32</height>
                     <textcolor>white3</textcolor>
-                    
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[Player.Time(hh:mm:ss)]</label>
@@ -5602,7 +5505,7 @@
                     <height>32</height>
                     <textcolor>white3</textcolor>
                     <align>right</align>
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <scroll>true</scroll>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[Player.TimeRemaining(hh:mm:ss),-]</label>

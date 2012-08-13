@@ -4,7 +4,7 @@
     <backgroundcolor>black</backgroundcolor>
     <allowoverlay>no</allowoverlay>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
-    <include condition="!Skin.HasSetting(firstrun3.5)">AutoConfig3.5</include>
+    
     <animation type="WindowOpen" reversible="false" condition="!Window.Previous(10004)">
         <effect type="zoom" start="150" end="100" center="960,540" time="900" tween="cubic" easing="out" />
         <effect type="fade" start="0" end="100" time="900" />
@@ -24,7 +24,6 @@
             <include>Furniture_SettingsBackPanel</include>
             <control type="group">
                 <include>Animation_CommonFade</include>
-                <include>Furniture_SettingsLogo</include>
                 <control type="grouplist" id="3">
                     <posx>63</posx>
                     <posy>180</posy>
@@ -40,7 +39,6 @@
                     <posx>358</posx>
                     <posy>120</posy>
                     <width>1491</width>
-                    
                     <font>Font_ShowcaseMainLabel2</font>
                     <include>Animation_CommonFade</include>
                     <label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
@@ -64,14 +62,12 @@
                     <posy>150</posy>
                     <width>46</width>
                     <height>800</height>
-                    
                     <texturesliderbackground>-</texturesliderbackground>
                     <texturesliderbar>-</texturesliderbar>
                     <texturesliderbarfocus>-</texturesliderbarfocus>
                     <textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
                     <textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    
                     <orientation>vertical</orientation>
                     <onleft>5</onleft>
                     <onright>3</onright>
@@ -108,8 +104,6 @@
                 <disabledcolor>60d0d0d0</disabledcolor>
                 <aligny>center</aligny>
                 <spinposx>40</spinposx>
-                <spinwidth>60</spinwidth>
-                <spinheight>92</spinheight>
                 <textoffsetx>30</textoffsetx>
                 <reverse>yes</reverse>
             </control>
@@ -135,7 +129,6 @@
                     <posx>22</posx>
                     <posy>0</posy>
                     <width>750</width>
-                    
                     <visible>Skin.HasSetting(breadcrumbslabel)</visible>
                     <visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]</visible>
                     <itemgap>0</itemgap>

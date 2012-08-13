@@ -163,7 +163,6 @@
                     <height>88</height>
                     <font>Font_Reg21</font>
                     <textcolor>floor</textcolor>
-                    
                     <colordiffuse>floor</colordiffuse>
                     <label>$INFO[ListItem.Genre]</label>
                 </control>
@@ -264,9 +263,6 @@
             </control>
         </control>
     </include>
-    <include name="Top250Label2ColorDefault">
-        
-    </include>
     <include name="Top250Label2ColorNoDefault">
         <textcolor>floor</textcolor>
     </include>
@@ -296,7 +292,6 @@
                     <height>45</height>
                     <align>right</align>
                     <font>Font_Info</font>
-                    <include condition="Skin.HasTheme(SKINDEFAULT)">Top250Label2ColorDefault</include>
                     <include condition="!Skin.HasTheme(SKINDEFAULT)">Top250Label2ColorNoDefault</include>
                     <label>$INFO[ListItem.RatingAndVotes]</label>
                 </control>
@@ -420,7 +415,7 @@
                     <posy>23</posy>
                     <width>135</width>
                     <height>88</height>
-                    <font>Font_Condensed22</font>
+                    <font>Font_Reg19</font>
                     <textcolor>floor</textcolor>
                     <align>center</align>
                     <label>[B]$INFO[ListItem.Year][/B]</label>

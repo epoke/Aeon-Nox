@@ -15,7 +15,6 @@
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <width>650</width>
                     <height>1080</height>
-                    <aspectratio>stretch</aspectratio>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
                 <control type="image">
@@ -23,7 +22,6 @@
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                     <width>650</width>
                     <height>1080</height>
-                    <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="grouplist">
                     <posx>140</posx>
@@ -32,20 +30,16 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <font>Font_Reg18</font>
                         <label>$VAR[TriPanelDetail1Var]</label>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        
                         <aligny>bottom</aligny>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <font>Font_Reg18</font>
                         <label fallback="N/A">$VAR[TriPanelValue1Var]</label>
                         <textcolor>white6</textcolor>
-                        
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                     </control>
                 </control>
                 <control type="grouplist">
@@ -55,20 +49,16 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <font>Font_Reg18</font>
                         <label>$VAR[TriPanelDetail2Var]</label>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        
                         <aligny>bottom</aligny>
                     </control>
                     <control type="label">
                         <width>395</width>
-                        <font>Font_Reg18</font>
                         <label fallback="N/A">$VAR[TriPanelValue2Var]</label>
                         <textcolor>white6</textcolor>
-                        
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                     </control>
                 </control>
                 <control type="grouplist">
@@ -78,26 +68,21 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <font>Font_Reg18</font>
                         <label>$VAR[TriPanelDetail3Var]</label>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        
                         <aligny>bottom</aligny>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <font>Font_Reg18</font>
                         <label fallback="N/A">$VAR[TriPanelValue3Var]</label>
                         <textcolor>white6</textcolor>
-                        
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                     </control>
                 </control>
                 <control type="textbox">
                     <posy>286</posy>
                     <posx>145</posx>
-                    <font>Font_Reg18</font>
                     <textcolor>white2</textcolor>
                     <width>434</width>
                     <height>545</height>
@@ -109,7 +94,6 @@
                 <control type="textbox">
                     <posy>287</posy>
                     <posx>145</posx>
-                    <font>Font_Reg18</font>
                     <textcolor>white2</textcolor>
                     <width>434</width>
                     <height>260</height>
@@ -125,7 +109,6 @@
                     <animation effect="zoom" start="100" end="92" time="800" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
                     <control type="image">
                         <texture>thumbs/multiplex_tvmask_shadow.png</texture>
-                        <aspectratio>stretch</aspectratio>
                         <posx>-21</posx>
                         <posy>76</posy>
                         <width>533</width>
@@ -247,7 +230,6 @@
                     <texture>views/tripanel/info_panel_glow.png</texture>
                     <width>650</width>
                     <height>1080</height>
-                    <aspectratio>stretch</aspectratio>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 </control>
@@ -255,7 +237,6 @@
                     <texture>views/tripanel/info_panel.png</texture>
                     <width>650</width>
                     <height>1080</height>
-                    <aspectratio>stretch</aspectratio>
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <!-- Runtime label -->
@@ -266,20 +247,16 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <font>Font_Reg18</font>
                         <label>$VAR[TriPanelDetail1Var]</label>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        
                         <aligny>bottom</aligny>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <font>Font_Reg18</font>
                         <label fallback="N/A">$VAR[TriPanelValue1Var]</label>
                         <textcolor>white6</textcolor>
-                        
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                     </control>
                 </control>
                 <control type="grouplist">
@@ -289,20 +266,16 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <font>Font_Reg18</font>
                         <label>$VAR[TriPanelDetail2Var]</label>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        
                         <aligny>bottom</aligny>
                     </control>
                     <control type="label">
                         <width>435</width>
-                        <font>Font_Reg18</font>
                         <label fallback="N/A">$VAR[TriPanelValue2Var]</label>
                         <textcolor>white6</textcolor>
-                        
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                     </control>
                 </control>
                 <control type="grouplist">
@@ -312,26 +285,21 @@
                     <orientation>horizontal</orientation>
                     <control type="label">
                         <width min="50" max="400">auto</width>
-                        <font>Font_Reg18</font>
                         <label>$VAR[TriPanelDetail3Var]</label>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        
                         <aligny>bottom</aligny>
                     </control>
                     <control type="label">
                         <width>350</width>
-                        <font>Font_Reg18</font>
                         <label fallback="N/A">$VAR[TriPanelValue3Var]</label>
                         <textcolor>white6</textcolor>
-                        
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                     </control>
                 </control>
                 <control type="textbox">
                     <posy>290</posy>
                     <posx>102</posx>
-                    <font>Font_Reg18</font>
                     <textcolor>white2</textcolor>
                     <width>480</width>
                     <visible>!Skin.HasSetting(tripanelextrafanart)</visible>
@@ -343,7 +311,6 @@
                 <control type="textbox">
                     <posy>292</posy>
                     <posx>102</posx>
-                    <font>Font_Reg18</font>
                     <textcolor>white2</textcolor>
                     <width>480</width>
                     <visible>Skin.HasSetting(tripanelextrafanart)</visible>
@@ -358,7 +325,6 @@
                     <posy>490</posy>
                     <control type="image">
                         <texture>thumbs/multiplex_tvmask_shadow.png</texture>
-                        <aspectratio>stretch</aspectratio>
                         <posx>-21</posx>
                         <posy>76</posy>
                         <width>533</width>
@@ -395,7 +361,6 @@
                     <colordiffuse>white6</colordiffuse>
                     <width>650</width>
                     <height>1080</height>
-                    <aspectratio>stretch</aspectratio>
                 </control>
             </control>
             <control type="group">
@@ -453,7 +418,6 @@
                                 <height>147</height>
                                 <aligny>center</aligny>
                                 <align>center</align>
-                                
                                 <label>$INFO[ListItem.Label]</label>
                                 <font>Font_Bold24</font>
                             </control>
@@ -489,7 +453,6 @@
                                 <posy>5</posy>
                                 <width>786</width>
                                 <height>137</height>
-                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">thumbs/banner_shadow_in.png</texture>
                                 <!--<animation effect="fade" time="50" delay="150" start="50" end="0">Focus</animation>-->
                             </control>
@@ -517,7 +480,6 @@
                                 <height>147</height>
                                 <aligny>center</aligny>
                                 <align>center</align>
-                                
                                 <label>$INFO[ListItem.Label]</label>
                                 <font>Font_Bold24</font>
                             </control>
@@ -544,7 +506,6 @@
                                 <posy>5</posy>
                                 <width>786</width>
                                 <height>137</height>
-                                <aspectratio>stretch</aspectratio>
                                 <texture background="true">thumbs/banner_shadow_in.png</texture>
                                 <animation effect="fade" time="50" delay="150" start="60" end="0">Focus</animation>
                                 <visible>Control.HasFocus(52)</visible>
@@ -557,7 +518,7 @@
                             <posx>68</posx>
                             <width>100</width>
                             <height>49</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$VAR[TriPanelListValue1Var]</label>
                             <scroll>false</scroll>
                             <align>center</align>
@@ -570,7 +531,7 @@
                             <width>695</width>
                             <height>49</height>
                             <label>$VAR[ListLabel1Var]</label>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textcolor>grey2</textcolor>
                             <aligny>center</aligny>
                         </control>
@@ -579,7 +540,7 @@
                             <posx>790</posx>
                             <width>680</width>
                             <height>51</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
                             <align>right</align>
@@ -610,7 +571,7 @@
                             <posx>68</posx>
                             <width>100</width>
                             <height>49</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$VAR[TriPanelListValue1Var]</label>
                             <scroll>false</scroll>
                             <align>center</align>
@@ -623,7 +584,7 @@
                             <width>695</width>
                             <height>49</height>
                             <label>$VAR[ListLabel1Var]</label>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textcolor>white2</textcolor>
                             <aligny>center</aligny>
                         </control>
@@ -632,7 +593,7 @@
                             <posx>790</posx>
                             <width>680</width>
                             <height>51</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
                             <align>right</align>
@@ -653,7 +614,7 @@
                             <posx>68</posx>
                             <width>100</width>
                             <height>49</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$VAR[TriPanelSquareListValueVar]</label>
                             <scroll>false</scroll>
                             <align>center</align>
@@ -666,7 +627,7 @@
                             <width>680</width>
                             <height>49</height>
                             <label>$VAR[TriPanelSquareListValue2Var]</label>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textcolor>white6</textcolor>
                             <aligny>center</aligny>
                         </control>
@@ -676,7 +637,7 @@
                             <width>680</width>
                             <height>49</height>
                             <label>$VAR[ListLabel2Var]</label>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textcolor>grey2</textcolor>
                             <aligny>center</aligny>
                         </control>
@@ -685,7 +646,7 @@
                             <posx>795</posx>
                             <width>680</width>
                             <height>51</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
                             <align>right</align>
@@ -717,7 +678,7 @@
                             <posx>68</posx>
                             <width>100</width>
                             <height>49</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$VAR[TriPanelSquareListValueVar]</label>
                             <scroll>false</scroll>
                             <align>center</align>
@@ -730,7 +691,7 @@
                             <width>680</width>
                             <height>49</height>
                             <label>$VAR[TriPanelSquareListValue2Var]</label>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textcolor>white2</textcolor>
                             <aligny>center</aligny>
                         </control>
@@ -740,7 +701,7 @@
                             <width>680</width>
                             <height>49</height>
                             <label>$VAR[ListLabel2Var]</label>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textcolor>white2</textcolor>
                             <aligny>center</aligny>
                         </control>
@@ -749,7 +710,7 @@
                             <posx>795</posx>
                             <width>680</width>
                             <height>51</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <scroll>false</scroll>
                             <align>right</align>
@@ -771,7 +732,6 @@
                     <posy>126</posy>
                     <width>46</width>
                     <height>725</height>
-                    
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <texturesliderbackground>-</texturesliderbackground>
                     <texturesliderbar>-</texturesliderbar>

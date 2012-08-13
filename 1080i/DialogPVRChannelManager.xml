@@ -119,9 +119,7 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        
                         <aligny>center</aligny>
-                        
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
                         <visible>ListItem.Property(ActiveChannel)</visible>
                     </control>
@@ -131,7 +129,6 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>grey3</textcolor>
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
@@ -188,7 +185,6 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>black</textcolor>
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
@@ -200,7 +196,6 @@
                         <width>502</width>
                         <height>60</height>
                         <font>Font_Reg20</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>black</textcolor>
                         <label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
@@ -211,7 +206,6 @@
                         <posy>26</posy>
                         <width>525</width>
                         <height>45</height>
-                        <font>font12</font>
                         
                         <aligny>center</aligny>
                         <textcolor>black</textcolor>
@@ -252,13 +246,9 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
                     <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
                     <label>19074</label>
                     <onleft>20</onleft>
                     <onright>60</onright>
@@ -275,14 +265,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <label>19201</label>
                     <onright>60</onright>
                     <onleft>20</onleft>
@@ -299,14 +283,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <label>19202</label>
                     <onleft>20</onleft>
                     <onright>60</onright>
@@ -331,14 +309,9 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
                     <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <label>19206</label>
                     <onleft>20</onleft>
                     <onright>60</onright>
@@ -355,14 +328,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <label>19200</label>
                     <onright>60</onright>
                     <onleft>20</onleft>
@@ -393,14 +360,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <label>19205</label>
                     <onleft>20</onleft>
                     <onright>34</onright>
@@ -418,14 +379,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <label>19024</label>
                     <onleft>30</onleft>
                     <onright>60</onright>
@@ -443,14 +398,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <label>19023</label>
                     <onleft>30</onleft>
                     <onright>60</onright>
@@ -467,14 +416,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <align>center</align>
                     <label>19203</label>
                     <onleft>20</onleft>
@@ -492,14 +435,8 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <align>center</align>
                     <label>19211</label>
                     <onleft>20</onleft>
@@ -517,15 +454,9 @@
                     <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                     <textcolor>FF939597</textcolor>
                     <focusedcolor>FFFFFFFF</focusedcolor>
-                    <radiowidth>141</radiowidth>
-                    <radioposx>472</radioposx>
-                    <radioheight>98</radioheight>
                     <textoffsetx>10</textoffsetx>
                     <aligny>center</aligny>
                     <align>center</align>
-                    <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                    <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                    <include></include>
                     <align>center</align>
                     <label>19204</label>
                     <onleft>20</onleft>

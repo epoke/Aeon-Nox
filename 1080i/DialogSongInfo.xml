@@ -124,10 +124,9 @@
                             <posy>-270</posy>
                             <width>1405</width>
                             <height>38</height>
-                            
                             <aligny>-</aligny>
                             <scroll>true</scroll>
-                            <font>Font_Condensed60</font>
+                            <font>Font_Reg38</font>
                             <label>$INFO[ListItem.Tracknumber,,: ][COLOR FF777777]$INFO[ListItem.Title][/COLOR]</label>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -137,10 +136,9 @@
                             <posy>-210</posy>
                             <width>1405</width>
                             <height>38</height>
-                            
                             <aligny>-</aligny>
                             <scroll>true</scroll>
-                            <font>Font_Condensed60</font>
+                            <font>Font_Reg38</font>
                             <label>$INFO[ListItem.Artist]$INFO[ListItem.Album, • ]</label>
                             <textcolor>white3</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -152,7 +150,7 @@
                         <width>485</width>
                         <height>198</height>
                         <align>justify</align>
-                        <font>Font_Condensed22</font>
+                        <font>Font_Reg19</font>
                         <pagecontrol>60</pagecontrol>
                         <autoscroll delay="15000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
                         <textcolor>grey2</textcolor>
@@ -167,23 +165,21 @@
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label>$LOCALIZE[515]:</label>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <aligny>bottom</aligny>
                             </control>
                             <control type="fadelabel">
                                 <width>671</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label fallback="N/A">$INFO[ListItem.Genre]</label>
                                 <textcolor>grey2</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <scrollout>false</scrollout>
                                 <pauseatend>1000</pauseatend>
-                                <scrollspeed>20</scrollspeed>
+                                
                             </control>
                         </control>
                         <control type="grouplist">
@@ -193,23 +189,21 @@
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label>$LOCALIZE[180]:</label>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <aligny>bottom</aligny>
                             </control>
                             <control type="fadelabel">
                                 <width>671</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label fallback="N/A">$INFO[ListItem.Duration]</label>
                                 <textcolor>grey2</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <scrollout>false</scrollout>
                                 <pauseatend>1000</pauseatend>
-                                <scrollspeed>20</scrollspeed>
+                                
                             </control>
                         </control>
                         <control type="grouplist">
@@ -219,23 +213,21 @@
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label>$LOCALIZE[576]:</label>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <aligny>bottom</aligny>
                             </control>
                             <control type="fadelabel">
                                 <width>671</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label fallback="13170">$INFO[ListItem.PlayCount]$INFO[ListItem.LastPlayed, ($LOCALIZE[568]: ,)]</label>
                                 <textcolor>grey2</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <scrollout>false</scrollout>
                                 <pauseatend>1000</pauseatend>
-                                <scrollspeed>20</scrollspeed>
+                                
                             </control>
                         </control>
                         <control type="grouplist">
@@ -245,23 +237,21 @@
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label>$LOCALIZE[573]:</label>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <aligny>bottom</aligny>
                             </control>
                             <control type="fadelabel">
                                 <width>671</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label fallback="N/A">$INFO[ListItem.Path]</label>
                                 <textcolor>grey2</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <scrollout>false</scrollout>
                                 <pauseatend>1000</pauseatend>
-                                <scrollspeed>20</scrollspeed>
+                                
                             </control>
                         </control>
                         <control type="grouplist">
@@ -271,23 +261,21 @@
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width min="50" max="400">auto</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label>$LOCALIZE[21800]:</label>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <aligny>bottom</aligny>
                             </control>
                             <control type="fadelabel">
                                 <width>671</width>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <label fallback="N/A">$INFO[ListItem.FileName]</label>
                                 <textcolor>grey2</textcolor>
                                 <shadowcolor>black</shadowcolor>
-                                
                                 <scrollout>false</scrollout>
                                 <pauseatend>1000</pauseatend>
-                                <scrollspeed>20</scrollspeed>
+                                
                             </control>
                         </control>
                         <control type="grouplist">
@@ -328,7 +316,7 @@
                                 <posy>0</posy>
                                 <width>135</width>
                                 <height>88</height>
-                                <font>Font_Condensed22</font>
+                                <font>Font_Reg19</font>
                                 <textcolor>grey2</textcolor>
                                 <align>center</align>
                                 <label>[B]$INFO[ListItem.Year][/B]</label>
@@ -366,12 +354,11 @@
                 <posx>500</posx>
                 <posy>727</posy>
                 <width>1290</width>
-                
                 <itemgap>40</itemgap>
                 <orientation>horizontal</orientation>
                 <control type="label">
                     <textcolor>white2</textcolor>
-                    <font>Font_Condensed22_Caps</font>
+                    <font>Font_Reg19_Caps</font>
                     <shadowcolor>black</shadowcolor>
                     <include>BreadcrumbsLabel</include>
                     <label>$INFO[Control.GetLabel(10)]</label>
@@ -380,7 +367,7 @@
                 </control>
                 <control type="label">
                     <textcolor>white2</textcolor>
-                    <font>Font_Condensed22_Caps</font>
+                    <font>Font_Reg19_Caps</font>
                     <shadowcolor>black</shadowcolor>
                     <include>BreadcrumbsLabel</include>
                     <label>$INFO[Control.GetLabel(11)]</label>
@@ -389,7 +376,7 @@
                 </control>
                 <control type="label">
                     <textcolor>white2</textcolor>
-                    <font>Font_Condensed22_Caps</font>
+                    <font>Font_Reg19_Caps</font>
                     <shadowcolor>black</shadowcolor>
                     <include>BreadcrumbsLabel</include>
                     <label>$INFO[Control.GetLabel(12)]</label>
@@ -398,7 +385,7 @@
                 </control>
                 <control type="label">
                     <textcolor>white2</textcolor>
-                    <font>Font_Condensed22_Caps</font>
+                    <font>Font_Reg19_Caps</font>
                     <shadowcolor>black</shadowcolor>
                     <include>BreadcrumbsLabel</include>
                     <label>$INFO[Control.GetLabel(13)]</label>
@@ -415,7 +402,6 @@
                 <onright>50</onright>
                 <onup>IncreaseRating</onup>
                 <ondown>DecreaseRating</ondown>
-                
                 <orientation>horizontal</orientation>
                 <itemgap>50</itemgap>
                 <control type="button" id="10">
@@ -459,7 +445,7 @@
                 <posy>1030</posy>
                 <width>1920</width>
                 <height>60</height>
-                <font>Font_Condensed22</font>
+                <font>Font_Reg19</font>
                 <textcolor>grey2</textcolor>
                 <align>right</align>
                 <label>$LOCALIZE[31458]</label>

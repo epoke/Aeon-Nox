@@ -52,14 +52,9 @@
                 <texturenofocus>dialogs/setcontent_button_nofocus.png</texturenofocus>
                 <textcolor>FF939597</textcolor>
                 <focusedcolor>FFFFFFFF</focusedcolor>
-                <radiowidth>141</radiowidth>
                 <radioposx>892</radioposx>
-                <radioheight>98</radioheight>
                 <textoffsetx>30</textoffsetx>
                 <aligny>center</aligny>
-                <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-                <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
-                <include></include>
             </control>
             <control type="spincontrolex" id="9">
                 <width>705</width>
@@ -74,8 +69,6 @@
                 <textcolor>FF939597</textcolor>
                 <focusedcolor>FFFFFFFF</focusedcolor>
                 <spinposx>-4</spinposx>
-                <spinwidth>40</spinwidth>
-                <spinheight>65</spinheight>
                 <textoffsetx>30</textoffsetx>
                 <aligny>center</aligny>
                 <reverse>yes</reverse>
@@ -93,8 +86,6 @@
                 <textcolor>FF939597</textcolor>
                 <focusedcolor>FFFFFFFF</focusedcolor>
                 <spinposx>-4</spinposx>
-                <spinwidth>40</spinwidth>
-                <spinheight>65</spinheight>
                 <textoffsetx>30</textoffsetx>
                 <aligny>center</aligny>
                 <reverse>yes</reverse>
@@ -107,7 +98,6 @@
                     <height>62</height>
                     <font>Font_SetContentMenu</font>
                     <label>186</label>
-                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>FF262728</focusedcolor>
                     <textoffsetx>30</textoffsetx>
@@ -126,7 +116,6 @@
                     <height>62</height>
                     <font>Font_SetContentMenu</font>
                     <label>222</label>
-                    
                     <textcolor>white2</textcolor>
                     <focusedcolor>FF262728</focusedcolor>
                     <textoffsetx>30</textoffsetx>

@@ -29,10 +29,8 @@
                     <posy>0</posy>
                     <width>310</width>
                     <height>34</height>
-                    <font>Font_Condensed18_Caps</font>
-                    
+                    <font>Font_Reg15_Caps</font>
                     <shadowcolor>-</shadowcolor>
-                    
                     <aligny>center</aligny>
                     <scroll>true</scroll>
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -61,9 +59,7 @@
                     <width>310</width>
                     <height>34</height>
                     <font>Font_Info_Caps</font>
-                    
                     <shadowcolor>-</shadowcolor>
-                    
                     <aligny>center</aligny>
                     <scroll>true</scroll>
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -172,7 +168,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$VAR[RecentAddedWidgetLabel1Var]</label>
-                    <font>Font_Condensed22_Caps</font>
+                    <font>Font_Reg19_Caps</font>
                     <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                     <shadowcolor>-</shadowcolor>
                     <include>Animation_HomeWidget</include>
@@ -195,7 +191,7 @@
                     <label>[UPPERCASE]$INFO[Container(8000).ListItem.Label2] • $INFO[Container(8000).ListItem.Property(EpisodeNumber)][/UPPERCASE]</label>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <font>Font_Condensed18_Caps</font>
+                    <font>Font_Reg15_Caps</font>
                     <textcolor>grey</textcolor>
                     <shadowcolor>-</shadowcolor>
                     <scrollspeed>30</scrollspeed>
@@ -341,7 +337,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>$INFO[Container(8000).ListItem.Label]</label>
-                    <font>Font_Condensed22_Caps</font>
+                    <font>Font_Reg19_Caps</font>
                     <textcolor>grey</textcolor>
                     <shadowcolor>-</shadowcolor>
                     <scrollspeed>30</scrollspeed>
@@ -431,7 +427,6 @@
                         <posy>0</posy>
                         <width>1050</width>
                         <height>45</height>
-                        
                         <aligny>center</aligny>
                         <font>Font_Reg24_Caps</font>
                         <textcolor>white2</textcolor>
@@ -461,7 +456,6 @@
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>Skin.HasSetting(Glowbar_Home)</visible>
                     <include>Animation_VisibleChange400</include>
-                    <aspectratio>stretch</aspectratio>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -555,7 +549,6 @@
                 </control>
                 <control type="image">
                     <texture>thumbs/multiplex_tvmask_shadow.png</texture>
-                    <aspectratio>stretch</aspectratio>
                     <posx>-21</posx>
                     <posy>76</posy>
                     <width>523</width>
@@ -657,7 +650,6 @@
                         <posy>120</posy>
                         <width>688</width>
                         <height>150</height>
-                        <font>Font_Reg18</font>
                         <textcolor>white3</textcolor>
                         <align>justify</align>
                         <aligny>top</aligny>
@@ -822,7 +814,6 @@
                             <font>Font_Info_Caps</font>
                             <textcolor>grey2</textcolor>
                             <shadowcolor>-</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                         </control>
@@ -846,7 +837,6 @@
                             <font>Font_Info_Caps</font>
                             <textcolor>white2</textcolor>
                             <shadowcolor>-</shadowcolor>
-                            
                             <aligny>center</aligny>
                             <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                         </control>

@@ -40,7 +40,6 @@
                 <width>729</width>
                 <height>1080</height>
                 <texture>info/movieinfogradient.png</texture>
-                <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
                 <posx>0</posx>
@@ -49,7 +48,6 @@
                 <height>1080</height>
                 <texture background="true">$INFO[ListItem.Icon]</texture>
                 <include>Animation_VisibleChange200</include>
-                <aspectratio>stretch</aspectratio>
             </control>
             <control type="image">
                 <animation effect="fade" time="400" delay="510">Visible</animation>
@@ -99,7 +97,6 @@
                 <scroll>true</scroll>
                 <haspath>true</haspath>
                 <font>Font_Info</font>
-                
                 <aligny>center</aligny>
                 <label>$INFO[ListItem.FileNameAndPath]</label>
                 <textcolor>FF868686</textcolor>
@@ -114,7 +111,6 @@
                 <onright>9000</onright>
                 <onup>150</onup>
                 <ondown>5055</ondown>
-                
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
                 <control type="button" id="8">
@@ -172,7 +168,7 @@
                     <font>Font_Reg38_Caps</font>
                     <label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
                     <scroll>true</scroll>
-                    <scrollspeed>20</scrollspeed>
+                    
                     <textcolor>white2</textcolor>
                     <animation effect="slide" start="0,-38" end="0,-38" time="0" condition="!IsEmpty(ListItem.Tagline)">Conditional</animation>
                 </control>
@@ -183,7 +179,7 @@
                     <font>Font_Reg22</font>
                     <label>$INFO[ListItem.Tagline]</label>
                     <scroll>true</scroll>
-                    <scrollspeed>20</scrollspeed>
+                    
                     <textcolor>FF868686</textcolor>
                 </control>
                 <!-- First Row -->
@@ -212,12 +208,11 @@
                     <posx>465</posx>
                     <posy>87</posy>
                     <width>555</width>
-                    
                     <aligny>center</aligny>
                     <font>Font_Reg20_Caps</font>
                     <label fallback="312577">[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
                     <scroll>true</scroll>
-                    <scrollspeed>20</scrollspeed>
+                    
                     <textcolor>FF868686</textcolor>
                     <height>85</height>
                 </control>
@@ -229,7 +224,6 @@
                         <posx>4</posx>
                         <width>165</width>
                         <height>44</height>
-                        
                         <aligny>center</aligny>
                         <font>Font_Reg19</font>
                         <textcolor>FF868686</textcolor>
@@ -240,11 +234,10 @@
                         <posx>180</posx>
                         <width>750</width>
                         <height>44</height>
-                        
                         <aligny>center</aligny>
                         <font>Font_Reg19</font>
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                         <textcolor>white2</textcolor>
                         <label fallback="312577">$INFO[ListItem.Director]</label>
                     </control>
@@ -257,7 +250,6 @@
                         <posx>4</posx>
                         <width>165</width>
                         <height>44</height>
-                        
                         <aligny>center</aligny>
                         <font>Font_Reg19</font>
                         <textcolor>FF868686</textcolor>
@@ -268,11 +260,10 @@
                         <posx>180</posx>
                         <width>750</width>
                         <height>44</height>
-                        
                         <aligny>center</aligny>
                         <font>Font_Reg19</font>
                         <scroll>true</scroll>
-                        <scrollspeed>20</scrollspeed>
+                        
                         <textcolor>white2</textcolor>
                         <label fallback="312577">$INFO[ListItem.Writer]</label>
                     </control>
@@ -285,7 +276,6 @@
                         <posx>4</posx>
                         <width>165</width>
                         <height>44</height>
-                        
                         <aligny>center</aligny>
                         <font>Font_Reg19</font>
                         <textcolor>FF868686</textcolor>
@@ -296,7 +286,6 @@
                         <posx>180</posx>
                         <width>750</width>
                         <height>44</height>
-                        
                         <aligny>center</aligny>
                         <font>Font_Reg19</font>
                         <textcolor>white2</textcolor>
@@ -332,7 +321,6 @@
                             <posx>585</posx>
                             <width>750</width>
                             <height>44</height>
-                            
                             <aligny>center</aligny>
                             <font>Font_Reg19</font>
                             <textcolor>white2</textcolor>
@@ -358,7 +346,6 @@
                             <posx>585</posx>
                             <width>750</width>
                             <height>44</height>
-                            
                             <aligny>center</aligny>
                             <font>Font_Reg19</font>
                             <textcolor>white2</textcolor>
@@ -371,7 +358,6 @@
                     <posx>4</posx>
                     <width>165</width>
                     <height>44</height>
-                    
                     <aligny>center</aligny>
                     <font>Font_Reg19</font>
                     <textcolor>FF868686</textcolor>
@@ -395,7 +381,6 @@
                     <posy>872</posy>
                     <width>1045</width>
                     <height>90</height>
-                    
                     <orientation>horizontal</orientation>
                     <itemgap>15</itemgap>
                     <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
@@ -533,7 +518,6 @@
                         <width>615</width>
                         <height>30</height>
                         <font>Font_Reg19</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>white2</textcolor>
                         <textoffsetx>15</textoffsetx>
@@ -556,7 +540,6 @@
                         <width>615</width>
                         <height>30</height>
                         <font>Font_Reg19</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>white2</textcolor>
                         <textoffsetx>15</textoffsetx>

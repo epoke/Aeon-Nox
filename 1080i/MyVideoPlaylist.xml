@@ -5,7 +5,7 @@
     <backgroundcolor>black</backgroundcolor>
     <views>50,51,52,501,57,512,500</views>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
-    <include condition="!Skin.HasSetting(firstrun3.5)">AutoConfig3.5</include>
+    
     <controls>
         <control type="multiimage">
             <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -44,7 +44,6 @@
                     <posx>22</posx>
                     <posy>0</posy>
                     <width>750</width>
-                    
                     <visible>Skin.HasSetting(breadcrumbslabel)</visible>
                     <visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]</visible>
                     <itemgap>0</itemgap>

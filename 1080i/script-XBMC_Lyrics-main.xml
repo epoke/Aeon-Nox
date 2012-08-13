@@ -64,12 +64,9 @@
                 <texturedown>settings/spin-down.png</texturedown>
                 <textureupfocus>settings/spin-up-focus.png</textureupfocus>
                 <texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-                <font>Font_Reg18</font>
                 <textcolor>FF929191</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <spinposx>-4</spinposx>
-                <spinwidth>42</spinwidth>
-                <spinheight>65</spinheight>
                 <textoffsetx>0</textoffsetx>
                 <aligny>center</aligny>
                 <reverse>yes</reverse>
@@ -78,7 +75,6 @@
                 <onright>130</onright>
                 <ondown>101</ondown>
                 <onup>101</onup>
-                
                 <visible>Control.IsVisible(100)</visible>
                 <animation effect="fade" time="1000">WindowOpen</animation>
                 <animation effect="fade" time="200">WindowClose</animation>
@@ -107,7 +103,6 @@
                         <aligny>center</aligny>
                         <align>center</align>
                         <textcolor>FF929191</textcolor>
-                        
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
@@ -121,7 +116,6 @@
                         <aligny>center</aligny>
                         <align>center</align>
                         <textcolor>FF929191</textcolor>
-                        
                         <label>$INFO[ListItem.Label]</label>
                         <visible>!Control.HasFocus(110)</visible>
                     </control>
@@ -134,7 +128,6 @@
                         <aligny>center</aligny>
                         <align>center</align>
                         <textcolor>FF929191</textcolor>
-                        
                         <label fallback="--">$INFO[ListItem.Label]</label>
                         <visible>Control.HasFocus(110)</visible>
                         <animation type="Focus" reversible="false">
@@ -153,7 +146,6 @@
                         <aligny>center</aligny>
                         <align>center</align>
                         <textcolor>FFFFFFFF</textcolor>
-                        
                         <label fallback="--">$INFO[ListItem.Label]</label>
                         <visible>Control.HasFocus(110)</visible>
                         <animation type="Focus" reversible="false">
@@ -173,12 +165,9 @@
                 <texturedown>settings/spin-down.png</texturedown>
                 <textureupfocus>settings/spin-up-focus.png</textureupfocus>
                 <texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-                <font>Font_Reg18</font>
                 <textcolor>FF929191</textcolor>
                 <focusedcolor>FFFFFFFF</focusedcolor>
                 <spinposx>-4</spinposx>
-                <spinwidth>42</spinwidth>
-                <spinheight>65</spinheight>
                 <textoffsetx>0</textoffsetx>
                 <aligny>center</aligny>
                 <reverse>yes</reverse>
@@ -187,7 +176,6 @@
                 <onright>130</onright>
                 <ondown>110</ondown>
                 <onup>110</onup>
-                
                 <visible>Control.IsVisible(110)</visible>
                 <animation effect="fade" time="1000">WindowOpen</animation>
                 <animation effect="fade" time="200">WindowClose</animation>
@@ -232,7 +220,6 @@
                         <width>1724</width>
                         <height>60</height>
                         <font>Font_Reg38</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>FFFFFFFF</textcolor>
                         <info>ListItem.Label</info>
@@ -261,7 +248,6 @@
                         <width>1724</width>
                         <height>60</height>
                         <font>Font_Reg38</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>FFFFFFFF</textcolor>
                         <info>ListItem.Label</info>
@@ -276,12 +262,9 @@
                 <texturedown>settings/spin-down.png</texturedown>
                 <textureupfocus>settings/spin-up-focus.png</textureupfocus>
                 <texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-                <font>Font_Reg18</font>
                 <textcolor>FF929191</textcolor>
                 <focusedcolor>FFFFFFFF</focusedcolor>
                 <spinposx>-4</spinposx>
-                <spinwidth>42</spinwidth>
-                <spinheight>65</spinheight>
                 <textoffsetx>0</textoffsetx>
                 <aligny>center</aligny>
                 <reverse>yes</reverse>
@@ -290,7 +273,6 @@
                 <onright>130</onright>
                 <ondown>120</ondown>
                 <onup>120</onup>
-                
                 <visible>Control.IsVisible(120)</visible>
                 <animation effect="fade" time="1000">WindowOpen</animation>
                 <animation effect="fade" time="200">WindowClose</animation>
@@ -308,7 +290,6 @@
                 <onright>110</onright>
                 <onclick>Skin.SetAddon(LyricScript_Path,xbmc.python.lyrics)</onclick>
                 <font>Font_Bold20_Caps</font>
-                
                 <aligny>center</aligny>
                 <textoffsetx>30</textoffsetx>
                 <animation effect="fade" time="1000">WindowOpen</animation>

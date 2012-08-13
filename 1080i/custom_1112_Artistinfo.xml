@@ -69,12 +69,9 @@
                 <control type="spincontrol" id="201">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <font>Font_Reg18</font>
                     <textcolor>FF929191</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <spinposx>-4</spinposx>
-                    <spinwidth>42</spinwidth>
-                    <spinheight>65</spinheight>
                     <textoffsetx>0</textoffsetx>
                     <aligny>center</aligny>
                     <reverse>yes</reverse>
@@ -92,12 +89,9 @@
                 <control type="spincontrol" id="203">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <font>Font_Reg18</font>
                     <textcolor>FF929191</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <spinposx>-4</spinposx>
-                    <spinwidth>42</spinwidth>
-                    <spinheight>65</spinheight>
                     <textoffsetx>0</textoffsetx>
                     <aligny>center</aligny>
                     <reverse>yes</reverse>

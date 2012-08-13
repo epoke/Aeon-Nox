@@ -46,7 +46,6 @@
                 <onright>9000</onright>
                 <ondown>60</ondown>
                 <onup>60</onup>
-                
                 <orientation>vertical</orientation>
             </control>
         </control>
@@ -55,7 +54,6 @@
             <posy>0</posy>
             <width>570</width>
             <height>60</height>
-            
             <font>Font_Info</font>
             <textoffsetx>30</textoffsetx>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
@@ -82,14 +80,10 @@
             <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
             <textcolor>FF939597</textcolor>
             <focusedcolor>FFFFFFFF</focusedcolor>
-            <radiowidth>141</radiowidth>
             <radioposx>945</radioposx>
-            <radioheight>98</radioheight>
             <textoffsetx>30</textoffsetx>
             <aligny>center</aligny>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-            <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-            <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
         </control>
         <control type="spincontrolex" id="9">
             <height>62</height>
@@ -104,8 +98,6 @@
             <textcolor>FF939597</textcolor>
             <focusedcolor>FFFFFFFF</focusedcolor>
             <spinposx>-8</spinposx>
-            <spinwidth>42</spinwidth>
-            <spinheight>65</spinheight>
             <textoffsetx>30</textoffsetx>
             <aligny>center</aligny>
             <alignx>center</alignx>

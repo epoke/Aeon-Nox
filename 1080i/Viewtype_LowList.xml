@@ -156,11 +156,11 @@
                         <posy>540</posy>
                         <height>60</height>
                         <width>1465</width>
-                        <font>Font_Condensed28_Caps</font>
+                        <font>Font_Reg25_Caps</font>
                         <align>center</align>
                         <aligny>center</aligny>
                         <textcolor>white3</textcolor>
-                        <scrollspeed>20</scrollspeed>
+                        
                         <label>[UPPERCASE]$INFO[ListItem.Tagline][/UPPERCASE]</label>
                     </control>
                     <control type="fadelabel">
@@ -169,7 +169,6 @@
                         <height>105</height>
                         <width>818</width>
                         <font>Font_OSDTitle2_Caps</font>
-                        
                         <aligny>center</aligny>
                         <textcolor>white3</textcolor>
                         <label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
@@ -180,7 +179,6 @@
                         <height>38</height>
                         <width>398</width>
                         <aligny>center</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>grey2</textcolor>
                         <scroll>true</scroll>
                         <label>$VAR[FanartPanelDetail1Var]</label>
@@ -191,7 +189,6 @@
                         <height>38</height>
                         <width>398</width>
                         <aligny>top</aligny>
-                        <font>Font_Reg18</font>
                         <scroll>true</scroll>
                         <textcolor>white6</textcolor>
                         <scroll>true</scroll>
@@ -204,7 +201,6 @@
                         <width>398</width>
                         <scroll>true</scroll>
                         <aligny>center</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>grey2</textcolor>
                         <label>$VAR[FanartPanelDetail2Var]</label>
                     </control>
@@ -215,7 +211,6 @@
                         <width>398</width>
                         <scroll>true</scroll>
                         <aligny>top</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>white6</textcolor>
                         <scroll>true</scroll>
                         <label fallback="312577">$VAR[FanartPanelValue2Var]</label>
@@ -227,7 +222,6 @@
                         <width>398</width>
                         <scroll>true</scroll>
                         <aligny>center</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>grey2</textcolor>
                         <label>$VAR[FanartPanelDetail4Var]</label>
                     </control>
@@ -238,7 +232,6 @@
                         <height>38</height>
                         <width>398</width>
                         <aligny>top</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>white6</textcolor>
                         <label fallback="312577">$VAR[FanartPanelValue4Var]</label>
                         <visible>IsEmpty(ListItem.Top250)</visible>
@@ -249,7 +242,6 @@
                         <height>38</height>
                         <width>398</width>
                         <aligny>top</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>white6</textcolor>
                         <label fallback="312577">$INFO[ListItem.RatingAndVotes]</label>
                         <label fallback="312577">$INFO[ListItem.Top250,$LOCALIZE[13409] #]</label>
@@ -262,7 +254,6 @@
                         <width>398</width>
                         <aligny>center</aligny>
                         <scroll>true</scroll>
-                        <font>Font_Reg18</font>
                         <textcolor>grey2</textcolor>
                         <label>$VAR[FanartPanelDetail5Var]</label>
                     </control>
@@ -273,7 +264,6 @@
                         <width>398</width>
                         <scroll>true</scroll>
                         <aligny>top</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>white6</textcolor>
                         <label fallback="312577">$VAR[FanartPanelValue5Var]</label>
                     </control>
@@ -284,7 +274,6 @@
                         <width>398</width>
                         <scroll>true</scroll>
                         <aligny>center</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>grey2</textcolor>
                         <label>$VAR[FanartPanelDetail6Var]</label>
                     </control>
@@ -295,7 +284,6 @@
                         <width>398</width>
                         <scroll>true</scroll>
                         <aligny>top</aligny>
-                        <font>Font_Reg18</font>
                         <textcolor>white6</textcolor>
                         <scroll>true</scroll>
                         <label fallback="312577">$VAR[FanartPanelValue6Var]</label>
@@ -305,7 +293,7 @@
                         <posy>606</posy>
                         <width>405</width>
                         <height>350</height>
-                        <font>Font_Condensed22</font>
+                        <font>Font_Reg19</font>
                         <label>$VAR[GlobalPlotVar]</label>
                         <align>justify</align>
                         <textcolor>white6</textcolor>
@@ -397,7 +385,6 @@
                             <posy>788</posy>
                             <height>20</height>
                             <width>180</width>
-                            <font>Font_Reg18</font>
                             <textcolor>grey2</textcolor>
                             <scroll>true</scroll>
                             <label>$VAR[FanartPanelDetail1Var]</label>
@@ -407,7 +394,6 @@
                             <posy>788</posy>
                             <height>20</height>
                             <width>420</width>
-                            <font>Font_Reg18</font>
                             <textcolor>white6</textcolor>
                             <scroll>true</scroll>
                             <label fallback="312577">$VAR[FanartPanelValue1Var]</label>
@@ -417,7 +403,6 @@
                             <posy>825</posy>
                             <height>20</height>
                             <width>180</width>
-                            <font>Font_Reg18</font>
                             <textcolor>grey2</textcolor>
                             <scroll>true</scroll>
                             <label>$VAR[FanartPanelDetail2Var]</label>
@@ -427,7 +412,6 @@
                             <posy>825</posy>
                             <height>20</height>
                             <width>420</width>
-                            <font>Font_Reg18</font>
                             <textcolor>white6</textcolor>
                             <scroll>true</scroll>
                             <label fallback="312577">$VAR[FanartPanelValue2Var]</label>
@@ -437,7 +421,6 @@
                             <posy>862</posy>
                             <height>20</height>
                             <width>180</width>
-                            <font>Font_Reg18</font>
                             <textcolor>grey2</textcolor>
                             <scroll>true</scroll>
                             <label>$VAR[LowListInfoDetail3]</label>
@@ -447,7 +430,6 @@
                             <posy>862</posy>
                             <height>20</height>
                             <width>420</width>
-                            <font>Font_Reg18</font>
                             <textcolor>white6</textcolor>
                             <scroll>true</scroll>
                             <label fallback="312577">$VAR[LowListInfoValue3]</label>
@@ -457,7 +439,6 @@
                             <posy>900</posy>
                             <height>20</height>
                             <width>180</width>
-                            <font>Font_Reg18</font>
                             <textcolor>grey2</textcolor>
                             <scroll>false</scroll>
                             <label>$VAR[LowListInfoDetail5]</label>
@@ -467,7 +448,6 @@
                             <posy>900</posy>
                             <height>20</height>
                             <width>420</width>
-                            <font>Font_Reg18</font>
                             <textcolor>white6</textcolor>
                             <scroll>true</scroll>
                             <label fallback="312577">$VAR[LowListInfoValue5]</label>
@@ -477,7 +457,6 @@
                             <posy>938</posy>
                             <height>20</height>
                             <width>180</width>
-                            <font>Font_Reg18</font>
                             <textcolor>grey2</textcolor>
                             <scroll>true</scroll>
                             <label>$VAR[LowListInfoDetail4]</label>
@@ -487,7 +466,6 @@
                             <posy>938</posy>
                             <height>20</height>
                             <width>420</width>
-                            <font>Font_Reg18</font>
                             <textcolor>white6</textcolor>
                             <scroll>true</scroll>
                             <label fallback="312577">$VAR[LowListInfoValue4]</label>
@@ -500,7 +478,7 @@
                             <posy>756</posy>
                             <width>633</width>
                             <height>234</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$VAR[FanartPanelPlotVar]</label>
                             <align>justify</align>
                             <textcolor>white6</textcolor>
@@ -512,7 +490,7 @@
                             <posy>760</posy>
                             <width>633</width>
                             <height>196</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$INFO[ListItem.Plot]</label>
                             <align>justify</align>
                             <textcolor>white6</textcolor>
@@ -524,7 +502,7 @@
                             <posy>760</posy>
                             <width>633</width>
                             <height>388</height>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <label>$VAR[FanartPanelPlotVar]</label>
                             <align>justify</align>
                             <textcolor>white6</textcolor>
@@ -576,7 +554,6 @@
                         <height>682</height>
                         <align>center</align>
                         <bordersize>18</bordersize>
-                        <aspectratio>stretch</aspectratio>
                         <include>PanelGlowFade</include>
                         <include>Animation_VisibleChange400</include>
                         <visible>Skin.HasSetting(ExtendedGlowMode) + !Skin.HasSetting(DisableGlowbar)</visible>
@@ -697,7 +674,6 @@
                             <posy>-135</posy>
                             <width>420</width>
                             <height>90</height>
-                            <aspectratio>stretch</aspectratio>
                             <fadetime>400</fadetime>
                             <texture diffuse="thumbs/banner_mask.png">featured/panel_featured_overlay.png</texture>
                             <visible>Skin.HasSetting(lowlistbanner)</visible>
@@ -708,7 +684,6 @@
                             <posy>-165</posy>
                             <width>390</width>
                             <height>150</height>
-                            <aspectratio>stretch</aspectratio>
                             <fadetime>400</fadetime>
                             <texture background="true">$VAR[TVShowLogoVar]</texture>
                             <visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)</visible>
@@ -751,7 +726,6 @@
                         <posy>0</posy>
                         <width>645</width>
                         <height>66</height>
-                        
                         <aligny>center</aligny>
                         <include>detailcolornofocus</include>
                         <font>Font_Bold16_Caps</font>
@@ -798,7 +772,6 @@
                         <posy>0</posy>
                         <width>645</width>
                         <height>33</height>
-                        
                         <aligny>center</aligny>
                         <include>listcolornofocus</include>
                         <font>Font_Bold16_Caps</font>
@@ -809,7 +782,6 @@
                         <posy>30</posy>
                         <width>645</width>
                         <height>33</height>
-                        
                         <aligny>center</aligny>
                         <include>listcolornofocus</include>
                         <font>Font_Info</font>
@@ -864,7 +836,6 @@
                             <height>146</height>
                             <aligny>center</aligny>
                             <align>center</align>
-                            
                             <label>$INFO[ListItem.Label]</label>
                             <font>Font_Bold24</font>
                         </control>
@@ -918,7 +889,6 @@
                             <height>146</height>
                             <aligny>center</aligny>
                             <align>center</align>
-                            
                             <label>$INFO[ListItem.Label]</label>
                             <font>Font_Bold24</font>
                         </control>

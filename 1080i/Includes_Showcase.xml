@@ -21,7 +21,6 @@
             <height>454</height>
             <align>center</align>
             <bordersize>18</bordersize>
-            <aspectratio>stretch</aspectratio>
             <include>Animation_VisibleChange400</include>
             <include>PanelGlowFade</include>
             <visible>Skin.HasSetting(ExtendedGlowMode) + !Skin.HasSetting(DisableGlowbar)</visible>
@@ -107,7 +106,6 @@
             <width>404</width>
             <height>403</height>
             <bordersize>16</bordersize>
-            <aspectratio>stretch</aspectratio>
             <include>Animation_VisibleChange400</include>
             <visible>Skin.HasSetting(ExtendedGlowMode) + !Skin.HasSetting(DisableGlowbar)</visible>
             <include>PanelGlowFade</include>
@@ -957,7 +955,7 @@
     </include>
     <include name="ShowcaseInfoPaneMovies">
         <control type="group" id="7550">
-            <visible>[Control.IsVisible(197) | Control.IsVisible(198)] + [[Skin.HasSetting(showcaseinfoon) + [Container.Content(movies) | Container.Content(musicvideos)]] | [Skin.HasSetting(showcaseinfoontv) + [Container.Content(tvshows) | Container.Content(seasons)]] | [Skin.HasSetting(showcaseinfoonep) + Container.Content(episodes)]] | Control.HasFocus(7000)</visible>
+            <visible>[Control.IsVisible(197) | Control.IsVisible(198)] + [[Skin.HasSetting(showcaseinfoon) + !Skin.HasSetting(infopaneoff) + [Container.Content(movies) | Container.Content(musicvideos)]] | [Skin.HasSetting(showcaseinfoontv) + [Container.Content(tvshows) | Container.Content(seasons)]] | [Skin.HasSetting(showcaseinfoonep) + Container.Content(episodes)]] | Control.HasFocus(7000)</visible>
             <visible>!StringCompare(ListItem.Label,..)</visible>
             <animation effect="slide" start="0,-945" end="0,0" time="550" easing="out" tween="cubic">VisibleChange</animation>
             <animation effect="fade" time="250">WindowOpen</animation>
@@ -1022,7 +1020,6 @@
                     <width>1620</width>
                     <height>42</height>
                     <scroll>true</scroll>
-                    <font>Font_Reg18</font>
                     <aligny>center</aligny>
                     <align>center</align>
                     <label>$VAR[LandscapeLogoPanelLabelVar]</label>

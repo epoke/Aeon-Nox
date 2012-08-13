@@ -34,11 +34,9 @@
                 <posy>45</posy>
                 <width>1322</width>
                 <height>45</height>
-                
                 <aligny>center</aligny>
                 <label>$LOCALIZE[13390]</label>
                 <font>Font_Bold19</font>
-                
                 <shadowcolor>black</shadowcolor>
             </control>
             <control type="grouplist" id="5">
@@ -67,7 +65,6 @@
                 <texturesliderbarfocus>-</texturesliderbarfocus>
                 <textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
                 <textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
-                
                 <orientation>vertical</orientation>
                 <onleft>5</onleft>
                 <onright>5</onright>
@@ -117,8 +114,6 @@
             <colordiffuse>FFFFFFFF</colordiffuse>
             <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>
-            <textureradiofocus>settings/settings_radiobuttononfocus.png</textureradiofocus>
-            <textureradionofocus>settings/settings_radiobuttonon.png</textureradionofocus>
         </control>
         <control type="spincontrolex" id="9">
             <posx>0</posx>

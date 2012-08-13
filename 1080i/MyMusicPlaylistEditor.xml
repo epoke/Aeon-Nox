@@ -4,7 +4,7 @@
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>black</backgroundcolor>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
-    <include condition="!Skin.HasSetting(firstrun3.5)">AutoConfig3.5</include>
+    
     <controls>
         <control type="multiimage">
             <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -105,7 +105,6 @@
                     <height>90</height>
                     <font>Font_Bold22_Caps</font>
                     <scroll>true</scroll>
-                    
                     <aligny>center</aligny>
                     <textcolor>floor</textcolor>
                 </control>
@@ -156,7 +155,6 @@
                         <posy>0</posy>
                         <width>128</width>
                         <height>62</height>
-                        <font>Font_Reg18</font>
                         <align>center</align>
                         <aligny>center</aligny>
                         <textcolor>bcicon</textcolor>
@@ -196,7 +194,6 @@
                         <posy>0</posy>
                         <width>128</width>
                         <height>62</height>
-                        <font>Font_Reg18</font>
                         <align>center</align>
                         <aligny>center</aligny>
                         <textcolor>white6</textcolor>
@@ -210,7 +207,6 @@
                 <posy>140</posy>
                 <width>46</width>
                 <height>526</height>
-                
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texturesliderbackground>-</texturesliderbackground>
                 <texturesliderbar>-</texturesliderbar>
@@ -280,7 +276,6 @@
                 <height>90</height>
                 <font>Font_Bold22_Caps</font>
                 <scroll>true</scroll>
-                
                 <aligny>center</aligny>
                 <label>B</label>
                 <textcolor>floor</textcolor>
@@ -319,7 +314,6 @@
                         <posy>0</posy>
                         <width>128</width>
                         <height>62</height>
-                        <font>Font_Reg18</font>
                         <align>center</align>
                         <aligny>center</aligny>
                         <textcolor>bcicon</textcolor>
@@ -359,7 +353,6 @@
                         <posy>0</posy>
                         <width>128</width>
                         <height>62</height>
-                        <font>Font_Reg18</font>
                         <align>center</align>
                         <aligny>center</aligny>
                         <textcolor>white6</textcolor>
@@ -373,7 +366,6 @@
                 <posy>140</posy>
                 <width>46</width>
                 <height>526</height>
-                
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texturesliderbackground>-</texturesliderbackground>
                 <texturesliderbar>-</texturesliderbar>
@@ -403,7 +395,6 @@
                     <posx>22</posx>
                     <posy>0</posy>
                     <width>750</width>
-                    
                     <visible>Skin.HasSetting(breadcrumbslabel)</visible>
                     <visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]</visible>
                     <itemgap>0</itemgap>

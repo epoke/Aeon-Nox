@@ -49,9 +49,7 @@
             <height>45</height>
             <font>Font_Bold19</font>
             <label>$LOCALIZE[298]</label>
-            
             <aligny>center</aligny>
-            
             <shadowcolor>black</shadowcolor>
         </control>
         <control type="button" id="3">
@@ -84,7 +82,6 @@
             <focusedcolor>white</focusedcolor>
             <textoffsetx>0</textoffsetx>
             <font>Font_Bold19</font>
-            
             <aligny>center</aligny>
             <onleft>61</onleft>
             <onright>4</onright>
@@ -103,7 +100,6 @@
             <focusedcolor>white</focusedcolor>
             <textoffsetx>0</textoffsetx>
             <font>Font_Bold19</font>
-            
             <aligny>center</aligny>
             <onleft>61</onleft>
             <onright>4</onright>
@@ -149,7 +145,6 @@
                     <posy>228</posy>
                     <width>338</width>
                     <height>22</height>
-                    <font>Font_Reg18</font>
                     <textcolor>white2</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -181,7 +176,6 @@
                     <posy>228</posy>
                     <width>338</width>
                     <height>22</height>
-                    <font>Font_Reg18</font>
                     <textcolor>white2</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -204,7 +198,6 @@
             <onright>11</onright>
             <ondown>61</ondown>
             <onup>61</onup>
-            
             <orientation>vertical</orientation>
         </control>
     </controls>

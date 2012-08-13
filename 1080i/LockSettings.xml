@@ -9,7 +9,6 @@
     </coordinates>
     <controls>
         <include>Furniture_SettingsBackPanel</include>
-        <include>Furniture_SettingsLogo</include>
         <control type="label">
             <posx>358</posx>
             <posy>120</posy>
@@ -18,7 +17,6 @@
             <label>$LOCALIZE[20043]</label>
             <align>center</align>
             <aligny>center</aligny>
-            
             <shadowcolor>black</shadowcolor>
         </control>
         <control type="grouplist" id="5">
@@ -48,8 +46,6 @@
             <disabledcolor>60d0d0d0</disabledcolor>
             <aligny>center</aligny>
             <spinposx>-2</spinposx>
-            <spinwidth>40</spinwidth>
-            <spinheight>65</spinheight>
             <textoffsetx>75</textoffsetx>
             <reverse>yes</reverse>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>

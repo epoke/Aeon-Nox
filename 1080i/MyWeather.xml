@@ -4,7 +4,7 @@
     <backgroundcolor>black</backgroundcolor>
     <allowoverlay>no</allowoverlay>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
-    <include condition="!Skin.HasSetting(firstrun3.5)">AutoConfig3.5</include>
+    
     <onunload>ClearProperty(FSMap,weather)</onunload>
     <controls>
         <control type="multiimage">
@@ -264,7 +264,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
                             <textcolor>white2</textcolor>
@@ -275,7 +274,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Current.Humidity)</info>
                             <textcolor>white2</textcolor>
@@ -286,7 +284,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Current.Pressure)</info>
                             <textcolor>white2</textcolor>
@@ -297,7 +294,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Current.Wind)</info>
                             <textcolor>white2</textcolor>
@@ -308,7 +304,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Current.Visibility)</info>
                             <textcolor>white2</textcolor>
@@ -319,7 +314,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Today.Sunrise)</info>
                             <textcolor>white2</textcolor>
@@ -330,7 +324,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Today.Sunset)</info>
                             <textcolor>white2</textcolor>
@@ -369,7 +362,6 @@
                                     <height>34</height>
                                     <font>Font_Reg18_Caps</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -378,10 +370,8 @@
                                     <posy>45</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>grey2</textcolor>
                                     <scroll>true</scroll>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(Outlook)]</label>
                                 </control>
@@ -390,10 +380,8 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>red</selectedcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                 </control>
@@ -402,9 +390,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(LowTemperature),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
                                 </control>
@@ -443,7 +429,6 @@
                                         <height>34</height>
                                         <font>Font_Reg18_Caps</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
@@ -452,9 +437,7 @@
                                         <posy>45</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(Outlook)]</label>
                                         <scroll>true</scroll>
@@ -464,9 +447,7 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(HighTemperature),$LOCALIZE[419]: ]</label>
                                     </control>
@@ -475,9 +456,7 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(LowTemperature),$LOCALIZE[418]: ]</label>
                                     </control>
@@ -491,7 +470,6 @@
                                         <height>34</height>
                                         <font>Font_Reg18_Caps</font>
                                         <textcolor>white2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
@@ -500,9 +478,7 @@
                                         <posy>45</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <textcolor>grey2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(Outlook)]</label>
                                         <scroll>true</scroll>
@@ -512,10 +488,8 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <textcolor>white2</textcolor>
                                         <selectedcolor>red</selectedcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                     </control>
@@ -524,9 +498,7 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <textcolor>white2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(LowTemperature),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
                                     </control>
@@ -695,7 +667,6 @@
                                     <height>34</height>
                                     <font>Font_Reg18_Caps</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -704,10 +675,8 @@
                                     <posy>45</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>grey2</textcolor>
                                     <scroll>true</scroll>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(Forecast)]</label>
                                 </control>
@@ -716,9 +685,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>[COLOR grey2]$INFO[ListItem.Property(TemperatureHeading)]: [/COLOR]$INFO[ListItem.Property(Temperature)]</label>
                                 </control>
@@ -727,9 +694,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>[COLOR grey2]$LOCALIZE[31948]: [/COLOR]$INFO[ListItem.Property(ChancePrecipitation)]</label>
                                 </control>
@@ -766,7 +731,6 @@
                                     <height>34</height>
                                     <font>Font_Reg18_Caps</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -775,9 +739,7 @@
                                     <posy>45</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>grey2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(Forecast)]</label>
                                     <scroll>true</scroll>
@@ -787,9 +749,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>[COLOR grey2]$INFO[ListItem.Property(TemperatureHeading)]: [/COLOR]$INFO[ListItem.Property(Temperature)]</label>
                                 </control>
@@ -798,9 +758,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>[COLOR grey2]$LOCALIZE[31948]: [/COLOR]$INFO[ListItem.Property(ChancePrecipitation)]</label>
                                 </control>
@@ -871,7 +829,6 @@
                                     <height>34</height>
                                     <font>Font_Reg18_Caps</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -880,10 +837,8 @@
                                     <posy>45</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>grey2</textcolor>
                                     <scroll>true</scroll>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(Forecast)]</label>
                                 </control>
@@ -892,10 +847,8 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>red</selectedcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                 </control>
@@ -904,9 +857,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(LowTemperature),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
                                 </control>
@@ -943,7 +894,6 @@
                                     <height>34</height>
                                     <font>Font_Reg18_Caps</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -952,9 +902,7 @@
                                     <posy>45</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>grey2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(Forecast)]</label>
                                     <scroll>true</scroll>
@@ -964,10 +912,8 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>red</selectedcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(HighTemperature),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                                 </control>
@@ -976,9 +922,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(LowTemperature),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
                                 </control>
@@ -1061,7 +1005,6 @@
                                     <height>34</height>
                                     <font>Font_Reg18_Caps</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -1070,10 +1013,8 @@
                                     <posy>45</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>grey2</textcolor>
                                     <scroll>true</scroll>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(Outlook)]</label>
                                 </control>
@@ -1082,9 +1023,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(Temperature)]  •  [COLOR grey2]$INFO[ListItem.Property(Humidity)][/COLOR]</label>
                                 </control>
@@ -1093,9 +1032,7 @@
                                     <posy>82</posy>
                                     <width>660</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>white2</textcolor>
-                                    
                                     <aligny>center</aligny>
                                     <label>$INFO[ListItem.Property(FeelsLike),[COLOR grey2]$LOCALIZE[402]: [/COLOR]]</label>
                                 </control>
@@ -1134,7 +1071,6 @@
                                         <height>34</height>
                                         <font>Font_Reg18_Caps</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
@@ -1143,9 +1079,7 @@
                                         <posy>45</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(Outlook)]</label>
                                         <scroll>true</scroll>
@@ -1155,9 +1089,7 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(Temperature)]  •  $INFO[ListItem.Property(Humidity)]</label>
                                     </control>
@@ -1166,9 +1098,7 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(FeelsLike),$LOCALIZE[402]: ]</label>
                                     </control>
@@ -1182,7 +1112,6 @@
                                         <height>34</height>
                                         <font>Font_Reg18_Caps</font>
                                         <textcolor>white2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
@@ -1191,9 +1120,7 @@
                                         <posy>45</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <textcolor>grey2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(Outlook)]</label>
                                         <scroll>true</scroll>
@@ -1203,9 +1130,7 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <textcolor>white2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(Temperature)]  •  [COLOR grey2]$INFO[ListItem.Property(Humidity)][/COLOR]</label>
                                     </control>
@@ -1214,9 +1139,7 @@
                                         <posy>82</posy>
                                         <width>660</width>
                                         <height>34</height>
-                                        <font>Font_Reg18</font>
                                         <textcolor>white2</textcolor>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Property(FeelsLike),[COLOR grey2]$LOCALIZE[402]: [/COLOR]]</label>
                                     </control>
@@ -1589,7 +1512,6 @@
                                     <width>780</width>
                                     <height>525</height>
                                     <texture>common/black.png</texture>
-                                    <aspectratio>stretch</aspectratio>
                                 </control>
                                 <control type="videowindow" id="2">
                                     <posx>98</posx>
@@ -1631,9 +1553,7 @@
                                         <posy>0</posy>
                                         <width>810</width>
                                         <height>60</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolornofocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
@@ -1667,9 +1587,7 @@
                                         <posy>0</posy>
                                         <width>810</width>
                                         <height>60</height>
-                                        <font>Font_Reg18</font>
                                         <include>listcolorfocus</include>
-                                        
                                         <aligny>center</aligny>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
@@ -1960,7 +1878,6 @@
                                 <texture>common/black.png</texture>
                                 <bordertexture border="15">common/white.png</bordertexture>
                                 <bordersize>15</bordersize>
-                                <aspectratio>stretch</aspectratio>
                                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                                 <visible>Control.HasFocus(5)</visible>
                             </control>
@@ -2049,7 +1966,6 @@
                                     <posy>1020</posy>
                                     <width>1500</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
                                     <align>center</align>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
@@ -2076,7 +1992,6 @@
                                         <posy>165</posy>
                                         <width>742</width>
                                         <height>900</height>
-                                        <font>Font_Reg18</font>
                                         <align>right</align>
                                         <textcolor>white2</textcolor>
                                         <pagecontrol>61</pagecontrol>
@@ -2087,8 +2002,6 @@
                                         <posy>165</posy>
                                         <width>742</width>
                                         <height>900</height>
-                                        <font>Font_Reg18</font>
-                                        
                                         <textcolor>grey2</textcolor>
                                         <pagecontrol>61</pagecontrol>
                                         <label>[CR]$INFO[Window(Weather).Property(Current.AstroTwilight.Start)]$INFO[Window(Weather).Property(Current.AstroTwilight.End), - ][CR]$INFO[Window(Weather).Property(Current.NauticTwilight.Start)]$INFO[Window(Weather).Property(Current.NauticTwilight.End), - ][CR]$INFO[Window(Weather).Property(Current.CivilTwilight.Start)]$INFO[Window(Weather).Property(Current.CivilTwilight.End), - ][CR]$INFO[Window(Weather).Property(Current.Sunrise)]$INFO[Window(Weather).Property(Current.Sunset), - ][CR]$INFO[Window(Weather).Property(Current.Sunrise.Azimuth),,°]$INFO[Window(Weather).Property(Current.Sunset.Azimuth), - ,°][CR]$INFO[Window(Weather).Property(Current.Sun.Length)][CR]$INFO[Window(Weather).Property(Current.Sun.Diff)][CR]$INFO[Window(Weather).Property(Current.Solarnoon.Time)][CR]$INFO[Window(Weather).Property(Current.Solarnoon.Altitude),,°][CR]$INFO[Window(Weather).Property(Current.Solarnoon.Distance)][CR][CR]$INFO[Window(Weather).Property(Current.Moonrise)]$INFO[Window(Weather).Property(Current.Moonset), - ][CR]$INFO[Window(Weather).Property(Current.Moonrise.Azimuth),,°]$INFO[Window(Weather).Property(Current.Moonset.Azimuth), - ,°][CR]$INFO[Window(Weather).Property(Current.Moon.Meridian.Time)][CR]$INFO[Window(Weather).Property(Current.Moon.Meridian.Altitude),,°][CR]$INFO[Window(Weather).Property(Current.Moon.Meridian.Distance)][CR]$INFO[Window(Weather).Property(Current.Moon.Meridian.Illuminated)][CR]$INFO[Window(Weather).Property(Current.Moon.Phase)][CR]</label>
@@ -2134,7 +2047,6 @@
                                     <posy>158</posy>
                                     <width>210</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>c0FFFFFF</textcolor>
                                     <align>center</align>
                                     <aligny>center</aligny>
@@ -2166,7 +2078,6 @@
                                     <posy>158</posy>
                                     <width>210</width>
                                     <height>34</height>
-                                    <font>Font_Reg18</font>
                                     <textcolor>c0FFFFFF</textcolor>
                                     <align>center</align>
                                     <aligny>center</aligny>
@@ -2253,7 +2164,7 @@
                     <posy>1030</posy>
                     <width>1920</width>
                     <height>20</height>
-                    <font>Font_Condensed20</font>
+                    <font>Font_Reg17</font>
                     <align>right</align>
                     <textcolor>floor</textcolor>
                     <shadowcolor>-</shadowcolor>
@@ -2399,7 +2310,6 @@
                                 <width>450</width>
                                 <height>52</height>
                                 <font>Font_Reg20</font>
-                                
                                 <aligny>center</aligny>
                                 <info>Window.Property(Current.Sunrise)</info>
                                 <textcolor>white2</textcolor>
@@ -2426,7 +2336,6 @@
                                 <width>450</width>
                                 <height>52</height>
                                 <font>Font_Reg20</font>
-                                
                                 <aligny>center</aligny>
                                 <info>Window.Property(Current.Sunset)</info>
                                 <textcolor>white2</textcolor>
@@ -2452,7 +2361,6 @@
                                 <width>450</width>
                                 <height>52</height>
                                 <font>Font_Reg20</font>
-                                
                                 <aligny>center</aligny>
                                 <info>Window.Property(Current.Moon.Phase)</info>
                                 <textcolor>white2</textcolor>
@@ -2464,7 +2372,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
                             <textcolor>white2</textcolor>
@@ -2475,7 +2382,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Current.Humidity)</info>
                             <textcolor>white2</textcolor>
@@ -2486,7 +2392,6 @@
                             <width>450</width>
                             <height>52</height>
                             <font>Font_Reg20</font>
-                            
                             <aligny>center</aligny>
                             <info>Window.Property(Current.Wind)</info>
                             <textcolor>white2</textcolor>
@@ -2523,7 +2428,6 @@
                             <height>34</height>
                             <font>Font_Reg18_Caps</font>
                             <textcolor>white2</textcolor>
-                            
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
@@ -2532,10 +2436,8 @@
                             <posy>45</posy>
                             <width>660</width>
                             <height>34</height>
-                            <font>Font_Reg18</font>
                             <textcolor>grey2</textcolor>
                             <scroll>true</scroll>
-                            
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Label2]</label>
                         </control>
@@ -2544,10 +2446,8 @@
                             <posy>82</posy>
                             <width>660</width>
                             <height>34</height>
-                            <font>Font_Reg18</font>
                             <textcolor>white2</textcolor>
                             <selectedcolor>red</selectedcolor>
-                            
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                         </control>
@@ -2556,9 +2456,7 @@
                             <posy>82</posy>
                             <width>660</width>
                             <height>34</height>
-                            <font>Font_Reg18</font>
                             <textcolor>white2</textcolor>
-                            
                             <aligny>center</aligny>
                             <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
                         </control>
@@ -2604,7 +2502,6 @@
                                 <height>34</height>
                                 <font>Font_Reg18_Caps</font>
                                 <textcolor>white2</textcolor>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
@@ -2613,9 +2510,7 @@
                                 <posy>45</posy>
                                 <width>660</width>
                                 <height>34</height>
-                                <font>Font_Reg18</font>
                                 <textcolor>grey2</textcolor>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Label2]</label>
                                 <scroll>true</scroll>
@@ -2625,10 +2520,8 @@
                                 <posy>82</posy>
                                 <width>660</width>
                                 <height>34</height>
-                                <font>Font_Reg18</font>
                                 <textcolor>white2</textcolor>
                                 <selectedcolor>red</selectedcolor>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Property(HighTemp),[COLOR grey2]$LOCALIZE[419]: [/COLOR]]</label>
                             </control>
@@ -2637,9 +2530,7 @@
                                 <posy>82</posy>
                                 <width>660</width>
                                 <height>34</height>
-                                <font>Font_Reg18</font>
                                 <textcolor>white2</textcolor>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Property(LowTemp),[COLOR grey2]$LOCALIZE[418]: [/COLOR]]</label>
                             </control>
@@ -2653,7 +2544,6 @@
                                 <height>34</height>
                                 <font>Font_Reg18_Caps</font>
                                 <include>listcolorfocus</include>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
@@ -2662,9 +2552,7 @@
                                 <posy>45</posy>
                                 <width>660</width>
                                 <height>34</height>
-                                <font>Font_Reg18</font>
                                 <include>listcolorfocus</include>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Label2]</label>
                                 <scroll>true</scroll>
@@ -2674,9 +2562,7 @@
                                 <posy>82</posy>
                                 <width>660</width>
                                 <height>34</height>
-                                <font>Font_Reg18</font>
                                 <include>listcolorfocus</include>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Property(HighTemp),$LOCALIZE[419]: ]</label>
                             </control>
@@ -2685,9 +2571,7 @@
                                 <posy>82</posy>
                                 <width>660</width>
                                 <height>34</height>
-                                <font>Font_Reg18</font>
                                 <include>listcolorfocus</include>
-                                
                                 <aligny>center</aligny>
                                 <label>$INFO[ListItem.Property(LowTemp),$LOCALIZE[418]: ]</label>
                             </control>
@@ -2779,7 +2663,6 @@
                     <posx>22</posx>
                     <posy>0</posy>
                     <width>750</width>
-                    
                     <visible>Skin.HasSetting(breadcrumbslabel)</visible>
                     <visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]</visible>
                     <itemgap>0</itemgap>
@@ -2835,9 +2718,8 @@
                         <ondown>9003</ondown>
                         <onback>7510</onback>
                         <control type="button" id="1600">
-                            <textcolor>$VAR[FontColorVar]</textcolor>
-                            <disabledcolor>$VAR[ColorDiffuseVar]</disabledcolor>
-                            <font>Font_Condensed22_Caps</font>
+                            <disabledcolor>$VAR[FontColorVar]</disabledcolor>
+                            <font>Font_Reg19_Caps</font>
                             <include>Objects_MediaMenuButtonAlt</include>
                             <label>$LOCALIZE[128]</label>
                             <enable>no</enable>
@@ -2860,14 +2742,11 @@
                             <texturenofocus>settings/listselect_nf.png</texturenofocus>
                             <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            <font>Font_Condensed22</font>
+                            <font>Font_Reg19</font>
                             <textoffsety>27</textoffsety>
-                            
                             <aligny>top</aligny>
                             <textoffsetx>0</textoffsetx>
                             <spinposx>-20</spinposx>
-                            <spinwidth>60</spinwidth>
-                            <spinheight>97</spinheight>
                         </control>
                         <control type="togglebutton" id="307">
                             <include>Objects_MediaMenuButtonAlt</include>
@@ -2889,8 +2768,8 @@
                         </control>
                         <control type="button" id="301">
                             <textcolor>$VAR[FontColorVar]</textcolor>
-                            <disabledcolor>$VAR[ColorDiffuseVar]</disabledcolor>
-                            <font>Font_Condensed22_Caps</font>
+                            <disabledcolor>$VAR[FontColorVar]</disabledcolor>
+                            <font>Font_Reg19_Caps</font>
                             <include>Objects_MediaMenuButtonAlt</include>
                             <label>$LOCALIZE[31911]</label>
                             <enable>no</enable>
@@ -2969,9 +2848,8 @@
                             <visible>System.HasAddon(script.widget.weatherworld)</visible>
                         </control>
                         <control type="button" id="1601">
-                            <textcolor>$VAR[FontColorVar]</textcolor>
-                            <disabledcolor>$VAR[ColorDiffuseVar]</disabledcolor>
-                            <font>Font_Condensed22_Caps</font>
+                            <disabledcolor>$VAR[FontColorVar]</disabledcolor>
+                            <font>Font_Reg19_Caps</font>
                             <include>Objects_MediaMenuButtonAlt</include>
                             <label>$LOCALIZE[31383]</label>
                             <enable>no</enable>
@@ -2987,9 +2865,8 @@
                             <visible>!Skin.HasSetting(kioskmode)</visible>
                         </control>
                         <control type="button" id="1604">
-                            <textcolor>$VAR[FontColorVar]</textcolor>
-                            <disabledcolor>$VAR[ColorDiffuseVar]</disabledcolor>
-                            <font>Font_Condensed22_Caps</font>
+                            <disabledcolor>$VAR[FontColorVar]</disabledcolor>
+                            <font>Font_Reg19_Caps</font>
                             <include>Objects_MediaMenuButtonAlt</include>
                             <label>$LOCALIZE[31185]</label>
                             <enable>no</enable>
@@ -3003,12 +2880,6 @@
                     <include>QuickNavLabel</include>
                 </control>
             </control>
-        </control>
-        <control type="button" id="9000">
-            <include>HiddenObject</include>
-            <enable>Skin.HasSetting(kioskmode)</enable>
-            <visible>Skin.HasSetting(kioskmode)</visible>
-            <onfocus>SetFocus(50)</onfocus>
         </control>
     </controls>
 </window>

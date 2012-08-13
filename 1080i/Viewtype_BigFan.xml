@@ -24,20 +24,17 @@
                 <itemlayout height="1080" width="1920">
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <aspectratio>stretch</aspectratio>
                         <fadetime>350</fadetime>
                         <texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Listitem.Property(Fanart_Image)]</texture>
                     </control>
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <aspectratio>stretch</aspectratio>
                         <fadetime>350</fadetime>
                         <visible>Container.Content(seasons) + !SubString(ListItem.Label,*,left)</visible>
                         <texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Season,season,-fanart.jpg]</texture>
                     </control>
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <aspectratio>stretch</aspectratio>
                         <fadetime>350</fadetime>
                         <visible>Container.Content(genres)</visible>
                         <include>Animation_VisibleChange400</include>
@@ -47,20 +44,17 @@
                 <focusedlayout height="1080" width="1920">
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <aspectratio>stretch</aspectratio>
                         <fadetime>350</fadetime>
                         <texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[Listitem.Property(Fanart_Image)]</texture>
                     </control>
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <aspectratio>stretch</aspectratio>
                         <fadetime>350</fadetime>
                         <visible>Container.Content(seasons) + !SubString(ListItem.Label,*,left)</visible>
                         <texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Season,season,-fanart.jpg]</texture>
                     </control>
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <aspectratio>stretch</aspectratio>
                         <fadetime>350</fadetime>
                         <visible>Container.Content(genres)</visible>
                         <include>Animation_VisibleChange400</include>
@@ -173,7 +167,6 @@
                 <posy>159r</posy>
                 <width>1500</width>
                 <height>60</height>
-                
                 <itemgap>10</itemgap>
                 <orientation>horizontal</orientation>
                 <control type="label">
@@ -182,7 +175,6 @@
                     <width min="200" max="1400">auto</width>
                     <height>38</height>
                     <font>Font_ShowcaseMainLabel2_Caps</font>
-                    
                     <scroll>true</scroll>
                     <textcolor>white6</textcolor>
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -201,8 +193,6 @@
                 <posy>98r</posy>
                 <width>720</width>
                 <height>52</height>
-                <font>Font_Reg18</font>
-                
                 <scroll>true</scroll>
                 <textcolor>white3</textcolor>
                 <label>$INFO[ListItem.Genre]</label>
@@ -213,8 +203,6 @@
                 <posy>98r</posy>
                 <width>720</width>
                 <height>52</height>
-                <font>Font_Reg18</font>
-                
                 <scroll>true</scroll>
                 <textcolor>white3</textcolor>
                 <label>$INFO[ListItem.TvShowTitle]</label>
@@ -225,8 +213,6 @@
                 <posy>60r</posy>
                 <width>700</width>
                 <height>52</height>
-                <font>Font_Reg18</font>
-                
                 <scroll>true</scroll>
                 <textcolor>white3</textcolor>
                 <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
@@ -237,8 +223,6 @@
                 <posy>60r</posy>
                 <width>1500</width>
                 <height>52</height>
-                <font>Font_Reg18</font>
-                
                 <scroll>true</scroll>
                 <textcolor>white3</textcolor>
                 <label>$INFO[ListItem.Label2] [LOWERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),($LOCALIZE[16101]: ,)][/LOWERCASE]</label>
@@ -249,8 +233,6 @@
                 <posy>60r</posy>
                 <width>1500</width>
                 <height>52</height>
-                <font>Font_Reg18</font>
-                
                 <scroll>true</scroll>
                 <textcolor>white3</textcolor>
                 <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</label>
