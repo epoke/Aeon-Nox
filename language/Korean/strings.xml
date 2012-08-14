@@ -48,7 +48,7 @@
 	<string id="31220">추천 에피소드</string>
 	<string id="31222">추천 영화</string>
 	<string id="31359">새 앨범</string>
-	<string id="31027">Reset item</string>
+	<string id="31027">항목 초기화</string>
 	<string id="31030">날씨 화면</string>
 	<string id="31031">NAVIGATE</string>
 	<string id="31032">없음</string>
@@ -65,33 +65,33 @@
 	<string id="31059">로고</string>
 	<string id="31060">포스터</string>
 	<string id="31061">텍스트</string>
-	<string id="31062">Reset Icon</string>
+	<string id="31062">아이콘 초기화</string>
 	<string id="31063">스타일 선택</string>
 	<string id="31064">다른 구성을 사용하려면 누르세요</string>
 	<string id="31065">정보</string>
-	<string id="31066">Back</string>
+	<string id="31066">뒤로 가기</string>
 	<string id="31067">무작위 트랙</string>
 	<string id="31068">무작위 앨범</string>
 	<string id="31069">아이콘 패널</string>
 	<string id="31070">무작위 애드온</string>
-	<string id="31071">Default weather</string>
+	<string id="31071">기본 날씨</string>
 	<string id="31072">시스템 정보</string>
 	<string id="31073">배우 정보</string>
 	<string id="31074">필모그래피</string>
 	<string id="31078">예고편</string>
 	<string id="31079">새로 고침</string>
 	<string id="31080">감독 정보</string>
-	<string id="31081">Latest MusicVids</string>
+	<string id="31081">최근 뮤직비디오</string>
 	<string id="31082">확장</string>
 	<string id="31083">제목</string>
 	<string id="31084">패널</string>
 	<string id="31085">밝게</string>
 	<string id="31086">클리어아트</string>
-	<string id="31087">Randomize All</string>
+	<string id="31087">모두 무작위</string>
 	<string id="31088">모든 영역에 색상 사용</string>
 	<string id="31089">모두</string>
 	<string id="31090">투명도 조정</string>
-	<string id="31091">Random MusicVids</string>
+	<string id="31091">무작위 뮤직비디오</string>
 	<string id="31092">아티스트 팬아트 (추가 팬아트, fanart.jpg, 기본 팬아트)</string>
 	<string id="31093">오늘 출생한 배우</string>
 	<string id="31094">위젯 팬아트</string>
@@ -109,7 +109,7 @@
     <string id="31113">단일 이미지</string>
     <string id="31114">다중 이미지</string>
     <string id="31115">사용자 설정</string>
-    <string id="31116">Show</string>
+    <string id="31116">보기</string>
     <string id="31123">배너 보기에서 "banner.jpg" 사용</string>
     <string id="31127">가사 애드온</string>
     <string id="31128">가사</string>
@@ -159,7 +159,7 @@
 	<string id="31407">[B]스킨 설정[/B][CR][CR]Aeon Nox 스킨 설정 · 홈 메뉴 항목 추가 및 제거[CR]스킨 배경 변경</string>
 	<string id="31408">[B]추가기능 설정[/B][CR][CR]설치된 추가기능 관리 · xbmc.org 에서 추가기능 찾기 및 설치 · 추가기능 설정 변경</string>
 	<string id="31409">[B]시스템 정보 확인[/B][CR][CR]하드웨어 확인 · CPU 사용 확인 · XBMC 버전 확인</string>
-	<string id="52409">[B]CONFIGURE TV SETTINGS[/B][CR][CR]Tune new channels · Configure the electronic guide · Record your favourite programs</string>
+	<string id="52409">[B]TV 설정[/B][CR][CR]새 채널 설정 · EPG 설정 · 프로그램 녹화</string>
 	<string id="31410">인터페이스</string>
 	<string id="31411">관리</string>
 	<string id="31412">연결</string>
@@ -251,7 +251,7 @@
 	<string id="31398">스타일</string>
 	<string id="31426">전체</string>
 	<string id="31427">개요</string>
-	<string id="31428">SHUTDOWN IN</string>
+	<string id="31428">종료 시간</string>
 	<string id="31429">표시</string>
 	<string id="31452">Not rated</string>
 	<string id="31453">방송 시간</string>
@@ -274,7 +274,7 @@
 	<string id="31627">OSD에 플레이어 컨트롤 단추 표시하지 않음</string>
 	<string id="31628">모든 아티스트</string>
 	<string id="31629">모든 비디오</string>
-	<string id="31630">Custom</string>
+	<string id="31630">사용자 설정</string>
 	<string id="31631">제목 대신 Logo.png 보기</string>
 	<string id="31633">빠른 이동</string>
 
@@ -324,9 +324,9 @@
 	<string id="31677">왼쪽</string>
     <string id="31186">전시 모드</string>
 	<string id="31179">Disable media menu and hide options in video info</string>
-	<string id="31180">Hide options in media menu</string>
-	<string id="31378">음악 라이브러리 경로 설정 (extrafanart, clearLOGO에 필요)</string>
-	<string id="31678">Set path to cond. weather bg folder</string>
+	<string id="31180">미디어 메뉴에서 옵션 숨기기</string>
+	<string id="31378">음악 라이브러리 경로 설정 (extrafanart, clearclearLOGO에 필요)</string>
+	<string id="31678">Conditional weather 배경화면 경로 설정</string>
     <string id="31679">제목 변경</string>
     <string id="31680">배경화면 선택</string>
     <string id="31681">위젯 선택</string>
@@ -397,7 +397,7 @@
 	<string id="41148">프로그램 애드온</string>
 	<string id="41149">비디오 재생목록</string>
 	<string id="41150">음악 재생목록</string>
-	<string id="41151">Custom</string>
+	<string id="41151">사용자 설정</string>
 	<string id="41153">즐겨찾기</string>
     <string id="41154">기능</string>
     <string id="41156">형식 선택</string>
@@ -407,7 +407,7 @@
     <string id="41160">아이콘 설정</string>
 
     <!--notifications-->
-    <string id="42000">Add-on missing</string>
+    <string id="42000">애드온 없음</string>
     <string id="42001">지연 시간을 변경하려면 오른쪽 화살표를 누르세요</string>
     <string id="42002">알림</string>
     <string id="42003">변경을 보려면 오른쪽 화살표를 누르세요</string>
@@ -436,7 +436,7 @@
     
     <string id="42200">Fade background in visualisation</string>
     <string id="42201">항상 앨범 정보 보기</string>
-    <string id="42202">Music BG</string>
+    <string id="42202">음악 배경화면</string>
     <string id="42203">Always randomize Random Widget Items</string>
     <string id="42204">색상</string>
     <string id="42205">위치</string>
@@ -454,17 +454,17 @@
     <string id="42217">무작위 아티스트</string>
     <string id="42218">Near Concerts</string>
     <string id="42219">다음 방송</string>
-    <string id="42220">Daily Babes</string>
+    <string id="42220">오늘의 처자</string>
     <string id="42221">구글 웨더</string>
-    <string id="42222">World Map</string>
-    <string id="42223">World Map + Icons</string>
-    <string id="42224">Live DVD cases</string>
-    <string id="42225">Live CD cases</string>
-    <string id="42226">Live Pictures</string>
-    <string id="42227">No Color</string>
-    <string id="42228">Area Shortcut</string>
-    <string id="42229">Pre-Defined Function</string>
-    <string id="42230">QuickList</string>
+    <string id="42222">세계 지도</string>
+    <string id="42223">세계 지도 + 아이콘</string>
+    <string id="42224">Live DVD 케이스</string>
+    <string id="42225">Live CD 케이스</string>
+    <string id="42226">Live 사진</string>
+    <string id="42227">색상 없음</string>
+    <string id="42228">영역 바로가기</string>
+    <string id="42229">미리 설정된 기능</string>
+    <string id="42230">빠른 목록</string>
     <string id="42231">DVD 재생</string>
     <string id="42232">음소거</string>
     <string id="42233">VideoDB 업데이트</string>
@@ -483,7 +483,7 @@
     <string id="42246">Around the world</string>
     <string id="42247">비디오 파일</string>
     <string id="42248">영화 장르</string>
-    <string id="42249">Add-On Browser</string>
+    <string id="42249">애드온 탐색기</string>
     <string id="42250">홈 화면 사용자 설정</string>
     <string id="42251">Player Controls</string>
     <string id="42252">음악 라이브러리</string>
@@ -506,14 +506,14 @@
     <string id="42269">Online Video Help</string>
     <string id="42270">Help</string>
     <string id="42271">Available at Passion-XBMC repository</string>
-    <string id="42272">Mixed Movies</string>
-    <string id="42273">Mixed TV</string>
-    <string id="42274">Mixed Music</string>
+    <string id="42272">혼합</string>
+    <string id="42273">혼합 TV</string>
+    <string id="42274">혼합 음악</string>
     <string id="42275">No Content for this Area</string>
     <string id="42277">홈화면 지금재생중 사용자 설정</string>
     <string id="42278">설정을 확인하려면 "재생" 버튼을 누르세요</string>
     <string id="42279">Fade background in video</string>
     <string id="42280">RSS 피드</string>
     <string id="42281">Click on buttons to customize them</string>
-    <string id="42282">Disable option to hide widgets by pressing "Back"</string>
+    <string id="42282">"뒤로가기" 버튼을 눌러 위젯 숨기기 기능 사용하지 않음"</string>
 </strings>
