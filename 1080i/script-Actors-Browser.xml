@@ -63,13 +63,7 @@
                     <textcolor>white3</textcolor>
                 </control>
             </control>
-            <control type="image">
-                <posx>90</posx>
-                <posy>110</posy>
-                <width>1138</width>
-                <height>970</height>
-                <texture>views/listpanel_back.png</texture>
-            </control>
+            <include>FileBrowserPanel</include>
             <control type="scrollbar" id="60">
                 <posx>1200</posx>
                 <posy>158</posy>
@@ -392,7 +386,7 @@
                     <include>PanelGlowFade</include>
                     <texture>dialogs/dialog_back_shadow.png</texture>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    <visible>[Skin.HasSetting(Glowbar_Home) + [Window.IsActive(home) | Window.IsActive(startup)]] | [!Skin.HasSetting(DisableGlowbar) + ![Window.IsActive(home) | Window.IsActive(startup)]]</visible>
+                    <visible>[!Skin.HasSetting(DisableGlowbar) + [Window.IsActive(home) | Window.IsActive(startup)]] | [!Skin.HasSetting(DisableGlowbar) + ![Window.IsActive(home) | Window.IsActive(startup)]]</visible>
                 </control>
                 <control type="image">
                     <posx>15</posx>

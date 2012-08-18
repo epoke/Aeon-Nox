@@ -47,21 +47,22 @@
                 <posy>39</posy>
                 <width>1920</width>
                 <height>750</height>
-                <control type="image">
-                    <posx>112</posx>
-                    <width>1695</width>
-                    <height>885</height>
-                    <include>PanelGlowFade</include>
-                    <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    <texture>views/tablet_template_glow.png</texture>
-                </control>
-                <control type="image">
-                    <posx>112</posx>
-                    <width>1695</width>
-                    <height>885</height>
-                    <texture>views/tablet_template.png</texture>
-                </control>
+                    <control type="image">
+                        <posx>112</posx>
+                        <width>1695</width>
+                        <height>1050</height>
+                        <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <include>PanelGlowFade</include>
+                        <texture>wall/wall_bg_glow.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>112</posx>
+                        <width>1695</width>
+                        <height>1050</height>
+                        <texture>wall/wall_bg.png</texture>
+                        <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+                    </control>
                 <control type="image">
                     <posy>8</posy>
                     <posx>112</posx>
@@ -2246,33 +2247,7 @@
                 <control type="group">
                     <posy>-20</posy>
                     <include>Animation_ListSlideLeft</include>
-                    <control type="image">
-                        <posx>90</posx>
-                        <posy>110</posy>
-                        <width>1138</width>
-                        <height>970</height>
-                        <texture>views/listpanel_back_shadow.png</texture>
-                        <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                        <include>Animation_VisibleChange400</include>
-                        <include>PanelGlowFade</include>
-                    </control>
-                    <control type="image">
-                        <posx>90</posx>
-                        <posy>110</posy>
-                        <width>1138</width>
-                        <height>970</height>
-                        <texture>views/listpanel_back.png</texture>
-                        <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-                    </control>
-                    <control type="image">
-                        <posx>90</posx>
-                        <posy>954</posy>
-                        <width>1138</width>
-                        <height>349</height>
-                        <texture>views/listpanel_back_reflection.png</texture>
-                    </control>
-                    <include condition="Skin.HasSetting(effect_bg)">BG_Effect_List_Panel</include>
+                    <include>ListPanel</include>
                     <control type="image">
                         <posx>990</posx>
                         <posy>123</posy>
