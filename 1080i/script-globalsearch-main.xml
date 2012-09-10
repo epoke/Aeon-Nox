@@ -67,33 +67,7 @@
                 <animation effect="fade" time="250" delay="2000">WindowOpen</animation>
                 <animation effect="fade" time="250">WindowClose</animation>
                 <animation effect="zoom" end="91" center="960,360" time="400" tween="cubic" easing="inout" condition="true">Conditional</animation>
-                <control type="image">
-                    <posx>36</posx>
-                    <posy>36</posy>
-                    <width>1846</width>
-                    <height>1006</height>
-                    <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    <include>Animation_VisibleChange400</include>
-                    <texture>settings/settings_panelback_shadow.png</texture>
-                </control>
-                <control type="image">
-                    <posx>34</posx>
-                    <posy>34</posy>
-                    <width>1850</width>
-                    <height>1010</height>
-                    <texture>settings/settings_panelback2.png</texture>
-                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-                </control>
-                <control type="image">
-                    <posx>80</posx>
-                    <posy>45</posy>
-                    <width>400</width>
-                    <height>158</height>
-                    <aspectratio>keep</aspectratio>
-                    <colordiffuse>white</colordiffuse>
-                    <texture>XBMC_Logo.png</texture>
-                </control>
+            <include>Furniture_SettingsBackPanel2</include>
                 <control type="group">
                     <animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">Conditional</animation>
                     <control type="list" id="9000">
@@ -251,7 +225,7 @@
                                 <ondown>111</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
@@ -454,7 +428,7 @@
                                 <ondown>121</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
@@ -657,7 +631,7 @@
                                 <ondown>131</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
@@ -834,7 +808,7 @@
                                 <ondown>141</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
@@ -1011,7 +985,7 @@
                                 <ondown>151</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
@@ -1188,7 +1162,7 @@
                                 <ondown>161</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
@@ -1341,7 +1315,7 @@
                                 <ondown>171</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>
@@ -1560,7 +1534,7 @@
                                 <ondown>181</ondown>
                                 <onleft>9000</onleft>
                                 <onright>9000</onright>
-                                <viewtype label="21371">list</viewtype>
+                                
                                 <orientation>vertical</orientation>
                                 <pagecontrol>60</pagecontrol>
                                 <focusposition>0</focusposition>

@@ -131,7 +131,7 @@
         <control type="group" id="8998">
             <posx>1542</posx>
             <posy>678</posy>
-            <visible>![Skin.HasSetting(DisableWidgets) + Window.IsActive(home)]</visible>
+            <visible>![!IsEmpty(Window(home).Property(DisableWidgets)) + Window.IsActive(home)]</visible>
             <visible>![IsEmpty(Control.GetLabel(4323)) + Window.IsActive(home) + Substring(Control.GetLabel(4321),custom) + [Container(9000).HasFocus(101) | Container(9000).HasFocus(102) | Container(9000).HasFocus(103) | Container(9000).HasFocus(104) | Container(9000).HasFocus(105) | Container(9000).HasFocus(106) | Container(9000).HasFocus(107) | Container(9000).HasFocus(108) | Container(9000).HasFocus(109)]]</visible>
             <visible>!Substring(Control.GetLabel(4321),weather) + !Substring(Control.GetLabel(4321),featured) + !Window.IsActive(1120) + !Substring(Control.GetLabel(4321),panel) + !IsEmpty(Control.GetLabel(4321))</visible>
             <include>Animation_Widgets</include>
@@ -653,7 +653,7 @@
                         <textcolor>white3</textcolor>
                         <align>justify</align>
                         <aligny>top</aligny>
-                        <label fallback="-">$INFO[Container(8000).ListItem.Property(Summary)]$INFO[Container(8000).ListItem.Property(Album_Description)]$INFO[Container(8000).ListItem.Property(Artist_Description)]</label>
+                        <label fallback="-">$INFO[Container(8000).ListItem.Property(Summary)]$INFO[Container(8000).ListItem.Property(Description)]</label>
                     </control>
                 </control>
                 <control type="image">
@@ -785,13 +785,22 @@
                     <height>280</height>
                     <onleft>8993</onleft>
                     <onright condition="SubString(Control.GetLabel(4321),random) + IsEmpty(Container(8000).ListItem.Property(Trailer))">XBMC.RunScript(script.randomitems,limit=16&amp;unplayed=True)</onright>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(101)">$INFO[Skin.String(StartupCustomHomeItem1)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(102)">$INFO[Skin.String(StartupCustomHomeItem2)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(103)">$INFO[Skin.String(StartupCustomHomeItem3)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(104)">$INFO[Skin.String(StartupCustomHomeItem4)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(105)">$INFO[Skin.String(StartupCustomHomeItem5)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(106)">$INFO[Skin.String(StartupCustomHomeItem6)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(107)">$INFO[Skin.String(StartupCustomHomeItem7)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(108)">$INFO[Skin.String(StartupCustomHomeItem8)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer)) + Container(9000).HasFocus(109)">$INFO[Skin.String(StartupCustomHomeItem9)]</onclick>
                     <onright condition="!IsEmpty(Container(8000).ListItem.Property(Trailer))">PlayMedia($ESCINFO[Container(8000).ListItem.Property(Trailer)])</onright>
                     <onup condition="!IsEmpty(Control.GetLabel(4325)) + Skin.HasSetting(lowermainmenu)">SetFocus(4445)</onup>
                     <onup condition="!Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onup>
                     <onup condition="IsEmpty(Control.GetLabel(4325)) + Skin.HasSetting(lowermainmenu)">8000</onup>
                     <ondown>8000</ondown>
                     <onback>8993</onback>
-                    <viewtype label="535">list</viewtype>
+                    
                     <preloaditems>2</preloaditems>
                     <pagecontrol>-</pagecontrol>
                     <scrolltime tween="quadratic" easing="out">200</scrolltime>

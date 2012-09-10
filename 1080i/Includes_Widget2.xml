@@ -5,7 +5,7 @@
             <posx>1542</posx>
             <posy>18</posy>
             <animation effect="slide" start="0,0" end="0,40" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <visible>!Skin.HasSetting(DisableWidgets)</visible>
+            <visible>IsEmpty(Window(home).Property(DisableWidgets))</visible>
             <visible>![IsEmpty(Control.GetLabel(4323)) + Substring(Control.GetLabel(4325),custom) + [Container(9000).HasFocus(101) | Container(9000).HasFocus(102) | Container(9000).HasFocus(103) | Container(9000).HasFocus(104) | Container(9000).HasFocus(105) | Container(9000).HasFocus(106) | Container(9000).HasFocus(107) | Container(9000).HasFocus(108) | Container(9000).HasFocus(109)]]</visible>
             <visible>!Substring(Control.GetLabel(4325),weather) + !Substring(Control.GetLabel(4325),featured) + !Substring(Control.GetLabel(4325),panel) + !IsEmpty(Control.GetLabel(4325))</visible>
             <include>Animation_Widgets</include>
@@ -447,7 +447,7 @@
                         <textcolor>white3</textcolor>
                         <align>justify</align>
                         <aligny>top</aligny>
-                        <label fallback="-">$INFO[Container(7000).ListItem.Property(Summary)]$INFO[Container(7000).ListItem.Property(Album_Description)]$INFO[Container(7000).ListItem.Property(Artist_Description)]</label>
+                        <label fallback="-">$INFO[Container(7000).ListItem.Property(Summary)]$INFO[Container(7000).ListItem.Property(Description)]</label>
                     </control>
                 </control>
                 <control type="image">
@@ -565,12 +565,23 @@
                     <height>280</height>
                     <onleft>7993</onleft>
                     <onright condition="SubString(Control.GetLabel(4325),random) + IsEmpty(Container(7000).ListItem.Property(Trailer))">XBMC.RunScript(script.randomitems,limit=16&amp;unplayed=True)</onright>
+                    
+                          <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(101)">$INFO[Skin.String(StartupSecondCustomHomeItem1)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(102)">$INFO[Skin.String(StartupSecondCustomHomeItem2)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(103)">$INFO[Skin.String(StartupSecondCustomHomeItem3)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(104)">$INFO[Skin.String(StartupSecondCustomHomeItem4)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(105)">$INFO[Skin.String(StartupSecondCustomHomeItem5)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(106)">$INFO[Skin.String(StartupSecondCustomHomeItem6)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(107)">$INFO[Skin.String(StartupSecondCustomHomeItem7)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(108)">$INFO[Skin.String(StartupSecondCustomHomeItem8)]</onclick>
+                            <onclick condition="SubString(Control.GetLabel(4325),custom) + IsEmpty(Container(7000).ListItem.Property(Trailer)) + Container(9000).HasFocus(109)">$INFO[Skin.String(StartupSecondCustomHomeItem9)]</onclick>
+                    
                     <onright condition="!IsEmpty(Container(7000).ListItem.Property(Trailer))">PlayMedia($ESCINFO[Container(7000).ListItem.Property(Trailer)])</onright>
                     <onup>7000</onup>
                     <ondown condition="!Skin.HasSetting(lowermainmenu) | IsEmpty(Control.GetLabel(4321))">9000</ondown>
                     <ondown condition="Skin.HasSetting(lowermainmenu) + !IsEmpty(Control.GetLabel(4321))">4444</ondown>
                     <onback>7993</onback>
-                    <viewtype label="535">list</viewtype>
+                    
                     <preloaditems>2</preloaditems>
                     <pagecontrol>-</pagecontrol>
                     <scrolltime tween="quadratic" easing="out">200</scrolltime>
@@ -684,7 +695,7 @@
             <visible>[Substring(Control.GetLabel(4325),featured) | Substring(Control.GetLabel(4325),panel)]</visible>
             <visible>![IsEmpty(Window(Home).Property(NextAired.1.Label)) + Substring(Control.GetLabel(4325),nextairedpanel)]</visible>
             <visible>![IsEmpty(Window(Home).Property(WatchList_Movie.1.Label)) + Substring(Control.GetLabel(4325),inprogressmovies)]</visible>
-            <visible>!Skin.HasSetting(DisableWidgets)</visible>
+            <visible>IsEmpty(Window(home).Property(DisableWidgets))</visible>
             <include>Animation_Widgets</include>
             <animation type="Conditional" condition="true">
                 <effect type="fade" start="100" end="90" time="500" tween="cubic" easing="inout" />
@@ -1390,7 +1401,7 @@
                         <ondown>9000</ondown>
                         <onback>AlarmClock(HomeTileLeft,Control.Move(6001,1),00:07,silent,loop)</onback>
                         <onback>9000</onback>
-                        <viewtype label="21371">list</viewtype>
+                        
                         <orientation>horizontal</orientation>
                         <pagecontrol>60</pagecontrol>
                         <focusposition>0</focusposition>
@@ -1529,7 +1540,7 @@
                         <onup>6011</onup>
                         <ondown>6011</ondown>
                         <onback>6011</onback>
-                        <viewtype label="21371">list</viewtype>
+                        
                         <orientation>horizontal</orientation>
                         <pagecontrol>60</pagecontrol>
                         <focusposition>0</focusposition>
@@ -1678,7 +1689,7 @@
                         <ondown>9000</ondown>
                         <onback>AlarmClock(HomeTileRight,Control.Move(6003,1),00:10,silent,loop)</onback>
                         <onback>9000</onback>
-                        <viewtype label="21371">list</viewtype>
+                        
                         <orientation>horizontal</orientation>
                         <pagecontrol>60</pagecontrol>
                         <focusposition>0</focusposition>
@@ -7121,7 +7132,7 @@
                 <onback>ClearProperty(PanelWidget2Info,Home)</onback>
                 <onback>9000</onback>
                 <preloaditems>1</preloaditems>
-                <viewtype label="535">list</viewtype>
+                
                 <pagecontrol>-</pagecontrol>
                 <scrolltime tween="quadratic" easing="out">400</scrolltime>
                 <itemlayout width="228" height="340" condition="Substring(Control.GetLabel(4325),panel,right) + [Substring(Control.GetLabel(4325),movie) | Substring(Control.GetLabel(4325),musicvideo) | Substring(Control.GetLabel(4325),actors)]">
@@ -7946,7 +7957,7 @@
             <icon>$INFO[Window(Home).Property(WatchList_Album.1.Thumb)]</icon>
             <thumb>$INFO[Window(Home).Property(WatchList_Album.1.Thumb)]</thumb>
             <property name="NavItem">item1.png</property>
-            <property name="Album_Description">$INFO[Window(Home).Property(WatchList_Album.1.Album_Description)]</property>
+            <property name="Description">$INFO[Window(Home).Property(WatchList_Album.1.Album_Description)]</property>
             <property name="Rating">$INFO[Window(Home).Property(WatchList_Album.1.Rating)]</property>
             <property name="Year">$INFO[Window(Home).Property(WatchList_Album.1.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.1.Fanart)]</property>
@@ -7960,7 +7971,7 @@
             <icon>$INFO[Window(Home).Property(WatchList_Album.2.Thumb)]</icon>
             <thumb>$INFO[Window(Home).Property(WatchList_Album.2.Thumb)]</thumb>
             <property name="NavItem">item2.png</property>
-            <property name="Album_Description">$INFO[Window(Home).Property(WatchList_Album.2.Album_Description)]</property>
+            <property name="Description">$INFO[Window(Home).Property(WatchList_Album.2.Album_Description)]</property>
             <property name="Rating">$INFO[Window(Home).Property(WatchList_Album.2.Rating)]</property>
             <property name="Year">$INFO[Window(Home).Property(WatchList_Album.2.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.2.Fanart)]</property>
@@ -7974,7 +7985,7 @@
             <icon>$INFO[Window(Home).Property(WatchList_Album.3.Thumb)]</icon>
             <thumb>$INFO[Window(Home).Property(WatchList_Album.3.Thumb)]</thumb>
             <property name="NavItem">item3.png</property>
-            <property name="Album_Description">$INFO[Window(Home).Property(WatchList_Album.3.Album_Description)]</property>
+            <property name="Description">$INFO[Window(Home).Property(WatchList_Album.3.Album_Description)]</property>
             <property name="Rating">$INFO[Window(Home).Property(WatchList_Album.3.Rating)]</property>
             <property name="Year">$INFO[Window(Home).Property(WatchList_Album.3.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.3.Fanart)]</property>
@@ -7988,7 +7999,7 @@
             <icon>$INFO[Window(Home).Property(WatchList_Album.4.Thumb)]</icon>
             <thumb>$INFO[Window(Home).Property(WatchList_Album.4.Thumb)]</thumb>
             <property name="NavItem">item4.png</property>
-            <property name="Album_Description">$INFO[Window(Home).Property(WatchList_Album.4.Album_Description)]</property>
+            <property name="Description">$INFO[Window(Home).Property(WatchList_Album.4.Album_Description)]</property>
             <property name="Rating">$INFO[Window(Home).Property(WatchList_Album.4.Rating)]</property>
             <property name="Year">$INFO[Window(Home).Property(WatchList_Album.4.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.4.Fanart)]</property>
@@ -8002,7 +8013,7 @@
             <icon>$INFO[Window(Home).Property(WatchList_Album.5.Thumb)]</icon>
             <thumb>$INFO[Window(Home).Property(WatchList_Album.5.Thumb)]</thumb>
             <property name="NavItem">item5.png</property>
-            <property name="Album_Description">$INFO[Window(Home).Property(WatchList_Album.5.Album_Description)]</property>
+            <property name="Description">$INFO[Window(Home).Property(WatchList_Album.5.Album_Description)]</property>
             <property name="Rating">$INFO[Window(Home).Property(WatchList_Album.5.Rating)]</property>
             <property name="Year">$INFO[Window(Home).Property(WatchList_Album.5.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.5.Fanart)]</property>
@@ -8598,20 +8609,15 @@
     <include name="WidgetMenuLabel">
         <posx>0</posx>
         <posy>0</posy>
-        <height>38</height>
-        <aligny>center</aligny>
+        <height>42</height>
+        <aligny>top</aligny>
         <align>center</align>
         <width min="15" max="220">auto</width>
         <font>Font_Reg19_Caps</font>
-         <textcolor>grey</textcolor>
-         <shadowcolor>black</shadowcolor>
-         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-        <texturenofocus>-</texturenofocus>
-        <textcolor>grey</textcolor>
-        <shadowcolor>bcshadow</shadowcolor>
-        <scroll>false</scroll>
         <focusedcolor>white2</focusedcolor>
-        <include condition="![Window.IsActive(1111) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(7) | Window.IsActive(settings)]">dialogeffect</include>
+        <textcolor>grey</textcolor>
+        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+        <scroll>false</scroll>
     </include>
 </includes>
