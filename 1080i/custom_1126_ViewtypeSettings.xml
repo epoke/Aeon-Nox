@@ -5,13 +5,9 @@
     <visible>Window.IsActive(1126)</visible>
     <coordinates>
         <system>1</system>
-        <posx>0</posx>
-        <posy>0</posy>
     </coordinates>
     <controls>
         <control type="grouplist" id="450">
-            <posx>0</posx>
-            <posy>0</posy>
             <width>1172</width>
             <height>1080</height>
             <itemgap>0</itemgap>
@@ -469,14 +465,14 @@
                 <onclick condition="Skin.HasSetting(landscapeclearart)">Skin.Reset(landscapeclearart)</onclick>
                 <visible>[Container.Content(tvshows) | Container.Content(movies)] + stringcompare(Skin.String(actualViewtype),landscape)</visible>
             </control>
-             <control type="radiobutton" id="16555">
+            <control type="radiobutton" id="16555">
                 <include>Objects_MediaMenuButtonAlt2</include>
                 <label>31059</label>
                 <onclick condition="Skin.HasSetting(landscapelogo)">Skin.Reset(landscapelogo)</onclick>
                 <onclick>Skin.ToggleSetting(landscapeonelogo)</onclick>
                 <selected>Skin.HasSetting(landscapeonelogo)</selected>
                 <visible>stringcompare(Skin.String(actualViewtype),landscape) + Container.Content(artists)</visible>
-            </control>           
+            </control>
             <control type="radiobutton" id="1636">
                 <include>Objects_MediaMenuButtonAlt2</include>
                 <label>42211</label>
@@ -569,12 +565,14 @@
                 <visible>Window.IsActive(videolibrary) + stringcompare(Skin.String(actualViewtype),posters)</visible>
             </control>
             <!--Floor Label Options-->
-            <control type="togglebutton" id="1649">
+            <control type="button" id="1649">
                 <include>Objects_MediaMenuButtonAlt2</include>
-                <label>$LOCALIZE[31388] [COLOR $VAR[FontColorVar]]$LOCALIZE[515][/COLOR]</label>
+                <label>$LOCALIZE[31388] [COLOR $VAR[FontColorVar]]$VAR[FloorLabelModeVar][/COLOR]</label>
                 <altlabel>$LOCALIZE[31388] [COLOR $VAR[FontColorVar]]$LOCALIZE[31172][/COLOR]</altlabel>
-                <onclick>Skin.ToggleSetting(wallgenre)</onclick>
-                <usealttexture>!Skin.HasSetting(wallgenre)</usealttexture>
+                <onclick condition="!Skin.HasSetting(wallgenre) + ! Skin.HasSetting(FloorLabelTagline)">Skin.SetBool(FloorLabelTagline)</onclick>
+                <onclick condition="Skin.HasSetting(FloorLabelTagline)">Skin.SetBool(wallgenre)</onclick>
+                <onclick condition="Skin.HasSetting(FloorLabelTagline)">Skin.Reset(FloorLabelTagline)</onclick>
+                <onclick condition="Skin.HasSetting(wallgenre)">Skin.Reset(wallgenre)</onclick>
                 <visible>[[stringcompare(Skin.String(actualViewtype),shift) | Stringcompare(Skin.String(actualViewtype),wall) | Stringcompare(Skin.String(actualViewtype),showcasemovies) | Stringcompare(Skin.String(actualViewtype),showcasedvd) | Stringcompare(Skin.String(actualViewtype),banners)] + Container.Content(movies)]</visible>
             </control>
             <!--Floor Label Options-->

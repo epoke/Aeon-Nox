@@ -314,7 +314,6 @@
     <string id="31638">비디오 라이브러리에 Next Aired 정보 보기</string>
     <string id="31639">정보 화면에서 미리보기 숨김</string>
     <string id="31640">재생 시간 대신 남은 시간 보기.</string>
-    <string id="31641">CD 커버를 뒤집어 아티스트 슬라이드쇼 보기</string>
     <string id="31642">'PDA Weather'</string>
     <string id="31643">홈화면 설정</string>
     <string id="31646">확인 절차 없이 모든 아트웍을 다운로드하겠습니까?</string>
@@ -424,7 +423,7 @@
     <string id="42014">설정가능한 옵션을 보려면 메뉴 항목을 누르세요</string>
     <string id="42015">설정의 변경 효과를 실시간으로 확인하려면 음악을 재생하세요</string>
     <string id="42016">아티스트슬라이드쇼 애드온에서 "Additional Artist Info"가 활성화되어야 합니다.</string>
-    <string id="42017">Welcome to Aeon Nox 3.6</string>
+    <string id="42017">Welcome to Aeon Nox 4.0</string>
     <string id="42018">Visit XBMC.org Forums for support</string>
 
 
@@ -523,4 +522,14 @@
     <string id="42286">유투브에서 예고편 검색</string>
     <string id="42287">Astronomy</string>
     <string id="42288">PRESS ANY KEY</string>
+    <string id="42289">Next Tracks</string>
+    <string id="42290">Collections</string>
+    <string id="42291">Folders</string>
+    <string id="42292">Categories</string>
+    <string id="42293">What earth looks like now</string>
+    <string id="42294">What the moon looks like now</string>
+    <string id="42295">No library content for this media type</string>
+    <!--     <string id="42296">bars</string> -->
+    <string id="42297">Press DOWN for extended info</string>
+    <string id="42298">Alternative main menu font</string>
 </strings>

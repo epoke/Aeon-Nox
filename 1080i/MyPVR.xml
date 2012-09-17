@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <window id="600">
-    <defaultcontrol>32</defaultcontrol>
+    <defaultcontrol>10</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>black</backgroundcolor>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
-    
     <controls>
         <control type="multiimage">
             <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -15,7 +14,6 @@
             <include>Animation_OpenClose_Furniture</include>
             <visible>![Control.IsVisible(516) | Control.IsVisible(514) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(8858) | [Skin.HasSetting(addonwallaltbackground) + Control.IsVisible(512)]]</visible>
             <control type="image">
-                <posx>0</posx>
                 <posy>472</posy>
                 <width>1920</width>
                 <height>608</height>
@@ -24,8 +22,6 @@
             </control>
             <control type="group">
                 <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
                     <width>696</width>
                     <height>1080</height>
                     <texture>views/showcase_vignette.png</texture>
@@ -40,7 +36,6 @@
                 </control>
                 <control type="image">
                     <posx>1224</posx>
-                    <posy>0</posy>
                     <width>696</width>
                     <height>1080</height>
                     <visible>true</visible>
@@ -60,7 +55,6 @@
                 <control type="image">
                     <width>1920</width>
                     <height>206</height>
-                    <posx>0</posx>
                     <posy>874</posy>
                     <texture>views/panel_spot.png</texture>
                     <colordiffuse>$VAR[SpotColorVar]</colordiffuse>
@@ -113,87 +107,89 @@
             </control>
         </control>
         <control type="group">
-            <posx>63</posx>
-            <posy>120</posy>
+            <posx>100</posx>
+            <posy>105</posy>
             <visible>Control.IsVisible(11) | Control.IsVisible(12) | Control.IsVisible(13)</visible>
             <include>VisibleFadeEffect</include>
-            <include>Animation_OpenCloseZoom_New</include>
+            <include>Animation_OpenCloseZoom_New</include> 
             <control type="image">
-                <posx>-3</posx>
-                <posy>-12</posy>
-                <width>922</width>
-                <height>478</height>
-                <texture border="8">PVR/Border.png</texture>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>814</width>
+                <height>458</height>
+                <texture border="5">PVR/Border.png</texture>
             </control>
             <control type="image">
-                <posx>62</posx>
-                <posy>8</posy>
-                <width>796</width>
-                <height>442</height>
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>804</width>
+                <height>448</height>
                 <texture fallback="special://skin/backgrounds/fallback_livetv.jpg">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</texture>
                 <include>VisibleFadeEffect</include>
                 <visible>!Player.HasVideo + Control.IsVisible(11)</visible>
             </control>
             <control type="image">
-                <posx>62</posx>
-                <posy>8</posy>
-                <width>796</width>
-                <height>442</height>
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>804</width>
+                <height>448</height>
                 <texture fallback="special://skin/backgrounds/fallback_radio.jpg">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</texture>
                 <include>VisibleFadeEffect</include>
                 <visible>!Player.HasVideo + Control.IsVisible(12)</visible>
             </control>
             <control type="image">
-                <posx>62</posx>
-                <posy>8</posy>
-                <width>796</width>
-                <height>442</height>
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>804</width>
+                <height>448</height>
                 <texture fallback="special://skin/backgrounds/fallback_record.jpg">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</texture>
                 <include>VisibleFadeEffect</include>
                 <visible>!Player.HasVideo + Control.IsVisible(13)</visible>
             </control>
             <control type="videowindow">
-                <posx>62</posx>
-                <posy>-6</posy>
-                <width>795</width>
-                <height>465</height>
+                <posx>5</posx>
+                <posy>5</posy>
+                <width>804</width>
+                <height>448</height>
                 <visible>Player.HasVideo</visible>
                 <animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
             </control>
         </control>
         <control type="group">
-            <posx>40</posx>
-            <posy>450</posy>
+            <posx>100</posx>
+            <posy>565</posy>
             <include>Animation_OpenCloseZoom_New</include>
             <visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
             <visible>!Control.IsVisible(10)</visible>
             <include>VisibleFadeEffect</include>
             <control type="label">
-                <posx>87</posx>
-                <posy>225</posy>
-                <width>800</width>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>100</width>
                 <height>30</height>
-                <font>Font_Reg22</font>
-                <align>center</align>
+                <font>Font_Reg14</font>
+                <textcolor>grey</textcolor>
                 <aligny>center</aligny>
-                <label>[UPPERCASE][B]$INFO[Container.ListItem.Title][/B][/UPPERCASE]</label>
-                <scroll>yes</scroll>
+                <align>left</align>
+                <visible>Container.ListItem.HasEpg</visible>
+                <label>$INFO[Container.ListItem.StartTime]</label>
             </control>
             <control type="label">
-                <posx>87</posx>
-                <posy>180</posy>
-                <width>800</width>
+                <posx>800</posx>
+                <posy>0</posy>
+                <width>100</width>
                 <height>30</height>
-                <font>Font_Reg16</font>
-                <align>center</align>
+                <font>Font_Reg14</font>
+                <textcolor>grey</textcolor>
                 <aligny>center</aligny>
+                <align>right</align>
                 <visible>Container.ListItem.HasEpg</visible>
-                <label>[B]$INFO[Container.ListItem.StartTime,, / ]$INFO[Container.ListItem.EndTime][/B]</label>
+                <label>$INFO[Container.ListItem.EndTime]</label>
             </control>
             <control type="progress">
-                <posx>74</posx>
-                <posy>148</posy>
-                <width>818</width>
+                <posx>100</posx>
+                <posy>7</posy>
+                <width>600</width>
                 <height>21</height>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texturebg border="12,0,12,0">dialogs/progress/progress_back.png</texturebg>
@@ -203,11 +199,35 @@
                 <visible>Container.ListItem.HasEpg</visible>
                 <info>Container.ListItem.Progress</info>
             </control>
+            <control type="label">
+                <posx>0</posx>
+                <posy>45</posy>
+                <width>800</width>
+                <height>30</height>
+                <font>Font_Reg22</font>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>[UPPERCASE][B]$INFO[Container.ListItem.Title][/B][/UPPERCASE]</label>
+                <scroll>yes</scroll>
+            </control>
+            <control type="label">
+                <posx>0</posx>
+                <posy>80</posy>
+                <width>800</width>
+                <height>30</height>
+                <font>Font_Reg15</font>
+                <textcolor>grey</textcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$LOCALIZE[19031]: $INFO[Container.ListItem.NextTitle]</label>
+                <scroll>yes</scroll>
+                <visible>!IsEmpty(Container.ListItem.NextTitle)</visible>
+            </control>
             <control type="textbox">
-                <posx>80</posx>
-                <posy>278</posy>
-                <width>810</width>
-                <height>192</height>
+                <posx>0</posx>
+                <posy>115</posy>
+                <width>800</width>
+                <height>230</height>
                 <align>justify</align>
                 <shadowcolor>black</shadowcolor>
                 <pagecontrol>-</pagecontrol>
@@ -247,7 +267,6 @@
                 <!--right widget -->
                 <control type="image">
                     <posx>654r</posx>
-                    <posy>0</posy>
                     <width>794</width>
                     <height>87</height>
                     <animation effect="slide" start="0" end="145" time="400" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
@@ -267,8 +286,6 @@
                     <posx>60</posx>
                     <control type="grouplist">
                         <visible>true</visible>
-                        <posx>0</posx>
-                        <posy>0</posy>
                         <width>1882</width>
                         <align>right</align>
                         <aligny>center</aligny>
@@ -282,8 +299,6 @@
                             <visible>[SubString(Container.SortMethod,$LOCALIZE[551]) | SubString(Container.SortMethod,$LOCALIZE[561]) | SubString(Container.SortMethod,$LOCALIZE[558]) | SubString(Container.SortMethod,$LOCALIZE[557]) | SubString(Container.SortMethod,$LOCALIZE[556])]</visible>
                         </control>
                         <control type="label">
-                            <posx>0</posx>
-                            <posy>0</posy>
                             <height>38</height>
                             <aligny>center</aligny>
                             <width min="15" max="1920">auto</width>
@@ -297,8 +312,6 @@
                             <label>[COLOR $VAR[BreadCrumbsContentColorVar]]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  •[/COLOR]</label>
                         </control>
                         <control type="label">
-                            <posx>0</posx>
-                            <posy>0</posy>
                             <height>38</height>
                             <aligny>center</aligny>
                             <width min="15" max="1920">auto</width>
@@ -315,15 +328,12 @@
             <control type="group">
                 <control type="grouplist">
                     <posx>22</posx>
-                    <posy>0</posy>
                     <width>750</width>
                     <visible>Skin.HasSetting(breadcrumbslabel)</visible>
                     <visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]</visible>
                     <itemgap>0</itemgap>
                     <orientation>horizontal</orientation>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
                         <width>54</width>
                         <height>38</height>
                         <aspectratio>keep</aspectratio>
@@ -354,8 +364,6 @@
             <visible>!Skin.HasSetting(kioskmode)</visible>
             <include>Animation_MediaMenuSlide2</include>
             <control type="grouplist" id="9000">
-                <posx>0</posx>
-                <posy>0</posy>
                 <width>395</width>
                 <height>900</height>
                 <onright>50</onright>
@@ -374,44 +382,36 @@
                 </animation>
                 <include>Animation_VisibleChange200</include>
                 <control type="button" id="32">
-                    <posx>0</posx>
-                    <posy>0</posy>
                     <include>Objects_MediaMenuButtonAlt</include>
                     <label>19023</label>
                 </control>
                 <control type="button" id="33">
                     <visible>!Skin.HasSetting(noradio)</visible>
-                    <posx>0</posx>
                     <posy>38</posy>
                     <include>Objects_MediaMenuButtonAlt</include>
                     <label>19024</label>
                 </control>
                 <control type="button" id="31">
-                    <posx>0</posx>
                     <posy>38</posy>
                     <include>Objects_MediaMenuButtonAlt</include>
                     <label>-</label>
                 </control>
                 <control type="button" id="34">
-                    <posx>0</posx>
                     <posy>112</posy>
                     <include>Objects_MediaMenuButtonAlt</include>
                     <label>19163</label>
                 </control>
                 <control type="button" id="35">
-                    <posx>0</posx>
                     <posy>150</posy>
                     <include>Objects_MediaMenuButtonAlt</include>
                     <label>19040</label>
                 </control>
                 <control type="button" id="36">
-                    <posx>0</posx>
                     <posy>188</posy>
                     <include>Objects_MediaMenuButtonAlt</include>
                     <label>137</label>
                 </control>
                 <control type="radiobutton" id="326">
-                    <posx>0</posx>
                     <posy>188</posy>
                     <onclick>Skin.ToggleSetting(smalltvlist)</onclick>
                     <include>Objects_MediaMenuButtonAlt</include>

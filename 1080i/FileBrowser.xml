@@ -5,8 +5,6 @@
     <zorder>4</zorder>
     <coordinates>
         <system>1</system>
-        <posx>0</posx>
-        <posy>0</posy>
     </coordinates>
     <controls>
         <include>DialogBackFade</include>
@@ -44,6 +42,7 @@
                     <posx>1226</posx>
                     <posy>810</posy>
                     <width>579</width>
+                    <height>60</height>
                     <align>center</align>
                     <font>Font_Reg15</font>
                 </control>
@@ -51,7 +50,7 @@
                     <posx>1226</posx>
                     <posy>900</posy>
                     <width>579</width>
-                    <font>Font_Bold28</font>
+                    <font>Font_Reg24</font>
                     <align>center</align>
                     <textcolor>white3</textcolor>
                 </control>
@@ -84,28 +83,26 @@
             </control>
             <control type="list" id="450">
                 <posx>90</posx>
-                <posy>158</posy>
+                <posy>167</posy>
                 <width>1140</width>
-                <height>728</height>
+                <height>731</height>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime tween="quadratic" easing="out">200</scrolltime>
                 <onleft>413</onleft>
                 <onright>60</onright>
                 <onup>450</onup>
                 <ondown>450</ondown>
-                <itemlayout height="60">
+                <itemlayout height="61">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <posy>1</posy>
                         <height>60</height>
                         <width>1140</width>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
                         <posx>68</posx>
-                        <posy>0</posy>
                         <width>810</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <textcolor>bcicon</textcolor>
@@ -113,9 +110,8 @@
                     </control>
                     <control type="label">
                         <posx>1041</posx>
-                        <posy>0</posy>
                         <width>795</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <align>right</align>
@@ -130,28 +126,25 @@
                         <info>ListItem.Overlay</info>
                     </control>
                 </itemlayout>
-                <focusedlayout height="60">
+                <focusedlayout height="61">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <posy>1</posy>
                         <height>60</height>
                         <width>1140</width>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
                         <posx>10</posx>
-                        <posy>0</posy>
                         <width>1117</width>
-                        <height>58</height>
+                        <height>61</height>
                         <texture>views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(450)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>68</posx>
-                        <posy>0</posy>
                         <width>810</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <textcolor>white6</textcolor>
@@ -159,9 +152,8 @@
                     </control>
                     <control type="label">
                         <posx>1041</posx>
-                        <posy>0</posy>
                         <width>795</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <align>right</align>
@@ -181,26 +173,24 @@
                 <posx>90</posx>
                 <posy>158</posy>
                 <width>1156</width>
-                <height>728</height>
+                <height>732</height>
                 <pagecontrol>60</pagecontrol>
                 <scrolltime tween="quadratic" easing="out">200</scrolltime>
                 <onleft>413</onleft>
                 <onright>60</onright>
                 <onup>451</onup>
                 <ondown>451</ondown>
-                <itemlayout height="60">
+                <itemlayout height="61">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <posy>1</posy>
                         <height>60</height>
                         <width>1156</width>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
                         <posx>68</posx>
-                        <posy>0</posy>
                         <width>810</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <textcolor>bcicon</textcolor>
@@ -208,9 +198,8 @@
                     </control>
                     <control type="label">
                         <posx>1041</posx>
-                        <posy>0</posy>
                         <width>795</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <align>right</align>
@@ -225,28 +214,25 @@
                         <info>ListItem.Overlay</info>
                     </control>
                 </itemlayout>
-                <focusedlayout height="60">
+                <focusedlayout height="61">
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
+                        <posy>1</posy>
                         <height>60</height>
                         <width>1156</width>
                         <texture>osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
                         <posx>10</posx>
-                        <posy>0</posy>
                         <width>1117</width>
-                        <height>58</height>
+                        <height>61</height>
                         <texture>views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(451)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>68</posx>
-                        <posy>0</posy>
                         <width>810</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <textcolor>white6</textcolor>
@@ -254,9 +240,8 @@
                     </control>
                     <control type="label">
                         <posx>1041</posx>
-                        <posy>0</posy>
                         <width>795</width>
-                        <height>60</height>
+                        <height>61</height>
                         <font>Font_Reg19</font>
                         <aligny>center</aligny>
                         <align>right</align>
@@ -274,9 +259,9 @@
             </control>
             <control type="grouplist">
                 <posx>102</posx>
-                <posy>910</posy>
+                <posy>898</posy>
                 <width>1117</width>
-                <height>80</height>
+                <height>100</height>
                 <onleft>451</onleft>
                 <onright>451</onright>
                 <onup>451</onup>
@@ -285,10 +270,8 @@
                 <scrolltime tween="quadratic" easing="out">200</scrolltime>
                 <orientation>horizontal</orientation>
                 <control type="button" id="413">
-                    <posx>0</posx>
-                    <posy>0</posy>
                     <width>279</width>
-                    <height>80</height>
+                    <height>91</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <font>Font_Reg22</font>
@@ -298,13 +281,11 @@
                     <textoffsety>16</textoffsety>
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
-                    <disabledcolor>grey</disabledcolor>
+                    <disabledcolor>grey3</disabledcolor>
                 </control>
                 <control type="button" id="414">
-                    <posx>0</posx>
-                    <posy>0</posy>
                     <width>279</width>
-                    <height>80</height>
+                    <height>91</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <font>Font_Reg22</font>
@@ -314,13 +295,11 @@
                     <textoffsety>16</textoffsety>
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
-                    <disabledcolor>grey</disabledcolor>
+                    <disabledcolor>grey3</disabledcolor>
                 </control>
                 <control type="button" id="415">
-                    <posx>0</posx>
-                    <posy>0</posy>
                     <width>279</width>
-                    <height>80</height>
+                    <height>91</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <font>Font_Reg22</font>
@@ -330,13 +309,11 @@
                     <textoffsety>16</textoffsety>
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
-                    <disabledcolor>grey</disabledcolor>
+                    <disabledcolor>grey3</disabledcolor>
                 </control>
                 <control type="radiobutton" id="416">
-                    <posx>0</posx>
-                    <posy>0</posy>
                     <width>279</width>
-                    <height>80</height>
+                    <height>91</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <font>Font_Reg22</font>
@@ -347,7 +324,7 @@
                     <textcolor>white2</textcolor>
                     <focusedcolor>white</focusedcolor>
                     <selectedcolor>FF7b7b7b</selectedcolor>
-                    <disabledcolor>grey</disabledcolor>
+                    <disabledcolor>grey3</disabledcolor>
                     <textureradiofocus>-</textureradiofocus>
                     <textureradionofocus>-</textureradionofocus>
                 </control>
