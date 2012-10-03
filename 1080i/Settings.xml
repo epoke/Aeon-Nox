@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <window id="4">
     <defaultcontrol always="true">9000</defaultcontrol>
-    <backgroundcolor>black</backgroundcolor>
+    <backgroundcolor>backgroundcolor</backgroundcolor>
     <allowoverlay>no</allowoverlay>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
     <animation type="WindowOpen" reversible="false" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(1111) + !Window.Previous(10007)">
@@ -143,10 +143,9 @@
                 <posx>555</posx>
                 <posy>810</posy>
                 <width>1200</width>
-                <height>160</height>
+                <height>210</height>
                 <font>Font_Reg20</font>
                 <label>$INFO[Container(9000).ListItem.Property(description)]</label>
-                <shadowcolor>-</shadowcolor>
             </control>
             <include>Furniture_SettingsInternalFrontPanel</include>
         </control>

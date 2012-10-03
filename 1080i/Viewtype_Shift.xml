@@ -201,7 +201,7 @@
     </include>
     <include name="ShiftView">
         <control type="group">
-                            <animation effect="slide" tween="cubic" easing="out" time="900"start="0,806" end="0,0">VisibleChange</animation>
+            <animation effect="slide" tween="cubic" easing="out" time="900" start="0,806" end="0,0">VisibleChange</animation>
             <visible>Control.IsVisible(57)</visible>
             <control type="fixedlist" id="57">
                 <posx>-120</posx>
@@ -271,7 +271,7 @@
                         <font>Font_Info_Caps</font>
                         <textcolor>floor</textcolor>
                         <shadowcolor>floorshadow</shadowcolor>
-                        <label>[UPPERCASE]$VAR[SecondLabelVar][/UPPERCASE]</label>
+                        <label>$VAR[SecondLabelVar]</label>
                     </control>
                     <control type="label">
                         <posx>195</posx>
@@ -283,7 +283,7 @@
                         <scrollspeed>30</scrollspeed>
                         <textcolor>floor</textcolor>
                         <shadowcolor>floorshadow</shadowcolor>
-                        <label>[UPPERCASE]$VAR[FirstLabelVar][/UPPERCASE]</label>
+                        <label>$VAR[FirstLabelVar]</label>
                     </control>
                 </control>
             </control>

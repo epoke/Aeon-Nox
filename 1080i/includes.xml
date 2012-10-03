@@ -302,7 +302,7 @@
     <include name="Objects_MediaMenuButtonAlt2">
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>60</height>
-        <width>600</width>
+        <width>470</width>
         <texturenofocus>settings/listselect_nf.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
         <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
@@ -318,12 +318,12 @@
         <font>Font_Reg19</font>
         <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
-        <radioposx>508</radioposx>
+        <radioposx>378</radioposx>
     </include>
     <include name="Objects_MediaMenuLabelAlt2">
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>45</height>
-        <width>600</width>
+        <width>470</width>
         <texturenofocus>settings/listselect_nf3.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
         <alttexturenofocus>settings/listselect_nf3.png</alttexturenofocus>
@@ -337,7 +337,7 @@
         <onleft>Dialog.Close(1126)</onleft>
         <onright>Dialog.Close(1126)</onright>
         <onright>SetFocus(50)</onright>
-        <font>Font_Reg15_Caps</font>
+        <font>Font_Bold15_Caps</font>
         <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
         <radioposx>508</radioposx>
@@ -369,6 +369,26 @@
         <include condition="!Skin.HasSetting(DisableGlowbar)">ShutdownGlow</include>
         <include condition="![!Skin.HasSetting(DisableGlowbar)]">ShutdownNoGlow</include>
     </include>
+    <include name="Objects_ShutdownMenuButton">
+        <height>75</height>
+        <width>440</width>
+        <textcolor>context</textcolor>
+        <focusedcolor>white2</focusedcolor>
+        <disabledcolor>$VAR[SpotColorVar2]</disabledcolor>
+        <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
+        <align>left</align>
+        <aligny>top</aligny>
+        <font>Font_Reg19_Caps</font>
+        <textoffsety>15</textoffsety>
+        <textoffsetx>95</textoffsetx>
+        <include condition="!Skin.HasSetting(DisableGlowbar)">ShutdownGlow</include>
+        <include condition="![!Skin.HasSetting(DisableGlowbar)]">ShutdownNoGlow</include>
+    </include>
+    <include name="Objects_ShutdownMenuIcon">
+        <height>63</height>
+        <width>67</width>
+        <aspectratio aligny="top">scale</aspectratio>
+    </include>
     <include name="HiddenObject">
         <posx>-300</posx>
         <posy>-300</posy>
@@ -389,7 +409,6 @@
         <textcolor>grey</textcolor>
         <selectedcolor>grey</selectedcolor>
     </include>
-    <include name="listcolorfocus"></include>
     <include name="detailcolornofocus">
         <textcolor>grey2</textcolor>
     </include>
@@ -795,7 +814,7 @@
         <height>60</height>
         <font>Font_Reg20</font>
         <textcolor>grey2</textcolor>
-        <focusedcolor>white</focusedcolor>
+        <focusedcolor>white2</focusedcolor>
         <textoffsetx>45</textoffsetx>
         <radioposx>290</radioposx>
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
@@ -874,7 +893,7 @@
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(font_weather,FF6db9e5)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(font_featured,FF6db9e5)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(font_settings,FF6db9e5)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(font_PVR,FF6db9e5)</onload>   
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(font_PVR,FF6db9e5)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(BackgroundDarkness,A0FFFFFF)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetBool(alternativerss)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetBool(colordialogs)</onload>
@@ -910,43 +929,41 @@
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetBool(GlobalNowPlaying)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetBool(altoverlayinfowall)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(IncludeWatchedCVPL,False)</onload>
-
         <onload condition="!Skin.HasSetting(firstrun) + !Library.HasContent(MusicVideos)">Skin.SetString(MusicVideosHomeItem.Disable,1)</onload>
-		
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(TVShowSub1.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(TVShowSub2.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(TVShowSub3.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(TVShowSub4.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(TVShowSub5.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MovieSub1.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MovieSub2.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MovieSub3.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MovieSub4.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MovieSub5.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub1.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub2.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub3.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub4.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub5.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub6.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub7.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherSub8.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub1.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub2.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub3.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub4.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub5.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub6.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub7.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomMusicSub8.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub1.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub2.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub3.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub4.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub5.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub6.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub7.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsSub8.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub8_1.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub8_2.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub8_3.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub8_4.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub8_5.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_1.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_2.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_3.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_4.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_5.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_1.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_2.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_3.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_4.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_5.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_6.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_7.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub10_8.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_1.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_2.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_3.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_4.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_5.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_6.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_7.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub11_8.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_1.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_2.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_3.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_4.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_5.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_6.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_7.Disable,1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub12_8.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub1_1.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub1_2.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub1_3.Disable,1)</onload>
@@ -992,37 +1009,41 @@
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_3.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_4.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomSub9_5.Disable,1)</onload>
-
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem1.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem2.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem3.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem4.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem5.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem6.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem7.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem8.Disable,1)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem9.Disable,1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ComicsHomeItem.Disable,1)</onload>
-
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MovieHomeItem.InfoLine,movies)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(TVShowHomeItem.InfoLine,tvshows)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MusicHomeItem.InfoLine,music)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MusicVideosHomeItem.InfoLine,musicvideos)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(PicturesHomeItem.InfoLine,randompics)</onload>
-<!--         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(PicturesHomeItem.InfoLine,recentpics)</onload>
- -->        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(LiveTVHomeItem.InfoLine,PVR)</onload>
-   <!--      <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem1.InfoLine,custom1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(LiveTVHomeItem.InfoLine,PVR)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem1.InfoLine,custom1)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem2.InfoLine,custom2)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem3.InfoLine,custom3)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem4.InfoLine,custom4)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem5.InfoLine,custom5)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem6.InfoLine,custom6)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem7.InfoLine,custom7)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem8.InfoLine,custom8)</onload>
-        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem9.InfoLine,custom9)</onload> -->
-
-
-
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MovieHomeItem.SubMenu,movies)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(TVShowHomeItem.SubMenu,tv)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(MusicHomeItem.SubMenu,music)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(VideosHomeItem.SubMenu,videos)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(LiveTVHomeItem.SubMenu,pvr)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ProgramsHomeItem.SubMenu,programs)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(WeatherHomeItem.SubMenu,weather)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(ShutdownHomeItem.SubMenu,shutdown)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(SettingsHomeItem.SubMenu,settings)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem1.SubMenu,custom1)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem2.SubMenu,custom2)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem3.SubMenu,custom3)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem4.SubMenu,custom4)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem5.SubMenu,custom5)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(CustomHomeItem6.SubMenu,custom6)</onload>
+        <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(submenulist,music tv movies pvr    custom1 custom2 custom3 custom4 custom5 custom6 videos programs settings  shutdown   weather)</onload>
         <onload>Skin.SetBool(firstrun)</onload>
     </include>
     <include name="DelayAnimations">
@@ -1096,18 +1117,29 @@
     <include name="DialogBackFade">
         <control type="image">
             <include>FullscreenDimensions</include>
-            <colordiffuse>black</colordiffuse>
-            <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
-            <texture>common/white.png</texture>
+            <texture>diffuseoverlay.png</texture>
+ <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
             <animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(fullscreenvideo)">Conditional</animation>
             <animation effect="fade" start="0" end="100" time="700">WindowOpen</animation>
             <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
         </control>
     </include>
+    <include name="ContextMenuOverlay">
+
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <texture>diffuseoverlay.png</texture>
+ <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
+            <animation effect="fade" start="0" end="100" time="700">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+            <visible>Window.IsActive(contextmenu)</visible>
+            <animation effect="fade" time="700">Visible</animation>
+            <animation effect="fade" time="400">Hidden</animation>
+        </control>
+    </include>
     <include name="QuickNavContent">
         <item>
             <label fallback="31502">$INFO[Skin.String(QuickNavItem1.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Film.png">$INFO[Skin.String(QuickNavItem1.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1120,7 +1152,6 @@
         </item>
         <item>
             <label fallback="31503">$INFO[Skin.String(QuickNavItem2.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Skin.String(QuickNavItem2.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1133,7 +1164,6 @@
         </item>
         <item>
             <label fallback="31501">$INFO[Skin.String(QuickNavItem3.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Headphone.png">$INFO[Skin.String(QuickNavItem3.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1146,7 +1176,6 @@
         </item>
         <item>
             <label fallback="20389">$INFO[Skin.String(QuickNavItem4.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Media.png">$INFO[Skin.String(QuickNavItem4.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1159,7 +1188,6 @@
         </item>
         <item>
             <label fallback="1036">$INFO[Skin.String(QuickNavItem5.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Star.png">$INFO[Skin.String(QuickNavItem5.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1172,7 +1200,6 @@
         </item>
         <item>
             <label fallback="1037">$INFO[Skin.String(QuickNavItem6.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Monitor.png">$INFO[Skin.String(QuickNavItem6.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1185,7 +1212,6 @@
         </item>
         <item>
             <label fallback="31507">$INFO[Skin.String(QuickNavItem7.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Puzzle.png">$INFO[Skin.String(QuickNavItem7.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1198,7 +1224,6 @@
         </item>
         <item>
             <label fallback="137">$INFO[Skin.String(QuickNavItem8.Label)]</label>
-            
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
             <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickNavItem8.MultiFanart)]</thumb>
@@ -1211,7 +1236,6 @@
         </item>
         <item>
             <label fallback="559">$INFO[Skin.String(QuickNavItem9.Label)]</label>
-            
             <thumb fallback="special://skin/extras/BigIcons/Format.png">$INFO[Skin.String(QuickNavItem9.MultiFanart)]</thumb>
             <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
             <onclick>Dialog.Close(1121)</onclick>
@@ -1279,6 +1303,62 @@
         </control>
     </include>
     <include name="FullScreenInfoBar">
+        <control type="group">
+            <posx>1552</posx>
+            <posy>789</posy>
+            <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)</visible>
+            <animation type="WindowOpen">
+                <effect type="slide" start="450,0" end="0,0" time="600" tween="cubic" easing="out" />
+                <effect type="fade" start="0" end="100" time="600" />
+            </animation>
+            <animation type="WindowClose">
+                <effect type="slide" start="0,0" end="450,0" time="600" tween="cubic" easing="out" />
+                <effect type="fade" start="100" end="0" time="600" />
+            </animation>
+            <control type="image" id="1000">
+                <posx>22</posx>
+                <posy>-51</posy>
+                <width>345</width>
+                <height>234</height>
+                <texture background="true" fallback="empty.png">$INFO[Player.FolderPath,,clearart.png]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+            </control>
+            <control type="image" id="1001">
+                <posx>22</posx>
+                <posy>-51</posy>
+                <width>345</width>
+                <height>234</height>
+                <texture background="true" fallback="empty.png">$INFO[Player.FolderPath,,../clearart.png]</texture>
+                <aspectratio>keep</aspectratio>
+                <visible>StringCompare(Control.GetLabel(1000),empty.png)</visible>
+            </control>
+            <control type="image" id="1002">
+                <posx>22</posx>
+                <posy>-66</posy>
+                <width>345</width>
+                <height>234</height>
+                <texture background="true" fallback="empty.png">$INFO[Player.FolderPath,,logo.png]</texture>
+                <aspectratio>keep</aspectratio>
+                <visible>StringCompare(Control.GetLabel(1000),empty.png) + StringCompare(Control.GetLabel(1001),empty.png)</visible>
+            </control>
+            <control type="image" id="1003">
+                <posx>22</posx>
+                <posy>-66</posy>
+                <width>345</width>
+                <height>234</height>
+                <visible>StringCompare(Control.GetLabel(1000),empty.png) + StringCompare(Control.GetLabel(1001),empty.png) + StringCompare(Control.GetLabel(1002),empty.png)</visible>
+                <texture background="true">$INFO[Player.FolderPath,,../logo.png]</texture>
+                <aspectratio>keep</aspectratio>
+                <animation type="WindowOpen">
+                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
+                    <effect type="fade" start="0" end="100" time="600" />
+                </animation>
+                <animation type="WindowClose">
+                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
+                    <effect type="fade" start="100" end="0" time="600" />
+                </animation>
+            </control>
+        </control>
         <control type="image">
             <posx>704</posx>
             <posy>866</posy>
@@ -1297,7 +1377,7 @@
             <font>Font_Reg19_Caps</font>
             <textcolor>FF363636</textcolor>
             <shadowcolor>88e5e5e5</shadowcolor>
-            <label>[UPPERCASE]$LOCALIZE[21396]: $INFO[player.chapter]$INFO[player.chaptercount, / ][/UPPERCASE]</label>
+            <label>$LOCALIZE[21396]: $INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
             <visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
         </control>
         <control type="image">
@@ -1305,77 +1385,6 @@
             <width>1920</width>
             <height>135</height>
             <texture>osd/osd_back.png</texture>
-        </control>
-        <control type="group">
-            <posy>789</posy>
-            <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(movies)</visible>
-            <control type="image" id="1000">
-                <posx>22</posx>
-                <posy>-51</posy>
-                <width>345</width>
-                <height>234</height>
-                <texture background="true" fallback="empty.png">$INFO[Player.FolderPath,,/clearart.png]</texture>
-                <aspectratio>keep</aspectratio>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="0" end="100" time="600" />
-                </animation>
-                <animation type="WindowClose">
-                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="100" end="0" time="600" />
-                </animation>
-            </control>
-            <control type="image" id="1001">
-                <posx>22</posx>
-                <posy>-51</posy>
-                <width>345</width>
-                <height>234</height>
-                <texture background="true" fallback="empty.png">$INFO[Player.FolderPath,,/../clearart.png]</texture>
-                <aspectratio>keep</aspectratio>
-                <visible>StringCompare(Control.GetLabel(1000),empty.png)</visible>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="0" end="100" time="600" />
-                </animation>
-                <animation type="WindowClose">
-                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="100" end="0" time="600" />
-                </animation>
-            </control>
-            <control type="image" id="1002">
-                <posx>22</posx>
-                <posy>-66</posy>
-                <width>345</width>
-                <height>234</height>
-                <texture background="true" fallback="empty.png">$INFO[Player.FolderPath,,/logo.png]</texture>
-                <aspectratio>keep</aspectratio>
-                <visible>StringCompare(Control.GetLabel(1000),empty.png) + StringCompare(Control.GetLabel(1001),empty.png)</visible>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="0" end="100" time="600" />
-                </animation>
-                <animation type="WindowClose">
-                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="100" end="0" time="600" />
-                </animation>
-            </control>
-            <control type="image" id="1003">
-                <posx>22</posx>
-                <posy>-66</posy>
-                <width>345</width>
-                <height>234</height>
-                <visible>StringCompare(Control.GetLabel(1000),empty.png) + StringCompare(Control.GetLabel(1001),empty.png) + StringCompare(Control.GetLabel(1002),empty.png)</visible>
-                <texture background="true">$INFO[Player.FolderPath,,/../logo.png]</texture>
-                <aspectratio>keep</aspectratio>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="0" end="100" time="600" />
-                </animation>
-                <animation type="WindowClose">
-                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="100" end="0" time="600" />
-                </animation>
-            </control>
         </control>
         <control type="group">
             <posy>910</posy>
@@ -1390,16 +1399,16 @@
             <visible>!Skin.HasSetting(DisableVideoThumb) + !substring(Control.GetLabel(888777),defaultvideo)</visible>
             <include>Animation_VisibleChange200</include>
             <control type="group">
-                <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos)</visible>
+                <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | [VideoPlayer.Content(episodes) + !Skin.HasSetting(TVShowsUsePoster)]</visible>
                 <animation type="WindowOpen">
-                    <effect type="slide" start="450,0" end="0,0" time="600" tween="cubic" easing="out" />
+                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
                 </animation>
                 <animation type="WindowClose">
-                    <effect type="slide" start="0,0" end="450,0" time="600" tween="cubic" easing="out" />
+                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
                     <effect type="fade" start="100" end="0" time="600" />
                 </animation>
                 <control type="image">
-                    <posx>1562</posx>
+                    <posx>12</posx>
                     <posy>581</posy>
                     <width>335</width>
                     <height>504</height>
@@ -1410,15 +1419,25 @@
                     <include>Animation_VisibleChange400</include>
                 </control>
                 <control type="image">
-                    <posx>1575</posx>
+                    <posx>25</posx>
                     <posy>600</posy>
                     <width>310</width>
                     <height>465</height>
                     <texture background="true" diffuse="thumbs/movieposter_mask.png">$INFO[VideoPlayer.Cover]</texture>
                     <aspectratio aligny="bottom">stretch</aspectratio>
+                    <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos)</visible>
                 </control>
                 <control type="image">
-                    <posx>1555</posx>
+                    <posx>25</posx>
+                    <posy>600</posy>
+                    <width>310</width>
+                    <height>465</height>
+                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$INFO[Player.Property(TVShowThumb)]</texture>
+                    <aspectratio aligny="bottom">stretch</aspectratio>
+                    <visible>VideoPlayer.Content(episodes)</visible>
+                </control>
+                <control type="image">
+                    <posx>5</posx>
                     <posy>580</posy>
                     <width>349</width>
                     <height>504</height>
@@ -1428,12 +1447,13 @@
                 </control>
             </control>
             <control type="group">
-                <visible>VideoPlayer.Content(episodes) | VideoPlayer.Content(LiveTV)</visible>
+                <visible>[VideoPlayer.Content(episodes) + Skin.HasSetting(TVShowsUsePoster)] | VideoPlayer.Content(LiveTV)</visible>
+                <posx>-1536</posx>
                 <animation type="WindowOpen">
-                    <effect type="slide" start="450,0" end="0,0" time="600" tween="cubic" easing="out" />
+                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
                 </animation>
                 <animation type="WindowClose">
-                    <effect type="slide" start="0,0" end="450,0" time="600" tween="cubic" easing="out" />
+                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
                     <effect type="fade" start="100" end="0" time="600" />
                 </animation>
                 <control type="image">
@@ -1487,35 +1507,16 @@
                     <effect type="slide" start="0,0" end="450,0" time="600" tween="cubic" easing="out" />
                     <effect type="fade" start="100" end="0" time="600" />
                 </animation>
-                <control type="image">
-                    <posx>1545</posx>
-                    <posy>862</posy>
-                    <width>368</width>
-                    <height>207</height>
-                    <texture>$INFO[VideoPlayer.Cover]</texture>
-                    <aspectratio>keep</aspectratio>
-                    <visible>VideoPlayer.Content(LiveTV) + !IsEmpty(VideoPlayer.Cover)</visible>
-                </control>
-            </control>
-            <control type="group">
-                <visible>VideoPlayer.Content(LiveTV)</visible>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
-                </animation>
-                <animation type="WindowClose">
-                    <effect type="slide" start="0,0" end="-450,0" time="600" tween="cubic" easing="out" />
-                    <effect type="fade" start="100" end="0" time="600" />
-                </animation>
                 <control type="label">
-                    <posx>-255</posx>
+                    <posx>1560</posx>
                     <posy>977</posy>
-                    <width>900</width>
+                    <width>300</width>
                     <height>68</height>
                     <align>center</align>
                     <aligny>center</aligny>
                     <font>Font_Reg19</font>
                     <textcolor>white2</textcolor>
-                    <label>[UPPERCASE][B]$INFO[VideoPlayer.ChannelName][/B][/UPPERCASE]</label>
+                    <label>[B]$INFO[VideoPlayer.ChannelName][/B]</label>
                     <scroll>true</scroll>
                 </control>
             </control>
@@ -1581,6 +1582,7 @@
             <label>$INFO[VideoPlayer.Genre]</label>
             <label>$INFO[VideoPlayer.RatingAndVotes,[COLOR bcicon]$LOCALIZE[31095]:[/COLOR] ]$INFO[VideoPlayer.Top250,[COLOR bcicon] $LOCALIZE[13409][/COLOR] # ]</label>
             <label>$INFO[VideoPlayer.mpaa]</label>
+            <label>$INFO[VideoPlayer.PlayCount,[COLOR bcicon]$LOCALIZE[567]: [/COLOR]]</label>
             <scroll>true</scroll>
             <scrollout>false</scrollout>
             <scrollspeed>70</scrollspeed>
@@ -1596,8 +1598,9 @@
             <font>Font_Reg19</font>
             <textcolor>$VAR[TitleColorVar]</textcolor>
             <label>$INFO[VideoPlayer.premiered,[COLOR bcicon]$LOCALIZE[20416]: [/COLOR]]</label>
+            <label>$INFO[VideoPlayer.Director,[COLOR bcicon]$LOCALIZE[31156][/COLOR] ]</label>
+            <label>$INFO[VideoPlayer.Writer,[COLOR bcicon]$LOCALIZE[31157][/COLOR] ]</label>
             <label>$INFO[VideoPlayer.PlayCount,[COLOR bcicon]$LOCALIZE[567]: [/COLOR]]</label>
-            <label>$INFO[VideoPlayer.LastPlayed,[COLOR bcicon]$LOCALIZE[568]: [/COLOR]]</label>
             <scroll>true</scroll>
             <scrollout>false</scrollout>
             <scrollspeed>70</scrollspeed>
@@ -1605,7 +1608,8 @@
             <visible>VideoPlayer.Content(episodes)</visible>
         </control>
         <control type="group">
-            <posy>915</posy>
+            <posx>1552</posx>
+            <posy>922</posy>
             <control type="group">
                 <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
                 <animation effect="slide" start="0,0" end="0,30" reversible="true" condition="IsEmpty(VideoPlayer.Rating)">Conditional</animation>
@@ -1693,102 +1697,487 @@
     </include>
     <include name="ColorConfigDefaultTheme">
         <onload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_music)])</onload>
-    <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_videolibrary)])</onload>
-    <onload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_PVR)])</onload>
-    <onload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_pictures)])</onload>
-    <onload condition="Window.IsActive(1115)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_featured)])</onload>
-    <onload condition="Window.IsActive(1111)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_settings)])</onload>
-    <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_addons)])</onload>
-    <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_programs)])</onload>
-    <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_musicplaylist)])</onload>
-    <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_videoplaylist)])</onload>
-    <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_mainmenu)])</onload>
-    <onload condition="Window.IsActive(weather)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_weather)])</onload>
-    <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(diffuse_music,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_videolibrary,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_PVR,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_pictures,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(1115)">Skin.SetString(diffuse_featured,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(1111)">Skin.SetString(diffuse_settings,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_addons,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_programs,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_musicplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_videoplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_mainmenu,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(weather)">Skin.SetString(diffuse_weather,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font_color,$INFO[Skin.String(font_music)])</onload>
-    <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font_color,$INFO[Skin.String(font_videolibrary)])</onload>
-    <onload condition="Window.IsActive(PVR)">Skin.SetString(font_color,$INFO[Skin.String(font_PVR)])</onload>
-    <onload condition="Window.IsActive(pictures)">Skin.SetString(font_color,$INFO[Skin.String(font_pictures)])</onload>
-    <onload condition="Window.IsActive(1115)">Skin.SetString(font_color,$INFO[Skin.String(font_featured)])</onload>
-    <onload condition="Window.IsActive(1111)">Skin.SetString(font_color,$INFO[Skin.String(font_settings)])</onload>
-    <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_color,$INFO[Skin.String(font_addons)])</onload>
-    <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_color,$INFO[Skin.String(font_programs)])</onload>
-    <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(font_color,$INFO[Skin.String(font_musicplaylist)])</onload>
-    <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(font_color,$INFO[Skin.String(font_videoplaylist)])</onload>
-    <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(font_color,$INFO[Skin.String(font_mainmenu)])</onload>
-    <onload condition="Window.IsActive(weather)">Skin.SetString(font_color,$INFO[Skin.String(font_weather)])</onload>
-    <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font_music,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font_videolibrary,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(PVR)">Skin.SetString(font_PVR,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(pictures)">Skin.SetString(font_pictures,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(1115)">Skin.SetString(font_featured,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(1111)">Skin.SetString(font_settings,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_addons,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_programs,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(font_musicplaylist,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(font_videoplaylist,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(font_mainmenu,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(weather)">Skin.SetString(font_weather,$INFO[Skin.String(font_color)])</onunload>
+        <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_videolibrary)])</onload>
+        <onload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_PVR)])</onload>
+        <onload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_pictures)])</onload>
+        <onload condition="Window.IsActive(1115)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_featured)])</onload>
+        <onload condition="Window.IsActive(1111)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_settings)])</onload>
+        <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_addons)])</onload>
+        <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_programs)])</onload>
+        <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_musicplaylist)])</onload>
+        <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_videoplaylist)])</onload>
+        <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_mainmenu)])</onload>
+        <onload condition="Window.IsActive(weather)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_weather)])</onload>
+        <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(diffuse_music,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_videolibrary,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_PVR,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_pictures,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(1115)">Skin.SetString(diffuse_featured,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(1111)">Skin.SetString(diffuse_settings,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_addons,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_programs,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_musicplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_videoplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_mainmenu,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(weather)">Skin.SetString(diffuse_weather,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font_color,$INFO[Skin.String(font_music)])</onload>
+        <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font_color,$INFO[Skin.String(font_videolibrary)])</onload>
+        <onload condition="Window.IsActive(PVR)">Skin.SetString(font_color,$INFO[Skin.String(font_PVR)])</onload>
+        <onload condition="Window.IsActive(pictures)">Skin.SetString(font_color,$INFO[Skin.String(font_pictures)])</onload>
+        <onload condition="Window.IsActive(1115)">Skin.SetString(font_color,$INFO[Skin.String(font_featured)])</onload>
+        <onload condition="Window.IsActive(1111)">Skin.SetString(font_color,$INFO[Skin.String(font_settings)])</onload>
+        <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_color,$INFO[Skin.String(font_addons)])</onload>
+        <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_color,$INFO[Skin.String(font_programs)])</onload>
+        <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(font_color,$INFO[Skin.String(font_musicplaylist)])</onload>
+        <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(font_color,$INFO[Skin.String(font_videoplaylist)])</onload>
+        <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(font_color,$INFO[Skin.String(font_mainmenu)])</onload>
+        <onload condition="Window.IsActive(weather)">Skin.SetString(font_color,$INFO[Skin.String(font_weather)])</onload>
+        <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font_music,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font_videolibrary,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(PVR)">Skin.SetString(font_PVR,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(pictures)">Skin.SetString(font_pictures,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(1115)">Skin.SetString(font_featured,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(1111)">Skin.SetString(font_settings,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_addons,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_programs,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(font_musicplaylist,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(font_videoplaylist,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(font_mainmenu,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(weather)">Skin.SetString(font_weather,$INFO[Skin.String(font_color)])</onunload>
     </include>
     <include name="ColorConfigWhiteTheme">
         <onload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_music)])</onload>
-    <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_videolibrary)])</onload>
-    <onload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_PVR)])</onload>
-    <onload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_pictures)])</onload>
-    <onload condition="Window.IsActive(1115)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_featured)])</onload>
-    <onload condition="Window.IsActive(1111)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_settings)])</onload>
-    <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_addons)])</onload>
-    <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_programs)])</onload>
-    <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_musicplaylist)])</onload>
-    <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_videoplaylist)])</onload>
-    <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_mainmenu)])</onload>
-    <onload condition="Window.IsActive(weather)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_weather)])</onload>
-    <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(diffuse_white_music,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_white_videolibrary,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_white_PVR,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_white_pictures,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(1115)">Skin.SetString(diffuse_white_featured,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(1111)">Skin.SetString(diffuse_white_settings,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_white_addons,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_white_programs,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_white_musicplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_white_videoplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_white_mainmenu,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onunload condition="Window.IsActive(weather)">Skin.SetString(diffuse_white_weather,$INFO[Skin.String(diffuse_color)])</onunload>
-    <onload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font_color,$INFO[Skin.String(white_font_music)])</onload>
-    <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font_color,$INFO[Skin.String(white_font_videolibrary)])</onload>
-    <onload condition="Window.IsActive(PVR)">Skin.SetString(font_color,$INFO[Skin.String(white_font_PVR)])</onload>
-    <onload condition="Window.IsActive(pictures)">Skin.SetString(font_color,$INFO[Skin.String(white_font_pictures)])</onload>
-    <onload condition="Window.IsActive(1115)">Skin.SetString(font_color,$INFO[Skin.String(white_font_featured)])</onload>
-    <onload condition="Window.IsActive(1111)">Skin.SetString(font_color,$INFO[Skin.String(white_font_settings)])</onload>
-    <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_color,$INFO[Skin.String(white_font_addons)])</onload>
-    <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_color,$INFO[Skin.String(white_font_programs)])</onload>
-    <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(font_color,$INFO[Skin.String(white_font_musicplaylist)])</onload>
-    <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(font_color,$INFO[Skin.String(white_font_videoplaylist)])</onload>
-    <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(font_color,$INFO[Skin.String(white_font_mainmenu)])</onload>
-    <onload condition="Window.IsActive(weather)">Skin.SetString(font_color,$INFO[Skin.String(white_font_weather)])</onload>
-    <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(white_font_music,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(white_font_videolibrary,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(PVR)">Skin.SetString(white_font_PVR,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(pictures)">Skin.SetString(white_font_pictures,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(1115)">Skin.SetString(white_font_featured,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(1111)">Skin.SetString(white_font_settings,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(white_font_addons,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(white_font_programs,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(white_font_musicplaylist,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(white_font_videoplaylist,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(white_font_mainmenu,$INFO[Skin.String(font_color)])</onunload>
-    <onunload condition="Window.IsActive(weather)">Skin.SetString(white_font_weather,$INFO[Skin.String(font_color)])</onunload>
+        <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_videolibrary)])</onload>
+        <onload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_PVR)])</onload>
+        <onload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_pictures)])</onload>
+        <onload condition="Window.IsActive(1115)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_featured)])</onload>
+        <onload condition="Window.IsActive(1111)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_settings)])</onload>
+        <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_addons)])</onload>
+        <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_programs)])</onload>
+        <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_musicplaylist)])</onload>
+        <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_videoplaylist)])</onload>
+        <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_mainmenu)])</onload>
+        <onload condition="Window.IsActive(weather)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_weather)])</onload>
+        <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(diffuse_white_music,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(diffuse_white_videolibrary,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(PVR)">Skin.SetString(diffuse_white_PVR,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_white_pictures,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(1115)">Skin.SetString(diffuse_white_featured,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(1111)">Skin.SetString(diffuse_white_settings,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_white_addons,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_white_programs,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(diffuse_white_musicplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(diffuse_white_videoplaylist,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(diffuse_white_mainmenu,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onunload condition="Window.IsActive(weather)">Skin.SetString(diffuse_white_weather,$INFO[Skin.String(diffuse_color)])</onunload>
+        <onload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font_color,$INFO[Skin.String(white_font_music)])</onload>
+        <onload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font_color,$INFO[Skin.String(white_font_videolibrary)])</onload>
+        <onload condition="Window.IsActive(PVR)">Skin.SetString(font_color,$INFO[Skin.String(white_font_PVR)])</onload>
+        <onload condition="Window.IsActive(pictures)">Skin.SetString(font_color,$INFO[Skin.String(white_font_pictures)])</onload>
+        <onload condition="Window.IsActive(1115)">Skin.SetString(font_color,$INFO[Skin.String(white_font_featured)])</onload>
+        <onload condition="Window.IsActive(1111)">Skin.SetString(font_color,$INFO[Skin.String(white_font_settings)])</onload>
+        <onload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_color,$INFO[Skin.String(white_font_addons)])</onload>
+        <onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_color,$INFO[Skin.String(white_font_programs)])</onload>
+        <onload condition="Window.IsActive(musicplaylist)">Skin.SetString(font_color,$INFO[Skin.String(white_font_musicplaylist)])</onload>
+        <onload condition="Window.IsActive(videoplaylist)">Skin.SetString(font_color,$INFO[Skin.String(white_font_videoplaylist)])</onload>
+        <onload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(font_color,$INFO[Skin.String(white_font_mainmenu)])</onload>
+        <onload condition="Window.IsActive(weather)">Skin.SetString(font_color,$INFO[Skin.String(white_font_weather)])</onload>
+        <onunload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(white_font_music,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(white_font_videolibrary,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(PVR)">Skin.SetString(white_font_PVR,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(pictures)">Skin.SetString(white_font_pictures,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(1115)">Skin.SetString(white_font_featured,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(1111)">Skin.SetString(white_font_settings,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(addonbrowser)">Skin.SetString(white_font_addons,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(white_font_programs,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(musicplaylist)">Skin.SetString(white_font_musicplaylist,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(videoplaylist)">Skin.SetString(white_font_videoplaylist,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="[Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString(white_font_mainmenu,$INFO[Skin.String(font_color)])</onunload>
+        <onunload condition="Window.IsActive(weather)">Skin.SetString(white_font_weather,$INFO[Skin.String(font_color)])</onunload>
+    </include>
+    <include name="QuickList">
+            <control type="group">
+            <posx>665</posx>
+            <include>Animation_OpenCloseZoom_New</include>
+            <control type="image">
+                <posx>30</posx>
+                <posy>100</posy>
+                <width>590</width>
+                <height>870</height>
+                <texture border="20">osd/osd_settings_back_glow.png</texture>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                <include>PanelGlowFade</include>
+                <include>Animation_VisibleChange400</include>
+            </control>
+            <control type="image">
+                <posx>30</posx>
+                <posy>100</posy>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+                <width>590</width>
+                <height>870</height>
+                <texture border="20">osd/osd_settings_back.png</texture>
+            </control>
+            <control type="list" id="800">
+                <visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
+                <visible>!Window.IsVisible(script-globalsearch-main.xml)</visible>
+                <posy>150</posy>
+                <width>600</width>
+                <height>1080</height>
+                <itemgap>0</itemgap>
+                <orientation>vertical</orientation>
+                <onleft>Dialog.CLose(1157)</onleft>
+                <onup>800</onup>
+                <ondown>9012</ondown>
+                <onright>Dialog.Close(1157)</onright>
+                <itemlayout width="600" height="80">
+                    <control type="image">
+                        <posx>50</posx>
+                        <width>600</width>
+                        <height>80</height>
+                        <texture border="0,0,0,4">settings/listselect_nf.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>72</posx>
+                        <posy>1</posy>
+                        <width>80</width>
+                        <height>80</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <colordiffuse>white3</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>200</posx>
+                        <height>80</height>
+                        <width>600</width>
+                        <aligny>center</aligny>
+                        <font>Font_Reg22_Caps</font>
+                        <textcolor>white3</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="600" height="80">
+                    <control type="image">
+                        <posx>50</posx>
+                        <width>600</width>
+                        <height>80</height>
+                        <texture border="0,0,0,4">settings/listselect_nf.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>50</posx>
+                        <width>600</width>
+                        <height>80</height>
+                        <texture>views/tripanel/listselect_fo.png</texture>
+                        <visible>Control.HasFocus(800)</visible>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <include>PanelGlowFade</include>
+                    </control>
+                    <control type="image">
+                        <posx>72</posx>
+                        <posy>1</posy>
+                        <width>80</width>
+                        <height>80</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <colordiffuse>white2</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>200</posx>
+                        <height>80</height>
+                        <width>600</width>
+                        <aligny>center</aligny>
+                        <font>Font_Reg22_Caps</font>
+                        <textcolor>white2</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <label fallback="31502">$INFO[Skin.String(QuickList1_1.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Film.png">$INFO[Skin.String(QuickList1_1.MultiFanart)]</thumb>
+                        <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_1.Type))">ReplaceWindow(Videos,MovieTitles,return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_1.Type),1) | stringcompare(Skin.String(QuickList1_1.Type),2) | stringcompare(Skin.String(QuickList1_1.Type),3) | stringcompare(Skin.String(QuickList1_1.Type),0)">RunAddon($INFO[Skin.String(QuickList1_1.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_1.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_1.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_1.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_1.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_1.Type),6) | Stringcompare(Skin.String(QuickList1_1.Type),7)">$INFO[Skin.String(QuickList1_1.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_1.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="31503">$INFO[Skin.String(QuickList1_2.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Skin.String(QuickList1_2.MultiFanart)]</thumb>
+                        <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_2.Type))">ReplaceWindow(Videos,TVShowTitles,return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_2.Type),1) | stringcompare(Skin.String(QuickList1_2.Type),2) | stringcompare(Skin.String(QuickList1_2.Type),3) | stringcompare(Skin.String(QuickList1_2.Type),0)">RunAddon($INFO[Skin.String(QuickList1_2.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_2.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_2.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_2.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_2.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_2.Type),6) | Stringcompare(Skin.String(QuickList1_2.Type),7)">$INFO[Skin.String(QuickList1_2.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_2.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="31501">$INFO[Skin.String(QuickList1_3.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Headphone.png">$INFO[Skin.String(QuickList1_3.MultiFanart)]</thumb>
+                        <onclick condition="Window.IsActive(playercontrols)">Dialog.Close(114)</onclick>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_3.Type))">ReplaceWindow(Music)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_3.Type),1) | stringcompare(Skin.String(QuickList1_3.Type),2) | stringcompare(Skin.String(QuickList1_3.Type),3) | stringcompare(Skin.String(QuickList1_3.Type),0)">RunAddon($INFO[Skin.String(QuickList1_3.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_3.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_3.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_3.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_3.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_3.Type),6) | Stringcompare(Skin.String(QuickList1_3.Type),7)">$INFO[Skin.String(QuickList1_3.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_3.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="20389">$INFO[Skin.String(QuickList1_4.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Media.png">$INFO[Skin.String(QuickList1_4.MultiFanart)]</thumb>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_4.Type))">ReplaceWindow(Videos,MusicVideoTitles,return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_4.Type),1) | stringcompare(Skin.String(QuickList1_4.Type),2) | stringcompare(Skin.String(QuickList1_4.Type),3) | stringcompare(Skin.String(QuickList1_4.Type),0)">RunAddon($INFO[Skin.String(QuickList1_4.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_4.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_4.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_4.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_4.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_4.Type),6) | Stringcompare(Skin.String(QuickList1_4.Type),7)">$INFO[Skin.String(QuickList1_4.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_4.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="1036">$INFO[Skin.String(QuickList1_5.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Star.png">$INFO[Skin.String(QuickList1_5.MultiFanart)]</thumb>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_5.Type))">ActivateWindow(favourites)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_5.Type),1) | stringcompare(Skin.String(QuickList1_5.Type),2) | stringcompare(Skin.String(QuickList1_5.Type),3) | stringcompare(Skin.String(QuickList1_5.Type),0)">RunAddon($INFO[Skin.String(QuickList1_5.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_5.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_5.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_5.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_5.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_5.Type),6) | Stringcompare(Skin.String(QuickList1_5.Type),7)">$INFO[Skin.String(QuickList1_5.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_5.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="1037">$INFO[Skin.String(QuickList1_6.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Monitor.png">$INFO[Skin.String(QuickList1_6.MultiFanart)]</thumb>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_6.Type))">ReplaceWindow(Videos,Addons,return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_6.Type),1) | stringcompare(Skin.String(QuickList1_6.Type),2) | stringcompare(Skin.String(QuickList1_6.Type),3) | stringcompare(Skin.String(QuickList1_6.Type),0)">RunAddon($INFO[Skin.String(QuickList1_6.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_6.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_6.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_6.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_6.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_6.Type),6) | Stringcompare(Skin.String(QuickList1_6.Type),7)">$INFO[Skin.String(QuickList1_6.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_6.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="31507">$INFO[Skin.String(QuickList1_7.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Puzzle.png">$INFO[Skin.String(QuickList1_7.MultiFanart)]</thumb>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_7.Type))">ReplaceWindow(Programs,addons)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_7.Type),1) | stringcompare(Skin.String(QuickList1_7.Type),2) | stringcompare(Skin.String(QuickList1_7.Type),3) | stringcompare(Skin.String(QuickList1_7.Type),0)">RunAddon($INFO[Skin.String(QuickList1_7.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_7.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_7.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_7.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_7.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_7.Type),6) | Stringcompare(Skin.String(QuickList1_7.Type),7)">$INFO[Skin.String(QuickList1_7.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_7.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="137">$INFO[Skin.String(QuickList1_8.Label)]</label>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickList1_8.MultiFanart)]</thumb>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_8.Type))">RunScript(script.globalsearch)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_8.Type),1) | stringcompare(Skin.String(QuickList1_8.Type),2) | stringcompare(Skin.String(QuickList1_8.Type),3) | stringcompare(Skin.String(QuickList1_8.Type),0)">RunAddon($INFO[Skin.String(QuickList1_8.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_8.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_8.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_8.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_8.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_8.Type),6) | Stringcompare(Skin.String(QuickList1_8.Type),7)">$INFO[Skin.String(QuickList1_8.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_8.Disable))</visible>
+                    </item>
+                    <item>
+                        <label fallback="559">$INFO[Skin.String(QuickList1_9.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Format.png">$INFO[Skin.String(QuickList1_9.MultiFanart)]</thumb>
+                        <onclick>Dialog.Close(1157)</onclick>
+                        <onclick condition="IsEmpty(Skin.String(QuickList1_9.Type))">ReplaceWindow(musicplaylist)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_9.Type),1) | stringcompare(Skin.String(QuickList1_9.Type),2) | stringcompare(Skin.String(QuickList1_9.Type),3) | stringcompare(Skin.String(QuickList1_9.Type),0)">RunAddon($INFO[Skin.String(QuickList1_9.Path)])</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_9.Type),4)">ReplaceWindow(Videos,$INFO[Skin.String(QuickList1_9.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_9.Type),5)">ReplaceWindow(MusicLibrary,$INFO[Skin.String(QuickList1_9.Path)],return)</onclick>
+                        <onclick condition="stringcompare(Skin.String(QuickList1_9.Type),6) | Stringcompare(Skin.String(QuickList1_9.Type),7)">$INFO[Skin.String(QuickList1_9.Path)]</onclick>
+                        <visible>IsEmpty(Skin.String(QuickList1_9.Disable))</visible>
+                    </item>
+                </content>
+            </control>
+            <control type="list" id="800">
+                <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
+                <visible>!Window.IsVisible(script-globalsearch-main.xml)</visible>
+                <posy>150</posy>
+                <width>600</width>
+                <height>1080</height>
+                <itemgap>0</itemgap>
+                <orientation>vertical</orientation>
+                <onleft>Dialog.CLose(1157)</onleft>
+                <onup>800</onup>
+                <ondown>9012</ondown>
+                <onright>Dialog.Close(1157)</onright>
+                <itemlayout width="600" height="80">
+                    <control type="image">
+                        <posx>50</posx>
+                        <width>600</width>
+                        <height>80</height>
+                        <texture border="0,0,0,4">settings/listselect_nf.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>72</posx>
+                        <posy>1</posy>
+                        <width>80</width>
+                        <height>80</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <colordiffuse>white3</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>200</posx>
+                        <height>80</height>
+                        <width>600</width>
+                        <aligny>center</aligny>
+                        <font>Font_Reg22_Caps</font>
+                        <textcolor>white3</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="image">
+                        <width>600</width>
+                        <height>80</height>
+                        <texture>close.png</texture>
+                        <visible>stringcompare(ListItem.Property(DisableIcon),1)</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="600" height="80">
+                    <control type="image">
+                        <posx>50</posx>
+                        <width>600</width>
+                        <height>80</height>
+                        <texture border="0,0,0,4">settings/listselect_nf.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>50</posx>
+                        <width>600</width>
+                        <height>80</height>
+                        <texture>views/tripanel/listselect_fo.png</texture>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <include>PanelGlowFade</include>
+                        <visible>Control.HasFocus(800)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>72</posx>
+                        <posy>1</posy>
+                        <width>80</width>
+                        <height>80</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <colordiffuse>white2</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>200</posx>
+                        <height>80</height>
+                        <width>600</width>
+                        <aligny>center</aligny>
+                        <font>Font_Reg22_Caps</font>
+                        <textcolor>white2</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="image">
+                        <width>600</width>
+                        <height>80</height>
+                        <texture>close.png</texture>
+                        <visible>stringcompare(ListItem.Property(DisableIcon),1)</visible>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <label fallback="31502">$INFO[Skin.String(QuickList1_1.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Film.png">$INFO[Skin.String(QuickList1_1.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_1.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_1)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="31503">$INFO[Skin.String(QuickList1_2.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Skin.String(QuickList1_2.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_2.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_2)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="31501">$INFO[Skin.String(QuickList1_3.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Headphone.png">$INFO[Skin.String(QuickList1_3.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_3.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_3)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="20389">$INFO[Skin.String(QuickList1_4.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Media.png">$INFO[Skin.String(QuickList1_4.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_4.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_4)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="1036">$INFO[Skin.String(QuickList1_5.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Star.png">$INFO[Skin.String(QuickList1_5.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_5.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_5)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="1037">$INFO[Skin.String(QuickList1_6.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Monitor.png">$INFO[Skin.String(QuickList1_6.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_6.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_6)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="31507">$INFO[Skin.String(QuickList1_7.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Puzzle.png">$INFO[Skin.String(QuickList1_7.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_7.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_7)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="137">$INFO[Skin.String(QuickList1_8.Label)]</label>
+                        <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickList1_8.MultiFanart)]</thumb>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_8.Disable)]</property>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_8)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                    <item>
+                        <label fallback="559">$INFO[Skin.String(QuickList1_9.Label)]</label>
+                        <property name="DisableIcon">$INFO[Skin.String(QuickList1_9.Disable)]</property>
+                        <thumb fallback="special://skin/extras/BigIcons/Format.png">$INFO[Skin.String(QuickList1_9.MultiFanart)]</thumb>
+                        <onclick>Skin.SetString(MenuItem,QuickList1_9)</onclick>
+                        <onclick>ActivateWindow(1136)</onclick>
+                    </item>
+                </content>
+            </control>
+            <control type="button" id="9012">
+                <posx>50</posx>
+                <posy>900</posy>
+                <width>550</width>
+                <height>40</height>
+                <label>$VAR[QuickNavButtonLabelVar]</label>
+                <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+                <texturenofocus border="8">-</texturenofocus>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
+                <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[42002],$LOCALIZE[42281])</onclick>
+                <onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
+                <textcolor>grey2</textcolor>
+                <focusedcolor>white</focusedcolor>
+                <font>Font_Reg15</font>
+                <align>center</align>
+                <altlabel>$LOCALIZE[31272]: [COLOR $VAR[FontColorVar]$LOCALIZE[31271][/COLOR]</altlabel>
+                <usealttexture>!IsEmpty(Window(home).Property(quicknavsetup))</usealttexture>
+                <alttexturefocus border="8">views/tripanel/listselect_fo.png</alttexturefocus>
+                <alttexturenofocus border="8">-</alttexturenofocus>
+                <label>$LOCALIZE[31095]</label>
+                <onleft>3</onleft>
+                <onright>3</onright>
+                <onup>SetFocus(800,20)</onup>
+                <onup>800</onup>
+                <ondown>SetFocus(800,0)</ondown>
+                <ondown>800</ondown>
+                <visible>!Skin.HasSetting(viewtypeselect)</visible>
+                <visible>!Skin.HasSetting(kioskmode)</visible>
+            </control>
+        </control>
+
     </include>
 </includes>

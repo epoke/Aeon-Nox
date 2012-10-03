@@ -2,7 +2,7 @@
 <window id="503">
     <defaultcontrol allways="true">50</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>black</backgroundcolor>
+    <backgroundcolor>backgroundcolor</backgroundcolor>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
     <controls>
         <control type="multiimage">
@@ -335,5 +335,6 @@
         </control>
         <include>Furniture_NowPlayingWidget</include>
         <include>Media_Menu</include>
+        <include>ContextMenuOverlay</include>
     </controls>
 </window>

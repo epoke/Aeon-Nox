@@ -50,9 +50,9 @@
                     <textoffsetx>15</textoffsetx>
                     <textoffsety>0</textoffsety>
                     <aligny>center</aligny>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Bold15_Caps</font>
                     <include>Animation_CommonFade</include>
-                    <label>[UPPERCASE][B]$LOCALIZE[31176][/UPPERCASE][/B]</label>
+                    <label>$LOCALIZE[31176]</label>
                     <enable>no</enable>
                 </control>
                 <control type="button" id="13">
@@ -94,21 +94,22 @@
                     <textoffsetx>15</textoffsetx>
                     <textoffsety>0</textoffsety>
                     <aligny>center</aligny>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Bold15_Caps</font>
                     <include>Animation_CommonFade</include>
-                    <label>[UPPERCASE][B]$LOCALIZE[42285][/UPPERCASE][/B]</label>
+                    <label>$LOCALIZE[42285]</label>
                     <enable>no</enable>
                 </control>
                 <control type="button" id="11">
                     <include>ColorChooserButton</include>
                     <label>$LOCALIZE[31178]</label>
+                    <onclick>SetProperty(colordialog,diffuse_color,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
                     <enable>!Skin.HasSetting(randomcolor)</enable>
                 </control>
                 <control type="button" id="12">
                     <include>ColorChooserButton</include>
                     <label>$LOCALIZE[31192]</label>
-                    <onclick>SetProperty(skincolor,font,1124)</onclick>
+                    <onclick>SetProperty(colordialog,font_color,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
                 </control>
                 <control type="button" id="17">

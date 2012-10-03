@@ -246,7 +246,7 @@
     <string id="31382">filter text</string>
     <string id="31383">Backdrop</string>
     <string id="31387">Darken</string>
-    <string id="31388">Floor label:</string>
+    <string id="31388">Floor label</string>
     <string id="31396">BannerList</string>
     <string id="31397">Ended</string>
     <string id="31398">Style</string>
@@ -276,7 +276,7 @@
     <string id="31628">All Artists</string>
     <string id="31629">All Videos</string>
     <string id="31630">Custom</string>
-    <string id="31631">Show Logo.png instead of title</string>
+    <string id="31631">Show logo instead of title</string>
     <string id="31633">QuickNav</string>
 
     <!-- Home Menu -->
@@ -367,7 +367,7 @@
     <string id="52013">Search string</string>
     <string id="52014">Timer</string>
     <string id="52015">Channel</string>
-    <string id="52016">Programme Info</string>
+    <string id="52016">Program Information</string>
     <string id="52017">Duration</string>
     <string id="52018">Recording Information</string>
     <string id="52019">Add group</string>
@@ -442,7 +442,7 @@
     <string id="42205">Position</string>
     <string id="42206">Choose custom color</string>
     <string id="42207">Choose Icon</string>
-    <string id="42208">Choose Position</string>
+    <string id="42208">Exchange Position</string>
     <string id="42209">Set Path</string>
     <string id="42210">Show ClearArt instead of Logo</string>
     <string id="42211">Use Alt Floor</string>
@@ -532,4 +532,5 @@
 <!--     <string id="42296">bars</string>
  -->    <string id="42297">Press DOWN for extended info</string>
     <string id="42298">Alternative main menu font</string>
+    <string id="42299">Shutdown timer</string>
 </strings>

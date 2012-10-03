@@ -53,7 +53,7 @@
                 <aligny>center</aligny>
                 <font>Font_Reg15_Caps</font>
                 <textcolor>white2</textcolor>
-                <label>[UPPERCASE]$INFO[ListItem.Episode,$LOCALIZE[20359] ][/UPPERCASE]</label>
+                <label>$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
             </control>
         </control>
         <control type="image">
@@ -205,8 +205,7 @@
     <include name="MediaListView3">
         <control type="group">
             <visible>Control.IsVisible(503)</visible>
-                            <animation effect="slide" tween="cubic" easing="out" time="500" start="0,806" end="0,0">VisibleChange</animation>
-
+            <animation effect="slide" tween="cubic" easing="out" time="500" start="0,806" end="0,0">VisibleChange</animation>
             <include condition="!Skin.HasSetting(showcasewrap)">lsfixed</include>
             <include condition="Skin.HasSetting(showcasewrap)">lswrap</include>
             <control type="image" id="8822">
@@ -236,7 +235,7 @@
                     <scrollspeed>30</scrollspeed>
                     <textcolor>floor</textcolor>
                     <shadowcolor>floorshadow</shadowcolor>
-                    <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+                    <label>$INFO[ListItem.Label]</label>
                     <visible>![[Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)]]</visible>
                     <visible>!Container.Content(episodes)</visible>
                 </control>
@@ -252,7 +251,7 @@
                     <scrollspeed>30</scrollspeed>
                     <textcolor>floor</textcolor>
                     <shadowcolor>floorshadow</shadowcolor>
-                    <label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+                    <label>$INFO[ListItem.Title]</label>
                     <visible>Container.Content(episodes)</visible>
                     <visible>![[Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + [Container.Content(tvshows) | Container.Content(movies)]]</visible>
                 </control>
