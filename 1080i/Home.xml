@@ -234,9 +234,7 @@
                         <texturebg>osd/osd_progress_clear.png</texturebg>
                         <lefttexture>-</lefttexture>
                         <midtexture>osd/osd_progressmid.png</midtexture>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <righttexture>-</righttexture>
-                        <overlaytexture>-</overlaytexture>
                     </control>
                 </control>
                 <!-- Home Menu Bar -->
@@ -368,7 +366,7 @@
                 <width>100</width>
                 <height>74</height>
                 <font>Font_Reg14</font>
-                <include>detailcolornofocus</include>
+                <textcolor>grey2</textcolor>
                 <aligny>center</aligny>
                 <align>center</align>
                 <label>$LOCALIZE[42264]</label>

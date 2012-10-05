@@ -73,7 +73,7 @@
                     <width>219</width>
                     <aligny>center</aligny>
                     <font>Font_Reg19</font>
-                    <include>detailcolornofocus</include>
+                    <textcolor>grey2</textcolor>
                     <info>ListItem.Label</info>
                     <visible>!StringCompare(ListItem.Label,Container.Viewmode)</visible>
                 </control>
@@ -101,7 +101,7 @@
                     <width>219</width>
                     <aligny>center</aligny>
                     <font>Font_Reg19</font>
-                    <include>listcolornofocus</include>
+                    <textcolor>white2</textcolor>
                     <info>ListItem.Label</info>
                     <visible>!StringCompare(ListItem.Label,Container.Viewmode)</visible>
                 </control>
@@ -474,7 +474,6 @@
             <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[42002],$LOCALIZE[42281])</onclick>
             <onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
             <textcolor>grey2</textcolor>
-            <focusedcolor>white</focusedcolor>
             <font>Font_Reg15</font>
             <align>center</align>
             <altlabel>$LOCALIZE[31272]: [COLOR $VAR[FontColorVar]]$LOCALIZE[31271][/COLOR]</altlabel>
