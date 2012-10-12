@@ -4,7 +4,7 @@
     <string id="31001">좋아함</string>
     <string id="31002">싫어함</string>
     <string id="31004">작업중...</string>
-    <string id="31021">Search XBMC for</string>
+    <string id="31021">XBMC 검색</string>
     <string id="31022">음악 - 파일</string>
     <string id="31024">페이지</string>
     <string id="31025">항목</string>
@@ -246,7 +246,7 @@
     <string id="31382">문자 입력</string>
     <string id="31383">배경화면</string>
     <string id="31387">어둡게</string>
-    <string id="31388">플로어에 표시:</string>
+    <string id="31388">플로어에 표시</string>
     <string id="31396">배너 목록</string>
     <string id="31397">종료</string>
     <string id="31398">스타일</string>
@@ -276,7 +276,7 @@
     <string id="31628">모든 아티스트</string>
     <string id="31629">모든 비디오</string>
     <string id="31630">사용자 설정</string>
-    <string id="31631">제목 대신 Logo.png 보기</string>
+    <string id="31631">제목 대신 로고 보기</string>
     <string id="31633">빠른 이동</string>
 
     <!-- Home Menu -->
@@ -442,7 +442,7 @@
     <string id="42205">위치</string>
     <string id="42206">사용자 색상 선택</string>
     <string id="42207">아이콘 선택</string>
-    <string id="42208">위치 선택</string>
+    <string id="42208">위치 변경</string>
     <string id="42209">경로 설정</string>
     <string id="42210">로고 대신 클리어아트 보기</string>
     <string id="42211">Use Alt Floor</string>
@@ -532,4 +532,5 @@
     <!--     <string id="42296">bars</string> -->
     <string id="42297">Press DOWN for extended info</string>
     <string id="42298">Alternative main menu font</string>
+    <string id="42299">Shutdown timer</string>
 </strings>
