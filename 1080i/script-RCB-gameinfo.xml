@@ -3,6 +3,8 @@
     <allowoverlay>yes</allowoverlay>
     <coordinates>
         <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
     </coordinates>
     <animation type="WindowOpen" reversible="false">
         <effect type="zoom" start="150" end="100" center="960,540" time="500" tween="cubic" easing="out" />
@@ -111,7 +113,6 @@
             <itemgap>40</itemgap>
             <orientation>horizontal</orientation>
             <control type="label">
-                <textcolor>white2</textcolor>
                 <font>Font_Reg19_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
@@ -120,7 +121,6 @@
                 <visible>Control.IsEnabled(3000) + Control.IsVisible(3000)</visible>
             </control>
             <control type="label">
-                <textcolor>white2</textcolor>
                 <font>Font_Reg19_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
@@ -182,7 +182,6 @@
                         <scroll>true</scroll>
                         <font>Font_Reg38</font>
                         <label>$INFO[Listitem.Label]</label>
-                        <textcolor>white2</textcolor>
                         <shadowcolor>black</shadowcolor>
                     </control>
                     <control type="label">

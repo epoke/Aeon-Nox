@@ -710,7 +710,7 @@
         <item>
             <label>31334</label>
             <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
-            <onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
+            <onclick>ActivateWindow(Videos,library://video/recentlyaddedmovies.xml,return)</onclick>
             <visible>Substring(Control.GetLabel(4327),movies) + IsEmpty(Skin.String(MoviesSub3))</visible>
         </item>
         <item>
@@ -796,8 +796,13 @@
         </item>
         <item>
             <label>31334</label>
-            <onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
+            <onclick>ActivateWindow(Videos,library://video/recentlyaddedepisodes.xml,return)</onclick>
             <visible>Substring(Control.GetLabel(4327),tv) + IsEmpty(Skin.String(TVShowsSub4))</visible>
+        </item>
+        <item>
+            <label>575</label>
+            <onclick>ActivateWindow(Videos,library://video/inprogressshows.xml,return)</onclick>
+            <visible>Substring(Control.GetLabel(4327),tv) + IsEmpty(Skin.String(TVShowsSub8))</visible>
         </item>
         <item>
             <label>652</label>
@@ -1246,7 +1251,6 @@
     <include name="MainMenuLabels">
         <height>225</height>
         <align>center</align>
-        <aligny>center</aligny>
         <label>$INFO[ListItem.Label]</label>
         <include>Animation_VisibleChange200</include>
         <posy>-5</posy>
@@ -1268,7 +1272,6 @@
         <ondown condition="IsEmpty(Window(home).Property(DisableWidgets)) + !IntegerGreaterThan(Container(9010).NumItems,0) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Control.GetLabel(4321))">4444</ondown>
         <onback condition="!Skin.HasSetting(DisableWidgetToggle) + IsEmpty(Window(home).Property(DisableWidgets))">SetProperty(DisableWidgets,1,home)</onback>
         <onback condition="!Skin.HasSetting(DisableWidgetToggle) + !IsEmpty(Window(home).Property(DisableWidgets))">ClearProperty(DisableWidgets,home)</onback>
-        <pagecontrol>-</pagecontrol>
         <scrolltime tween="quadratic" easing="out">300</scrolltime>
         <include condition="Skin.HasSetting(mainmenuicons)">FocusPosition4</include>
         <include condition="!Skin.HasSetting(mainmenuicons)">FocusPosition2</include>
@@ -1293,7 +1296,6 @@
                 <textcolor>white4</textcolor>
                 <height>225</height>
                 <align>center</align>
-                <aligny>center</aligny>
                 <label>$INFO[ListItem.Label]</label>
                 <font>Font_Reg17_Caps</font>
             </control>
@@ -1317,7 +1319,6 @@
                     <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
                     <height>225</height>
                     <align>center</align>
-                    <aligny>center</aligny>
                     <label>[B]$INFO[ListItem.Label][/B]</label>
                     <font>Font_Reg17_Caps</font>
                 </control>
@@ -1339,7 +1340,6 @@
                     <textcolor>white4</textcolor>
                     <height>225</height>
                     <align>center</align>
-                    <aligny>center</aligny>
                     <label>[B]$INFO[ListItem.Label][/B]</label>
                     <font>Font_Reg17_Caps</font>
                 </control>
@@ -1532,7 +1532,7 @@
         <posx>145</posx>
         <posy>-4</posy>
         <height>50</height>
-        <width>1125</width>
+        <width>1150</width>
         <onleft>9010</onleft>
         <onright>9010</onright>
         <viewtype>list</viewtype>
@@ -1552,7 +1552,6 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <aligny>center</aligny>
                 <font>Font_Info_Caps</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey2</textcolor>
@@ -1564,7 +1563,6 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <aligny>center</aligny>
                 <font>Font_Reg19_Caps</font>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
@@ -1575,7 +1573,6 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <aligny>center</aligny>
                 <font>Font_Reg19_Caps</font>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
@@ -1617,42 +1614,26 @@
     </include>
     <include name="MainMenuFixedList">
         <control type="fixedlist" id="9000">
-            <include>MainMenuListContent</include>
-        </control>
-    </include>
-    <include name="MainMenuFixedList1124">
-        <control type="fixedlist" id="9000">
-            <include>MainMenuListContent1124</include>
+            <include condition="Window.IsActive(home)">MainMenuListContent</include>
+            <include condition="Window.IsActive(1124)">MainMenuListContent1124</include>
         </control>
     </include>
     <include name="MainMenuWrapList">
         <control type="wraplist" id="9000">
-            <include>MainMenuListContent</include>
-        </control>
-    </include>
-    <include name="MainMenuWrapList1124">
-        <control type="wraplist" id="9000">
-            <include>MainMenuListContent1124</include>
+            <include condition="Window.IsActive(home)">MainMenuListContent</include>
+            <include condition="Window.IsActive(1124)">MainMenuListContent1124</include>
         </control>
     </include>
     <include name="SubMenuFixedList">
         <control type="fixedlist" id="9010">
-            <include>SubMenuListContent</include>
-        </control>
-    </include>
-    <include name="SubMenuFixedList1124">
-        <control type="fixedlist" id="9010">
-            <include>SubMenuListContent1124</include>
+            <include condition="Window.IsActive(home)">SubMenuListContent</include>
+            <include condition="Window.IsActive(1124)">SubMenuListContent1124</include>
         </control>
     </include>
     <include name="SubMenuWrapList">
         <control type="wraplist" id="9010">
-            <include>SubMenuListContent</include>
-        </control>
-    </include>
-    <include name="SubMenuWrapList1124">
-        <control type="wraplist" id="9010">
-            <include>SubMenuListContent1124</include>
+            <include condition="Window.IsActive(home)">SubMenuListContent</include>
+            <include condition="Window.IsActive(1124)">SubMenuListContent1124</include>
         </control>
     </include>
     <include name="MainMenuListContent1124">
@@ -1666,7 +1647,6 @@
         <onup>ActivateWindow(1120)</onup>
         <ondown condition="IntegerGreaterThan(Container(9010).NumItems,0)">SetProperty(FocusOnSubmenu,true,home)</ondown>
         <ondown>9010</ondown>
-        <pagecontrol>-</pagecontrol>
         <scrolltime tween="quadratic" easing="out">300</scrolltime>
         <include condition="Skin.HasSetting(mainmenuicons)">FocusPosition4</include>
         <include condition="!Skin.HasSetting(mainmenuicons)">FocusPosition2</include>
@@ -1768,7 +1748,6 @@
                 <textcolor>white4</textcolor>
                 <height>225</height>
                 <align>center</align>
-                <aligny>center</aligny>
                 <label>[B]$INFO[ListItem.Label][/B]</label>
                 <font>Font_Reg17_Caps</font>
             </control>
@@ -1800,7 +1779,6 @@
                     <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
                     <height>225</height>
                     <align>center</align>
-                    <aligny>center</aligny>
                     <label>[B]$INFO[ListItem.Label][/B]</label>
                     <font>Font_Reg17_Caps</font>
                 </control>
@@ -1822,7 +1800,6 @@
                     <textcolor>white4</textcolor>
                     <height>225</height>
                     <align>center</align>
-                    <aligny>center</aligny>
                     <label>[B]$INFO[ListItem.Label][/B]</label>
                     <font>Font_Reg17_Caps</font>
                 </control>
@@ -2147,7 +2124,6 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <aligny>center</aligny>
                 <font>Font_Info_Caps</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey</textcolor>
@@ -2167,7 +2143,6 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <aligny>center</aligny>
                 <font>Font_Reg19_Caps</font>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
@@ -2179,7 +2154,6 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <aligny>center</aligny>
                 <font>Font_Reg19_Caps</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey</textcolor>
@@ -2629,6 +2603,13 @@
                 <onclick condition="IsEmpty(Skin.String(TVShowsSub4))">Skin.SetString(TVShowsSub4,1)</onclick>
                 <onclick condition="!IsEmpty(Skin.String(TVShowsSub4))">Skin.Reset(TVShowsSub4)</onclick>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub4)]</property>
+                <visible>Substring(Control.GetLabel(4327),tv)</visible>
+            </item>
+            <item>
+                <label>575</label>
+                <onclick condition="IsEmpty(Skin.String(TVShowsSub8))">Skin.SetString(TVShowsSub8,1)</onclick>
+                <onclick condition="!IsEmpty(Skin.String(TVShowsSub8))">Skin.Reset(TVShowsSub8)</onclick>
+                <property name="DisableIcon">$INFO[Skin.String(TVShowsSub8)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
             <item>
@@ -3554,75 +3535,75 @@
     <include name="WatchlistMoviesBackgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.3.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.3.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.4.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.4.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.5.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.5.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.6.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.6.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.7.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.7.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.8.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.8.Fanart))</visible>
         </item>
     </include>
     <include name="WatchlistAlbumsBackgrounds">
         <item>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.3.Fanart)]</property>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.3.Fanart))</visible>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.3.Fanart)]</property>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.3.Fanart))</visible>
             <onclick>-</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
         <item>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.4.Fanart))</visible>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.4.Fanart)]</property>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.4.Fanart))</visible>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.4.Fanart)]</property>
             <onclick>-</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
         <item>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.5.Fanart))</visible>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.5.Fanart)]</property>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.5.Fanart))</visible>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.5.Fanart)]</property>
             <onclick>-</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
         <item>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.6.Fanart)]</property>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.6.Fanart))</visible>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.6.Fanart)]</property>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.6.Fanart))</visible>
             <onclick>-</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
         <item>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.7.Fanart)]</property>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.7.Fanart))</visible>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.7.Fanart)]</property>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.7.Fanart))</visible>
             <onclick>-</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
         <item>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.8.Fanart)]</property>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.8.Fanart))</visible>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.8.Fanart)]</property>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.8.Fanart))</visible>
             <onclick>-</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
@@ -3630,39 +3611,39 @@
     <include name="WatchlistTVBackgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.3.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.4.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.5.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.6.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.7.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.8.Fanart))</visible>
         </item>
     </include>
     <include name="RandomPicturesBackgrounds">
@@ -3932,39 +3913,39 @@
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.1.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Movie.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.2.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),inprogressmovies)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Movie.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.2.Fanart))</visible>
         </item>
         <item>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Fanart)]</property>
             <onclick>-</onclick>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.1.Fanart))</visible>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
         <item>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Album.2.Fanart)]</property>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Album.2.Fanart))</visible>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.2.Fanart)]</property>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.2.Fanart))</visible>
             <onclick>-</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmusic)</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.1.Fanart))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(WatchList_Episode.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Fanart)]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
-            <visible>!IsEmpty(Window(Home).Property(WatchList_Episode.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.2.Fanart))</visible>
         </item>
         <item>
             <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=1)</onclick>
@@ -4006,7 +3987,7 @@
     <include name="WorldWeatherIcons">
         <control type="group">
             <visible>StringCompare(Control.GetLabel(4322),googleweather2)</visible>
-            <include>VisibleFadeEffect</include>
+            <include>Animation_VisibleChange200</include>
             <include>Animation_WindowFade200</include>
             <include>WeatherWorldGroup2601</include>
             <include>WeatherWorldGroup2602</include>

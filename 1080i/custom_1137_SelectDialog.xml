@@ -7,6 +7,8 @@
     <zorder>4</zorder>
     <coordinates>
         <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
@@ -57,7 +59,6 @@
                     <align>center</align>
                     <label>$VAR[Window1137Label1Var]</label>
                     <scroll>true</scroll>
-                    <textoffsetx>45</textoffsetx>
                 </control>
                 <control type="group">
                     <visible>Window.IsActive(home)</visible>

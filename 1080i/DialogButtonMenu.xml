@@ -6,6 +6,8 @@
     <zorder>7</zorder>
     <coordinates>
         <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
     </coordinates>
     <include>Animation_DialogZoom</include>
     <controls>
@@ -13,12 +15,12 @@
         <include condition="Skin.HasSetting(effect_bg)">BG_Effect_Home</include>
         <include condition="Skin.HasSetting(quicklistmenu)">QuickList</include>
         <control type="group">
+            <posx>40</posx>
             <visible>!Skin.HasSetting(quicklistmenu)</visible>
             <control type="grouplist" id="800">
-                <posx>730</posx>
-                <width>460</width>
+                <posx>670</posx>
+                <width>550</width>
                 <height>1080</height>
-                <itemgap>0</itemgap>
                 <onleft>800</onleft>
                 <onright>800</onright>
                 <onup>800</onup>
@@ -27,7 +29,7 @@
                 <align>center</align>
                 <control type="image" id="18">
                     <posy>-39</posy>
-                    <width>460</width>
+                    <width>488</width>
                     <height>39</height>
                     <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                     <texture>$VAR[ShutdownTopVar]</texture>
@@ -118,16 +120,16 @@
                 </control>
                 <control type="image" id="19">
                     <posy>699</posy>
-                    <width>460</width>
+                    <width>488</width>
                     <height>40</height>
                     <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                     <texture>$VAR[ContextBottomVar]</texture>
                 </control>
             </control>
             <control type="grouplist">
-                <posx>754</posx>
+                <posx>714</posx>
                 <posy>0</posy>
-                <width>460</width>
+                <width>550</width>
                 <height>1080</height>
                 <itemgap>12</itemgap>
                 <orientation>vertical</orientation>
@@ -154,7 +156,7 @@
                 <control type="image">
                     <texture>special://skin/extras/BigIcons/Battery.png</texture>
                     <include>Objects_ShutdownMenuIcon</include>
-                    <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(10)">Conditional</animation>
+                    <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(10) + !Control.HasFocus(5)">Conditional</animation>
                     <visible>System.CanHibernate | System.CanSuspend</visible>
                 </control>
                 <control type="image">
