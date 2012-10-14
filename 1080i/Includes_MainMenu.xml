@@ -710,7 +710,7 @@
         <item>
             <label>31334</label>
             <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
-            <onclick>ActivateWindow(Videos,library://video/recentlyaddedmovies.xml,return)</onclick>
+            <onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
             <visible>Substring(Control.GetLabel(4327),movies) + IsEmpty(Skin.String(MoviesSub3))</visible>
         </item>
         <item>
@@ -796,7 +796,7 @@
         </item>
         <item>
             <label>31334</label>
-            <onclick>ActivateWindow(Videos,library://video/recentlyaddedepisodes.xml,return)</onclick>
+            <onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
             <visible>Substring(Control.GetLabel(4327),tv) + IsEmpty(Skin.String(TVShowsSub4))</visible>
         </item>
         <item>
@@ -1132,7 +1132,7 @@
             <property name="InfoLine">$INFO[Skin.String(FeaturedHomeItem.InfoLine)]</property>
             <property name="SubMenu">$INFO[Skin.String(FeaturedHomeItem.SubMenu)]</property>
             <thumb>$INFO[Skin.String(FeaturedHomeItem.MultiFanart)]</thumb>
-            <visible>System.HasAddon(script.watchlist) | !IsEmpty(Skin.String(FeaturedHomeItem.Path))</visible>
+            <visible>System.HasAddon(service.skin.widgets) | !IsEmpty(Skin.String(FeaturedHomeItem.Path))</visible>
         </item>
     </include>
     <include name="CustomMainMenuItem1">
@@ -1563,7 +1563,9 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Info_Caps</font>
+                <animation effect="zoom" center="112,25" start="100" end="130" time="200" tween="quadratic" easing="out">Focus</animation>
+                <animation effect="zoom" center="112,25" start="130" end="100" time="200" tween="quadratic" easing="out">Unfocus</animation>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey2</textcolor>
@@ -1573,7 +1575,9 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Reg19_Caps</font>
+                <animation effect="zoom" center="112,25" start="100" end="130" time="200" tween="quadratic" easing="out">Focus</animation>
+                <animation effect="zoom" center="112,25" start="130" end="100" time="200" tween="quadratic" easing="out">Unfocus</animation>
+                <font>Font_Info_Caps</font>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
@@ -2143,7 +2147,9 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Info_Caps</font>
+                <animation effect="zoom" center="112,25" start="100" end="130" time="200" tween="quadratic" easing="out">Focus</animation>
+                <animation effect="zoom" center="112,25" start="130" end="100" time="200" tween="quadratic" easing="out">Unfocus</animation>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
@@ -2154,7 +2160,9 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Info_Caps</font>
+                <animation effect="zoom" center="112,25" start="100" end="130" time="200" tween="quadratic" easing="out">Focus</animation>
+                <animation effect="zoom" center="112,25" start="130" end="100" time="200" tween="quadratic" easing="out">Unfocus</animation>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey</textcolor>
                 <visible>!Control.HasFocus(9010)</visible>

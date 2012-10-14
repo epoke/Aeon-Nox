@@ -815,9 +815,6 @@
             </control>
         </control>
     </include>
-    <include name="CommonVerticalScrollbar">
-        <texturesliderbackground>views/scrollbarbacklist.png</texturesliderbackground>
-    </include>
     <include name="AutoConfig">
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(diffuse_programs,FF6db9e5)</onload>
         <onload condition="!Skin.HasSetting(firstrun)">Skin.SetString(diffuse_music,FF6db9e5)</onload>
@@ -1486,7 +1483,7 @@
             <visible>!Skin.HasSetting(DisableVideoThumb) + !substring(Control.GetLabel(888777),defaultvideo)</visible>
             <include>Animation_VisibleChange200</include>
             <control type="group">
-                <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) VideoPlayer.Content(episodes)</visible>
+                <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
                 <animation type="WindowOpen">
                     <effect type="slide" start="-450,0" end="0,0" time="600" tween="cubic" easing="out" />
                 </animation>
@@ -1519,7 +1516,7 @@
                     <posy>600</posy>
                     <width>310</width>
                     <height>465</height>
-                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$INFO[Player.Property(TVShowThumb)]</texture>
+                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$INFO[Player.Art(TVShowThumb)]</texture>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <visible>VideoPlayer.Content(episodes)</visible>
                 </control>
@@ -1581,6 +1578,7 @@
             <posy>956</posy>
             <width>1140</width>
             <height>8</height>
+            <aligny>top</aligny>
             <align>center</align>
             <font>Font_Reg19</font>
             <textcolor>$VAR[TitleColorVar]</textcolor>
@@ -1600,6 +1598,7 @@
             <posy>956</posy>
             <width>1140</width>
             <height>8</height>
+            <aligny>top</aligny>
             <align>center</align>
             <font>Font_Reg19</font>
             <textcolor>$VAR[TitleColorVar]</textcolor>
