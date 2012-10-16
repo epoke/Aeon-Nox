@@ -1467,7 +1467,8 @@
                     <include condition="!Skin.HasSetting(lowermainmenu)">Animation_PanelFlipUp1</include>
                 </animation>
                 <control type="group">
-                    <!-- <visible>Substring(Control.GetLabel(4321),panel,right)</visible> -->
+                    <include>Animation_VisibleChange200</include>
+                    <visible>!Substring(Control.GetLabel(4321),transparent)</visible>
                     <control type="image">
                         <width>1650</width>
                         <height>402</height>
@@ -2399,8 +2400,8 @@
                     <height>360</height>
                     <texture border="50">featured/panel_featured_overlay.png</texture>
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-                    <!--                     <visible>Substring(Control.GetLabel(4321),panel,right)</visible>
- -->
+                    <include>Animation_VisibleChange200</include>
+                    <visible>!Substring(Control.GetLabel(4321),transparent)</visible>
                 </control>
             </control>
             <control type="group">
@@ -2488,6 +2489,15 @@
                         <fadetime>400</fadetime>
                         <texture background="true">$INFO[Container(5010).ListItem.Property(RootPath),,/logo.png]</texture>
                     </control>
+                    <control type="image">
+                        <posx>1261</posx>
+                        <posy>10</posy>
+                        <width>300</width>
+                        <height>116</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>400</fadetime>
+                        <texture background="true">$INFO[Container(5010).ListItem.Property(Logo)]</texture>
+                    </control>
                     <control type="grouplist" id="5020">
                         <posx>238</posx>
                         <posy>98</posy>
@@ -2538,7 +2548,7 @@
                         </control>
                         <control type="button" id="5018">
                             <label>$LOCALIZE[31087]</label>
-                            <onclick>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onclick>
+                            <onclick>SetProperty(SkinWidgets_RandomItems_Update,true)</onclick>
                             <include>WidgetMenuLabel</include>
                             <visible>Substring(Control.GetLabel(4321),random) + !Substring(Control.GetLabel(4321),custom)</visible>
                             <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
@@ -2556,7 +2566,7 @@
                             <onclick condition="SubString(Control.GetLabel(4321),4custom)">$INFO[Skin.String(SmartPlaylist4.Call)]</onclick>
                             <onclick condition="SubString(Control.GetLabel(4321),5custom)">$INFO[Skin.String(SmartPlaylist5.Call)]</onclick>
                             <onclick condition="SubString(Control.GetLabel(4321),6custom)">$INFO[Skin.String(SmartPlaylist6.Call)]</onclick>
-                            <onright condition="SubString(Control.GetLabel(4321),random) + !SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer))">XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onright>
+                            <onright condition="SubString(Control.GetLabel(4321),random) + !SubString(Control.GetLabel(4321),custom) + IsEmpty(Container(8000).ListItem.Property(Trailer))">SetProperty(SkinWidgets_RandomItems_Update,true)</onright>
                             <include>WidgetMenuLabel</include>
                             <visible>Substring(Control.GetLabel(4321),random) + Substring(Control.GetLabel(4321),custom)</visible>
                             <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
@@ -2681,11 +2691,11 @@
                             <ondown>SetFocus(5010)</ondown>
                             <visible>Substring(Control.GetLabel(4321),rss)</visible>
                         </control>
-                        <control type="button" id="5023">
-                            <label>$LOCALIZE[31066]</label>
-                            <onclick>ClearProperty(PanelWidgetInfo,Home)</onclick>
-                            <onclick>SetFocus(5010)</onclick>
+                        <control type="button" id="5024">
+                            <label>$LOCALIZE[31087]</label>
+                            <onclick>SetProperty(SkinWidgets_RandomItems_Update,true)</onclick>
                             <include>WidgetMenuLabel</include>
+                            <visible>Substring(Control.GetLabel(4321),random)</visible>
                             <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
                             <onback>SetFocus(5010)</onback>
                             <onup>ClearProperty(PanelWidgetInfo,Home)</onup>
@@ -2693,11 +2703,11 @@
                             <ondown>ClearProperty(PanelWidgetInfo,Home)</ondown>
                             <ondown>SetFocus(5010)</ondown>
                         </control>
-                        <control type="button" id="5024">
-                            <label>$LOCALIZE[31087]</label>
-                            <onclick>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onclick>
+                        <control type="button" id="5023">
+                            <label>$LOCALIZE[31066]</label>
+                            <onclick>ClearProperty(PanelWidgetInfo,Home)</onclick>
+                            <onclick>SetFocus(5010)</onclick>
                             <include>WidgetMenuLabel</include>
-                            <visible>Substring(Control.GetLabel(4321),random)</visible>
                             <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
                             <onback>SetFocus(5010)</onback>
                             <onup>ClearProperty(PanelWidgetInfo,Home)</onup>
@@ -2740,7 +2750,7 @@
                         <label>$INFO[Container(5010).ListItem.Label2]</label>
                         <textoffsetx>15</textoffsetx>
                     </control>
-                    <control type="label">
+<!--                     <control type="label">
                         <posx>345</posx>
                         <posy>150</posy>
                         <width>1251</width>
@@ -2750,7 +2760,7 @@
                         <label>$INFO[Container(5010).ListItem.Label]</label>
                         <textoffsetx>15</textoffsetx>
                         <visible>!Substring(Control.GetLabel(4321),watchlistmusic)</visible>
-                    </control>
+                    </control> -->
                     <control type="label">
                         <posx>360</posx>
                         <posy>145</posy>
@@ -2800,6 +2810,7 @@
                             <label>$LOCALIZE[208]</label>
                             <include>WidgetMenuLabel</include>
                             <onclick condition="Substring(Control.GetLabel(4321),artist)">ActivateWindow(musiclibrary,$ESCINFO[Container(5010).ListItem.Property(Path)],return)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),album) | Substring(Control.GetLabel(4321),watchlistmusic)">$INFO[Container(5010).ListItem.Property(Path)]</onclick>
                             <onclick condition="!Substring(Control.GetLabel(4321),artist) + !Substring(Control.GetLabel(4321),addons)">$INFO[Container(5010).ListItem.Property(Path)]</onclick>
                             <onclick condition="Substring(Control.GetLabel(4321),addons)">RunAddon($INFO[Container(5010).ListItem.Property(Path)])</onclick>
                             <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
@@ -2809,21 +2820,9 @@
                             <ondown>ClearProperty(PanelWidgetInfo,Home)</ondown>
                             <ondown>SetFocus(5010)</ondown>
                         </control>
-                        <control type="button" id="5033">
-                            <label>$LOCALIZE[31066]</label>
-                            <onclick>ClearProperty(PanelWidgetInfo,Home)</onclick>
-                            <onclick>SetFocus(5010)</onclick>
-                            <include>WidgetMenuLabel</include>
-                            <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
-                            <onback>SetFocus(5010)</onback>
-                            <onup>ClearProperty(PanelWidgetInfo,Home)</onup>
-                            <onup>SetFocus(5010)</onup>
-                            <ondown>ClearProperty(PanelWidgetInfo,Home)</ondown>
-                            <ondown>SetFocus(5010)</ondown>
-                        </control>
                         <control type="button" id="5034">
                             <label>$LOCALIZE[31087]</label>
-                            <onclick>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onclick>
+                            <onclick>SetProperty(SkinWidgets_RandomItems_Update,true)</onclick>
                             <include>WidgetMenuLabel</include>
                             <visible>Substring(Control.GetLabel(4321),random) + !Substring(Control.GetLabel(4321),pics)</visible>
                             <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
@@ -2838,6 +2837,18 @@
                             <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onclick>
                             <include>WidgetMenuLabel</include>
                             <visible>Substring(Control.GetLabel(4321),randompics)</visible>
+                            <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
+                            <onback>SetFocus(5010)</onback>
+                            <onup>ClearProperty(PanelWidgetInfo,Home)</onup>
+                            <onup>SetFocus(5010)</onup>
+                            <ondown>ClearProperty(PanelWidgetInfo,Home)</ondown>
+                            <ondown>SetFocus(5010)</ondown>
+                        </control>
+                        <control type="button" id="5033">
+                            <label>$LOCALIZE[31066]</label>
+                            <onclick>ClearProperty(PanelWidgetInfo,Home)</onclick>
+                            <onclick>SetFocus(5010)</onclick>
+                            <include>WidgetMenuLabel</include>
                             <onback>ClearProperty(PanelWidgetInfo,Home)</onback>
                             <onback>SetFocus(5010)</onback>
                             <onup>ClearProperty(PanelWidgetInfo,Home)</onup>
@@ -2922,6 +2933,128 @@
                         <visible>Control.HasFocus(5010)</visible>
                     </control>
                 </focusedlayout>
+
+                <itemlayout width="532" height="340" condition="Substring(Control.GetLabel(4321),logo,right)">
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>5</posy>
+                        <width>512</width>
+                        <height>340</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture background="true" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Property(Logo)]</texture>
+                    </control>
+
+                        <control type="label">
+                            <posx>5</posx>
+                            <posy>307</posy>
+                            <width>532</width>
+                            <height>30</height>
+                            <font>Font_Reg19</font>
+                            <label>$INFO[ListItem.Property(Tagline)]</label>
+                            <textoffsetx>15</textoffsetx>
+                        </control>
+                </itemlayout>
+                <focusedlayout width="532" height="340" condition="Substring(Control.GetLabel(4321),logo,right)">
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>5</posy>
+                        <width>512</width>
+                                <animation effect="zoom" center="246,170" start="95" end="100" time="600" tween="back" easing="out" reversible="false">Focus</animation>
+                        <height>340</height>
+                        <texture background="true" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Property(Logo)]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>532</width>
+                        <height>350</height>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <texture border="5">views/addonwall_select.png</texture>
+                        <visible>Control.HasFocus(5010)</visible>
+                    </control>
+                        <control type="label">
+                            <posx>5</posx>
+                            <posy>307</posy>
+                            <width>532</width>
+                            <height>30</height>
+                            <font>Font_Reg19</font>
+                            <visible>!Control.HasFocus(5010)</visible>
+                            <label>$INFO[ListItem.Property(Tagline)]</label>
+                            <textoffsetx>15</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>5</posx>
+                            <posy>307</posy>
+                            <width>532</width>
+                            <height>30</height>
+                            <font>Font_Reg19</font>
+                            <textcolor>$VAR[FontColorVar]</textcolor>
+                            <label>$INFO[ListItem.Property(Tagline)]</label>
+                            <textoffsetx>15</textoffsetx>
+                            <visible>Control.HasFocus(5010)</visible>
+                        </control>
+                </focusedlayout>
+
+                <itemlayout width="532" height="340" condition="Substring(Control.GetLabel(4321),clearart,right)">
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>0</posy>
+                        <width>492</width>
+                        <height>340</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture background="true" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Property(ClearArt)]</texture>
+                    </control>
+
+                        <control type="label">
+                            <posx>5</posx>
+                            <posy>307</posy>
+                            <width>532</width>
+                            <height>30</height>
+                            <font>Font_Reg19</font>
+                            <label>$INFO[ListItem.Property(EpisodeNumber)]: $INFO[ListItem.Label]</label>
+                            <textoffsetx>15</textoffsetx>
+                        </control>
+                </itemlayout>
+                <focusedlayout width="532" height="340" condition="Substring(Control.GetLabel(4321),clearart,right)">
+                    <control type="image">
+                        <posx>20</posx>
+                        <posy>0</posy>
+                                <animation effect="zoom" center="246,170" start="95" end="100" time="600" tween="back" easing="out" reversible="false">Focus</animation>
+                        <width>492</width>
+                        <height>340</height>
+                        <texture background="true" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Property(ClearArt)]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                        <control type="label">
+                            <posx>5</posx>
+                            <posy>307</posy>
+                            <width>532</width>
+                            <height>30</height>
+                            <font>Font_Reg19</font>
+                            <visible>!Control.HasFocus(5010)</visible>
+                            <label>$INFO[ListItem.Property(EpisodeNumber)]: $INFO[ListItem.Label]</label>
+                            <textoffsetx>15</textoffsetx>
+                        </control>
+                        <control type="label">
+                            <posx>5</posx>
+                            <posy>307</posy>
+                            <width>532</width>
+                            <height>30</height>
+                            <font>Font_Reg19</font>
+                            <textcolor>$VAR[FontColorVar]</textcolor>
+                            <label>$INFO[ListItem.Property(EpisodeNumber)]: $INFO[ListItem.Label]</label>
+                            <textoffsetx>15</textoffsetx>
+                            <visible>Control.HasFocus(5010)</visible>
+                        </control>
+                    <control type="image">
+                        <width>532</width>
+                        <height>350</height>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <texture border="5">views/addonwall_select.png</texture>
+                        <visible>Control.HasFocus(5010)</visible>
+                    </control>
+                </focusedlayout>
+
+                
                 <itemlayout width="319" height="360" condition="Substring(Control.GetLabel(4321),panel,right) + [Substring(Control.GetLabel(4321),babe) | Substring(Control.GetLabel(4321),addons) | Substring(Control.GetLabel(4321),albums) | Substring(Control.GetLabel(4321),artists) | Stringcompare(Control.GetLabel(4321),watchlistmusicpanel)]">
                     <control type="group">
                         <control type="image">
@@ -3160,44 +3293,42 @@
                     </control>
                 </focusedlayout>
                 <content>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),recentmoviespanel)">LatestMoviesItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randommoviespanel)">RandomMoviesItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),recentmusicvideospanel)">MusicvideoLatestItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randommusicvideospanel)">MusicvideoRandomItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),inprogressmoviespanel)">WatchlistMoviesItems</include>
+                    <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),recentmoviespanel)]">LatestMoviesItems</include>
+                    <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),randommoviespanel)]">RandomMoviesItems</include>
+                    <include condition="Library.HasContent(musicvideos) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),watchlistmusicvideospanel)]">WatchListMusicVideosItems</include>
+                    <include condition="Library.HasContent(musicvideos) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),recentmusicvideospanel)">MusicvideoLatestItems</include>
+                    <include condition="Library.HasContent(musicvideos) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),randommusicvideospanel)">MusicvideoRandomItems</include>
+                    <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),inprogressmoviespanel)]">WatchlistMoviesItems</include>
+                    <include condition="Library.HasContent(music) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomalbumspanel)">RandomAlbumsItems</include>
+                    <include condition="Library.HasContent(music) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomartistspanel)">RandomArtistsItems</include>
+                    <include condition="Library.HasContent(music) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),recentalbumspanel)">LatestAlbumsItems</include>
+                    <include condition="Library.HasContent(music) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),watchlistmusicpanel)">WatchlistMusicItems</include>
+                    <include condition="System.HasAddon(script.metadata.actors) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),actorspanel)">BornActorsItems</include>
+                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomaddonspanel)">RandomAddonsItems</include>
+                    <include condition="Library.HasContent(tvshows) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),recenttvpanel)">LatestEpisodesItems</include>
+                    <include condition="Library.HasContent(tvshows) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomtvpanel)">RandomEpisodesItems</include>
+                    <include condition="Library.HasContent(tvshows) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),watchlisttvpanel)">WatchListTVItems</include>
+                    <include condition="System.HasAddon(plugin.image.mypicsdb) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),randompicspanel)">RandomPicturesItems</include>
+                    <include condition="System.HasAddon(plugin.image.mypicsdb) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),recentpicspanel)">LatestPicturesItems</include>
                     <include condition="Window.IsActive(1124) | SubString(Skin.String(widgetlist),1custompanel)">Custom1Widget</include>
                     <include condition="Window.IsActive(1124) | SubString(Skin.String(widgetlist),2custompanel)">Custom2Widget</include>
                     <include condition="Window.IsActive(1124) | SubString(Skin.String(widgetlist),3custompanel)">Custom3Widget</include>
                     <include condition="Window.IsActive(1124) | SubString(Skin.String(widgetlist),4custompanel)">Custom4Widget</include>
                     <include condition="Window.IsActive(1124) | SubString(Skin.String(widgetlist),5custompanel)">Custom5Widget</include>
                     <include condition="Window.IsActive(1124) | SubString(Skin.String(widgetlist),6custompanel)">Custom6Widget</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomalbumspanel)">RandomAlbumsItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomartistspanel)">RandomArtistsItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),recentalbumspanel)">LatestAlbumsItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),watchlistmusicpanel)">WatchlistMusicItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),actorspanel)">BornActorsItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomaddonspanel)">RandomAddonsItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),recenttvpanel)">LatestEpisodesItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomtvpanel)">RandomEpisodesItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),watchlisttvpanel)">WatchListTVItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randompics)">RandomPicturesItems</include>
-                    <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),recentpics)">LatestPicturesItems</include>
-                    <include condition="Window.IsActive(1124)">LatestMoviesItems1124</include>
-                    <include condition="Window.IsActive(1124)">RandomMoviesItems1124</include>
-                    <include condition="Window.IsActive(1124)">MusicvideoLatestItems1124</include>
-                    <include condition="Window.IsActive(1124)">MusicvideoRandomItems1124</include>
-                    <include condition="Window.IsActive(1124)">WatchlistMoviesItems1124</include>
-                    <include condition="Window.IsActive(1124)">RandomAlbumsItems1124</include>
-                    <include condition="Window.IsActive(1124)">RandomArtistsItems1124</include>
-                    <include condition="Window.IsActive(1124)">LatestAlbumsItems1124</include>
-                    <include condition="Window.IsActive(1124)">WatchlistMusicItems1124</include>
-                    <include condition="Window.IsActive(1124)">LatestEpisodesItems1124</include>
-                    <include condition="Window.IsActive(1124)">RandomEpisodesItems1124</include>
-                    <include condition="Window.IsActive(1124)">RandomPicturesItems1124</include>
-                    <include condition="Window.IsActive(1124)">LatestPicturesItems1124</include>
-                    <include condition="Window.IsActive(1124)">BornActorsItems1124</include>
-                    <include condition="Window.IsActive(1124)">RandomAddonsItems1124</include>
-                    <include condition="Window.IsActive(1124)">WatchListTVItems1124</include>
+                    <include condition="Library.HasContent(musicvideos) + Window.IsActive(1124)">MusicvideoLatestItems_1124</include>
+                    <include condition="Library.HasContent(musicvideos) + Window.IsActive(1124)">MusicvideoRandomItems_1124</include>
+                    <include condition="Library.HasContent(music) + Window.IsActive(1124)">RandomAlbumsItems_1124</include>
+                    <include condition="Library.HasContent(music) + Window.IsActive(1124)">RandomArtistsItems_1124</include>
+                    <include condition="Library.HasContent(music) + Window.IsActive(1124)">LatestAlbumsItems_1124</include>
+                    <include condition="Library.HasContent(music) + Window.IsActive(1124)">WatchlistMusicItems_1124</include>
+                    <include condition="System.HasAddon(script.metadata.actors) + Window.IsActive(1124)">BornActorsItems_1124</include>
+                    <include condition="Window.IsActive(1124)">RandomAddonsItems_1124</include>
+                    <include condition="Library.HasContent(tvshows) + Window.IsActive(1124)">LatestEpisodesItems_1124</include>
+                    <include condition="Library.HasContent(tvshows) + Window.IsActive(1124)">RandomEpisodesItems_1124</include>
+                    <include condition="Library.HasContent(tvshows) + Window.IsActive(1124)">WatchListTVItems_1124</include>
+                    <include condition="System.HasAddon(plugin.image.mypicsdb) + Window.IsActive(1124)">RandomPicturesItems_1124</include>
+                    <include condition="System.HasAddon(plugin.image.mypicsdb) + Window.IsActive(1124)">LatestPicturesItems_1124</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),babe)">DailyBabesContent</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss1panel)]">RSS1WidgetContent1124</include>
                     <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss1panel)">RSS1WidgetContent</include>
@@ -5820,7 +5951,7 @@
         <height>42</height>
         <aligny>top</aligny>
         <align>center</align>
-        <width min="15" max="220">auto</width>
+        <width min="15" max="260">auto</width>
         <font>Font_Reg19_Caps</font>
         <focusedcolor>white2</focusedcolor>
         <textcolor>grey</textcolor>
