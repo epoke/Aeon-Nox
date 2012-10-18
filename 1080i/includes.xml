@@ -785,7 +785,7 @@
         <textcolor>$VAR[SubTitleColorVar]</textcolor>
     </include>
     <include name="Objects_CommonSettingsScrollbar">
-        <posx>354</posx>
+        <posx>1524</posx>
         <posy>285</posy>
         <width>46</width>
         <height>540</height>
@@ -1263,7 +1263,6 @@
                 <height>180</height>
                 <texture>$INFO[VideoPlayer.Cover]</texture>
                 <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(VideoPlayer.Cover)</visible>
             </control>
         </control>
         <control type="group" id="1">
@@ -1505,7 +1504,7 @@
                     <posy>600</posy>
                     <width>310</width>
                     <height>465</height>
-                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$INFO[Player.Art(TVShowThumb)]</texture>
+                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$INFO[Player.Art(tvshowthumb)]</texture>
                     <aspectratio aligny="bottom">stretch</aspectratio>
                     <visible>VideoPlayer.Content(episodes)</visible>
                 </control>

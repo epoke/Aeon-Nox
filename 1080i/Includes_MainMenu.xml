@@ -612,8 +612,8 @@
     </include>
     <include name="DefaultSystemSubMenu">
         <item>
-            <label>5</label>
-            <onclick>ActivateWindow(Settings)</onclick>
+            <label>Skin Settings</label>
+            <onclick>ActivateWindow(SkinSettings)</onclick>
             <visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub1))</visible>
         </item>
         <item>
@@ -635,6 +635,11 @@
             <label>24001</label>
             <onclick>ActivateWindow(AddonBrowser)</onclick>
             <visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub5))</visible>
+        </item>
+        <item>
+            <label>Edit Main Menu</label>
+            <onclick>ActivateWindow(1124)</onclick>
+            <visible>Substring(Control.GetLabel(4327),settings) + IsEmpty(Skin.String(SystemSub6))</visible>
         </item>
     </include>
     <include name="DefaultShutdownSubMenu">
@@ -2296,7 +2301,7 @@
             </item>
             <!--System-->
             <item>
-                <label>5</label>
+                <label>Skin Settings</label>
                 <onclick condition="IsEmpty(Skin.String(SystemSub1))">Skin.SetString(SystemSub1,1)</onclick>
                 <onclick condition="!IsEmpty(Skin.String(SystemSub1))">Skin.Reset(SystemSub1)</onclick>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub1)]</property>
@@ -2328,6 +2333,13 @@
                 <onclick condition="IsEmpty(Skin.String(SystemSub5))">Skin.SetString(SystemSub5,1)</onclick>
                 <onclick condition="!IsEmpty(Skin.String(SystemSub5))">Skin.Reset(SystemSub5)</onclick>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub5)]</property>
+                <visible>Substring(Control.GetLabel(4327),settings)</visible>
+            </item>
+            <item>
+                <label>Edit Main Menu</label>
+                <onclick condition="IsEmpty(Skin.String(SystemSub6))">Skin.SetString(SystemSub6,1)</onclick>
+                <onclick condition="!IsEmpty(Skin.String(SystemSub6))">Skin.Reset(SystemSub6)</onclick>
+                <property name="DisableIcon">$INFO[Skin.String(SystemSub6)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
             </item>
             <!--Custom-->
