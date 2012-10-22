@@ -254,7 +254,7 @@
     <string id="31427">개요</string>
     <string id="31428">종료 시간</string>
     <string id="31429">표시</string>
-    <string id="31452">Not rated</string>
+    <string id="31452">등급 없음</string>
     <string id="31453">방송 시간</string>
     <string id="31454">배너</string>
     <string id="31458">평점을 변경하려면 위 또는 아래 화살표를 누르세요</string>
@@ -323,7 +323,7 @@
     <string id="31676">상단 바</string>
     <string id="31677">왼쪽</string>
     <string id="31186">전시 모드</string>
-    <string id="31179">Disable media menu and hide options in video info</string>
+    <string id="31179">미디어 메뉴를 사용하지 않고 비디오 정보에서 옵션을 숨김</string>
     <string id="31180">미디어 메뉴에서 옵션 숨기기</string>
     <string id="31378">음악 라이브러리 경로 설정 (extrafanart, clearclearLOGO에 필요)</string>
     <string id="31678">현재 날씨 상태 배경화면 경로 설정</string>
@@ -411,7 +411,7 @@
     <string id="42001">지연 시간을 변경하려면 오른쪽 화살표를 누르세요</string>
     <string id="42002">알림</string>
     <string id="42003">변경을 보려면 오른쪽 화살표를 누르세요</string>
-    <string id="42004">Extra/Season-FanArt are not supported by XBMC natively</string>
+    <string id="42004">추가/시즌 팬아트는 XBMC에서 기본으로 지원되지 않습니다.</string>
     <string id="42005">script.cinema.experience가 필요합니다</string>
     <string id="42006">script.randommovie가 필요합니다</string>
     <string id="42007">Press RIGHT to select path to wall viz</string>
@@ -423,8 +423,8 @@
     <string id="42014">설정가능한 옵션을 보려면 메뉴 항목을 누르세요</string>
     <string id="42015">설정의 변경 효과를 실시간으로 확인하려면 음악을 재생하세요</string>
     <string id="42016">아티스트슬라이드쇼 애드온에서 "Additional Artist Info"가 활성화되어야 합니다.</string>
-    <string id="42017">Welcome to Aeon Nox 4.0</string>
-    <string id="42018">Visit XBMC.org Forums for support</string>
+    <string id="42017">Aeon Nox 4.0 사용을 환영합니다</string>
+    <string id="42018">XBMC.org 포럼에서 사용정보를 얻을 수 있습니다</string>
 
 
     <string id="42100">'추천' 윈도우 영역 색상 설정</string>
@@ -505,14 +505,14 @@
     <string id="42268">MAC 주소 입력</string>
     <string id="42269">온라인 튜토리얼 동영상</string>
     <string id="42270">도움말</string>
-    <string id="42271">Passion-XBMC 리포를 이용해 설치하세요</string>
+    <string id="42271">Passion-XBMC 저장소 애드온을 이용해 설치하세요</string>
     <string id="42272">혼합</string>
     <string id="42273">혼합 TV</string>
     <string id="42274">혼합 음악</string>
     <string id="42275">이 영역의 컨텐츠 없음</string>
     <string id="42277">홈화면 지금재생중 사용자 설정</string>
     <string id="42278">설정을 확인하려면 "재생" 버튼을 누르세요</string>
-    <string id="42279">Fade background in video</string>
+    <string id="42279">비디오에서 배경화면 흐리게</string>
     <string id="42280">RSS 피드</string>
     <string id="42281">설정할 버튼을 누르세요</string>
     <string id="42282">"뒤로가기" 버튼을 눌러 위젯 숨기기 기능 사용하지 않음"</string>
