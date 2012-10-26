@@ -2908,7 +2908,6 @@
                     <label>$VAR[FeaturedInfoDialogLabel1Var]</label>
                 </control>
                 <control type="label">
-                    
                     <posy>45</posy>
                     <height>45</height>
                     <width>894</width>
@@ -2919,7 +2918,6 @@
                     <textoffsetx>30</textoffsetx>
                 </control>
                 <control type="label">
-                    
                     <posy>90</posy>
                     <height>45</height>
                     <width>894</width>
@@ -2952,7 +2950,6 @@
                     <label>$VAR[FeaturedInfoDialogLabel1Var]</label>
                 </control>
                 <control type="label">
-                    
                     <posy>45</posy>
                     <height>45</height>
                     <width>684</width>
@@ -2963,7 +2960,6 @@
                     <textoffsetx>30</textoffsetx>
                 </control>
                 <control type="label">
-                    
                     <posy>90</posy>
                     <height>45</height>
                     <width>684</width>
@@ -3071,13 +3067,14 @@
                     <visible></visible>
                     <itemgap>20</itemgap>
                     <orientation>horizontal</orientation>
+                    <usecontrolcoords>true</usecontrolcoords>
                     <control type="image">
                         <width>38</width>
                         <height>30</height>
                         <texture>common/featured_icon.png</texture>
                         <aspectratio>keep</aspectratio>
                         <colordiffuse>$VAR[BreadCrumbsContentColorVar]</colordiffuse>
-                        <animation effect="slide" start="0,0" end="0,6" time="0" condition="true">Conditional</animation>
+                        <posy>6</posy>
                     </control>
                     <control type="label">
                         <font>Font_Reg19_Caps</font>
