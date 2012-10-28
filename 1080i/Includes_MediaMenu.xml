@@ -122,10 +122,6 @@
             <selected>Window.IsVisible(MusicLibrary)</selected>
             <visible>Window.IsActive(MusicLibrary)</visible>
         </control>
-        <control type="button" id="17">
-            <include>Objects_MediaMenuButtonIcons</include>
-            <label>527</label>
-        </control>
     </include>
     <include name="VideoLibraryAltButtons_Left">
         <control type="radiobutton" id="16">
@@ -189,10 +185,10 @@
             <selected>Window.IsVisible(MusicLibrary)</selected>
             <visible>Window.IsActive(MusicFiles)</visible>
         </control>
-        <control type="button" id="11">
+               <control type="button" id="17">
             <include>Objects_MediaMenuButtonIcons</include>
-            <label>600</label>
-        </control>
+            <label>527</label>
+        </control> 
     </include>
     <include name="PicturesButtons">
         <control type="button" id="6">
@@ -405,7 +401,8 @@
                 </control>
                 <control type="grouplist">
                     <posy>15</posy>
-                    <itemgap>15</itemgap>
+                    <posx>3</posx>
+                    <itemgap>20</itemgap>
                     <control type="image">
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(1802)">Conditional</animation>
                         <include>MediaMenuIcons</include>
@@ -498,12 +495,6 @@
                         <visible>!Window.IsActive(musicplaylisteditor)</visible>
                     </control>
                     <control type="image">
-                        <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(17)">Conditional</animation>
-                        <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/flpp.png</texture>
-                        <visible>Control.IsVisible(17) + Window.IsActive(musiclibrary)</visible>
-                    </control>
-                    <control type="image">
                         <animation effect="fade" start="100" end="55" time="0" condition="![Control.HasFocus(6)]">Conditional</animation>
                         <include>MediaMenuIcons</include>
                         <texture>special://skin/extras/BigIcons/Paperclip.png</texture>
@@ -546,10 +537,10 @@
                         <visible>Control.IsVisible(22) + [Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist)]</visible>
                     </control>
                     <control type="image">
-                        <animation effect="fade" start="100" end="55" time="0" condition="![Control.HasFocus(11)]">Conditional</animation>
+                        <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(17)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/CD-DVD.png</texture>
-                        <visible>Control.IsVisible(11)</visible>
+                        <texture>special://skin/extras/BigIcons/flpp.png</texture>
+                        <visible>Control.IsVisible(17) + Window.IsActive(musicfiles)</visible>
                     </control>
                     <control type="image">
                         <animation effect="fade" start="100" end="55" time="0" condition="![Control.HasFocus(10)]">Conditional</animation>
@@ -646,8 +637,8 @@
         </control>
     </include>
     <include name="MediaMenuIcons">
-        <width>85</width>
-        <height>85</height>
+        <width>80</width>
+        <height>80</height>
         <posx>10</posx>
         <colordiffuse>white</colordiffuse>
     </include>

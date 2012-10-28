@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <fonts>
     <fontset id="Default" idloc="31390" unicode="true">
         <font>
@@ -649,6 +649,7 @@
             <name>Font_Reg22_Caps</name>
             <filename>MC360.ttf</filename>
             <style>uppercase</style>
+            <linespacing>0.70</linespacing>
             <size>37</size>
         </font>
         <font>
