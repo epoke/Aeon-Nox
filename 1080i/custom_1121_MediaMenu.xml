@@ -27,7 +27,7 @@
             <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
         </control>
         <control type="group">
-            <visible>Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(picturessettings) | Window.IsActive(programssettings) | Window.IsActive(weathersettings) | Window.IsActive(musicsettings) | Window.IsActive(systemsettings) | Window.IsActive(videossettings) | Window.IsActive(networksettings) | Window.IsActive(appearancesettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(10020)</visible>
+            <visible>Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(picturessettings) | Window.IsActive(programssettings) | Window.IsActive(weathersettings) | Window.IsActive(musicsettings) | Window.IsActive(systemsettings) | Window.IsActive(videossettings) | Window.IsActive(networksettings) | Window.IsActive(appearancesettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)</visible>
             <animation type="WindowClose">
                 <effect type="slide" end="-490" time="400" easing="in" tween="cubic" />
             </animation>
@@ -164,7 +164,7 @@
                 <item>
                     <label>$LOCALIZE[31236]</label>
                     <onclick>Container.SetViewMode(508)</onclick>
-                    <visible>Container.Content(TVShows) | Container.Content(movies)</visible>
+                    <visible>Container.Content(TVShows) | Container.Content(movies) | Container.Content(seasons)</visible>
                     <visible>![Window.IsActive(videos) + Skin.HasSetting(DisableBannersVL)]</visible>
                 </item>
                 <item>
@@ -216,13 +216,13 @@
                 <item>
                     <label>$LOCALIZE[31028]</label>
                     <onclick>Container.SetViewMode(501)</onclick>
-                    <visible>[[[Window.IsActive(videos) + [Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(files)]] | [Window.IsActive(programs) + !Container.Content(addons)] | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Skin.HasSetting(comics)] | SubString(Container.FolderPath,videodb://5/) | Container.Content(musicvideos)] + !Container.Content(addons)] | Window.IsActive(videoplaylist)</visible>
+                    <visible>[[[Window.IsActive(videos) + [Container.Content(Movies) | Container.Content(sets) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(files)]] | [Window.IsActive(programs) + !Container.Content(addons)] | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Skin.HasSetting(comics)] | SubString(Container.FolderPath,videodb://5/) | Container.Content(musicvideos)] + !Container.Content(addons)] | Window.IsActive(videoplaylist)</visible>
                     <visible>![Window.IsActive(videos) + Skin.HasSetting(DisableShowCaseVL)]</visible>
                 </item>
                 <item>
                     <label>$LOCALIZE[31029]</label>
                     <onclick>Container.SetViewMode(509)</onclick>
-                    <visible>[Window.IsActive(501) | Window.IsActive(musiclibrary) | Window.IsActive(programs) | [Window.IsActive(pictures) + Skin.HasSetting(pictures)] | Container.Content(addons) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + !Container.Content(years)</visible>
+                    <visible>[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(programs) | [Window.IsActive(pictures) + Skin.HasSetting(pictures)] | Container.Content(addons) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + !Container.Content(years)</visible>
                 </item>
             </content>
         </control>

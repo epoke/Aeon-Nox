@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<window id="25">
+<window>
     <defaultcontrol always="true">50</defaultcontrol>
     <onload condition="System.HasAddon(script.metadata.actors) + !IsEmpty(Window(home).Property(BrowseActors))">RunScript(script.metadata.actors,backend)</onload>
     <onload condition="System.HasAddon(script.tvtunes) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">XBMC.RunScript(script.tvtunes,backend=True)</onload>
@@ -139,6 +139,7 @@
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">SetFocus(50)</onclick>
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">Select</onclick>
                     <visible>!StringCompare(ListItem.Label,..) + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>
+                    <visible>!Container.Content(sets)</visible>
                 </control>
                 <control type="button" id="7002">
                     <include>HiddenObject</include>

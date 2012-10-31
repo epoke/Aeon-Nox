@@ -224,7 +224,6 @@
                     <include>PanelGlowFade</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-                    <include>Animation_VisibleChange400</include>
                 </control>
                 <control type="image">
                     <width>260</width>
@@ -317,7 +316,6 @@
                     <include>PanelGlowFade</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-                    <include>Animation_VisibleChange400</include>
                 </control>
                 <control type="image">
                     <texture background="true" diffuse="thumbs/multiplex_tvmask.png">DefaultVideoCover.png</texture>
@@ -371,7 +369,6 @@
                     <texture>thumbs/boxes/cd_shadow_light_shadow.png</texture>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                     <include>PanelGlowFade</include>
-                    <include>Animation_VisibleChange400</include>
                 </control>
                 <control type="group">
                     <posx>430</posx>
@@ -456,7 +453,6 @@
                     <texture>keyboard/keyboard_back_shadow.png</texture>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                     <include>PanelGlowFade</include>
-                    <include>Animation_VisibleChange400</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
                 <control type="image">
@@ -1161,7 +1157,6 @@
                         <onright>AlarmClock(HomeTileLeft,Control.Move(6001,1),00:07,silent,loop)</onright>
                         <onright>6011</onright>
                         <onup>Control.Move(6001,1)</onup>
-                        <onup>AlarmClock(HomeTileLeft,Control.Move(6001,1),00:07,silent,loop)</onup>
                         <ondown condition="Control.IsVisible(5000)">SetFocus(5000)</ondown>
                         <ondown condition="Control.IsVisible(8998) + Skin.HasSetting(lowermainmenu)">CancelAlarm(WidgetMove,true)</ondown>
                         <ondown condition="Control.IsVisible(8998) + Skin.HasSetting(lowermainmenu)">SetFocus(8000,0)</ondown>
@@ -1281,9 +1276,7 @@
                         <onleft>6010</onleft>
                         <onright>AlarmClock(HomeTileMid,Control.Move(6002,1),00:15,silent,loop)</onright>
                         <onright>6012</onright>
-                        <onup condition="Skin.HasSetting(lowermainmenu)">Control.Move(6002,1)</onup>
-                        <onup condition="!Skin.HasSetting(lowermainmenu)">AlarmClock(HomeTileMid,Control.Move(6002,1),00:15,silent,loop)</onup>
-                        <onup condition="!Skin.HasSetting(lowermainmenu)">7993</onup>
+                        <onup>Control.Move(6002,1)</onup>
                         <onfocus>CancelAlarm(HomeTileMid,true)</onfocus>
                         <onback>AlarmClock(HomeTileMid,Control.Move(6002,1),00:15,silent,loop)</onback>
                         <onback>7993</onback>
@@ -1416,10 +1409,9 @@
                         <onleft>6011</onleft>
                         <onright>AlarmClock(HomeTileRight,Control.Move(6003,1),00:10,silent,loop)</onright>
                         <onright>6010</onright>
-                        <onup condition="Skin.HasSetting(lowermainmenu)">Control.Move(6003,1)</onup>
-                        <onup condition="!Skin.HasSetting(lowermainmenu)">AlarmClock(HomeTileRight,Control.Move(6003,1),00:10,silent,loop)</onup>
-                        <onup condition="!Skin.HasSetting(lowermainmenu)">7993</onup>
-                        <onclick>PlayMedia($ESCINFO[Container(6003).ListItem.Property(Path)])</onclick>
+                        <onup>Control.Move(6003,1)</onup>
+                        <onclick condition="!Stringcompare(Control.GetLabel(4325),featuredmusic)">PlayMedia($ESCINFO[Container(6003).ListItem.Property(Path)])</onclick>
+                        <onclick condition="Stringcompare(Control.GetLabel(4325),featuredmusic)">$INFO[Container(6003).ListItem.Property(Path)]</onclick>
                         <ondown condition="Skin.HasSetting(lowermainmenu)">AlarmClock(HomeTileRight,Control.Move(6003,1),00:10,silent,loop)</ondown>
                         <ondown condition="Skin.HasSetting(lowermainmenu)">7993</ondown>
                         <ondown condition="!Skin.HasSetting(lowermainmenu)">Control.Move(6003,1)</ondown>
@@ -4853,7 +4845,6 @@
                 <posy>26</posy>
                 <width>1596</width>
                 <height>360</height>
-                <include>Animation_VisibleChange400</include>
                 <orientation>horizontal</orientation>
                 <animation effect="fade" start="100" end="0" time="0" condition="!Substring(Control.GetLabel(4325),panel)">Conditional</animation>
                 <onleft>6010</onleft>
@@ -5832,7 +5823,7 @@
             <property name="NavItem">item1.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -5843,7 +5834,7 @@
             <property name="NavItem">item2.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.2.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.2.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -5854,7 +5845,7 @@
             <property name="NavItem">item3.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.3.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.3.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.3.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -5865,7 +5856,7 @@
             <property name="NavItem">item4.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.4.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.4.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.4.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -5876,7 +5867,7 @@
             <property name="NavItem">item5.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.5.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.5.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.5.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -5887,7 +5878,7 @@
             <property name="NavItem">item6.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.6.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.6.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.6.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -5898,7 +5889,7 @@
             <property name="NavItem">item7.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.7.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.7.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.7.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -5909,7 +5900,7 @@
             <property name="NavItem">item8.png</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.8.Fanart)]</property>
             <onclick>PlayList.Clear</onclick>
-            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.8.Path)]</property>
+            <property name="Path">$INFO[Window(Home).Property(RecentAlbum.8.Play)]</property>
             <visible>Stringcompare(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
     </include>
