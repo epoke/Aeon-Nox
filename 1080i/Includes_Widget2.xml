@@ -1163,11 +1163,9 @@
                         <onright>AlarmClock(HomeTileLeft,Control.Move(6001,1),00:07,silent,loop)</onright>
                         <onright>6011</onright>
                         <onup>Control.Move(6001,1)</onup>
-                        <ondown condition="Control.IsVisible(5000)">SetFocus(5000)</ondown>
-                        <ondown condition="Control.IsVisible(8998) + Skin.HasSetting(lowermainmenu)">CancelAlarm(WidgetMove,true)</ondown>
-                        <ondown condition="Control.IsVisible(8998) + Skin.HasSetting(lowermainmenu)">SetFocus(8000,0)</ondown>
-                        <ondown condition="Control.IsVisible(8998) + Skin.HasSetting(lowermainmenu)">8000</ondown>
-                        <ondown condition="!Control.IsVisible(5000) + !Control.IsVisible(8998) + Skin.HasSetting(lowermainmenu)">7993</ondown>
+                        <ondown condition="Skin.HasSetting(lowermainmenu)">AlarmClock(HomeTileMid,Control.Move(6001,1),00:15,silent,loop)</ondown>
+                        <ondown condition="Skin.HasSetting(lowermainmenu)">7993</ondown>
+                        <ondown condition="!Skin.HasSetting(lowermainmenu)">9000</ondown>
                         <onback>AlarmClock(HomeTileLeft,Control.Move(6001,1),00:07,silent,loop)</onback>
                         <onback>7993</onback>
                         <onclick condition="!Stringcompare(Control.GetLabel(4325),featuredmusic)">PlayMedia($ESCINFO[Container(6001).ListItem.Property(Path)])</onclick>
@@ -1288,8 +1286,8 @@
                         <onback>7993</onback>
                         <ondown condition="Skin.HasSetting(lowermainmenu)">AlarmClock(HomeTileMid,Control.Move(6002,1),00:15,silent,loop)</ondown>
                         <ondown condition="Skin.HasSetting(lowermainmenu)">7993</ondown>
-                        <ondown condition="!Skin.HasSetting(lowermainmenu)">Control.Move(6002,1)</ondown>
-                        <onclick condition="!IsEmpty(Container(6002).ListItem.Label2)">XBMC.RunAddon($INFO[Container(6002).ListItem.Label2])</onclick>
+                        <ondown condition="!Skin.HasSetting(lowermainmenu)">9000</ondown>
+                        <onclick condition="!IsEmpty(Container(6002).ListItem.Label2)">RunAddon($INFO[Container(6002).ListItem.Label2])</onclick>
                         <onclick condition="!IsEmpty(Container(6002).ListItem.Label2) + !stringcompare(Container(6002).ListItem.Property(Type),4) + !stringcompare(Container(6002).ListItem.Property(Type),5) + !stringcompare(Container(6002).ListItem.Property(Type),6) + !stringcompare(Container(6002).ListItem.Property(Type),7)">RunAddon($INFO[Container(6002).ListItem.Label2])</onclick>
                         <onclick condition="!IsEmpty(Container(6002).ListItem.Label2) + stringcompare(Container(6002).ListItem.Property(Type),4)">ActivateWindow(Videos,$INFO[Container(6002).ListItem.Label2],return)</onclick>
                         <onclick condition="!IsEmpty(Container(6002).ListItem.Label2) + stringcompare(Container(6002).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$INFO[Container(6002).ListItem.Label2],return)</onclick>
@@ -1418,9 +1416,9 @@
                         <onup>Control.Move(6003,1)</onup>
                         <onclick condition="!Stringcompare(Control.GetLabel(4325),featuredmusic)">PlayMedia($ESCINFO[Container(6003).ListItem.Property(Path)])</onclick>
                         <onclick condition="Stringcompare(Control.GetLabel(4325),featuredmusic)">$INFO[Container(6003).ListItem.Property(Path)]</onclick>
-                        <ondown condition="Skin.HasSetting(lowermainmenu)">AlarmClock(HomeTileRight,Control.Move(6003,1),00:10,silent,loop)</ondown>
+                        <ondown condition="Skin.HasSetting(lowermainmenu)">AlarmClock(HomeTileMid,Control.Move(6003,1),00:15,silent,loop)</ondown>
                         <ondown condition="Skin.HasSetting(lowermainmenu)">7993</ondown>
-                        <ondown condition="!Skin.HasSetting(lowermainmenu)">Control.Move(6003,1)</ondown>
+                        <ondown condition="!Skin.HasSetting(lowermainmenu)">9000</ondown>
                         <onback>AlarmClock(HomeTileRight,Control.Move(6003,1),00:10,silent,loop)</onback>
                         <onback>7993</onback>
                         <onfocus>CancelAlarm(HomeTileRight,true)</onfocus>
@@ -1562,31 +1560,31 @@
                     <visible>!Substring(Control.GetLabel(4325),transparent)</visible>
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
-				<control type="button">
-					<description>left Arrow</description>
-					<posx>-40</posx>
-					<posy>180</posy>
-					<width>40</width>
-					<height>40</height>
-					<texturefocus flipx="true">arrowright.png</texturefocus>
-					<texturenofocus flipx="true">arrowright.png</texturenofocus>
-					<onclick>Control.Move(6010,-1)</onclick>
-					<visible>Control.HasFocus(6010) + Container(6010).HasPrevious</visible>
-					<include>Animation_DialogPopup</include>
-				</control>
-				<control type="button">
-					<description>right Arrow</description>
-					<posx>1650</posx>
-					<posy>180</posy>
-					<width>40</width>
-					<height>40</height>
-					<texturefocus>arrowright.png</texturefocus>
-					<texturenofocus>arrowright.png</texturenofocus>
-					<onclick>Control.Move(6010,1)</onclick>
-					<visible>Control.HasFocus(6010) + Container(6010).HasNext</visible>
-					<include>Animation_DialogPopup</include>
-				</control>
+                <control type="button">
+                    <description>left Arrow</description>
+                    <posx>-40</posx>
+                    <posy>180</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texturefocus flipx="true">arrowright.png</texturefocus>
+                    <texturenofocus flipx="true">arrowright.png</texturenofocus>
+                    <onclick>Control.Move(6010,-1)</onclick>
+                    <visible>Control.HasFocus(6010) + Container(6010).HasPrevious</visible>
+                    <include>Animation_DialogPopup</include>
                 </control>
+                <control type="button">
+                    <description>right Arrow</description>
+                    <posx>1650</posx>
+                    <posy>180</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texturefocus>arrowright.png</texturefocus>
+                    <texturenofocus>arrowright.png</texturenofocus>
+                    <onclick>Control.Move(6010,1)</onclick>
+                    <visible>Control.HasFocus(6010) + Container(6010).HasNext</visible>
+                    <include>Animation_DialogPopup</include>
+                </control>
+            </control>
             <control type="group">
                 <visible>!IsEmpty(Window(Home).Property(PanelWidget2Info))</visible>
                 <animation type="Visible" reversible="false">
@@ -2016,7 +2014,7 @@
                         </control>
                         <control type="button" id="6035">
                             <label>$LOCALIZE[31087]</label>
-                            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onclick>
+                            <onclick>RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onclick>
                             <include>WidgetMenuLabel</include>
                             <visible>Substring(Control.GetLabel(4325),randompics,left)</visible>
                             <onback>ClearProperty(PanelWidget2Info,Home)</onback>
@@ -5149,7 +5147,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.1.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.1.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=1)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=1)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.1.Folder)]</property>
@@ -5158,7 +5156,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.2.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.2.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=2)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=2)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.2.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.2.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.2.Folder)]</property>
@@ -5167,7 +5165,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.3.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.3.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=3)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=3)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.3.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.3.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.3.Folder)]</property>
@@ -5176,7 +5174,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.4.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.4.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=4)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=4)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.4.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.4.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.4.Folder)]</property>
@@ -5187,7 +5185,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.5.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.5.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=5)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=5)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.5.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.5.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.5.Folder)]</property>
@@ -5196,7 +5194,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.6.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.6.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=6)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=6)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.6.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.6.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.6.Folder)]</property>
@@ -5205,7 +5203,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.7.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.7.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=7)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=7)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.7.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.7.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.7.Folder)]</property>
@@ -5214,7 +5212,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.8.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.8.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=8)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=8)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.8.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.8.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.8.Folder)]</property>
@@ -5225,7 +5223,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.1.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.1.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=1)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=1)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.1.Folder)]</property>
@@ -5234,7 +5232,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.2.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.2.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=2)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=2)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.2.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.2.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.2.Folder)]</property>
@@ -5243,7 +5241,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.3.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.3.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=3)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=3)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.3.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.3.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.3.Folder)]</property>
@@ -5252,7 +5250,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.4.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.4.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=4)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=4)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.4.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.4.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.4.Folder)]</property>
@@ -5263,7 +5261,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.5.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.5.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=5)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=5)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.5.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.5.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.5.Folder)]</property>
@@ -5272,7 +5270,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.6.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.6.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=6)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=6)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.6.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.6.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.6.Folder)]</property>
@@ -5281,7 +5279,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.7.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.7.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=7)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=7)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.7.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.7.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.7.Folder)]</property>
@@ -5290,7 +5288,7 @@
         <item>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.8.Name)]</label>
             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.8.Date)]</label2>
-            <onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=8)</onclick>
+            <onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Latest'&amp;current=8)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.8.Path)]</thumb>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.8.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBLatest.8.Folder)]</property>
@@ -6381,7 +6379,7 @@
     </include>
     <include name="RSS1Widget2Content1124">
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.1.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.1.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.1.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.1.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.1.Desc)]</property>
@@ -6392,7 +6390,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS1.RSS.1.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.2.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.2.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.2.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.2.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.2.Desc)]</property>
@@ -6403,7 +6401,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS1.RSS.2.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.3.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.3.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.3.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.3.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.3.Desc)]</property>
@@ -6414,7 +6412,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS1.RSS.3.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.4.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.4.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.4.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.4.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.4.Desc)]</property>
@@ -6427,7 +6425,7 @@
     </include>
     <include name="RSS1Widget2Content">
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.5.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.5.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.5.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.5.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.5.Desc)]</property>
@@ -6438,7 +6436,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS1.RSS.5.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.6.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.6.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.6.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.6.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.6.Desc)]</property>
@@ -6449,7 +6447,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS1.RSS.6.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.7.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.7.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.7.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.7.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.7.Desc)]</property>
@@ -6460,7 +6458,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS1.RSS.7.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS1.RSS.8.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS1.RSS.8.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS1.RSS.8.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS1.RSS.8.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS1.RSS.8.Desc)]</property>
@@ -6473,7 +6471,7 @@
     </include>
     <include name="RSS3Widget2Content1124">
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.1.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.1.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.1.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.1.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.1.Desc)]</property>
@@ -6484,7 +6482,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS3.RSS.1.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.2.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.2.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.2.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.2.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.2.Desc)]</property>
@@ -6495,7 +6493,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS3.RSS.2.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.3.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.3.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.3.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.3.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.3.Desc)]</property>
@@ -6506,7 +6504,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS3.RSS.3.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.4.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.4.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.4.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.4.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.4.Desc)]</property>
@@ -6519,7 +6517,7 @@
     </include>
     <include name="RSS3Widget2Content">
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.5.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.5.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.5.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.5.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.5.Desc)]</property>
@@ -6530,7 +6528,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS3.RSS.5.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.6.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.6.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.6.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.6.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.6.Desc)]</property>
@@ -6541,7 +6539,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS3.RSS.6.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.7.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.7.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.7.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.7.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.7.Desc)]</property>
@@ -6552,7 +6550,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS3.RSS.7.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS3.RSS.8.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS3.RSS.8.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS3.RSS.8.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS3.RSS.8.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS3.RSS.8.Desc)]</property>
@@ -6565,7 +6563,7 @@
     </include>
     <include name="RSS2Widget2Content1124">
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.1.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.1.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.1.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.1.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.1.Desc)]</property>
@@ -6576,7 +6574,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS2.RSS.1.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.2.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.2.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.2.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.2.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.2.Desc)]</property>
@@ -6587,7 +6585,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS2.RSS.2.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.3.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.3.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.3.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.3.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.3.Desc)]</property>
@@ -6598,7 +6596,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS2.RSS.3.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.4.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.4.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.4.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.4.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.4.Desc)]</property>
@@ -6611,7 +6609,7 @@
     </include>
     <include name="RSS2Widget2Content">
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.5.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.5.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.5.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.5.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.5.Desc)]</property>
@@ -6622,7 +6620,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS2.RSS.5.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.6.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.6.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.6.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.6.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.6.Desc)]</property>
@@ -6633,7 +6631,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS2.RSS.6.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.7.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.7.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.7.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.7.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.7.Desc)]</property>
@@ -6644,7 +6642,7 @@
             <visible>!IsEmpty(Window(home).Property(RSS2.RSS.7.Title))</visible>
         </item>
         <item>
-            <onclick>XBMC.PlayMedia($INFO[Window(home).Property(RSS2.RSS.8.Media)])</onclick>
+            <onclick>PlayMedia($INFO[Window(home).Property(RSS2.RSS.8.Media)])</onclick>
             <label>$INFO[Window(home).Property(RSS2.RSS.8.Title)]</label>
             <icon>$INFO[Window(home).Property(RSS2.RSS.8.Image.1)]</icon>
             <property name="Plot">$INFO[Window(Home).Property(RSS2.RSS.8.Desc)]</property>
