@@ -12,9 +12,8 @@
             </control>
             <control type="image">
                 <include>FullscreenDimensions</include>
-                <texture>common/white.png</texture>
+                <texture>common/bgcolor.png</texture>
                 <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
-                <colordiffuse>black</colordiffuse>
                 <visible>!Skin.HasSetting(altoverlayinfowall)</visible>
                 <include>Animation_WindowFade200</include>
             </control>
@@ -104,7 +103,6 @@
                     <texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[EpisodePosterVar]</texture>
                     <bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
                     <bordersize>19</bordersize>
-                    <include>Animation_VisibleChange400</include>
                 </control>
             </control>
         </control>
@@ -310,8 +308,7 @@
                     <height>105</height>
                     <animation effect="fade" start="100" end="50" time="50" condition="true">Conditional</animation>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <colordiffuse>black</colordiffuse>
-                    <texture diffuse="thumbs/banner_mask.png">common/white.png</texture>
+                    <texture diffuse="thumbs/banner_mask.png">common/bgcolor.png</texture>
                 </control>
                 <control type="image">
                     <posx>1255</posx>

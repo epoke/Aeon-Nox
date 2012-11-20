@@ -38,7 +38,6 @@
                             <aspectratio>keep</aspectratio>
                             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture border="5">views/addonwall_select.png</texture>
-                            <include>Animation_VisibleChange200</include>
                         </control>
                         <control type="image">
                             <width>261</width>
@@ -159,7 +158,6 @@
                                 <aspectratio scalediffuse="false">stretch</aspectratio>
                                 <colordiffuse>$VAR{FocusTextureColorVar]</colordiffuse>
                                 <texture border="5">views/addonwall_select.png</texture>
-                                <include>Animation_VisibleChange200</include>
                             </control>
                             <control type="image">
                                 <width>189</width>
@@ -291,9 +289,8 @@
                                     <posy>116</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <texture>common/white.png</texture>
+                                    <texture>common/bgcolor.png</texture>
                                     <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
-                                    <colordiffuse>black</colordiffuse>
                                     <bordersize>5</bordersize>
                                 </control>
                                 <control type="label">
@@ -312,7 +309,7 @@
                                 <width>285</width>
                                 <height>161</height>
                                 <aspectratio scalediffuse="false">stretch</aspectratio>
-                                <texture background="true" fallback="common/black.png">$INFO[ListItem.Art(landscape)]</texture>
+                                <texture background="true" fallback="common/black.png">$VAR[LandscapeThumbVar]</texture>
                                 <bordertexture border="5">thumbs/bordershadow4.png</bordertexture>
                                 <bordersize>5</bordersize>
                                 <visible>Container.Content(tvshows)</visible>
@@ -344,15 +341,13 @@
                                     <height>161</height>
                                     <colordiffuse>$VAR{FocusTextureColorVar]</colordiffuse>
                                     <texture border="5">views/addonwall_select.png</texture>
-                                    <include>Animation_VisibleChange200</include>
                                 </control>
                                 <control type="image">
                                     <posy>116</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <texture>common/white.png</texture>
+                                    <texture>common/bgcolor.png</texture>
                                     <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
-                                    <colordiffuse>black</colordiffuse>
                                     <bordersize>5</bordersize>
                                 </control>
                                 <control type="label">
@@ -369,7 +364,7 @@
                             <control type="image">
                                 <width>285</width>
                                 <height>161</height>
-                                <texture background="true" fallback="common/black.png">$INFO[ListItem.Path,,landscape.jpg]</texture>
+                                <texture background="true" fallback="common/black.png">$VAR[LandscapeThumbVar]</texture>
                                 <bordersize>5</bordersize>
                                 <visible>Container.Content(tvshows)</visible>
                             </control>
@@ -448,7 +443,6 @@
                                 <aspectratio align="center">stretch</aspectratio>
                                 <colordiffuse>$VAR{FocusTextureColorVar]</colordiffuse>
                                 <texture border="5">views/addonwall_select.png</texture>
-                                <include>Animation_VisibleChange200</include>
                             </control>
                             <control type="image">
                                 <posx>11</posx>

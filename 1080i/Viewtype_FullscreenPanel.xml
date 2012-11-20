@@ -6,8 +6,7 @@
             <include>Animation_Widgets</include>
             <control type="image">
                 <include>FullscreenDimensions</include>
-                <texture>common/white.png</texture>
-                <colordiffuse>black</colordiffuse>
+                <texture>common/bgcolor.png</texture>
                 <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
                 <animation effect="fade" time="250">WindowOpen</animation>
                 <animation effect="fade" time="250">WindowClose</animation>
@@ -463,16 +462,6 @@
                             <visible>!Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
-                            <posy>5</posy>
-                            <posx>5</posx>
-                            <width>374</width>
-                            <height>210</height>
-                            <bordersize>5</bordersize>
-                            <texture background="true" border="5">$INFO[ListItem.Art(fanart)]</texture>
-                            <aspectratio>scale</aspectratio>
-                            <visible>Container.Content(tvshows)</visible>
-                        </control>
-                        <control type="image">
                             <posy>-280</posy>
                             <posx>805</posx>
                             <width>520</width>
@@ -488,7 +477,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture background="true" border="5">$INFO[ListItem.Path,,landscape.jpg]</texture>
+                            <texture background="true" border="5">$VAR[LandscapeThumbVar]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
@@ -543,14 +532,23 @@
                             <posy>90</posy>
                             <width>1470</width>
                             <height>116</height>
-                            <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Plot]</label>
+                            <visible>IsEmpty(ListItem.Art(characterart))</visible>
+                            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        </control>
+                        <control type="textbox">
+                            <posx>410</posx>
+                            <posy>90</posy>
+                            <width>1250</width>
+                            <height>116</height>
+                            <label>$INFO[ListItem.Plot]</label>
+                            <visible>!IsEmpty(ListItem.Art(characterart))</visible>
+                            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                         <control type="image">
                             <posx>1580</posx>
                             <posy>5</posy>
                             <width>391</width>
-                            <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
                             <height>210</height>
                             <aspectratio align="center">keep</aspectratio>
                             <texture background="true">$INFO[ListItem.Art(characterart)]</texture>
@@ -575,16 +573,6 @@
                             <visible>!Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
-                            <posy>5</posy>
-                            <posx>5</posx>
-                            <width>374</width>
-                            <height>210</height>
-                            <bordersize>5</bordersize>
-                            <texture background="true" border="5">$INFO[ListItem.Art(fanart)]</texture>
-                            <aspectratio>scale</aspectratio>
-                            <visible>Container.Content(tvshows)</visible>
-                        </control>
-                        <control type="image">
                             <posy>-280</posy>
                             <posx>805</posx>
                             <width>520</width>
@@ -600,7 +588,7 @@
                             <width>374</width>
                             <height>210</height>
                             <bordersize>5</bordersize>
-                            <texture background="true" border="5">$INFO[ListItem.Art(landscape)]</texture>
+                            <texture background="true" border="5">$VAR[LandscapeThumbVar]</texture>
                             <aspectratio>scale</aspectratio>
                             <visible>Container.Content(tvshows)</visible>
                         </control>
@@ -645,6 +633,16 @@
                             <width>1470</width>
                             <height>116</height>
                             <label>$INFO[ListItem.Plot]</label>
+                            <visible>IsEmpty(ListItem.Art(characterart))</visible>
+                            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                        </control>
+                        <control type="textbox">
+                            <posx>410</posx>
+                            <posy>90</posy>
+                            <width>1250</width>
+                            <height>116</height>
+                            <label>$INFO[ListItem.Plot]</label>
+                            <visible>!IsEmpty(ListItem.Art(characterart))</visible>
                             <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                         <control type="image">
@@ -652,7 +650,6 @@
                             <posy>5</posy>
                             <width>391</width>
                             <height>210</height>
-                            <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
                             <aspectratio align="center">keep</aspectratio>
                             <texture background="true">$INFO[ListItem.Art(characterart)]</texture>
                         </control>
@@ -1135,17 +1132,7 @@
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture background="true" border="5">$INFO[ListItem.Art(fanart)]</texture>
-            <aspectratio>scale</aspectratio>
-            <visible>Container.Content(tvshows)</visible>
-        </control>
-        <control type="image">
-            <posy>6</posy>
-            <posx>5</posx>
-            <width>374</width>
-            <height>210</height>
-            <bordersize>5</bordersize>
-            <texture border="5" background="true">$INFO[ListItem.Art(landscape)]</texture>
+            <texture background="true" border="5">$VAR[LandscapeThumbVar]</texture>
             <aspectratio>scale</aspectratio>
             <visible>Container.Content(tvshows)</visible>
         </control>
@@ -1205,16 +1192,6 @@
             <visible>!Container.Content(tvshows)</visible>
         </control>
         <control type="image">
-            <posy>6</posy>
-            <posx>5</posx>
-            <width>374</width>
-            <height>210</height>
-            <bordersize>5</bordersize>
-            <texture border="5" background="true">$INFO[ListItem.Art(fanart)]</texture>
-            <aspectratio>scale</aspectratio>
-            <visible>Container.Content(tvshows)</visible>
-        </control>
-        <control type="image">
             <posy>-289</posy>
             <posx>405</posx>
             <width>520</width>
@@ -1230,7 +1207,7 @@
             <width>374</width>
             <height>210</height>
             <bordersize>5</bordersize>
-            <texture border="5" background="true">$INFO[ListItem.Art(landscape)]</texture>
+            <texture background="true" border="5">$VAR[LandscapeThumbVar]</texture>
             <aspectratio>scale</aspectratio>
             <visible>Container.Content(tvshows)</visible>
         </control>

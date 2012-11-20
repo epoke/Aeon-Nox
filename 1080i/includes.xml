@@ -246,7 +246,6 @@
         <onleft>ClearProperty(viewtypeselect,home)</onleft>
         <onleft>ActivateWindow(1121)</onleft>
         <font>Font_Reg19</font>
-        <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
         <radioposx>308</radioposx>
     </include>
@@ -266,7 +265,6 @@
         <onleft>ActivateWindow(1121)</onleft>
         <aligny>top</aligny>
         <font>Font_Reg18</font>
-        <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
         <radioposx>308</radioposx>
     </include>
@@ -283,7 +281,6 @@
         <textoffsetx>15</textoffsetx>
         <textoffsety>2</textoffsety>
         <font>Font_Reg19</font>
-        <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
         <radioposx>308</radioposx>
     </include>
@@ -303,7 +300,6 @@
         <onright>Dialog.Close(1126)</onright>
         <onright>SetFocus(50)</onright>
         <font>Font_Reg19</font>
-        <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
         <radioposx>378</radioposx>
     </include>
@@ -324,7 +320,6 @@
         <onright>Dialog.Close(1126)</onright>
         <onright>SetFocus(50)</onright>
         <font>Font_Bold15_Caps</font>
-        <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
         <radioposx>508</radioposx>
     </include>
@@ -703,7 +698,7 @@
         <width>150</width>
         <height>58</height>
         <aspectratio>keep</aspectratio>
-        <texture background="true" fallback="fallback.png">$INFO[ListItem.Property(Path),,logo.png]</texture>
+        <texture background="true" fallback="XBMC_Logo.png">$INFO[ListItem.Property(Path),,logo.png]</texture>
         <visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
     </include>
     <include name="NextAiredThumbVars">
@@ -1001,7 +996,6 @@
                 <height>35</height>
                 <texture>common/circle.png</texture>
                 <aspectratio>keep</aspectratio>
-                <include>Animation_VisibleChange200</include>
             </control>
             <control type="label">
                 <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
@@ -1029,7 +1023,6 @@
         <textoffsetx>15</textoffsetx>
         <textoffsety>2</textoffsety>
         <font>Font_Reg19</font>
-        <include>Animation_CommonFade</include>
         <radiowidth>98</radiowidth>
         <radioposx>508</radioposx>
     </include>
@@ -1234,6 +1227,7 @@
             <width>1920</width>
             <height>180</height>
             <texture>osd/osd_back.png</texture>
+            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
         </control>
         <control type="group" id="1">
             <posy>865</posy>
@@ -1642,6 +1636,7 @@
                 <width>2080</width>
                 <height>87</height>
                 <texture border="80,0,80,0">osd/osd_progress_bar_back.png</texture>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             </control>
             <control type="progress" id="23">
                 <posx>150</posx>
@@ -2183,7 +2178,6 @@
         </control>
     </include>
     <include name="LiveTVVideoOSD">
-        <!-- LiveTV -->
         <control type="group">
             <visible>!Skin.HasSetting(ClassicOSD)</visible>
             <animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
@@ -2514,7 +2508,7 @@
         <control type="group" id="703">
             <visible>Skin.HasSetting(ClassicOSD)</visible>
             <control type="grouplist" id="70030">
-                <posx>375</posx>
+                <posx>355</posx>
                 <posy>11</posy>
                 <width>960</width>
                 <height>135</height>
@@ -2541,7 +2535,7 @@
                 </control>
             </control>
             <control type="grouplist" id="70033">
-                <posx>480</posx>
+                <posx>460</posx>
                 <posy>11</posy>
                 <width>960</width>
                 <height>135</height>
@@ -2557,16 +2551,16 @@
                     <width>100</width>
                     <height>100</height>
                     <colordiffuse>white</colordiffuse>
-                    <texturenofocus>PVR/buttons/UPNOFO.png</texturenofocus>
-                    <texturefocus>PVR/buttons/UPFO.png</texturefocus>
+                    <texturenofocus>osd/buttons/OSDUpNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDUpFO.png</texturefocus>
                     <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
                     <onclick>PlayerControl(Next)</onclick>
                 </control>
                 <control type="button" id="70035">
                     <width>100</width>
                     <height>100</height>
-                    <texturenofocus>PVR/buttons/DOWNNOFO.png</texturenofocus>
-                    <texturefocus>PVR/buttons/DOWNFO.png</texturefocus>
+                    <texturenofocus>osd/buttons/OSDDownNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDDownFO.png</texturefocus>
                     <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
                     <onclick>PlayerControl(Previous)</onclick>
                 </control>
@@ -2592,15 +2586,15 @@
                 <control type="button" id="70038">
                     <width>100</width>
                     <height>100</height>
-                    <texturefocus>osd/buttons/OSDStopFO.png</texturefocus>
                     <texturenofocus>osd/buttons/OSDStopNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDStopFO.png</texturefocus>
                     <onclick>PlayerControl(Stop)</onclick>
                 </control>
                 <control type="button" id="70039">
                     <width>100</width>
                     <height>100</height>
-                    <texturefocus>osd/buttons/OSDForwardFO.png</texturefocus>
                     <texturenofocus>osd/buttons/OSDForwardNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDForwardFO.png</texturefocus>
                     <onclick>PlayerControl(Forward)</onclick>
                     <enable>Player.SeekEnabled</enable>
                     <animation effect="fade" start="100" end="50" time="100" condition="!Player.SeekEnabled">Conditional</animation>
@@ -2608,16 +2602,16 @@
                 <control type="button" id="70040">
                     <width>100</width>
                     <height>100</height>
-                    <texturefocus>PVR/buttons/OSDPVRChFO.png</texturefocus>
-                    <texturenofocus>PVR/buttons/OSDPVRChNF.png</texturenofocus>
+                    <texturenofocus>osd/buttons/OSDPlaylistNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDPlaylistFO.png</texturefocus>
                     <onclick>ActivateWindow(PVROSDChannels)</onclick>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                 </control>
                 <control type="button" id="70041">
                     <width>100</width>
                     <height>100</height>
-                    <texturefocus>PVR/buttons/OSDEPGFO.png</texturefocus>
-                    <texturenofocus>PVR/buttons/OSDEPGNOFO.png</texturenofocus>
+                    <texturenofocus>osd/buttons/OSDEpgNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDEpgFO.png</texturefocus>
                     <onclick>ActivateWindow(PVROSDGuide)</onclick>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                 </control>
@@ -2639,19 +2633,17 @@
                 <control type="button" id="70043">
                     <width>100</width>
                     <height>100</height>
-                    <texturenofocus>PVR/buttons/TXTNOFO.png</texturenofocus>
-                    <texturefocus>PVR/buttons/TXTFO.png</texturefocus>
+                    <texturenofocus>osd/buttons/OSDTxtNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDTxtFO.png</texturefocus>
                     <onclick>ActivateWindow(Teletext)</onclick>
                     <onclick>Dialog.Close(VideoOSD)</onclick>
                 </control>
                 <control type="togglebutton" id="70044">
                     <width>100</width>
                     <height>100</height>
-                    <texturefocus>PVR/buttons/RECFO.png</texturefocus>
-                    <texturenofocus>PVR/buttons/RECNOFO.png</texturenofocus>
+                    <texturenofocus>osd/buttons/OSDRecordNF.png</texturenofocus>
+                    <texturefocus>osd/buttons/OSDRecordFO.png</texturefocus>
                     <usealttexture>Player.Recording</usealttexture>
-                    <alttexturenofocus>PVR/buttons/RECONNOFO.png</alttexturenofocus>
-                    <alttexturefocus>PVR/buttons/RECONFO.png</alttexturefocus>
                     <onclick>PlayerControl(Record)</onclick>
                     <enable>Player.CanRecord</enable>
                     <animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
@@ -3107,5 +3099,19 @@
                 </control>
             </control>
         </control>
+    </include>
+    <include name="InvisibleIncludeLabels">
+            <control type="label" id="11111">
+                <label> $INFO[Skin.String(MusicVideosHomeItem.Widget)] $INFO[Skin.String(MusicHomeItem.Widget)] $INFO[Skin.String(TVShowHomeItem.Widget)] $INFO[Skin.String(MovieHomeItem.Widget)] $INFO[Skin.String(LiveTVHomeItem.Widget)] $INFO[Skin.String(PicturesHomeItem.Widget)] $INFO[Skin.String(TVGuideHomeItem.Widget)] $INFO[Skin.String(FeaturedHomeItem.Widget)] $INFO[Skin.String(CustomHomeItem1.Widget)] $INFO[Skin.String(CustomHomeItem2.Widget)] $INFO[Skin.String(CustomHomeItem3.Widget)] $INFO[Skin.String(CustomHomeItem4.Widget)] $INFO[Skin.String(CustomHomeItem5.Widget)] $INFO[Skin.String(CustomHomeItem6.Widget)] $INFO[Skin.String(VideosHomeItem.Widget)] $INFO[Skin.String(ProgramsHomeItem.Widget)] $INFO[Skin.String(SettingsHomeItem.Widget)] $INFO[Skin.String(SearchHomeItem.Widget)] $INFO[Skin.String(ShutdownHomeItem.Widget)] $INFO[Skin.String(FavouritesHomeItem.Widget)] $INFO[Skin.String(PlayDiscHomeItem.Widget)] $INFO[Skin.String(WeatherHomeItem.Widget)] $INFO[Skin.String(ComicsHomeItem.Widget)] $INFO[Skin.String(FullscreenHomeItem.Widget)] $INFO[Skin.String(CustomSub9_1.Widget)] $INFO[Skin.String(CustomSub9_2.Widget)] $INFO[Skin.String(CustomSub9_4.Widget)] $INFO[Skin.String(CustomSub9_5.Widget)] $INFO[Skin.String(CustomSub8_1.Widget)] $INFO[Skin.String(CustomSub8_2.Widget)] $INFO[Skin.String(CustomSub8_3.Widget)] $INFO[Skin.String(CustomSub8_4)] $INFO[Skin.String(CustomSub8_5.Widget)] $INFO[Skin.String(CustomSub11_1.Widget)] $INFO[Skin.String(CustomSub11_2.Widget)] $INFO[Skin.String(CustomSub11_3.Widget)] $INFO[Skin.String(CustomSub11_4.Widget)] $INFO[Skin.String(CustomSub11_5.Widget)] $INFO[Skin.String(CustomSub11_6.Widget)] $INFO[Skin.String(CustomSub11_7.Widget)] $INFO[Skin.String(CustomSub11_8.Widget)] </label>
+            </control>
+            <control type="label" id="11112">
+                <label> $INFO[Skin.String(MusicVideosHomeItem.Widget2)] $INFO[Skin.String(MusicHomeItem.Widget2)] $INFO[Skin.String(TVShowHomeItem.Widget2)] $INFO[Skin.String(MovieHomeItem.Widget2)] $INFO[Skin.String(LiveTVHomeItem.Widget2)] $INFO[Skin.String(PicturesHomeItem.Widget2)] $INFO[Skin.String(TVGuideHomeItem.Widget2)] $INFO[Skin.String(FeaturedHomeItem.Widget2)] $INFO[Skin.String(CustomHomeItem1.Widget2)] $INFO[Skin.String(CustomHomeItem2.Widget2)] $INFO[Skin.String(CustomHomeItem3.Widget2)] $INFO[Skin.String(CustomHomeItem4.Widget2)] $INFO[Skin.String(CustomHomeItem5.Widget2)] $INFO[Skin.String(CustomHomeItem6.Widget2)] $INFO[Skin.String(VideosHomeItem.Widget2)] $INFO[Skin.String(ProgramsHomeItem.Widget2)] $INFO[Skin.String(SettingsHomeItem.Widget2)] $INFO[Skin.String(SearchHomeItem.Widget2)] $INFO[Skin.String(ShutdownHomeItem.Widget2)] $INFO[Skin.String(FavouritesHomeItem.Widget2)] $INFO[Skin.String(PlayDiscHomeItem.Widget2)] $INFO[Skin.String(WeatherHomeItem.Widget2)] $INFO[Skin.String(ComicsHomeItem.Widget2)] $INFO[Skin.String(FullscreenHomeItem.Widget2)] </label>
+            </control>
+            <control type="label" id="11113">
+                <label> $INFO[Skin.String(MusicVideosHomeItem.MultiFanart)] $INFO[Skin.String(MusicHomeItem.MultiFanart)] $INFO[Skin.String(TVShowHomeItem.MultiFanart)] $INFO[Skin.String(MovieHomeItem.MultiFanart)] $INFO[Skin.String(LiveTVHomeItem.MultiFanart)] $INFO[Skin.String(PicturesHomeItem.MultiFanart)] $INFO[Skin.String(TVGuideHomeItem.MultiFanart)] $INFO[Skin.String(FeaturedHomeItem.MultiFanart)] $INFO[Skin.String(CustomHomeItem1.MultiFanart)] $INFO[Skin.String(CustomHomeItem2.MultiFanart)] $INFO[Skin.String(CustomHomeItem3.MultiFanart)] $INFO[Skin.String(CustomHomeItem4.MultiFanart)] $INFO[Skin.String(CustomHomeItem5.MultiFanart)] $INFO[Skin.String(CustomHomeItem6.MultiFanart)] $INFO[Skin.String(VideosHomeItem.MultiFanart)] $INFO[Skin.String(ProgramsHomeItem.MultiFanart)] $INFO[Skin.String(SettingsHomeItem.MultiFanart)] $INFO[Skin.String(SearchHomeItem.MultiFanart)] $INFO[Skin.String(ShutdownHomeItem.MultiFanart)] $INFO[Skin.String(FavouritesHomeItem.MultiFanart)] $INFO[Skin.String(PlayDiscHomeItem.MultiFanart)] $INFO[Skin.String(WeatherHomeItem.MultiFanart)] $INFO[Skin.String(ComicsHomeItem.MultiFanart)] $INFO[Skin.String(FullscreenHomeItem.MultiFanart)] </label>
+            </control>
+            <control type="label" id="11114">
+                <label> $INFO[Skin.String(MusicVideosHomeItem.Submenu)] $INFO[Skin.String(MusicHomeItem.Submenu)] $INFO[Skin.String(TVShowHomeItem.Submenu)] $INFO[Skin.String(MovieHomeItem.Submenu)] $INFO[Skin.String(LiveTVHomeItem.Submenu)] $INFO[Skin.String(PicturesHomeItem.Submenu)] $INFO[Skin.String(TVGuideHomeItem.Submenu)] $INFO[Skin.String(FeaturedHomeItem.Submenu)] $INFO[Skin.String(CustomHomeItem1.Submenu)] $INFO[Skin.String(CustomHomeItem2.Submenu)] $INFO[Skin.String(CustomHomeItem3.Submenu)] $INFO[Skin.String(CustomHomeItem4.Submenu)] $INFO[Skin.String(CustomHomeItem5.Submenu)] $INFO[Skin.String(CustomHomeItem6.Submenu)] $INFO[Skin.String(VideosHomeItem.Submenu)] $INFO[Skin.String(ProgramsHomeItem.Submenu)] $INFO[Skin.String(SettingsHomeItem.Submenu)] $INFO[Skin.String(SearchHomeItem.Submenu)] $INFO[Skin.String(ShutdownHomeItem.Submenu)] $INFO[Skin.String(FavouritesHomeItem.Submenu)] $INFO[Skin.String(PlayDiscHomeItem.Submenu)] $INFO[Skin.String(WeatherHomeItem.Submenu)] $INFO[Skin.String(ComicsHomeItem.Submenu)] $INFO[Skin.String(FullscreenHomeItem.Submenu)] </label>
+            </control>
     </include>
 </includes>

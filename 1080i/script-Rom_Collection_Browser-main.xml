@@ -21,8 +21,7 @@
             <posy>-207</posy>
             <width>1920</width>
             <height>1080</height>
-            <texture>common/white.png</texture>
-            <colordiffuse>black</colordiffuse>
+            <texture>common/bgcolor.png</texture>
             <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
             <animation effect="fade" start="0" end="100" time="550" delay="200">Visible</animation>
             <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
@@ -30,8 +29,7 @@
         </control>
         <control type="image">
             <include>FullscreenDimensions</include>
-            <texture>common/white.png</texture>
-            <colordiffuse>black</colordiffuse>
+            <texture>common/bgcolor.png</texture>
             <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
             <animation effect="fade" start="0" end="100" time="550" delay="200">Visible</animation>
             <animation effect="fade" start="100" end="0" time="100">Hidden</animation>
@@ -102,7 +100,6 @@
                     <posx>158</posx>
                     <posy>63</posy>
                     <control type="group">
-                        <include>Animation_VisibleChange200</include>
                         <control type="label">
                             <height>20</height>
                             <width>420</width>
@@ -1197,7 +1194,6 @@
                             <aspectratio>keep</aspectratio>
                             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture border="5">views/addonwall_select.png</texture>
-                            <include>Animation_VisibleChange200</include>
                         </control>
                         <control type="image">
                             <width>261</width>
@@ -2449,7 +2445,6 @@
                     <posy>1040</posy>
                     <width>900</width>
                     <align>center</align>
-                    <include>Animation_CommonFade</include>
                     <font>Font_ShowcaseMainLabel2_Caps</font>
                     <scroll>true</scroll>
                     <scrollspeed>30</scrollspeed>
@@ -2794,7 +2789,6 @@
                             <aspectratio>keep</aspectratio>
                             <texture>tooltip.png</texture>
                             <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-                            <include>Animation_CommonFade</include>
                         </control>
                         <control type="group">
                             <control type="image">
