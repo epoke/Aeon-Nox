@@ -30,19 +30,20 @@
             <focusedlayout width="614" height="30"></focusedlayout>
             <content>
                 <include>1124Backgrounds</include>
-                <include>RandomMoviesBackgrounds</include>
-                <include>LatestMoviesBackgrounds</include>
-                <include>LatestTVBackgrounds</include>
-                <include>RandomTVBackgrounds</include>
-                <include>LatestAlbumsBackgrounds</include>
-                <include>RandomArtistsBackgrounds</include>
-                <include>LatestMusicVideosBackgrounds</include>
-                <include>RandomMusicVideosBackgrounds</include>
-                <include>WatchlistMoviesBackgrounds</include>
-                <include>WatchlistAlbumsBackgrounds</include>
-                <include>WatchlistTVBackgrounds</include>
-                <include>LatestPicturesBackgrounds</include>
-                <include>RandomPicturesBackgrounds</include>
+                <include condition="Library.HasContent(movies)">RandomMoviesBackgrounds</include>
+                <include condition="Library.HasContent(movies)">LatestMoviesBackgrounds</include>
+                <include condition="Library.HasContent(tvshows)">LatestTVBackgrounds</include>
+                <include condition="Library.HasContent(tvshows)">RandomTVBackgrounds</include>
+                <include condition="Library.HasContent(music)">LatestAlbumsBackgrounds</include>
+                <include condition="Library.HasContent(music)">RandomArtistsBackgrounds</include>
+                <include condition="Library.HasContent(musicvideos)">LatestMusicVideosBackgrounds</include>
+                <include condition="Library.HasContent(musicvideos)">RandomMusicVideosBackgrounds</include>
+                <include condition="Library.HasContent(movies)">WatchlistMoviesBackgrounds</include>
+                <include condition="Library.HasContent(music)">WatchlistAlbumsBackgrounds</include>
+                <include condition="Library.HasContent(tvshows)">WatchlistTVBackgrounds</include>
+                <include condition="System.HasAddon(plugin.image.mypicsdb)">LatestPicturesBackgrounds</include>
+                <include condition="System.HasAddon(plugin.image.mypicsdb)">RandomPicturesBackgrounds</include>
+                <include condition="System.HasAddon(script.games.rom.collection.browser)">MostPlayedRomsBackgrounds</include>
                 <include>DailyBabeBackgrounds</include>
             </content>
         </control>
@@ -645,12 +646,12 @@
                 <posy>-455</posy>
                 <texture flipy="true">views/lowlist_panelback.png</texture>
                 <width>1920</width>
-                <height>651</height>
+                <height>631</height>
                 <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
             </control>
             <control type="label">
                 <posx>75</posx>
-                <posy>5</posy>
+                <posy>20</posy>
                 <label>-</label>
                 <label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, • $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, • $LOCALIZE[612]: ,bit]$INFO[musicplayer.Samplerate, • $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, • $LOCALIZE[21444]: ]</label>
                 <font>Font_Reg19</font>
@@ -673,7 +674,7 @@
             </control>
             <control type="label">
                 <posx>75</posx>
-                <posy>105</posy>
+                <posy>90</posy>
                 <label>-</label>
                 <label>$LOCALIZE[13388]: $INFO[Visualisation.Preset]</label>
                 <font>Font_Reg19</font>
@@ -727,6 +728,7 @@
                         <height>593</height>
                         <animation effect="fade" start="100" end="73" time="0" condition="true">Conditional</animation>
                         <texture>wall/wall_bg.png</texture>
+                        <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                     </control>
                 </control>
                 <control type="group">
@@ -784,6 +786,7 @@
                                 <width>425</width>
                                 <height>400</height>
                                 <texture>thumbs/boxes/cd_shadow_light.png</texture>
+                                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             </control>
                         </control>
                     </control>

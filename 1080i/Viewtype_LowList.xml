@@ -375,7 +375,7 @@
                         <aspectratio scalediffuse="true">keep</aspectratio>
                         <fadetime>400</fadetime>
                         <visible>![Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)]</visible>
-                        <texture diffuse="thumbs/banner_mask.png" background="true">$INFO[ListItem.Art(banner)]</texture>
+                        <texture diffuse="thumbs/banner_mask.png" background="true">$VAR[BannerVar]</texture>
                         <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
                     </control>
                 </control>
@@ -701,7 +701,7 @@
                             <aspectratio scalediffuse="false">stretch</aspectratio>
                             <fadetime>400</fadetime>
                             <visible>Skin.HasSetting(lowlistbanner)</visible>
-                            <texture diffuse="thumbs/banner_mask.png" background="true" fallback="empty.png">$INFO[ListItem.Art(banner)]</texture>
+                            <texture diffuse="thumbs/banner_mask.png" background="true" fallback="empty.png">$INFO[ListItem.Art(tvshow.banner)]</texture>
                         </control>
                         <control type="image">
                             <posy>-135</posy>
@@ -774,7 +774,7 @@
                         <posy>8</posy>
                         <width>52</width>
                         <height>52</height>
-                        <info>ListItem.Overlay,thumbs/Alt</info>
+                        <texture>$VAR[AltWatchedIconVar]</texture>
                     </control>
                 </itemlayout>
                 <focusedlayout height="66" width="825" condition="![Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)]">
@@ -830,7 +830,7 @@
                         <posy>8</posy>
                         <width>52</width>
                         <height>52</height>
-                        <info>ListItem.Overlay,thumbs/Alt</info>
+                        <texture>$VAR[AltWatchedIconVar]</texture>
                     </control>
                 </focusedlayout>
                 <itemlayout height="155" width="825" condition="Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)">

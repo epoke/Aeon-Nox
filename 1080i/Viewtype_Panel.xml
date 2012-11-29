@@ -306,7 +306,7 @@
                     <width>550</width>
                     <height>610</height>
                     <fadetime>200</fadetime>
-                    <texture>$INFO[ListItem.Icon]</texture>
+                    <texture>$VAR[ListPosterVar]</texture>
                     <aspectratio aligny="top" align="right">keep</aspectratio>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                     <bordersize>7</bordersize>
@@ -384,31 +384,31 @@
                         <aspectratio aligny="bottom">keep</aspectratio>
                         <texture>$INFO[ListItem.Art(clearlogo)]</texture>
                     </control>
-            <control type="group">
-                <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
-           	<control type="label">
-					<posx>216</posx>
-					<posy>90</posy>
-					<width>420</width>
-					<align>center</align>
-					<font>Font_Info_Caps</font>
-					<textcolor>floor</textcolor>
-					<shadowcolor>floorshadow</shadowcolor>
-					<label>$VAR[SecondLabelVar]</label>
-				</control>
-				<control type="label">
-					<posx>216</posx>
-					<posy>56</posy>
-					<width>420</width>
-					<align>center</align>
-					<font>Font_MainClassic4</font>
-					<scroll>true</scroll>
-					<scrollspeed>30</scrollspeed>
-					<textcolor>floor</textcolor>
-					<shadowcolor>floorshadow</shadowcolor>
-					<label>$VAR[FirstLabelVar]</label>
-				</control>
-				</control>
+                    <control type="group">
+                        <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+                        <control type="label">
+                            <posx>216</posx>
+                            <posy>90</posy>
+                            <width>420</width>
+                            <align>center</align>
+                            <font>Font_Info_Caps</font>
+                            <textcolor>floor</textcolor>
+                            <shadowcolor>floorshadow</shadowcolor>
+                            <label>$VAR[SecondLabelVar]</label>
+                        </control>
+                        <control type="label">
+                            <posx>216</posx>
+                            <posy>56</posy>
+                            <width>420</width>
+                            <align>center</align>
+                            <font>Font_MainClassic4</font>
+                            <scroll>true</scroll>
+                            <scrollspeed>30</scrollspeed>
+                            <textcolor>floor</textcolor>
+                            <shadowcolor>floorshadow</shadowcolor>
+                            <label>$VAR[FirstLabelVar]</label>
+                        </control>
+                    </control>
                     <control type="group">
                         <posx>380</posx>
                         <include>UnwatchedIcon</include>
@@ -430,32 +430,31 @@
                         <aspectratio aligny="bottom">keep</aspectratio>
                         <texture>$INFO[ListItem.Art(clearlogo)]</texture>
                     </control>
-            <control type="group">
-                <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
-           	<control type="label">
-					<posx>216</posx>
-					<posy>90</posy>
-					<width>420</width>
-					<align>center</align>
-					<font>Font_Info_Caps</font>
-					<textcolor>floor</textcolor>
-					<shadowcolor>floorshadow</shadowcolor>
-					<label>$VAR[SecondLabelVar]</label>
-				</control>
-				<control type="label">
-					<posx>216</posx>
-					<posy>56</posy>
-					<width>420</width>
-					<align>center</align>
-					<font>Font_MainClassic4</font>
-					<scroll>true</scroll>
-					<scrollspeed>30</scrollspeed>
-					<textcolor>floor</textcolor>
-					<shadowcolor>floorshadow</shadowcolor>
-					<label>$VAR[FirstLabelVar]</label>
-				</control>
-				</control>
-                
+                    <control type="group">
+                        <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+                        <control type="label">
+                            <posx>216</posx>
+                            <posy>90</posy>
+                            <width>420</width>
+                            <align>center</align>
+                            <font>Font_Info_Caps</font>
+                            <textcolor>floor</textcolor>
+                            <shadowcolor>floorshadow</shadowcolor>
+                            <label>$VAR[SecondLabelVar]</label>
+                        </control>
+                        <control type="label">
+                            <posx>216</posx>
+                            <posy>56</posy>
+                            <width>420</width>
+                            <align>center</align>
+                            <font>Font_MainClassic4</font>
+                            <scroll>true</scroll>
+                            <scrollspeed>30</scrollspeed>
+                            <textcolor>floor</textcolor>
+                            <shadowcolor>floorshadow</shadowcolor>
+                            <label>$VAR[FirstLabelVar]</label>
+                        </control>
+                    </control>
                     <control type="group">
                         <posx>380</posx>
                         <include>UnwatchedIcon</include>

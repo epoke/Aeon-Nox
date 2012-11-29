@@ -157,7 +157,6 @@
                     </control>
                     <control type="radiobutton" id="107">
                         <label>21398</label>
-                        <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(Startup_Playlist_Path)][/COLOR]</label2>
                         <include>Default_SettingRadioButton</include>
                         <onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
                         <selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
@@ -167,7 +166,7 @@
                         <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(Startup_Playlist_Path)][/COLOR]</label2>
                         <include>Default_SettingRadioButton</include>
                         <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u|.xsp,t:\playlists\music\)</onclick>
-                        <visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+                        <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
                     </control>
                 </control>
                 <control type="grouplist" id="9002">
@@ -471,7 +470,7 @@
                         <onclick>Addon.OpenSettings(script.randomandlastitems)</onclick>
                         <visible>System.HasAddon(script.randomandlastitems)</visible>
                     </control>
-                   <control type="button" id="423">
+                    <control type="button" id="423">
                         <label>script.artwork.downloader</label>
                         <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
                         <include>Default_SettingRadioButtonShort</include>
@@ -735,6 +734,7 @@
                     <control type="button" id="303">
                         <include>Default_SettingButton</include>
                         <label>$LOCALIZE[31678]</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(WeatherFanartDir)][/COLOR]</label2>
                         <onclick>Skin.Reset(WeatherFanartDir)</onclick>
                         <onclick>Skin.SetPath(WeatherFanartDir)</onclick>
                     </control>
@@ -750,7 +750,8 @@
                         <label>Library Structure</label>
                         <label2>[COLOR $VAR[FontColorVar]]$VAR[LibraryStructureVar][/COLOR]</label2>
                         <onclick condition="Stringcompare(Skin.String(LibraryStructure),1) | IsEmpty(Skin.String(LibraryStructure))">Skin.SetString(LibraryStructure,2)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),3)">Skin.SetString(LibraryStructure,1)</onclick>
+                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),4)">Skin.SetString(LibraryStructure,1)</onclick>
+                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),3)">Skin.SetString(LibraryStructure,4)</onclick>
                         <onclick condition="Stringcompare(Skin.String(LibraryStructure),2)">Skin.SetString(LibraryStructure,3)</onclick>
                         <onclick condition="Stringcompare(Skin.String(LibraryStructure),1)">Skin.SetString(LibraryStructure,2)</onclick>
                     </control>
