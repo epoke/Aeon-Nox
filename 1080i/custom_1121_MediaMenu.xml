@@ -10,10 +10,10 @@
         <posy>0</posy>
     </coordinates>
     <animation type="WindowClose">
-        <effect type="slide" start="0,0" end="-460,0" time="400" easing="in" tween="cubic" />
+        <effect type="slide" end="-460,0" time="400" easing="in" tween="cubic" />
     </animation>
     <animation type="WindowOpen">
-        <effect type="fade" start="0" end="100" delay="400" time="200" reversible="true" />
+        <effect type="fade" end="100" delay="400" time="200" />
     </animation>
     <controls>
         <control type="image">
@@ -22,7 +22,7 @@
             <texture>common/bgcolor.png</texture>
             <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
             <include>Animation_VisibleChange400</include>
-            <animation effect="fade" start="0" end="100" time="700">WindowOpen</animation>
+            <animation effect="fade" end="100" time="700">WindowOpen</animation>
             <animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
         </control>
         <control type="group">
@@ -205,12 +205,6 @@
                     <label>$LOCALIZE[31152]</label>
                     <onclick>Container.SetViewMode(513)</onclick>
                     <visible>Container.Content(albums) | Container.Content(songs) | Window.IsActive(musicfiles)</visible>
-                </item>
-                <item>
-                    <label>$LOCALIZE[31151]</label>
-                    <onclick>Container.SetViewMode(504)</onclick>
-                    <visible>[[Window.IsActive(videos) + [Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(files)]] | [Window.IsActive(programs) + !Container.Content(addons)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)] | SubString(Container.FolderPath,videodb://5/) | Container.Content(musicvideos)] + !Container.Content(addons)</visible>
-                    <visible>![Window.IsActive(videos) + Skin.HasSetting(DisableDVDCaseVL)]</visible>
                 </item>
                 <item>
                     <label>$LOCALIZE[31028]</label>

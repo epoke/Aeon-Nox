@@ -10,13 +10,12 @@
                 <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
                 <animation effect="fade" time="250">WindowOpen</animation>
                 <animation effect="fade" time="250">WindowClose</animation>
-                <animation effect="fade" start="0" end="100" time="200">Visible</animation>
+                <animation effect="fade" end="100" time="200">Visible</animation>
                 <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
                 <visible>Skin.HasSetting(infopanelbackground)</visible>
             </control>
             <control type="group">
                 <animation effect="zoom" start="96" end="85" center="960,435" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(infopanelbackground)">Conditional</animation>
-                <include>Animation_Widgets</include>
                 <control type="panel" id="518">
                     <visible>Container.Content(episodes)|Container.Content(tvshows)|Container.Content(artists)|Container.Content(albums)|Container.Content(addons)|Container.Content(movies)</visible>
                     <posy>36</posy>
@@ -187,7 +186,7 @@
                             <height>500</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
-                            <animation effect="slide" start="0" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
+                            <animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
                             <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
                         </control>
                         <control type="image">
@@ -325,7 +324,7 @@
                             <height>500</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
-                            <animation effect="slide" start="0" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
+                            <animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
                             <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
                         </control>
                         <control type="image">
@@ -677,7 +676,7 @@
                 <onleft>518</onleft>
                 <onright>9000</onright>
                 <orientation>vertical</orientation>
-                <animation effect="slide" start="0" end="-813" time="0" condition="Skin.HasSetting(infopanelfanart)">Conditional</animation>
+                <animation effect="slide" end="-813" time="0" condition="Skin.HasSetting(infopanelfanart)">Conditional</animation>
                 <visible>!Skin.HasSetting(infopanelbackground)</visible>
             </control>
         </control>
@@ -698,7 +697,7 @@
             <height>500</height>
             <aspectratio aligny="top">keep</aspectratio>
             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
-            <animation effect="slide" start="0" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
+            <animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
             <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
         </control>
         <control type="image">
@@ -842,7 +841,7 @@
             <height>500</height>
             <aspectratio aligny="top">keep</aspectratio>
             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
-            <animation effect="slide" start="0" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
+            <animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
             <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
         </control>
         <control type="image">

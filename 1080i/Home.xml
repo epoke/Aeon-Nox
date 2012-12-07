@@ -7,7 +7,6 @@
     <onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + [Substring(Skin.String(widgetlist),randompics) | Substring(Skin.String(widget2list),randompics) | Substring(Skin.String(backgroundlist),randompics)]">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onload>
     <onload condition="!Window.Previous(startup) + Skin.HasSetting(randomizehome) + [Substring(Skin.String(widgetlist),random) | Substring(Skin.String(widget2list),random) | Substring(Skin.String(backgroundlist),random)]">SetProperty(SkinWidgets_RandomItems_Update,true)</onload>
     <onload>ClearProperty(DontRunTVShowScripts,Home)</onload>
-    <onload>ClearProperty(FocusOnSubmenu,home)</onload>
     <onload>AlarmClock(BGMove,Control.Move(4324,1),00:07,silent,loop)</onload>
     <onload>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onload>
     <onload>AlarmClock(Widget2Move,Control.Move(7000,1),00:07,silent,loop)</onload>
@@ -44,31 +43,22 @@
     <controls>
         <control type="button" id="9004">
             <include>HiddenObject</include>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(1).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,1)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(2).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,2)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(3).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,3)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(4).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,4)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(5).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,5)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(6).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,6)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(7).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,7)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(8).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,8)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(9).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,9)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(10).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,10)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(11).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,11)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(12).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,12)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(13).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,13)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(14).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,14)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(15).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,15)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(16).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,16)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(17).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,17)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(18).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,18)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(19).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,19)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(20).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,20)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(21).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,21)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(22).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,22)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(23).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,23)</onfocus>
-            <onfocus condition="Window.Previous(startup) + !IsEmpty(Skin.String(CustomFocusOffset)) + Stringcompare(Container(9000).ListItem(24).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,24)</onfocus>
+            <onfocus>$VAR[HomeCustomStartupFocus]</onfocus>
             <onfocus>SetFocus(9000)</onfocus>
+            <onleft>SetFocus(9000)</onleft>
+            <onright>SetFocus(9000)</onright>
+            <ondown>SetFocus(9000)</ondown>
+            <onup>SetFocus(9000)</onup>
+            <onclick>SetFocus(9000)</onclick>
+        </control>
+        <control type="button" id="9006">
+            <include>HiddenObject</include>
+            <onfocus condition="Stringcompare(Container(9000).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(9000).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(9000).ListItem.Property(Path),videodb://1/)">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
+<!--             <onclick condition="IsEmpty(Skin.String(TVShowHomeItem.Type)) + !Library.HasContent(TVShows)">Notification($LOCALIZE[257],$LOCALIZE[42295])</onclick>
+ -->            <onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),0) | stringcompare(Container(9000).ListItem.Property(Type),1) | stringcompare(Container(9000).ListItem.Property(Type),2) | stringcompare(Container(9000).ListItem.Property(Type),3)">RunAddon($INFO[Container(9000).ListItem.Property(Path)])</onfocus>
+            <onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),4)">ActivateWindow(Videos,$INFO[Container(9000).ListItem.Property(Path)],return)</onfocus>
+            <onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$INFO[Container(9000).ListItem.Property(Path)],return)</onfocus>
+            <onfocus condition="stringcompare(Container(9000).ListItem.Property(Type),6) | Stringcompare(Container(9000).ListItem.Property(Type),7)  | Stringcompare(Container(9000).ListItem.Property(Type),custom)">$INFO[Container(9000).ListItem.Property(Path)]</onfocus>
         </control>
         <include>MainMenuCommonContent</include>
         <!-- Fanart -->
@@ -81,8 +71,8 @@
                 <aspectratio align="center" aligny="top">scale</aspectratio>
                 <animation effect="fade" time="600">Visible</animation>
                 <animation effect="fade" time="600">Hidden</animation>
-                <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-                <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+                <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" delay="600" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+                <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" delay="600" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
                 <visible>!Control.IsVisible(2355) + ![Substring(Control.GetLabel(4322),case) | Substring(Control.GetLabel(4322),dailybabe)]</visible>
             </control>
             <include condition="SubString(Skin.String(backgroundlist),dailybabe)">DailyBabeBG</include>
@@ -205,7 +195,6 @@
             <include>RecentWidget</include>
             <include>RecentWidget2</include>
         </control>
-        <include>PosterWidgetTrailerLabel</include>
         <!-- Library Totals -->
         <include>LibraryStats</include>
         <!-- Time Panel-->
@@ -214,17 +203,30 @@
         <include>RSSPanel</include>
         <control type="group">
             <include>FullscreenDimensions</include>
-            <animation effect="slide" start="0,0" end="0,338" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,338" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
             <include>Animation_OpenCloseZoom</include>
             <control type="group">
                 <animation effect="zoom" end="80" center="960,520" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
                 <!-- Submenu -->
+                               <control type="image">
+                    <posx>935</posx>
+                    <posy>613</posy>
+                    <width>50</width>
+                    <height>15</height>
+                    <colordiffuse>white</colordiffuse>
+                    <texture>arrowdown.png</texture>
+<!--                     <animation effect="slide" end="0,40" time="0" condition="[!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)]">Conditional</animation>
+ -->                    <visible>Control.HasFocus(9000)</visible>
+                    <visible>!Skin.HasSetting(showsubmenu)</visible>
+                    <visible>!IsEmpty(Container(9000).ListItem.Property(SubMenu))</visible>
+                     <animation effect="zoom" start="100,0" end="100,100" time="500" delay="200" tween="cubic" center="0,613" easing="inout">VisibleChange</animation>
+                 </control>
                 <control type="group" id="9001">
                     <posx>240</posx>
                     <posy>609</posy>
                     <animation effect="zoom" end="120" center="960,610" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
                     <animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]">conditional</animation>
-                    <animation effect="slide" start="0,0" end="0,-60" time="300" tween="cubic" easing="inout" condition="!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]">conditional</animation>
+                    <animation effect="slide" end="0,-60" time="300" tween="cubic" easing="inout" condition="!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]">conditional</animation>
                     <control type="image">
                         <posx>70</posx>
                         <posy>3</posy>
@@ -243,7 +245,7 @@
                     <posy>62</posy>
                     <width>1920</width>
                     <height>1080</height>
-                    <animation effect="fade" start="0" end="100" time="750" condition="Player.HasAudio + System.IdleTime(8)">Conditional</animation>
+                    <animation effect="fade" end="100" time="750" condition="Player.HasAudio + System.IdleTime(8)">Conditional</animation>
                     <control type="progress">
                         <posy>452</posy>
                         <width>1920</width>
@@ -286,19 +288,18 @@
                     <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
                     <label>$VAR[HomeOSDLabelVar]</label>
                     <visible>Player.HasMedia + System.IdleTime(8)</visible>
-                    <animation effect="fade" start="0" end="100" time="1050">Visible</animation>
+                    <animation effect="fade" end="100" time="1050">Visible</animation>
                 </control>
                 <!-- Home Menu -->
                 <control type="button" id="8993">
                     <include>HiddenObject</include>
                     <onfocus>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onfocus>
-                    <onfocus>ClearProperty(FocusOnSubmenu,home)</onfocus>
+                    <onfocus>ClearProperty(PanelWidgetInfo,Home)</onfocus>
                     <onfocus>SetFocus(9000)</onfocus>
                 </control>
                 <control type="button" id="7993">
                     <include>HiddenObject</include>
                     <onfocus>AlarmClock(Widget2Move,Control.Move(7000,1),00:07,silent,loop)</onfocus>
-                    <onfocus>ClearProperty(FocusOnSubmenu,home)</onfocus>
                     <onfocus>SetFocus(9000)</onfocus>
                 </control>
                 <!--focus first widget-->
@@ -308,11 +309,6 @@
                     <onfocus condition="Control.IsVisible(8998)">CancelAlarm(WidgetMove,true)</onfocus>
                     <onfocus condition="Control.IsVisible(8998)">SetFocus(8000,0)</onfocus>
                     <onfocus condition="Control.IsVisible(8998)">SetFocus(8000)</onfocus>
-                    <onfocus condition="Stringcompare(Control.GetLabel(4321),weather)">ActivateWindow(weather)</onfocus>
-                    <onfocus condition="Stringcompare(Control.GetLabel(4325),system)">ActivateWindow(settings)</onfocus>
-                    <onfocus condition="[IsEmpty(Window(Home).Property(NextAired.1.Label)) + Substring(Control.GetLabel(4321),nextairedpanel)]">SetFocus(8993)</onfocus>
-                    <onfocus condition="[IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + Substring(Control.GetLabel(4321),watchlistmovies)]">SetFocus(8993)</onfocus>
-                    <onfocus condition="[IsEmpty(Window(Home).Property(RecommendedEpisode.1.Title)) + Substring(Control.GetLabel(4321),watchlisttv)]">SetFocus(8993)</onfocus>
                 </control>
                 <!--focus second widget-->
                 <control type="button" id="4445">
@@ -321,10 +317,6 @@
                     <onfocus condition="Control.IsVisible(7998)">CancelAlarm(Widget2Move,true)</onfocus>
                     <onfocus condition="Control.IsVisible(7998)">SetFocus(7000,0)</onfocus>
                     <onfocus condition="Control.IsVisible(7998)">SetFocus(7000)</onfocus>
-                    <onfocus condition="Stringcompare(Control.GetLabel(4325),weather)">ActivateWindow(weather)</onfocus>
-                    <onfocus condition="Stringcompare(Control.GetLabel(4325),system)">ActivateWindow(settings)</onfocus>
-                    <onfocus condition="[IsEmpty(Window(Home).Property(NextAired.1.Label)) + Substring(Control.GetLabel(4325),nextairedpanel)]">SetFocus(8993)</onfocus>
-                    <onfocus condition="[IsEmpty(Window(Home).Property(RecommendedMovie.1.Title)) + Substring(Control.GetLabel(4325),watchlistmovies)]">SetFocus(8993)</onfocus>
                 </control>
                 <include condition="Skin.HasSetting(mainmenufixedlist)">MainMenuFixedList</include>
                 <include condition="!Skin.HasSetting(mainmenufixedlist)">MainMenuWrapList</include>
@@ -338,16 +330,17 @@
         <!--Weather info-->
         <include condition="!IsEmpty(Weather.Plugin) + SubString(Skin.String(widgetlist),weather)">Weather_Widget</include>
         <include condition="!IsEmpty(Weather.Plugin) + SubString(Skin.String(widget2list),weather)">Weather_Widget2</include>
+        <include>ExtraInfoPanels</include>
         <!-- Music Info -->
         <include condition="!Skin.HasSetting(nohomepageMusicinfo) | !Skin.HasSetting(homepageVideoinfo)">Furniture_HomeNowPlaying</include>
         <control type="group">
             <visible>!IsEmpty(Window(home).Property(DisableWidgets)) + !Player.HasMedia</visible>
             <include>Animation_WindowFade200</include>
-            <animation type="Visible" reversible="true">
+            <animation type="Visible">
                 <effect type="zoom" start="150" end="100" center="960,540" time="500" tween="cubic" easing="out" />
-                <effect type="fade" start="0" end="100" time="300" />
+                <effect type="fade" end="100" time="300" />
             </animation>
-            <animation type="Hidden" reversible="true">
+            <animation type="Hidden">
                 <effect type="fade" start="100" end="0" time="300" />
                 <effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
             </animation>

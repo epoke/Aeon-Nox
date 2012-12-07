@@ -21,12 +21,18 @@
             </control>
             <control type="image">
                 <width>1920</width>
-                <height>87</height>
-                <texture>common/common_topbar.png</texture>
-                <visible>!Skin.HasSetting(altbreadcrumbstexture)</visible>
+                <height>115</height>
+                <posy>-40</posy>
+                <visible>Skin.HasSetting(FadedTopBar)</visible>
+                <texture>views/logo_tagline_gradient.png</texture>
             </control>
             <control type="group">
-                <visible>!Skin.HasSetting(altbreadcrumbstexture)</visible>
+                <visible>!Skin.HasSetting(altbreadcrumbstexture) + !Skin.HasSetting(FadedTopBar)</visible>
+                <control type="image">
+                    <width>1920</width>
+                    <height>87</height>
+                    <texture>common/common_topbar.png</texture>
+                </control>
                 <include>Neon_Topbar</include>
             </control>
         </control>
@@ -49,7 +55,7 @@
                     <colordiffuse>$VAR[TitleColorVar]</colordiffuse>
                     <include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
                     <visible>Skin.HasSetting(breadcrumbslabel) + ![Skin.HasSetting(GlobalNowPlaying) + Player.HasMedia]</visible>
-                    <animation effect="slide" start="0,0" end="-9,0" time="0" condition="true">Conditional</animation>
+                    <animation effect="slide" end="-9,0" time="0" condition="true">Conditional</animation>
                 </control>
                 <control type="label">
                     <include>BreadcrumbsLabel</include>
@@ -149,8 +155,8 @@
             </control>
         </control>
         <control type="group">
-            <animation type="Conditional" reversible="true" condition="Control.HasFocus(110) | Control.HasFocus(195)">
-                <effect type="slide" start="0,0" end="0,-52" time="400" tween="cubic" easing="in" />
+            <animation type="Conditional" condition="Control.HasFocus(110) | Control.HasFocus(109)">
+                <effect type="slide" end="0,-52" time="400" tween="cubic" easing="in" />
             </animation>
             <animation effect="slide" start="-735,0" end="0,0" delay="0" time="300">VisibleChange</animation>
             <visible>Skin.HasSetting(GlobalRSS) + ![Skin.HasSetting(GlobalNowPlaying) + Player.HasMedia]</visible>
@@ -190,8 +196,8 @@
             <include>Animation_VisibleChange400</include>
             <visible>Skin.HasSetting(ClassicTopBar) + [Skin.HasSetting(breadcrumbslabel) | Skin.HasSetting(GlobalRSS)]</visible>
             <animation effect="slide" start="-750" end="0" time="300">VisibleChange</animation>
-            <animation effect="slide" start="0" end="140" time="300" condition="Container.Content(songs) + ![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]">Conditional</animation>
-            <animation effect="slide" start="0" end="80" time="300" condition="Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)">Conditional</animation>
+            <animation effect="slide" end="140" time="300" condition="Container.Content(songs) + ![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)]">Conditional</animation>
+            <animation effect="slide" end="80" time="300" condition="Player.HasMedia + Skin.HasSetting(GlobalNowPlaying)">Conditional</animation>
         </control>
     </include>
     <include name="Breadcrumbs_Furniture">
@@ -201,7 +207,7 @@
                 <texture>-</texture>
                 <include>HiddenObject</include>
                 <visible>![Container.Scrolling | Container.OnScrollNext | Container.OnScrollPrevious]</visible>
-                <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                <animation effect="fade" end="100" time="0">Visible</animation>
                 <animation effect="fade" time="500">Hidden</animation>
             </control>
             <!--right widget -->
@@ -209,7 +215,7 @@
                 <posx>654r</posx>
                 <width>794</width>
                 <height>87</height>
-                <animation effect="slide" start="0" end="145" time="400" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
+                <animation effect="slide" end="145" time="400" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
                 <texture flipy="true">home/timepanel_mid.png</texture>
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
                 <include>Animation_VisibleChange400</include>

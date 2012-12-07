@@ -3,7 +3,7 @@
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>backgroundcolor</backgroundcolor>
-    <views>50,509,500,501,504,505,511,512,517,560</views>
+    <views>50,509,500,501,505,511,512,517,560</views>
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
     <onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
     <controls>
@@ -31,7 +31,7 @@
         </control>
         <include>WallPanel</include>
         <control type="group">
-            <animation effect="slide" start="0,0" end="0,650" time="700" easing="out" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
+            <animation effect="slide" end="0,650" time="700" easing="out" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
             <control type="group">
                 <visible>!Substring(Container.FolderPath,\comics\)</visible>
                 <!-- view id = 50 -->
@@ -39,19 +39,18 @@
                 <!-- view id = 51 -->
                 <include>Stripshow</include>
             </control>
-                <include>CommonRootView</include>
-                <include>Viewtype_Wall</include>
-                <include>AddonWall</include>
+            <include>CommonRootView</include>
+            <include>Viewtype_Wall</include>
+            <include>AddonWall</include>
             <control type="group">
                 <visible>Substring(Container.FolderPath,\comics\)</visible>
                 <!-- view id = 500 -->
                 <include>Showcase</include>
-                <include>ShowcaseDVD</include>
             </control>
             <control type="button" id="7000">
                 <include>HiddenObject</include>
                 <onfocus>SetFocus(9000)</onfocus>
-                <visible>Control.IsVisible(509) | Control.IsVisible(517) | Control.IsVisible(501) | Control.IsVisible(504)</visible>
+                <visible>Control.IsVisible(509) | Control.IsVisible(517) | Control.IsVisible(501)</visible>
             </control>
             <include>FloorLabels</include>
             <control type="group">

@@ -9,8 +9,19 @@
     <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
     <onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
     <allowoverlay>no</allowoverlay>
-    <views>50,52,53,57,500,501,503,504,550,508,509,510,511,512,514,516,518</views>
+    <views>50,52,53,57,500,501,503,550,508,509,510,511,512,514,516,518</views>
     <controls>
+        <control type="button" id="9900"><!-- no info-->
+            <include>HiddenObject</include>
+            <visible>!Container.Content()</visible>
+            <visible>!SubString(ListItem.Path,videodb://1/7/,left)</visible>
+            <visible>!SubString(Container.FolderPath,library://,left)</visible>
+            <visible>!Stringcompare(ListItem.Label,..)</visible>
+            <visible>!Container.Content(years)</visible>
+            <visible>!Container.Content(genres)</visible>
+            <visible>!Container.Content(studios)</visible>
+            <visible>!Container.Content(countries)</visible>
+        </control>
         <control type="label" id="4420">
             <label fallback="fanart">$VAR[InfoPanelStyleVar]</label>
             <include>HiddenObject</include>
@@ -58,7 +69,7 @@
             <texture>diffuseoverlay.png</texture>
             <animation effect="fade" time="250">WindowOpen</animation>
             <animation effect="fade" time="250">WindowClose</animation>
-            <animation effect="fade" start="0" end="100" time="550" delay="200">Visible</animation>
+            <animation effect="fade" end="100" time="550" delay="200">Visible</animation>
             <animation effect="fade" start="100" end="0" time="400">Hidden</animation>
             <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
             <visible>!Control.HasFocus(109)</visible>
@@ -69,7 +80,7 @@
         <include>Furniture_Showcase</include>
         <include condition="!Skin.HasSetting(DisableInfoWallVL) | !Skin.HasSetting(DisableWallVL)">WallPanel</include>
         <control type="group">
-            <animation effect="slide" start="0,0" end="0,650" time="700" easing="out" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
+            <animation effect="slide" end="0,650" time="700" easing="out" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
             <control type="group">
                 <!-- view id = 50 -->
                 <include>CommonRootView</include>
@@ -86,7 +97,6 @@
                 <!-- view id = 503 Landscape-->
                 <include condition="!Skin.HasSetting(DisableLandscapeVL)">MediaListView3</include>
                 <!-- view id = 504 Showcase DVD-->
-                <include condition="!Skin.HasSetting(DisableDVDCaseVL)">ShowcaseDVD</include>
                 <!-- view id = 511 -->
                 <include condition="!Skin.HasSetting(DisableLowListVL)">LowList</include>
                 <!-- view id = 510 -->
@@ -94,7 +104,7 @@
                 <!-- view id = 57-->
                 <include condition="!Skin.HasSetting(DisableShiftVL)">ShiftView</include>
                 <!-- view id = 509-->
-                <include condition="!Skin.HasSetting(DisableShowCaseVL)+IsEmpty(Window(Home).Property(DontRunTVShowScripts))">ShowcaseQuadrate</include>
+                <include condition="!Skin.HasSetting(DisableShowCaseSquareVL)">ShowcaseQuadrate</include>
                 <!-- view id = 512-->
                 <include condition="!Skin.HasSetting(DisableInfoWallVL)">AddonWall</include>
                 <!--view id = 514-->
@@ -105,17 +115,15 @@
             <control type="group">
                 <control type="button" id="7000">
                     <include>HiddenObject</include>
-                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) | Control.IsVisible(508)] + [Control.IsVisible(501) | Control.IsVisible(504) | Control.IsVisible(503) | Control.IsVisible(508)]">SetFocus(9000)</onfocus>
-                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(504) | Control.IsVisible(503)] + !Skin.HasSetting(trailerincontextmenu)">SetFocus(1801)</onfocus>
-                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(504) | Control.IsVisible(503)] + Skin.HasSetting(trailerincontextmenu)">SetFocus(9000)</onfocus>
+                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) | Control.IsVisible(508)] + [Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(508)]">SetFocus(9000)</onfocus>
+                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(503)] + !Skin.HasSetting(trailerincontextmenu)">SetFocus(1801)</onfocus>
+                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(503)] + Skin.HasSetting(trailerincontextmenu)">SetFocus(9000)</onfocus>
                     <onup condition="IsEmpty(ListItem.Trailer) | Skin.HasSetting(trailerincontextmenu)">SetFocus(9000)</onup>
                     <onup condition="!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(trailerincontextmenu)">SetFocus(1801)</onup>
                     <onleft condition="Control.IsVisible(501)">Control.Move(501,-1)</onleft>
-                    <onleft condition="Control.IsVisible(504)">Control.Move(504,-1)</onleft>
                     <onleft condition="Control.IsVisible(503)">Control.Move(503,-1)</onleft>
                     <onleft condition="Control.IsVisible(508)">Control.Move(508,-1)</onleft>
                     <onright condition="Control.IsVisible(501)">Control.Move(501,1)</onright>
-                    <onright condition="Control.IsVisible(504)">Control.Move(504,1)</onright>
                     <onright condition="Control.IsVisible(503)">Control.Move(503,1)</onright>
                     <onright condition="Control.IsVisible(508)">Control.Move(508,1)</onright>
                     <onleft>50</onleft>
@@ -126,8 +134,7 @@
                     <onclick condition="IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">SetFocus(50)</onclick>
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">Select</onclick>
-                    <visible>!StringCompare(ListItem.Label,..) + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>
-                    <visible>!Container.Content(sets)</visible>
+                    <visible>Control.IsVisible(9900) + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>
                 </control>
                 <control type="button" id="7002">
                     <include>HiddenObject</include>
@@ -147,19 +154,18 @@
                 </control>
             </control>
             <control type="group">
-                <visible>Control.IsVisible(550) | Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(504) | Control.IsVisible(501) | Control.IsVisible(500) | Control.IsVisible(512) | Control.IsVisible(516) | Control.IsVisible(514)</visible>
-                <animation effect="slide" start="0" end="705" time="0" easing="inout" tween="cubic" condition="Control.IsVisible(514)">Conditional</animation>
+                <visible>Control.IsVisible(550) | Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(501) | Control.IsVisible(500) | Control.IsVisible(512) | Control.IsVisible(516) | Control.IsVisible(514)</visible>
+                <animation effect="slide" end="705" time="0" easing="inout" tween="cubic" condition="Control.IsVisible(514)">Conditional</animation>
                 <include>FloorFlags</include>
             </control>
             <include>FloorLabels</include>
             <include condition="!Skin.HasSetting(DisablePostersVL) | !Skin.HasSetting(DisableShiftVL) |!Skin.HasSetting(DisableTriPanelVL)">Posters_Furniture</include>
             <control type="group">
-                <animation effect="slide" start="0,0" end="-50,0" time="400" easing="inout" tween="circle" condition="Skin.HasSetting(smallshiftview) + Control.IsVisible(57)">Conditional</animation>
-                <animation effect="slide" start="0,0" end="-642.5,0" time="400" easing="inout" tween="circle" condition="Control.IsVisible(57)">Conditional</animation>
+                <animation effect="slide" end="-50,0" time="400" easing="inout" tween="circle" condition="Skin.HasSetting(smallshiftview) + Control.IsVisible(57)">Conditional</animation>
+                <animation effect="slide" end="-642.5,0" time="400" easing="inout" tween="circle" condition="Control.IsVisible(57)">Conditional</animation>
                 <animation effect="fade" delay="300" time="300" reversible="false">Hidden</animation>
-                <animation effect="fade" start="0" delay="200" end="100" time="300" reversible="true" condition="!Stringcompare(Control.GetLabel(8822),empty.png)">Conditional</animation>
+                <animation effect="fade" delay="200" end="100" time="300" condition="!Stringcompare(Control.GetLabel(8822),empty.png)">Conditional</animation>
                 <animation effect="fade" start="100" end="0" time="0" condition="Container.Content(seasons)">Conditional</animation>
-                <visible>Control.IsVisible(57) | [Control.IsVisible(500) + !StringCompare(Container.FolderName,youtube)] | Control.IsVisible(504) | Control.IsVisible(501)</visible>
                 <visible>![Container.OnNext | Container.OnPrevious]</visible>
                 <include>Animation_OpenCloseZoom_New</include>
                 <control type="image" id="8822">
@@ -172,6 +178,8 @@
                     <animation effect="fade" delay="300" time="300" reversible="false">Hidden</animation>
                     <texture background="true" diffuse="thumbs/banner_mask.png">$INFO[ListItem.Art(banner)]</texture>
                     <visible>[Skin.HasSetting(tvshowbannersfloor) + Container.Content(tvshows)]</visible>
+                                    <visible>Control.IsVisible(57) | [Control.IsVisible(500) + !StringCompare(Container.FolderName,youtube)] | Control.IsVisible(501)</visible>
+
                 </control>
                 <control type="image" id="8822">
                     <posx>817.5</posx>
@@ -181,6 +189,8 @@
                     <fadetime>200</fadetime>
                     <animation effect="fade" delay="300" time="300" reversible="false">Hidden</animation>
                     <texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                                    <visible>Control.IsVisible(57) | [Control.IsVisible(500) + !StringCompare(Container.FolderName,youtube)] | Control.IsVisible(501)</visible>
+
                     <aspectratio>keep</aspectratio>
                     <visible>[[Skin.HasSetting(movielogosfloor) + Container.Content(movies)] | [Skin.HasSetting(tvshowlogosfloor) + Container.Content(tvshows)]]</visible>
                 </control>
