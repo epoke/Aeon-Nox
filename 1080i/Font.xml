@@ -468,6 +468,7 @@
         </font>
         <font>
             <name>Font_Info</name>
+            <linespacing>0.80</linespacing>
             <filename>MC360.ttf</filename>
             <size>28</size>
         </font>
@@ -836,6 +837,7 @@
             <name>Font_Info</name>
             <filename>MC360.ttf</filename>
             <size>28</size>
+            <linespacing>0.80</linespacing>
         </font>
         <font>
             <name>Font_Reg17</name>
@@ -1169,6 +1171,7 @@
         <font>
             <name>Font_Info</name>
             <filename>Ubuntu-C.ttf</filename>
+            <linespacing>0.80</linespacing>
             <size>28</size>
         </font>
         <font>
@@ -1492,6 +1495,7 @@
         <font>
             <name>Font_Info</name>
             <filename>Ubuntu-R_KOR.ttf</filename>
+            <linespacing>0.80</linespacing>
             <size>24</size>
         </font>
         <font>
@@ -1788,6 +1792,7 @@
         <font>
             <name>Font_Info</name>
             <filename>Ubuntu-C.ttf</filename>
+            <linespacing>0.80</linespacing>
             <aspect>1.10</aspect>
             <size>28</size>
         </font>

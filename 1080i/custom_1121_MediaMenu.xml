@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1121">
     <defaultcontrol always="true">9011</defaultcontrol>
-    <onload>ClearProperty(QuickNavSetup,home)</onload>
     <onunload>ClearProperty(quicknavsetup,home)</onunload>
     <onunload>ClearProperty(viewtypeselect,home)</onunload>
     <coordinates>
@@ -31,7 +30,7 @@
                 <effect type="slide" end="-490" time="400" easing="in" tween="cubic" />
             </animation>
             <animation type="WindowOpen">
-                <effect type="slide" start="-450" end="0" time="400" easing="out" tween="cubic" />
+                <effect type="slide" start="-450" end="0" time="400" tween="cubic" />
             </animation>
             <control type="image">
                 <posx>-42</posx>

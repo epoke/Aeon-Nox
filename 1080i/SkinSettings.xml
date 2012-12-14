@@ -2,9 +2,9 @@
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <backgroundcolor>backgroundcolor</backgroundcolor>
-    <include condition="!Skin.HasSetting(firstrun)">AutoConfig</include>
+    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
     <animation type="WindowOpen" reversible="false" condition="![Window.Previous(SettingsCategory.xml) | Window.Previous(1116) | Window.Previous(settings)]">
-        <effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" easing="out" />
+        <effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
         <effect type="fade" end="100" time="300" />
     </animation>
     <animation type="WindowClose" reversible="false" condition="![Window.Next(SettingsCategory.xml) | Window.Next(1116) | Window.Next(settings)]">
@@ -27,7 +27,7 @@
                 <onright>9010</onright>
                 <onup>9000</onup>
                 <ondown>9000</ondown>
-                <scrolltime tween="sine" easing="out">300</scrolltime>
+                <scrolltime tween="sine">300</scrolltime>
                 <itemlayout height="74" width="570">
                     <control type="label">
                         <posx>30</posx>
@@ -200,7 +200,7 @@
                     <control type="button" id="455">
                         <label>$LOCALIZE[42100]</label>
                         <include>Default_SettingButton</include>
-                        <onclick>ActivateWindow(1115)</onclick>
+                        <onclick>ActivateWindow(1147)</onclick>
                         <onclick>ActivateWindow(1128)</onclick>
                     </control>
                     <control type="button" id="454">
@@ -506,7 +506,6 @@
                         <onclick>Addon.OpenSettings(script.rssclient)</onclick>
                         <visible>System.HasAddon(script.rssclient)</visible>
                     </control>
-
                 </control>
                 <control type="grouplist" id="9007">
                     <visible>Container(9000).Hasfocus(7)</visible>
