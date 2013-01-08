@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: XBMC Skins\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2012-12-14 11:39+0000\n"
+"PO-Revision-Date: 2012-12-15 05:23+0000\n"
 "Last-Translator: Junghwan Oh <junghwan@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/xbmc-skins/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -110,7 +110,7 @@ msgstr "[B]TV 설정[/B][CR][CR]새 채널 설정 · EPG 설정 · 프로그램 
 
 msgctxt "#31017"
 msgid "Live TV"
-msgstr "Live TV"
+msgstr "TV 시청"
 
 msgctxt "#31021"
 msgid "Search XBMC for"
@@ -122,7 +122,7 @@ msgstr "음악 - 파일"
 
 msgctxt "#31023"
 msgid "Reset Fallback"
-msgstr ""
+msgstr "기본값 초기화"
 
 msgctxt "#31024"
 msgid "Page"
@@ -242,7 +242,7 @@ msgstr "전체화면"
 
 msgctxt "#31054"
 msgid "Shadow"
-msgstr ""
+msgstr "그림자"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -454,7 +454,7 @@ msgstr "녹화중"
 
 msgctxt "#31112"
 msgid "Coloured"
-msgstr ""
+msgstr "컬러"
 
 msgctxt "#31113"
 msgid "Single Image"
@@ -870,7 +870,7 @@ msgstr "많이 재생한 앨범"
 
 msgctxt "#31327"
 msgid "Most played ROMs"
-msgstr ""
+msgstr "가장 많이 플레이한 ROM"
 
 msgctxt "#31328"
 msgid "Recently Added"
@@ -1117,11 +1117,11 @@ msgstr "배너"
 
 msgctxt "#31455"
 msgid "MovieWall: Path to movie cover folder"
-msgstr ""
+msgstr "영화 월: 영화 커버 폴더 경로"
 
 msgctxt "#31456"
 msgid "CD-Wall: Path to CD cover folder"
-msgstr ""
+msgstr "CD-월: CD 커버 폴더 경로"
 
 msgctxt "#31457"
 msgid "Comics"
@@ -1305,7 +1305,7 @@ msgstr "라벨"
 
 msgctxt "#31623"
 msgid "Slot"
-msgstr ""
+msgstr "슬롯"
 
 msgctxt "#31627"
 msgid "Hide OSD player controls"
@@ -1349,11 +1349,11 @@ msgstr "회전"
 
 msgctxt "#31637"
 msgid "Shadow"
-msgstr ""
+msgstr "그림자"
 
 msgctxt "#31638"
 msgid "Show 'Next Aired' info"
-msgstr ""
+msgstr "'Next Aired' 정보 보기"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
@@ -1377,11 +1377,11 @@ msgstr "홈 화면 설정"
 
 msgctxt "#31644"
 msgid "Icon Panel Manager"
-msgstr ""
+msgstr "아이콘 패널 관리자"
 
 msgctxt "#31645"
 msgid "Background Setup"
-msgstr ""
+msgstr "배경화면 설정"
 
 msgctxt "#31646"
 msgid ""
@@ -1394,7 +1394,7 @@ msgstr "재생목록 사용자 메뉴 위젯에 시청한 항목 포함"
 
 msgctxt "#31673"
 msgid "Most Played ROMs"
-msgstr ""
+msgstr "가장 많이 플레이한 ROM"
 
 msgctxt "#31674"
 msgid "Switch panel layout"
@@ -1610,7 +1610,7 @@ msgstr "사용자 설정"
 
 msgctxt "#41152"
 msgid "Activate featured overlay when pressing up"
-msgstr ""
+msgstr "위 화살표를 눌러 추천 오버레이 활성화"
 
 msgctxt "#41153"
 msgid "Favourite"
@@ -1622,7 +1622,7 @@ msgstr "기능"
 
 msgctxt "#41155"
 msgid "Activate Bottom Menu (Play DVD, toggle widgets)"
-msgstr ""
+msgstr "하단 메뉴 활성화 (DVD 재생, 위젯 토글)"
 
 msgctxt "#41156"
 msgid "Choose Type"
@@ -1682,7 +1682,7 @@ msgstr "경로를 설정해야 합니다"
 
 msgctxt "#42009"
 msgid "Bar Style"
-msgstr ""
+msgstr "바 스타일"
 
 msgctxt "#42010"
 msgid "This feature requires the ColorPicker add-on"
@@ -1734,7 +1734,7 @@ msgstr "오늘 방송"
 
 msgctxt "#42103"
 msgid "Fallback settings"
-msgstr ""
+msgstr "기본값 설정"
 
 msgctxt "#42104"
 msgid "Fallback"
