@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1136">
     <defaultcontrol always="true">4</defaultcontrol>
     <allowoverlay>no</allowoverlay>
@@ -233,31 +233,31 @@
     <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub9_5)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub9_5.Path)])</onload>
     <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub9_5)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub9_5.MultiFanart)])</onload>
     <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub9_5)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub9_5.Disable)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_1)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub10_1.Type)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_1)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub10_1.Label)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_1)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub10_1.Path)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_1)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub10_1.MultiFanart)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_1)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub10_1.Disable)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_2)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub10_2.Type)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_2)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub10_2.Label)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_2)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub10_2.Path)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_2)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub10_2.MultiFanart)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_2)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub10_2.Disable)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_3)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub10_3.Type)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_3)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub10_3.Label)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_3)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub10_3.Path)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_3)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub10_3.MultiFanart)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_3)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub10_3.Disable)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_4)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub10_4.Type)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_4)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub10_4.Label)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_4)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub10_4.Path)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_4)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub10_4.MultiFanart)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_4)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub10_4.Disable)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_5)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub10_5.Type)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_5)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub10_5.Label)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_5)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub10_5.Path)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_5)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub10_5.MultiFanart)])</onload>
-    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub10_5)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub10_5.Disable)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_1)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub0_1.Type)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_1)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub0_1.Label)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_1)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub0_1.Path)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_1)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub0_1.MultiFanart)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_1)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub0_1.Disable)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_2)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub0_2.Type)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_2)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub0_2.Label)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_2)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub0_2.Path)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_2)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub0_2.MultiFanart)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_2)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub0_2.Disable)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_3)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub0_3.Type)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_3)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub0_3.Label)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_3)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub0_3.Path)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_3)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub0_3.MultiFanart)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_3)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub0_3.Disable)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_4)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub0_4.Type)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_4)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub0_4.Label)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_4)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub0_4.Path)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_4)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub0_4.MultiFanart)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_4)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub0_4.Disable)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_5)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(CustomSub0_5.Type)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_5)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(CustomSub0_5.Label)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_5)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(CustomSub0_5.Path)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_5)">Skin.SetString(ItemToEdit.MultiFanart,$INFO[Skin.String(CustomSub0_5.MultiFanart)])</onload>
+    <onload condition="Stringcompare(Window(home).Property(MenuItem),CustomSub0_5)">Skin.SetString(ItemToEdit.Disable,$INFO[Skin.String(CustomSub0_5.Disable)])</onload>
     <onload condition="Stringcompare(Window(home).Property(MenuItem),QuickNavItem1)">Skin.SetString(ItemToEdit.Type,$INFO[Skin.String(QuickNavItem1.Type)])</onload>
     <onload condition="Stringcompare(Window(home).Property(MenuItem),QuickNavItem1)">Skin.SetString(ItemToEdit.Label,$INFO[Skin.String(QuickNavItem1.Label)])</onload>
     <onload condition="Stringcompare(Window(home).Property(MenuItem),QuickNavItem1)">Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(QuickNavItem1.Path)])</onload>
@@ -417,7 +417,7 @@
                     <control type="button">
                         <include>Objects_CustomizerInfoButton</include>
                         <visible>![Substring(Skin.String(ItemToEdit.MultiFanart),recent,left) | Substring(Skin.String(ItemToEdit.MultiFanart),widgetfanart,left) | Substring(Skin.String(ItemToEdit.MultiFanart),random,left) | Substring(Skin.String(ItemToEdit.MultiFanart),dvdcase,left) | Substring(Skin.String(ItemToEdit.MultiFanart),nocase,left) | Substring(Skin.String(ItemToEdit.MultiFanart),case,left) | Substring(Skin.String(ItemToEdit.MultiFanart),watchlist,left) | IsEmpty(Skin.String(ItemToEdit.MultiFanart))]</visible>
-                        <label>$LOCALIZE[31102] [LOWERCASE]$LOCALIZE[573][/LOWERCASE]:</label>
+                        <label>$LOCALIZE[31098]:</label>
                         <label2>[COLOR white]$INFO[Skin.String(ItemToEdit.MultiFanart)][/COLOR]</label2>
                         <visible>Window.IsActive(1124)</visible>
                     </control>
@@ -453,8 +453,6 @@
                         <control type="button" id="2140">
                             <label>$LOCALIZE[41156]</label>
                             <include>Objects_CustomizerSettingsButton</include>
-                            <onclick>Skin.Reset(ItemToEdit.Label)</onclick>
-                            <onclick>Skin.Reset(ItemToEdit.Path)</onclick>
                             <onclick>ActivateWindow(1142)</onclick>
                         </control>
                         <control type="button" id="2141">

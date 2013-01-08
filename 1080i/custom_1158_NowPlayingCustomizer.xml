@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window id="1158" type="window">
     <defaultcontrol always="true">450</defaultcontrol>
     <backgroundcolor>backgroundcolor</backgroundcolor>
@@ -188,12 +188,6 @@
                     <onclick condition="Skin.HasSetting(artistslideshowhome)">Skin.SetBool(musicfanarthome)</onclick>
                     <onclick condition="Skin.HasSetting(artistslideshowhome)">Skin.Reset(artistslideshowhome)</onclick>
                     <onclick condition="Skin.HasSetting(musicfanarthome)">Skin.Reset(musicfanarthome)</onclick>
-                </control>
-                <control type="radiobutton" id="453">
-                    <include>Objects_NowPlayingSettingsButton</include>
-                    <label>31425</label>
-                    <onclick>Skin.ToggleSetting(NowPlayingFolderJPG)</onclick>
-                    <selected>!Skin.HasSetting(NowPlayingFolderJPG)</selected>
                 </control>
                 <control type="radiobutton" id="454">
                     <include>Objects_NowPlayingSettingsButton</include>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1122">
     <defaultcontrol always="true">4</defaultcontrol>
     <allowoverlay>no</allowoverlay>
@@ -33,7 +33,7 @@
     <controls>
         <control type="group">
             <posy>-40</posy>
-            <visible>!Window.IsActive(script-RSS_Editor-rssEditor.xml) + !Window.IsActive(1137) + !Window.IsActive(1150) + !Window.IsActive(1160) + !Window.IsActive(1162) + !Window.IsActive(1133) + !Window.IsActive(1134) + !Window.IsActive(1138) + !Window.IsActive(1142) + !Window.IsActive(1143) + !Window.IsActive(1144) + !Window.IsActive(1145) + !Window.IsActive(1155)</visible>
+            <visible>!Window.IsActive(script-RSS_Editor-rssEditor.xml) + !Window.IsActive(1137) + !Window.IsActive(1150) + !Window.IsActive(1160) + !Window.IsActive(1162) + !Window.IsActive(1133) + !Window.IsActive(1134) + !Window.IsActive(1138) + !Window.IsActive(1142) + !Window.IsActive(1143) + !Window.IsActive(1144) + !Window.IsActive(1145) + !Window.IsActive(1146) + !Window.IsActive(1155) + !Window.IsVisible(DialogKeyboard.xml)</visible>
             <include>Animation_DialogPopup</include>
             <control type="image">
                 <posx>456</posx>
@@ -67,7 +67,7 @@
                     <include>Animation_VisibleChange200</include>
                     <control type="button">
                         <include>Objects_CustomizerInfoButton</include>
-                        <label>$LOCALIZE[42302]:</label>
+                        <label>$LOCALIZE[564]:</label>
                         <label2>[COLOR white]$VAR[CustomItemTypeNameVar][/COLOR]</label2>
                     </control>
                     <control type="button">
@@ -98,7 +98,7 @@
                     <control type="button">
                         <include>Objects_CustomizerInfoButton</include>
                         <visible>![Substring(Skin.String(ItemToEdit.MultiFanart),recent,left) | Substring(Skin.String(ItemToEdit.MultiFanart),widgetfanart,left) | Substring(Skin.String(ItemToEdit.MultiFanart),random,left) | Substring(Skin.String(ItemToEdit.MultiFanart),dvdcase,left) | Substring(Skin.String(ItemToEdit.MultiFanart),nocase,left) | Substring(Skin.String(ItemToEdit.MultiFanart),case,left) | Substring(Skin.String(ItemToEdit.MultiFanart),watchlist,left) | IsEmpty(Skin.String(ItemToEdit.MultiFanart))]</visible>
-                        <label>$LOCALIZE[31102] [LOWERCASE]$LOCALIZE[573][/LOWERCASE]:</label>
+                        <label>$LOCALIZE[31098]:</label>
                         <label2>[COLOR white]$INFO[Skin.String(ItemToEdit.MultiFanart)][/COLOR]</label2>
                     </control>
                     <control type="button">
@@ -118,6 +118,18 @@
                         <height>100</height>
                         <align>center</align>
                         <aspectratio>keep</aspectratio>
+                        <colordiffuse>FFFFFFFF</colordiffuse>
+                        <visible>!Substring(Skin.String(ItemToEdit.Icon),/BigIcons/)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>100</posx>
+                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
+                        <width>600</width>
+                        <height>100</height>
+                        <align>center</align>
+                        <aspectratio>keep</aspectratio>
+                        <colordiffuse>white</colordiffuse>
+                        <visible>Substring(Skin.String(ItemToEdit.Icon),/BigIcons/)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -143,8 +155,6 @@
                         <control type="button" id="20">
                             <label>$LOCALIZE[41156]</label>
                             <include>Objects_CustomizerSettingsButton</include>
-                            <onclick>Skin.Reset(ItemToEdit.Label)</onclick>
-                            <onclick>Skin.Reset(ItemToEdit.Path)</onclick>
                             <onclick>ActivateWindow(1142)</onclick>
                         </control>
                         <control type="button" id="23">
@@ -221,8 +231,6 @@
                             <onclick condition="Stringcompare(Window(home).Property(MenuItem),ShutdownHomeItem)">Skin.Setstring(ItemToEdit.SubMenu,shutdown)</onclick>
                             <onclick condition="Stringcompare(Window(home).Property(MenuItem),SettingsHomeItem)">Skin.Setstring(ItemToEdit.SubMenu,settings)</onclick>
                             <onclick condition="Stringcompare(Window(home).Property(MenuItem),ProgramsHomeItem)">Skin.Setstring(ItemToEdit.SubMenu,programs)</onclick>
-                            <!--                             <onclick condition="Stringcompare(Window(home).Property(MenuItem),CustomHomeItem1)">Skin.Setstring(ItemToEdit.InfoLine,custom1)</onclick>
- -->
                         </control>
                     </control>
                 </control>

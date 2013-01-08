@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
     <include name="Viewtype_FullscreenPanel">
         <control type="group">
@@ -533,7 +533,7 @@
                             <height>116</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <visible>IsEmpty(ListItem.Art(characterart))</visible>
-                            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                            <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                         <control type="textbox">
                             <posx>410</posx>
@@ -542,7 +542,7 @@
                             <height>116</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <visible>!IsEmpty(ListItem.Art(characterart))</visible>
-                            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                            <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                         <control type="image">
                             <posx>1580</posx>
@@ -633,7 +633,7 @@
                             <height>116</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <visible>IsEmpty(ListItem.Art(characterart))</visible>
-                            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                            <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                         <control type="textbox">
                             <posx>410</posx>
@@ -642,7 +642,7 @@
                             <height>116</height>
                             <label>$INFO[ListItem.Plot]</label>
                             <visible>!IsEmpty(ListItem.Art(characterart))</visible>
-                            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                            <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
                         <control type="image">
                             <posx>1580</posx>
@@ -678,6 +678,19 @@
                 <orientation>vertical</orientation>
                 <animation effect="slide" end="-813" time="0" condition="Skin.HasSetting(infopanelfanart)">Conditional</animation>
                 <visible>!Skin.HasSetting(infopanelbackground)</visible>
+            </control>
+            <control type="scrollbar" id="68">
+                <posx>1877</posx>
+                <animation effect="zoom" start="70" end="100" center="auto" tween="back" time="400" condition="Control.HasFocus(68)">Conditional</animation>
+                <posy>100</posy>
+                <width>46</width>
+                <height>910</height>
+                <animation effect="fade" start="100" end="0" time="300" condition="!Control.HasFocus(68)">Conditional</animation>
+                <texturesliderbackground>views/scrollbarbacklist.png</texturesliderbackground>
+                <orientation>vertical</orientation>
+                <onleft>518</onleft>
+                <onright>9000</onright>
+                <visible>Skin.HasSetting(infopanelbackground)</visible>
             </control>
         </control>
     </include>
@@ -1146,7 +1159,7 @@
             <posx>400</posx>
             <posy>1</posy>
             <height>45</height>
-            <width>1240</width>
+            <width>540</width>
             <label>$INFO[ListItem.Label]</label>
             <font>Font_Bold24</font>
             <textoffsetx>10</textoffsetx>
@@ -1155,7 +1168,7 @@
             <posx>563</posx>
             <posy>46</posy>
             <height>30</height>
-            <width>1240</width>
+            <width>540</width>
             <label>$INFO[ListItem.Label2,• ]</label>
             <font>Font_Reg20</font>
             <textoffsetx>10</textoffsetx>
@@ -1176,7 +1189,7 @@
             <width>500</width>
             <height>116</height>
             <label>$INFO[ListItem.Plot]</label>
-            <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+            <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
         </control>
     </include>
     <include name="FSPanelTVItemLayout">
@@ -1230,7 +1243,7 @@
             <posx>400</posx>
             <posy>1</posy>
             <height>45</height>
-            <width>1240</width>
+            <width>540</width>
             <label>$INFO[ListItem.Label]</label>
             <font>Font_Bold24</font>
             <textcolor>grey2</textcolor>
@@ -1240,7 +1253,7 @@
             <posx>563</posx>
             <posy>46</posy>
             <height>30</height>
-            <width>1240</width>
+            <width>540</width>
             <label>$INFO[ListItem.Label2,• ]</label>
             <font>Font_Reg20</font>
             <textcolor>grey2</textcolor>

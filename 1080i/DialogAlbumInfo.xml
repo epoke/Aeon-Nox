@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window>
     <defaultcontrol>5000</defaultcontrol>
     <onload codition="!Player.HasAudio + System.HasAddon(script.artistslideshow) + Skin.HasSetting(usescriptalbumlist)">SetProperty(CURRENTARTIST,$INFO[ListItem.Artist])</onload>
@@ -222,7 +222,7 @@
                     <height>270</height>
                     <font>Font_Reg19</font>
                     <pagecontrol>60</pagecontrol>
-                    <autoscroll delay="15000" time="5000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
                     <textcolor>white3</textcolor>
                     <shadowcolor>black</shadowcolor>
                     <animation effect="fade" time="400">VisibleChange</animation>
@@ -565,8 +565,8 @@
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <label>$INFO[Control.GetLabel(22)]</label>
-                <animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(22) + !Control.HasFocus(23)">Conditional</animation>
-                <visible>Control.IsVisible(22) | Control.IsVisible(23)</visible>
+                <animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="inout" condition="!Control.HasFocus(22)">Conditional</animation>
+                <visible>Control.IsVisible(22)</visible>
             </control>
             <control type="label">
                 <font>Font_Reg19_Caps</font>
@@ -580,7 +580,7 @@
         <control type="grouplist" id="5000">
             <onup>9000</onup>
             <onleft>5000</onleft>
-            <onright condition="Control.IsVisible(50)">50</onright>
+            <onright condition="!Control.IsVisible(5223)">50</onright>
             <onright condition="Control.IsVisible(5223)">5223</onright>
             <ondown condition="ControlGroup(5000).HasFocus(25)">5222</ondown>
             <ondown condition="ControlGroup(5000).HasFocus(13) | ControlGroup(5000).HasFocus(14)">60</ondown>
@@ -615,16 +615,10 @@
             <control type="button" id="22">
                 <label>$LOCALIZE[31096]</label>
                 <include>HiddenObject</include>
-                <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist],return)</onclick>
+                <onclick condition="Container.Content(artists)">ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist],return)</onclick>
+                <onclick condition="Container.Content(albums)">ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist] $INFO[ListItem.Album],return)</onclick>
                 <onclick>Dialog.Close(all,true)</onclick>
-                <visible>Container.Content(artists)</visible>
-            </control>
-            <control type="button" id="23">
-                <label>$LOCALIZE[31096]</label>
-                <include>HiddenObject</include>
-                <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Artist] $INFO[ListItem.Album],return)</onclick>
-                <onclick>Dialog.Close(all,true)</onclick>
-                <visible>Container.Content(albums)</visible>
+                <visible>Container.Content(artists) | Container.Content(albums)</visible>
             </control>
             <control type="button" id="25">
                 <label>$LOCALIZE[31635]</label>
@@ -651,6 +645,8 @@
             <aspectratio>keep</aspectratio>
             <colordiffuse>white3</colordiffuse>
             <texture>$INFO[ListItem.Property(Album_Label),flags/music/recordlabel/,.png]</texture>
+            <visible>!ControlGroup(5000).HasFocus(25)</visible>
+            <include>Animation_VisibleChange200</include>
         </control>
         <!-- Tracks / Discography -->
         <control type="list" id="50">

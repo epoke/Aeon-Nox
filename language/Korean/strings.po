@@ -1,18 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: Aeon Nox
 # Addon id: skin.aeon.nox
-# Addon version: 4.0.1
+# Addon version: 4.0.5
 # Addon Provider: Big_Noid & phil65
-# Translators:
-# Junghwan Oh <junghwan@gmail.com>, 2012.
-#   <piodio@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2012-12-15 05:23+0000\n"
-"Last-Translator: Junghwan Oh <junghwan@gmail.com>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: XBMC Translation Team\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/xbmc-skins/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,43 +17,9 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgctxt "Addon Summary"
-msgid "Aeon Nox 4.0 by Big_Noid & phil65"
-msgstr "Aeon Nox 4.0 by Big_Noid & phil65"
-
-msgctxt "Addon Description"
-msgid ""
-"Aeon Nox stands for eye candy and customization. There are many different "
-"views and options to present your media in the way you want it. The Home "
-"window is fully customizable. You can add up to nine custom main menu items,"
-" each with five custom sub-menu items. You can change the look with "
-"different styles and themes, add or remove widgets and disable menu and sub-"
-"menu items you don't use. Be sure to checkout the changelog to find "
-"everything that was added or changed!"
-msgstr "Aeon Nox는 시각적 즐거움과 사용자 설정을 제공합니다. 여러분의 미디어를 여러분이 원하는 다양한 방식으로 표현해 주는 많은 보기 형식과 옵션이 있습니다. 홈 윈도우는 완전하게 사용자 설정이 가능합니다. 9개의 메인 메뉴 항목을 추가할 수 있고 각각 5개의 사용자 하위메뉴를 추가할 수 있습니다. 각기 다른 스타일과 테마로 모양을 바꿀 수 있고 위젯을 추가, 삭제할 수 있으며 사용하지 않는 메뉴과 하위메뉴를 끌 수 있습니다. 추가되거나 변경된 모든 기능은 변경로그를 확인하기 바랍니다."
-
-msgctxt "Addon Disclaimer"
-msgid ""
-"Aeon Nox is a skin based on the design of Aeon by djh_. A great deal of "
-"textures used are from Aeon and it's mods. All credits to the makers of "
-"these skins and mods."
-msgstr "Aeon Nox는 djh_가 디자인한 Aeon을 바탕으로 하였습니다. 사용된 텍스처들은 Aeon과 변형판들에서 가져왔습니다. All credits to the makers of these skins and mods."
-
-msgctxt "#31001"
-msgid "Love"
-msgstr "좋아함"
-
-msgctxt "#31002"
-msgid "Hate"
-msgstr "싫어함"
-
 msgctxt "#31003"
 msgid "N/A"
 msgstr "N/A"
-
-msgctxt "#31004"
-msgid "Working..."
-msgstr "작업중..."
 
 msgctxt "#31005"
 msgid "Premiered"
@@ -66,25 +29,9 @@ msgctxt "#31006"
 msgid "Info unavailable"
 msgstr "정보 없음"
 
-msgctxt "#31007"
-msgid "Search guide"
-msgstr "편성표 검색"
-
-msgctxt "#31008"
-msgid "Search string"
-msgstr "검색어"
-
 msgctxt "#31009"
 msgid "Timer"
 msgstr "예약"
-
-msgctxt "#31010"
-msgid "Channel"
-msgstr "채널"
-
-msgctxt "#31011"
-msgid "Duration"
-msgstr "시간"
 
 msgctxt "#31012"
 msgid "Add group"
@@ -103,14 +50,16 @@ msgid "Timer"
 msgstr "예약"
 
 msgctxt "#31016"
-msgid ""
-"[B]CONFIGURE TV SETTINGS[/B][CR][CR]Tune new channels · Configure the "
-"electronic guide · Record your favourite programs"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Tune new channels · Configure the electronic guide · Record your favourite programs"
 msgstr "[B]TV 설정[/B][CR][CR]새 채널 설정 · EPG 설정 · 프로그램 녹화"
 
 msgctxt "#31017"
 msgid "Live TV"
 msgstr "TV 시청"
+
+msgctxt "#31018"
+msgid "Big covers"
+msgstr "큰 커버"
 
 msgctxt "#31021"
 msgid "Search XBMC for"
@@ -122,7 +71,7 @@ msgstr "음악 - 파일"
 
 msgctxt "#31023"
 msgid "Reset Fallback"
-msgstr "기본값 초기화"
+msgstr "예비 설정 초기화"
 
 msgctxt "#31024"
 msgid "Page"
@@ -148,14 +97,6 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr "쇼케이스2"
 
-msgctxt "#31030"
-msgid "Weather screen"
-msgstr "날씨 화면"
-
-msgctxt "#31031"
-msgid "Navigate"
-msgstr "탐색"
-
 msgctxt "#31032"
 msgid "Nothing"
 msgstr "없음"
@@ -163,6 +104,10 @@ msgstr "없음"
 msgctxt "#31033"
 msgid "Play item on startup"
 msgstr "시작할 때 항목 재생"
+
+msgctxt "#31034"
+msgid "Move tooltip to top bar"
+msgstr "툴팁을 상단 바로 옮김"
 
 msgctxt "#31035"
 msgid "Conditional weather"
@@ -219,22 +164,6 @@ msgstr "추가 팬아트"
 msgctxt "#31048"
 msgid "Visualization presets"
 msgstr "시각화 프리셋"
-
-msgctxt "#31049"
-msgid "End Time"
-msgstr "종료 시각"
-
-msgctxt "#31050"
-msgid "Previous"
-msgstr "이전"
-
-msgctxt "#31051"
-msgid "Next"
-msgstr "다음"
-
-msgctxt "#31052"
-msgid "Remaining"
-msgstr "남은 시간"
 
 msgctxt "#31053"
 msgid "Fullscreen"
@@ -408,6 +337,14 @@ msgctxt "#31097"
 msgid "Classic OSD style"
 msgstr "클래식 OSD 스타일"
 
+msgctxt "#31098"
+msgid "Background path"
+msgstr "배경화면 경로"
+
+msgctxt "#31099"
+msgid "Top bar style"
+msgstr "상단 바 스타일"
+
 msgctxt "#31101"
 msgid "Home window furniture"
 msgstr "홈 화면 옵션"
@@ -538,7 +475,7 @@ msgstr "작가"
 
 msgctxt "#31158"
 msgid "Current time"
-msgstr "현재 시간"
+msgstr "현재 시각"
 
 msgctxt "#31162"
 msgid "Trailers"
@@ -559,6 +496,10 @@ msgstr "간단한 목록"
 msgctxt "#31166"
 msgid "Infopanel"
 msgstr "정보 패널"
+
+msgctxt "#31167"
+msgid "Playlists for Widget 2"
+msgstr "두 번째 위젯 재생목록"
 
 msgctxt "#31168"
 msgid "No CoverFlow"
@@ -620,6 +561,10 @@ msgctxt "#31182"
 msgid "Colored"
 msgstr "색상 적용"
 
+msgctxt "#31183"
+msgid "Weather Wunderground"
+msgstr "Weather Wunderground"
+
 msgctxt "#31184"
 msgid "Unwatched icon"
 msgstr "미시청 아이콘"
@@ -638,7 +583,7 @@ msgstr "정보 패널의 자동 숨김 시간 (초)"
 
 msgctxt "#31188"
 msgid "Show Status"
-msgstr "상태 표시"
+msgstr "상태"
 
 msgctxt "#31189"
 msgid "Previous Episode"
@@ -688,6 +633,14 @@ msgctxt "#31222"
 msgid "Random movies"
 msgstr "무작위 영화"
 
+msgctxt "#31223"
+msgid "Visibility"
+msgstr "가시거리"
+
+msgctxt "#31226"
+msgid "Moon phase"
+msgstr "달의 위상"
+
 msgctxt "#31227"
 msgid "Vinyl Record"
 msgstr "LP 레코드"
@@ -708,6 +661,10 @@ msgctxt "#31231"
 msgid "Navigation"
 msgstr "이동"
 
+msgctxt "#31232"
+msgid "Moonrise"
+msgstr "월출"
+
 msgctxt "#31233"
 msgid "Panel"
 msgstr "패널"
@@ -723,6 +680,10 @@ msgstr "시프트"
 msgctxt "#31236"
 msgid "BannerPlex"
 msgstr "배너플렉스"
+
+msgctxt "#31239"
+msgid "Pressure"
+msgstr "기압"
 
 msgctxt "#31240"
 msgid "'New' flag"
@@ -751,6 +712,10 @@ msgstr "BD/DVD 케이스"
 msgctxt "#31255"
 msgid "Blu-ray Disc"
 msgstr "블루레이 디스크"
+
+msgctxt "#31256"
+msgid "Include already watched Items?"
+msgstr "시청한 항목을 포함하겠습니까?"
 
 msgctxt "#31257"
 msgid "Details"
@@ -790,7 +755,7 @@ msgstr "예고편을 전체 화면으로 재생"
 
 msgctxt "#31281"
 msgid "Show video info when player is paused"
-msgstr "일시 정지시 비디오 정보 보기"
+msgstr "일시 정지했을 때 비디오 정보 보기"
 
 msgctxt "#31282"
 msgid "Clear Cases"
@@ -850,7 +815,7 @@ msgstr "노래방 노래 선택기"
 
 msgctxt "#31322"
 msgid "Aired"
-msgstr "방송일"
+msgstr "방송일자"
 
 msgctxt "#31323"
 msgid "Latest movies"
@@ -875,6 +840,18 @@ msgstr "가장 많이 플레이한 ROM"
 msgctxt "#31328"
 msgid "Recently Added"
 msgstr "최근 추가됨"
+
+msgctxt "#31329"
+msgid "In-progress TV Shows"
+msgstr "감상 중 TV 쇼"
+
+msgctxt "#31330"
+msgid "Random music"
+msgstr "무작위 음악"
+
+msgctxt "#31332"
+msgid "Play Video"
+msgstr "비디오 재생"
 
 msgctxt "#31333"
 msgid "Recent"
@@ -915,6 +892,14 @@ msgstr "영화 메뉴"
 msgctxt "#31356"
 msgid "Download Subtitles"
 msgstr "자막 다운로드"
+
+msgctxt "#31357"
+msgid "Mixed info"
+msgstr "혼합 정보"
+
+msgctxt "#31358"
+msgid "System info"
+msgstr "시스템 정보"
 
 msgctxt "#31359"
 msgid "Latest albums"
@@ -1005,66 +990,43 @@ msgid "Style"
 msgstr "스타일"
 
 msgctxt "#31400"
-msgid ""
-"[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language "
-"and region · Change file listing options[CR]Set up a screensaver · Activate "
-"different themes and fontsets for the current skin"
+msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver · Activate different themes and fontsets for the current skin"
 msgstr "[B]모양새 설정[/B][CR][CR]스킨 변경 · 언어 및 지역 설정 · 파일 목록 옵션 변경 · 화면보호기 설정"
 
 msgctxt "#31401"
-msgid ""
-"[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video"
-" playback options · Change video listing options[CR]Set subtitle fonts"
+msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
 msgstr "[B]비디오 설정[/B][CR][CR]비디오 라이브러리 관리 · 비디오 재생 옵션 변경 · 비디오 목록 옵션 변경 · 자막 글꼴 설정"
 
 msgctxt "#31402"
-msgid ""
-"[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music"
-" playback options · Change music listing options[CR]Setup song submission · "
-"Set karaoke options"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
 msgstr "[B]음악 설정[/B][CR][CR]음악 라이브러리 관리 · 음악 재생 옵션 변경 · 음악 목록 옵션 변경 · 노래 전송 설정 · 노래방 옵션 설정"
 
 msgctxt "#31403"
-msgid ""
-"[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · "
-"Configure slideshows"
+msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshows"
 msgstr "[B]사진 설정[/B][CR][CR]사진 목록 옵션 변경 · 슬라이드쇼 설정"
 
 msgctxt "#31404"
-msgid ""
-"[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Choose a weather add-on · Set three"
-" cities to collect weather information"
+msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Choose a weather add-on · Set three cities to collect weather information"
 msgstr "[B]날씨 설정[/B][CR][CR]날씨 애드온 설정 · 날씨 정보를 수집할 세 도시 설정"
 
 msgctxt "#31405"
-msgid ""
-"[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and "
-"HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of XBMC via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
 msgstr "[B]네트워크 설정[/B][CR][CR]UPnP 및 HTTP 를 통한 XBMC 제어 설정 · 파일 공유 설정 · 인터넷 접근 옵션 설정"
 
 msgctxt "#31406"
-msgid ""
-"[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · "
-"Configure audio output · Setup remote controls[CR]Set power saving options ·"
-" Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
 msgstr "[B]시스템 설정[/B][CR][CR]화면 설정 및 조정 · 오디오 출력 설정 · 원격 제어 설정 · 전원 절약 옵션 설정 · 디버깅 사용 · 마스터 잠금 설정"
 
 msgctxt "#31407"
-msgid ""
-"[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Aeon Nox skin · Customize "
-"the home menu · Adjust the skin colors[CR]Change skin backgrounds"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Aeon Nox skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
 msgstr "[B]스킨 설정[/B][CR][CR]Aeon Nox 스킨 설정 · 홈 메뉴 항목 추가 및 제거[CR]스킨 배경 변경"
 
 msgctxt "#31408"
-msgid ""
-"[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for "
-"and install Add-ons from xbmc.org[CR]Modify Add-on settings"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org[CR]Modify Add-on settings"
 msgstr "[B]추가기능 설정[/B][CR][CR]설치된 추가기능 관리 · xbmc.org 에서 추가기능 찾기 및 설치 · 추가기능 설정 변경"
 
 msgctxt "#31409"
-msgid ""
-"[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU "
-"usage[CR]Check XBMC revision number"
+msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check XBMC revision number"
 msgstr "[B]시스템 정보 확인[/B][CR][CR]하드웨어 확인 · CPU 사용 확인 · XBMC 버전 확인"
 
 msgctxt "#31411"
@@ -1109,7 +1071,7 @@ msgstr "등급 없음"
 
 msgctxt "#31453"
 msgid "Airtime"
-msgstr "방송 시간"
+msgstr "방송시각"
 
 msgctxt "#31454"
 msgid "Banners"
@@ -1297,7 +1259,7 @@ msgstr "아이콘 패널에 추가"
 
 msgctxt "#31621"
 msgid "Use Alaska paused label for video OSD"
-msgstr "비디오 OSD에 알라스카 스타일의 일시정지 표시"
+msgstr "비디오 OSD에 'Alaska' 스킨 스타일의 일시정지 표시"
 
 msgctxt "#31622"
 msgid "Label"
@@ -1310,14 +1272,6 @@ msgstr "슬롯"
 msgctxt "#31627"
 msgid "Hide OSD player controls"
 msgstr "OSD에 플레이어 컨트롤 단추 표시하지 않음"
-
-msgctxt "#31628"
-msgid "All Artists"
-msgstr "모든 아티스트"
-
-msgctxt "#31629"
-msgid "All Videos"
-msgstr "모든 비디오"
 
 msgctxt "#31630"
 msgid "Custom"
@@ -1347,21 +1301,17 @@ msgctxt "#31636"
 msgid "Rotating"
 msgstr "회전"
 
-msgctxt "#31637"
-msgid "Shadow"
-msgstr "그림자"
-
 msgctxt "#31638"
 msgid "Show 'Next Aired' info"
 msgstr "'Next Aired' 정보 보기"
 
 msgctxt "#31639"
 msgid "Hide video thumb on info screen"
-msgstr "정보 화면에서 미리보기 숨김"
+msgstr "정보 화면에서 비디오 썸네일 숨김"
 
 msgctxt "#31640"
 msgid "Show remaining time instead of duration."
-msgstr "재생 시간 대신 남은 시간 보기."
+msgstr "재생 시간 대신 남은 시간 보기"
 
 msgctxt "#31641"
 msgid "Paths"
@@ -1384,8 +1334,7 @@ msgid "Background Setup"
 msgstr "배경화면 설정"
 
 msgctxt "#31646"
-msgid ""
-"Do you want to download all available [CR]artwork without user interaction?"
+msgid "Do you want to download all available [CR]artwork without user interaction?"
 msgstr "확인 절차 없이 모든 아트웍을 다운로드하겠습니까?"
 
 msgctxt "#31672"
@@ -1524,41 +1473,13 @@ msgctxt "#31714"
 msgid "Current position"
 msgstr "현재 위치"
 
-msgctxt "#31900"
-msgid "Maps"
-msgstr "지도"
-
-msgctxt "#31901"
-msgid "36 Hour"
-msgstr "36 시간"
-
-msgctxt "#31902"
-msgid "Hourly"
-msgstr "시간"
-
-msgctxt "#31903"
-msgid "Weekend"
-msgstr "주말"
-
 msgctxt "#31904"
 msgid "10 Day"
 msgstr "10 일"
 
-msgctxt "#31905"
-msgid "Current"
-msgstr "현재"
-
 msgctxt "#31906"
 msgid "Visibility"
-msgstr "특보"
-
-msgctxt "#31907"
-msgid "Video"
-msgstr "비디오"
-
-msgctxt "#31911"
-msgid "Forecast"
-msgstr "예보"
+msgstr "가시거리"
 
 msgctxt "#31912"
 msgid "Conditions"
@@ -1575,10 +1496,6 @@ msgstr "기압"
 msgctxt "#31948"
 msgid "Chance Precip"
 msgstr "강수 확률"
-
-msgctxt "#32502"
-msgid "TV"
-msgstr "TV"
 
 msgctxt "#41145"
 msgid "Video Add-on"
@@ -1630,7 +1547,7 @@ msgstr "형식 선택"
 
 msgctxt "#41157"
 msgid "Choose 2nd widget"
-msgstr "두번째 위젯 선택"
+msgstr "두 번째 위젯 선택"
 
 msgctxt "#41158"
 msgid "Menu label"
@@ -1712,14 +1629,6 @@ msgctxt "#42016"
 msgid "Needs \"Additional Artist Info\" activated in Artistslideshow Plugin"
 msgstr "아티스트슬라이드쇼 애드온에서 \"추가 아티스트 정보\"가 활성화되어야 합니다."
 
-msgctxt "#42017"
-msgid "Welcome to Aeon Nox 4.0"
-msgstr "Aeon Nox 4.0 사용을 환영합니다"
-
-msgctxt "#42018"
-msgid "Visit XBMC.org Forums for support"
-msgstr "XBMC.org 포럼에서 사용정보를 얻을 수 있습니다"
-
 msgctxt "#42100"
 msgid "Set up 'Featured' window appearance"
 msgstr "'추천' 화면 모양새 설정"
@@ -1728,17 +1637,13 @@ msgctxt "#42101"
 msgid "Set up 'Settings' window appearance"
 msgstr "'설정' 화면 모양새 설정"
 
-msgctxt "#42102"
-msgid "AIRING TODAY"
-msgstr "오늘 방송"
-
 msgctxt "#42103"
 msgid "Fallback settings"
-msgstr "기본값 설정"
+msgstr "예비 설정"
 
 msgctxt "#42104"
 msgid "Fallback"
-msgstr "기본값"
+msgstr "예비값"
 
 msgctxt "#42105"
 msgid "Playlist widget"
@@ -1760,10 +1665,6 @@ msgctxt "#42203"
 msgid "Always randomize Random Widget Items"
 msgstr "무작위 위젯 항목을 항상 무작위로"
 
-msgctxt "#42204"
-msgid "Color"
-msgstr "색상"
-
 msgctxt "#42205"
 msgid "Position"
 msgstr "위치"
@@ -1779,10 +1680,6 @@ msgstr "아이콘 선택"
 msgctxt "#42208"
 msgid "Exchange Position"
 msgstr "위치 변경"
-
-msgctxt "#42209"
-msgid "Set Path"
-msgstr "경로 설정"
 
 msgctxt "#42210"
 msgid "Show ClearArt instead of Logo"
@@ -1940,10 +1837,6 @@ msgctxt "#42248"
 msgid "Movie Genres"
 msgstr "영화 장르"
 
-msgctxt "#42249"
-msgid "Add-On Browser"
-msgstr "애드온 탐색기"
-
 msgctxt "#42250"
 msgid "Home Customizer"
 msgstr "홈 화면 사용자 설정"
@@ -1975,10 +1868,6 @@ msgstr "지금재생중"
 msgctxt "#42257"
 msgid "Temperature"
 msgstr "온도"
-
-msgctxt "#42258"
-msgid "Condition"
-msgstr "상태"
 
 msgctxt "#42259"
 msgid "Coordinates"
@@ -2064,10 +1953,6 @@ msgctxt "#42279"
 msgid "Fade background in video"
 msgstr "비디오에서 배경화면 흐리게"
 
-msgctxt "#42280"
-msgid "RSS Feed"
-msgstr "RSS 피드"
-
 msgctxt "#42281"
 msgid "Click on buttons to customize them"
 msgstr "설정할 버튼을 누르세요"
@@ -2079,10 +1964,6 @@ msgstr "\"뒤로가기\" 버튼을 눌러 위젯 숨기기 기능 사용하지 �
 msgctxt "#42283"
 msgid "A new white theme is now available in \"Appearance settings\""
 msgstr "\"모양새\" 설정에서 새로운 화이트 테마를 적용할 수 있습니다."
-
-msgctxt "#42284"
-msgid "Move trailer button to context menu"
-msgstr "예고편 버튼을 컨텍스트 메뉴로 이동"
 
 msgctxt "#42285"
 msgid "Area-specific Options"
@@ -2132,10 +2013,6 @@ msgctxt "#42297"
 msgid "Press DOWN for extended info"
 msgstr "아래 화살표를 눌러 추가 정보 표시"
 
-msgctxt "#42298"
-msgid "Alternative main menu font"
-msgstr "다른 메인 메뉴 글꼴"
-
 msgctxt "#42299"
 msgid "Shutdown timer"
 msgstr "종료 예약"
@@ -2147,10 +2024,6 @@ msgstr "사용자 배경 이미지 설정"
 msgctxt "#42301"
 msgid "Supplied backgrounds"
 msgstr "제공된 배경화면"
-
-msgctxt "#42302"
-msgid "Type"
-msgstr "유형"
 
 msgctxt "#42303"
 msgid "Set InfoLine"
@@ -2169,12 +2042,7 @@ msgid "First run help...."
 msgstr "처음 사용 도움말...."
 
 msgctxt "#42307"
-msgid ""
-"This tab signifies that there is a menu off to the side of this window that "
-"contains extra options for this section.  To access the menu, navigate to "
-"the arrow direction with your remote control or keyboard or place your mouse"
-" pointer over the tab. [CR][CR]Click \"Ok\" to close this dialog. It will "
-"not appear again."
+msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the arrow direction with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialog. It will not appear again."
 msgstr "이 탭은 이 윈도우의 가장자리에 이 섹션의 추가 옵션을 설정할 수 있는 메뉴가 감추어져 있음을 의미합니다. 이 메뉴를 이용하려면, 리모콘이나 키보드의 화살표 버튼를 누르거나 마우스 포인터를 탭 위로 이동하세요. [CR][CR]\"확인\"을 눌러 이 대화상자를 닫으세요. 이 메시지는 다시 보이지 않습니다."
 
 msgctxt "#42308"
@@ -2298,29 +2166,19 @@ msgid "[B]Fional88[/B] for creating the tutorial videos"
 msgstr "[B]Fional88[/B] 튜토리얼 동영상 제작"
 
 msgctxt "#42338"
-msgid ""
-"[B]www.webdesignerdepot.com[/B] for permission to include the iconpack "
-"\"Reflection\""
+msgid "[B]www.webdesignerdepot.com[/B] for permission to include the iconpack \"Reflection\""
 msgstr "[B]www.webdesignerdepot.com[/B] \"Reflection\" 아이콘팩 사용 허가"
 
 msgctxt "#42339"
-msgid ""
-"[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, "
-"[B]black[/B] for creating Xperience1080"
+msgid "[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, [B]black[/B] for creating Xperience1080"
 msgstr "[B]DJH_ [/B] Aeon 스킨 제작, [B]Jezz_X [/B] Confluence 스킨 제작, [B]black[/B] Xperience1080 스킨 제작"
 
 msgctxt "#42340"
-msgid ""
-"Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], "
-"[B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], "
-"[B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
+msgid "Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
 msgstr "번역: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
 
 msgctxt "#42341"
-msgid ""
-"[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B],"
-" [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to "
-"this project"
+msgid "[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to this project"
 msgstr "[CR]그리고: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] 과 [CR]이 프로젝트에 기여한 다른 모든 사용자들"
 
 msgctxt "#42342"

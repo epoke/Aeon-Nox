@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
     <include name="Viewtype_Episode">
         <control type="group">
@@ -80,6 +80,7 @@
             </control>
             <control type="group">
                 <visible>Window.IsActive(videos)</visible>
+                <visible>!Skin.HasSetting(disableepisodeposter)</visible>
                 <control type="image">
                     <posx>30</posx>
                     <posy>160</posy>
@@ -100,7 +101,7 @@
                     <width>502</width>
                     <height>739</height>
                     <aspectratio scalediffuse="false">stretch</aspectratio>
-                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[EpisodePosterVar]</texture>
+                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[ListPosterVar]</texture>
                     <bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
                     <bordersize>19</bordersize>
                 </control>
@@ -140,14 +141,6 @@
                 <font>Font_Reg17</font>
                 <textcolor>grey</textcolor>
             </control>
-            <control type="image">
-                <posx>1337</posx>
-                <posy>26</posy>
-                <width>42</width>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <height>42</height>
-                <texture>$VAR[WatchedIconVar]</texture>
-            </control>
         </itemlayout>
         <focusedlayout width="950" height="346">
             <control type="image">
@@ -158,14 +151,6 @@
                 <bordertexture border="20">thumbs/cd_shadow.png</bordertexture>
                 <bordersize>20</bordersize>
                 <aspectratio scalediffuse="false">scale</aspectratio>
-            </control>
-            <control type="image">
-                <posx>1337</posx>
-                <posy>106</posy>
-                <width>42</width>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <height>42</height>
-                <texture>$VAR[WatchedIconVar]</texture>
             </control>
             <control type="group">
                 <animation type="Conditional" reversible="false" condition="Control.HasFocus(514) + [!Container(514).OnNext + !Container(514).OnPrevious]">
@@ -215,13 +200,13 @@
                     <align>right</align>
                     <label>$VAR[InfoWallTextboxVar]</label>
                     <font>Font_Reg19</font>
-                    <autoscroll time="3600" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
         </focusedlayout>
     </include>
     <include name="EpisodeViewtypeVideoLayouts">
-        <itemlayout width="950" height="90" condition="![[Skin.HasSetting(episodebanner) | Skin.HasSetting(episodelogo)]+ Container.Content(tvshows)]">
+        <itemlayout width="950" height="90" condition="![[Skin.HasSetting(episodebanner) | Skin.HasSetting(episodelogo)]+ [Container.Content(tvshows) | Container.Content(movies)]]">
             <control type="label">
                 <posx>1280</posx>
                 <width>690</width>
@@ -249,34 +234,30 @@
                 <width>42</width>
                 <height>42</height>
                 <animation type="Conditional" condition="Container.Content(episodes)">
-                    <effect type="zoom" end="150" time="0" easing="in" tween="cubic" />
                     <!--                     <effect type="fade" end="15" time="400" easing="in" tween="cubic" />
  -->
-                    <effect type="slide" end="5,-2" time="0" easing="in" tween="cubic" />
+                    <effect type="slide" end="46,2" time="0" easing="in" tween="cubic" />
                 </animation>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <animation effect="slide" end="0,-20" time="300" tween="cubic" easing="inout" condition="Container.Content(seasons)">Conditional</animation>
                 <texture>$VAR[WatchedIconVar]</texture>
             </control>
             <control type="label">
-                <posx>1330</posx>
+                <posx>1312</posx>
                 <posy>25</posy>
                 <width>80</width>
                 <height>45</height>
                 <animation type="Conditional" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">
                     <effect type="fade" end="30" time="0" easing="in" tween="cubic" />
                 </animation>
-                <animation type="Conditional" condition="ListItem.IsResumable">
-                    <effect type="fade" end="30" time="0" easing="in" tween="cubic" />
-                </animation>
                 <align>center</align>
                 <label>$INFO[ListItem.Episode]</label>
-                <font>Font_MainClassic4</font>
+                <font>Font_ShowcaseMainLabel2</font>
                 <textcolor>white</textcolor>
                 <visible>Container.Content(episodes)</visible>
             </control>
         </itemlayout>
-        <itemlayout width="950" height="140" condition="Skin.HasSetting(episodebanner) + Container.Content(tvshows)">
+        <itemlayout width="950" height="140" condition="Skin.HasSetting(episodebanner) + [Container.Content(tvshows) | Container.Content(movies)]">
             <control type="group">
                 <posx>30</posx>
                 <control type="image">
@@ -284,8 +265,17 @@
                     <posy>8</posy>
                     <width>548</width>
                     <height>105</height>
-                    <aspectratio scalediffuse="false">stretch</aspectratio>
-                    <texture diffuse="thumbs/banner_mask.png">common/black.png</texture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture background="true" diffuse="thumbs/banner_mask.png">$VAR[BannerVar]</texture>
+                </control>
+                <control type="image">
+                    <posx>708</posx>
+                    <posy>10</posy>
+                    <width>548</width>
+                    <height>100</height>
+                    <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+                    <aspectratio scalediffuse="false">keep</aspectratio>
+                    <texture background="true">$VAR[TVShowLogoVar]</texture>
                 </control>
                 <control type="label">
                     <posx>972</posx>
@@ -293,16 +283,10 @@
                     <width>528</width>
                     <height>105</height>
                     <align>center</align>
+                        <shadowcolor>black</shadowcolor>
                     <label>$INFO[ListItem.Label]</label>
                     <font>Font_Bold24</font>
-                </control>
-                <control type="image">
-                    <posx>708</posx>
-                    <posy>8</posy>
-                    <width>548</width>
-                    <height>105</height>
-                    <aspectratio scalediffuse="false">stretch</aspectratio>
-                    <texture background="true" diffuse="thumbs/banner_mask.png">$VAR[BannerVar]</texture>
+                    <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
                 </control>
                 <control type="image">
                     <posx>708</posx>
@@ -328,7 +312,7 @@
                 </control>
             </control>
         </itemlayout>
-        <itemlayout width="950" height="140" condition="Skin.HasSetting(episodelogo) + Container.Content(tvshows)">
+        <itemlayout width="950" height="140" condition="Skin.HasSetting(episodelogo) + [Container.Content(tvshows) | Container.Content(movies)]">
             <control type="group">
                 <posx>50</posx>
                 <control type="image">
@@ -417,7 +401,7 @@
                     <align>right</align>
                     <info>ListItem.Plot</info>
                     <font>Font_Reg19</font>
-                    <autoscroll time="3600" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
         </focusedlayout>
@@ -434,26 +418,18 @@
                 <aspectratio scalediffuse="false">scale</aspectratio>
             </control>
             <control type="image">
-                <posx>1285</posx>
-                <posy>106</posy>
-                <width>42</width>
+                <posx>1305</posx>
+                <posy>136</posy>
+                <width>55</width>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <height>42</height>
+                <height>55</height>
                 <texture>$VAR[WatchedIconVar]</texture>
-                <animation type="Conditional" condition="Container.Content(episodes)">
-                    <effect type="zoom" end="150" time="0" easing="in" tween="cubic" />
-                    <effect type="slide" end="5,-2" time="0" easing="in" tween="cubic" />
-                </animation>
             </control>
             <control type="label">
                 <posx>1330</posx>
                 <posy>90</posy>
                 <width>80</width>
                 <height>45</height>
-                <animation type="Conditional" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">
-                    <effect type="fade" end="30" time="0" easing="in" tween="cubic" />
-                    <effect type="slide" end="0,-30" time="0" easing="in" tween="cubic" />
-                </animation>
                 <align>center</align>
                 <label>$INFO[ListItem.Episode]</label>
                 <font>Font_MainClassic4</font>
@@ -497,7 +473,7 @@
                     <align>right</align>
                     <info>ListItem.Plot</info>
                     <font>Font_Reg19</font>
-                    <autoscroll time="3600" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
         </focusedlayout>

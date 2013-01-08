@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
     <include name="Custom1Subs">
         <item>
@@ -423,51 +423,51 @@
             <visible>Substring(Control.GetLabel(4327),custom9) + IsEmpty(Skin.String(CustomSub9_5.Disable)) + !IsEmpty(Skin.String(CustomSub9_5.Path))</visible>
         </item>
     </include>
-    <include name="Custom10Subs">
+    <include name="Custom0Subs">
         <item>
-            <label>$INFO[Skin.String(CustomSub10_1.Label)]</label>
-            <thumb>$INFO[Skin.String(CustomSub10_1.MultiFanart)]</thumb>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_1.Type),0) | Stringcompare(Skin.String(CustomSub10_1.Type),1) | Stringcompare(Skin.String(CustomSub10_1.Type),2) | Stringcompare(Skin.String(CustomSub10_1.Type),3)">RunAddon($INFO[Skin.String(CustomSub10_1.Path)])</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub10_1.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub10_1.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_1.Type),6) | Stringcompare(Skin.String(CustomSub10_1.Type),7)">$INFO[Skin.String(CustomSub10_1.Path)]</onclick>
-            <visible>Substring(Control.GetLabel(4327),custom10) + IsEmpty(Skin.String(CustomSub10_1.Disable)) + !IsEmpty(Skin.String(CustomSub10_1.Path))</visible>
+            <label>$INFO[Skin.String(CustomSub0_1.Label)]</label>
+            <thumb>$INFO[Skin.String(CustomSub0_1.MultiFanart)]</thumb>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_1.Type),0) | Stringcompare(Skin.String(CustomSub0_1.Type),1) | Stringcompare(Skin.String(CustomSub0_1.Type),2) | Stringcompare(Skin.String(CustomSub0_1.Type),3)">RunAddon($INFO[Skin.String(CustomSub0_1.Path)])</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub0_1.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub0_1.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_1.Type),6) | Stringcompare(Skin.String(CustomSub0_1.Type),7)">$INFO[Skin.String(CustomSub0_1.Path)]</onclick>
+            <visible>Substring(Control.GetLabel(4327),custom0) + IsEmpty(Skin.String(CustomSub0_1.Disable)) + !IsEmpty(Skin.String(CustomSub0_1.Path))</visible>
         </item>
         <item>
-            <label>$INFO[Skin.String(CustomSub10_2.Label)]</label>
-            <thumb>$INFO[Skin.String(CustomSub10_2.MultiFanart)]</thumb>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_2.Type),0) | Stringcompare(Skin.String(CustomSub10_2.Type),1) | Stringcompare(Skin.String(CustomSub10_2.Type),2) | Stringcompare(Skin.String(CustomSub10_2.Type),3)">RunAddon($INFO[Skin.String(CustomSub10_2.Path)])</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub10_2.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub10_2.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_2.Type),6) | Stringcompare(Skin.String(CustomSub10_2.Type),7)">$INFO[Skin.String(CustomSub10_2.Path)]</onclick>
-            <visible>Substring(Control.GetLabel(4327),custom10) + IsEmpty(Skin.String(CustomSub10_2.Disable)) + !IsEmpty(Skin.String(CustomSub10_2.Path))</visible>
+            <label>$INFO[Skin.String(CustomSub0_2.Label)]</label>
+            <thumb>$INFO[Skin.String(CustomSub0_2.MultiFanart)]</thumb>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_2.Type),0) | Stringcompare(Skin.String(CustomSub0_2.Type),1) | Stringcompare(Skin.String(CustomSub0_2.Type),2) | Stringcompare(Skin.String(CustomSub0_2.Type),3)">RunAddon($INFO[Skin.String(CustomSub0_2.Path)])</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub0_2.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub0_2.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_2.Type),6) | Stringcompare(Skin.String(CustomSub0_2.Type),7)">$INFO[Skin.String(CustomSub0_2.Path)]</onclick>
+            <visible>Substring(Control.GetLabel(4327),custom0) + IsEmpty(Skin.String(CustomSub0_2.Disable)) + !IsEmpty(Skin.String(CustomSub0_2.Path))</visible>
         </item>
         <item>
-            <label>$INFO[Skin.String(CustomSub10_3.Label)]</label>
-            <thumb>$INFO[Skin.String(CustomSub10_3.MultiFanart)]</thumb>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_3.Type),0) | Stringcompare(Skin.String(CustomSub10_3.Type),1) | Stringcompare(Skin.String(CustomSub10_3.Type),2) | Stringcompare(Skin.String(CustomSub10_3.Type),3)">RunAddon($INFO[Skin.String(CustomSub10_3.Path)])</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub10_3.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub10_3.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_3.Type),6) | Stringcompare(Skin.String(CustomSub10_3.Type),7)">$INFO[Skin.String(CustomSub10_3.Path)]</onclick>
-            <visible>Substring(Control.GetLabel(4327),custom10) + IsEmpty(Skin.String(CustomSub10_3.Disable)) + !IsEmpty(Skin.String(CustomSub10_3.Path))</visible>
+            <label>$INFO[Skin.String(CustomSub0_3.Label)]</label>
+            <thumb>$INFO[Skin.String(CustomSub0_3.MultiFanart)]</thumb>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_3.Type),0) | Stringcompare(Skin.String(CustomSub0_3.Type),1) | Stringcompare(Skin.String(CustomSub0_3.Type),2) | Stringcompare(Skin.String(CustomSub0_3.Type),3)">RunAddon($INFO[Skin.String(CustomSub0_3.Path)])</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub0_3.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub0_3.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_3.Type),6) | Stringcompare(Skin.String(CustomSub0_3.Type),7)">$INFO[Skin.String(CustomSub0_3.Path)]</onclick>
+            <visible>Substring(Control.GetLabel(4327),custom0) + IsEmpty(Skin.String(CustomSub0_3.Disable)) + !IsEmpty(Skin.String(CustomSub0_3.Path))</visible>
         </item>
         <item>
-            <label>$INFO[Skin.String(CustomSub10_4.Label)]</label>
-            <thumb>$INFO[Skin.String(CustomSub10_4.MultiFanart)]</thumb>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_4.Type),0) | Stringcompare(Skin.String(CustomSub10_4.Type),1) | Stringcompare(Skin.String(CustomSub10_4.Type),2) | Stringcompare(Skin.String(CustomSub10_4.Type),3)">RunAddon($INFO[Skin.String(CustomSub10_4.Path)])</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub10_4.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub10_4.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_4.Type),6) | Stringcompare(Skin.String(CustomSub10_4.Type),7)">$INFO[Skin.String(CustomSub10_4.Path)]</onclick>
-            <visible>Substring(Control.GetLabel(4327),custom10) + IsEmpty(Skin.String(CustomSub10_4.Disable)) + !IsEmpty(Skin.String(CustomSub10_4.Path))</visible>
+            <label>$INFO[Skin.String(CustomSub0_4.Label)]</label>
+            <thumb>$INFO[Skin.String(CustomSub0_4.MultiFanart)]</thumb>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_4.Type),0) | Stringcompare(Skin.String(CustomSub0_4.Type),1) | Stringcompare(Skin.String(CustomSub0_4.Type),2) | Stringcompare(Skin.String(CustomSub0_4.Type),3)">RunAddon($INFO[Skin.String(CustomSub0_4.Path)])</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub0_4.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub0_4.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_4.Type),6) | Stringcompare(Skin.String(CustomSub0_4.Type),7)">$INFO[Skin.String(CustomSub0_4.Path)]</onclick>
+            <visible>Substring(Control.GetLabel(4327),custom0) + IsEmpty(Skin.String(CustomSub0_4.Disable)) + !IsEmpty(Skin.String(CustomSub0_4.Path))</visible>
         </item>
         <item>
-            <label>$INFO[Skin.String(CustomSub10_5.Label)]</label>
-            <thumb>$INFO[Skin.String(CustomSub10_5.MultiFanart)]</thumb>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_5.Type),0) | Stringcompare(Skin.String(CustomSub10_5.Type),1) | Stringcompare(Skin.String(CustomSub10_5.Type),2) | Stringcompare(Skin.String(CustomSub10_5.Type),3)">RunAddon($INFO[Skin.String(CustomSub10_5.Path)])</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub10_5.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub10_5.Path)],return)</onclick>
-            <onclick condition="stringcompare(Skin.String(CustomSub10_5.Type),6) | Stringcompare(Skin.String(CustomSub10_5.Type),7)">$INFO[Skin.String(CustomSub10_5.Path)]</onclick>
-            <visible>Substring(Control.GetLabel(4327),custom10) + IsEmpty(Skin.String(CustomSub10_5.Disable)) + !IsEmpty(Skin.String(CustomSub10_5.Path))</visible>
+            <label>$INFO[Skin.String(CustomSub0_5.Label)]</label>
+            <thumb>$INFO[Skin.String(CustomSub0_5.MultiFanart)]</thumb>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_5.Type),0) | Stringcompare(Skin.String(CustomSub0_5.Type),1) | Stringcompare(Skin.String(CustomSub0_5.Type),2) | Stringcompare(Skin.String(CustomSub0_5.Type),3)">RunAddon($INFO[Skin.String(CustomSub0_5.Path)])</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(CustomSub0_5.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(CustomSub0_5.Path)],return)</onclick>
+            <onclick condition="stringcompare(Skin.String(CustomSub0_5.Type),6) | Stringcompare(Skin.String(CustomSub0_5.Type),7)">$INFO[Skin.String(CustomSub0_5.Path)]</onclick>
+            <visible>Substring(Control.GetLabel(4327),custom0) + IsEmpty(Skin.String(CustomSub0_5.Disable)) + !IsEmpty(Skin.String(CustomSub0_5.Path))</visible>
         </item>
     </include>
     <include name="DefaultMusicSubMenu">
@@ -595,7 +595,8 @@
     <include name="DefaultShutdownSubMenu">
         <item>
             <label>$LOCALIZE[31009]</label>
-            <onclick>AlarmClock(shutdowntimer,Powerdown())</onclick>
+            <onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+			<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
             <visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub1)) + !System.HasAlarm(shutdowntimer)</visible>
         </item>
         <item>
@@ -625,7 +626,6 @@
         </item>
         <item>
             <label>20126</label>
-            <onclick>dialog.close(all,true)</onclick>
             <onclick>System.LogOff</onclick>
             <visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub6)) + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon</visible>
         </item>
@@ -1047,7 +1047,7 @@
             <label fallback="CUSTOM1">$INFO[Skin.String(CustomHomeItem1.Label)]</label>
             <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem1,home)</onclick>
             <onclick>SetFocus(9006)</onclick>
-            <icon fallback="special://skin/backgrounds/playlist/">$INFO[Skin.String(CustomHomeItem1.MultiFanart)]</icon>
+            <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem1.MultiFanart)]</icon>
             <property name="Widget">$INFO[Skin.String(CustomHomeItem1.Widget)]</property>
             <property name="Widget2">$INFO[Skin.String(CustomHomeItem1.Widget2)]</property>
             <property name="WidgetTitle">$INFO[Skin.String(CustomHomeItem1.WidgetTitle)]</property>
@@ -1065,7 +1065,7 @@
             <label fallback="CUSTOM2">$INFO[Skin.String(CustomHomeItem2.Label)]</label>
             <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem2,home)</onclick>
             <onclick>SetFocus(9006)</onclick>
-            <icon fallback="special://skin/backgrounds/playlist/">$INFO[Skin.String(CustomHomeItem2.MultiFanart)]</icon>
+            <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem2.MultiFanart)]</icon>
             <property name="Widget">$INFO[Skin.String(CustomHomeItem2.Widget)]</property>
             <property name="Widget2">$INFO[Skin.String(CustomHomeItem2.Widget2)]</property>
             <property name="WidgetTitle">$INFO[Skin.String(CustomHomeItem2.WidgetTitle)]</property>
@@ -1083,7 +1083,7 @@
             <label fallback="CUSTOM3">$INFO[Skin.String(CustomHomeItem3.Label)]</label>
             <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem3,home)</onclick>
             <onclick>SetFocus(9006)</onclick>
-            <icon fallback="special://skin/backgrounds/playlist/">$INFO[Skin.String(CustomHomeItem3.MultiFanart)]</icon>
+            <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem3.MultiFanart)]</icon>
             <property name="Widget">$INFO[Skin.String(CustomHomeItem3.Widget)]</property>
             <property name="Widget2">$INFO[Skin.String(CustomHomeItem3.Widget2)]</property>
             <property name="WidgetTitle">$INFO[Skin.String(CustomHomeItem3.WidgetTitle)]</property>
@@ -1101,7 +1101,7 @@
             <label fallback="CUSTOM4">$INFO[Skin.String(CustomHomeItem4.Label)]</label>
             <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem4,home)</onclick>
             <onclick>SetFocus(9006)</onclick>
-            <icon fallback="special://skin/backgrounds/playlist/">$INFO[Skin.String(CustomHomeItem4.MultiFanart)]</icon>
+            <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem4.MultiFanart)]</icon>
             <property name="Widget">$INFO[Skin.String(CustomHomeItem4.Widget)]</property>
             <property name="Widget2">$INFO[Skin.String(CustomHomeItem4.Widget2)]</property>
             <property name="WidgetTitle">$INFO[Skin.String(CustomHomeItem4.WidgetTitle)]</property>
@@ -1119,7 +1119,7 @@
             <label fallback="CUSTOM5">$INFO[Skin.String(CustomHomeItem5.Label)]</label>
             <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem5,home)</onclick>
             <onclick>SetFocus(9006)</onclick>
-            <icon fallback="special://skin/backgrounds/playlist/">$INFO[Skin.String(CustomHomeItem5.MultiFanart)]</icon>
+            <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem5.MultiFanart)]</icon>
             <property name="Widget">$INFO[Skin.String(CustomHomeItem5.Widget)]</property>
             <property name="Widget2">$INFO[Skin.String(CustomHomeItem5.Widget2)]</property>
             <property name="WidgetTitle">$INFO[Skin.String(CustomHomeItem5.WidgetTitle)]</property>
@@ -1137,7 +1137,7 @@
             <label fallback="CUSTOM6">$INFO[Skin.String(CustomHomeItem6.Label)]</label>
             <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem6,home)</onclick>
             <onclick>SetFocus(9006)</onclick>
-            <icon fallback="special://skin/backgrounds/playlist/">$INFO[Skin.String(CustomHomeItem6.MultiFanart)]</icon>
+            <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(CustomHomeItem6.MultiFanart)]</icon>
             <property name="Widget">$INFO[Skin.String(CustomHomeItem6.Widget)]</property>
             <property name="Widget2">$INFO[Skin.String(CustomHomeItem6.Widget2)]</property>
             <property name="WidgetTitle">$INFO[Skin.String(CustomHomeItem6.WidgetTitle)]</property>
@@ -1207,7 +1207,7 @@
                 <height>88</height>
                 <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
                 <colordiffuse>white5</colordiffuse>
-                <visible>SubString(ListItem.Property(BigIcon),/BigIcons/) | IsEmpty(ListItem.Property(BigIcon))</visible>
+                <visible>SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
             </control>
             <control type="image">
                 <posx>252</posx>
@@ -1215,8 +1215,8 @@
                 <width>88</width>
                 <height>60</height>
                 <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
-                <colordiffuse>white5</colordiffuse>
-                <visible>![SubString(ListItem.Property(BigIcon),/BigIcons/) | IsEmpty(ListItem.Property(BigIcon))]</visible>
+                <colordiffuse>48FFFFFF</colordiffuse>
+                <visible>!SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
                 <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
@@ -1231,24 +1231,27 @@
             </control>
         </itemlayout>
         <focusedlayout height="225" width="250" condition="Skin.HasSetting(mainmenuicons)">
-            <control type="image">
-                <posx>252</posx>
-                <posy>64</posy>
-                <width>88</width>
-                <height>88</height>
-                <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
-                <colordiffuse>$VAR[MainMenuFontColorVar]</colordiffuse>
-                <visible>SubString(ListItem.Property(BigIcon),/BigIcons/) | IsEmpty(ListItem.Property(BigIcon))</visible>
-            </control>
-            <control type="image">
-                <posx>252</posx>
-                <posy>66</posy>
-                <width>88</width>
-                <height>60</height>
-                <aspectratio>keep</aspectratio>
-                <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
-                <colordiffuse>$VAR[MainMenuFontColorVar]</colordiffuse>
-                <visible>![SubString(ListItem.Property(BigIcon),/BigIcons/) | IsEmpty(ListItem.Property(BigIcon))]</visible>
+            <control type="group">
+                <animation effect="zoom" start="80" end="100" center="296,108" delay="200" tween="back" time="300">Focus</animation>
+                <control type="image">
+                    <posx>252</posx>
+                    <posy>64</posy>
+                    <width>88</width>
+                    <height>88</height>
+                    <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
+                    <colordiffuse>$VAR[MainMenuFontColorVar]</colordiffuse>
+                    <visible>SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
+                </control>
+                <control type="image">
+                    <posx>252</posx>
+                    <posy>66</posy>
+                    <width>88</width>
+                    <height>60</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
+                    <colordiffuse>FFFFFFFF</colordiffuse>
+                    <visible>!SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
+                </control>
             </control>
             <control type="label">
                 <posx>297</posx>
@@ -1401,7 +1404,7 @@
             <include condition="Substring(Skin.String(submenulist),custom7)">Custom7Subs</include>
             <include condition="Substring(Skin.String(submenulist),custom8)">Custom8Subs</include>
             <include condition="Substring(Skin.String(submenulist),custom9)">Custom9Subs</include>
-            <include condition="Substring(Skin.String(submenulist),custom10)">Custom10Subs</include>
+            <include condition="Substring(Skin.String(submenulist),custom0)">Custom0Subs</include>
         </content>
     </include>
     <include name="MainMenuFixedList">
@@ -1798,229 +1801,229 @@
     <include name="CustomHomeItem1Backgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.3.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.3.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.4.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.4.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.5.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.5.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.6.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.6.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.7.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.7.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.8.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.8.Art(fanart)))</visible>
         </item>
     </include>
     <include name="CustomHomeItem2Backgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.3.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.3.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.4.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.4.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.5.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.5.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.6.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.6.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.7.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.7.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.8.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.8.Art(fanart)))</visible>
         </item>
     </include>
     <include name="CustomHomeItem3Backgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.3.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.3.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.4.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.4.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.5.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.5.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.6.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.6.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.7.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.7.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.8.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.8.Art(fanart)))</visible>
         </item>
     </include>
     <include name="CustomHomeItem4Backgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.3.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.3.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.4.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.4.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.5.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.5.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.6.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.6.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.7.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.7.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.8.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.8.Art(fanart)))</visible>
         </item>
     </include>
     <include name="CustomHomeItem5Backgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.3.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.3.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.4.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.4.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.5.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.5.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.6.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.6.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.7.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.7.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.8.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.8.Art(fanart)))</visible>
         </item>
     </include>
     <include name="CustomHomeItem6Backgrounds">
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.3.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.3.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.3.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.3.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.4.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.4.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.4.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.4.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.5.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.5.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.5.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.5.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.6.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.6.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.6.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.6.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.7.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.7.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.7.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.7.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.8.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.8.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.8.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.8.Art(fanart)))</visible>
         </item>
     </include>
     <include name="WatchlistMoviesBackgrounds">
@@ -2376,75 +2379,75 @@
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.1.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.1.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.2.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.2.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.1.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.1.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.2.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.2.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.1.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.1.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.2.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.2.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.1.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.1.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.2.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.2.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.1.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.1.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.2.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.2.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.1.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.1.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.1.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.1.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.2.Fanart)]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.2.Art(fanart))]</property>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
-            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.2.Fanart))</visible>
+            <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.2.Art(fanart)))</visible>
         </item>
         <item>
             <onclick>-</onclick>
@@ -2472,7 +2475,7 @@
         </item>
         <item>
             <onclick>-</onclick>
-            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
+            <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.Art(fanart)))]</property>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart)))</visible>
         </item>
@@ -2531,7 +2534,7 @@
     </include>
     <include name="WorldWeatherIcons">
         <control type="group">
-            <visible>StringCompare(Control.GetLabel(4322),googleweather2)</visible>
+            <visible>StringCompare(Control.GetLabel(4322),weatherworldbackground)</visible>
             <include>Animation_VisibleChange200</include>
             <include>Animation_WindowFade200</include>
             <include>WeatherWorldGroup2601</include>
@@ -2550,8 +2553,12 @@
             <posx>9</posx>
             <posy>1037</posy>
             <width>1920</width>
-            <onleft>6020</onleft>
-            <onright>6020</onright>
+            <onleft condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">SetFocus(4444)</onleft>
+            <onleft condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onleft>
+            <onleft condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onleft>
+            <onright condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">SetFocus(4444)</onright>
+            <onright condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onright>
+            <onright condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onright>
             <align>left</align>
             <onback>SetFocus(9000)</onback>
             <include>Animation_VisibleChange200</include>
@@ -2560,7 +2567,7 @@
             <onup condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onup>
             <onup condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onup>
             <ondown>SetFocus(9000)</ondown>
-            <visible>Player.HasMedia | !IsEmpty(System.DVDLabel)</visible>
+            <visible>Player.HasMedia | System.HasMediadvd</visible>
             <visible>Skin.HasSetting(bottommenu)</visible>
             <itemgap>7</itemgap>
             <orientation>horizontal</orientation>
@@ -2569,7 +2576,7 @@
                 <include>BottomMenuButton</include>
                 <texturefocus>common/logo_music.png</texturefocus>
                 <texturenofocus>common/logo_music.png</texturenofocus>
-                <visible>!IsEmpty(System.DVDLabel)</visible>
+                <visible>System.HasMediadvd</visible>
                 <colordiffuse>$VAR[HomeDVDButtonColorVar]</colordiffuse>
                 <animation effect="zoom" center="0,22" start="100" end="120" time="200" tween="quadratic">Focus</animation>
                 <onclick>PlayDVD()</onclick>

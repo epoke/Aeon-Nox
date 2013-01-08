@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <includes>
     <default type="image">
         <posx>0</posx>
@@ -34,6 +34,7 @@
         <align>left</align>
         <font>Font_Reg18</font>
         <textcolor>white2</textcolor>
+        <scrollspeed>20</scrollspeed>
         <pauseatend>3000</pauseatend>
         <scrollout>false</scrollout>
         <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>

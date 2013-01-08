@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window type="buttonMenu" id="111">
     <onload condition="Window.IsActive(1126)">Dialog.Close(1126)</onload>
     <onload condition="Window.IsActive(1121)">Dialog.Close(1121)</onload>
@@ -55,6 +55,7 @@
                     <label>$LOCALIZE[42299]</label>
                     <include>Objects_ShutdownMenuButton</include>
                     <onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
                     <visible>!System.HasAlarm(shutdowntimer)</visible>
                 </control>
                 <control type="button" id="15">
@@ -90,7 +91,7 @@
                 <control type="button" id="7">
                     <label>$INFO[system.profilename,$LOCALIZE[20126] ]</label>
                     <include>Objects_ShutdownMenuButton</include>
-                    <onclick>dialog.close(all,true)</onclick>
+                    <onclick>Dialog.Close(all,true)</onclick>
                     <onclick>System.LogOff</onclick>
                     <visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
                     <visible>System.Loggedon</visible>
@@ -177,14 +178,14 @@
                     <visible>System.HasMediadvd + System.Platform.ATV2</visible>
                 </control>
                 <control type="image">
-                    <texture>special://skin/extras/BigIcons/Search.png</texture>
+                    <texture>special://skin/extras/BigIcons/Lock.png</texture>
                     <include>Objects_ShutdownMenuIcon</include>
                     <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(7)">Conditional</animation>
                     <visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
                     <visible>System.Loggedon</visible>
                 </control>
                 <control type="image">
-                    <texture>special://skin/extras/BigIcons/Magicwand.png</texture>
+                    <texture>special://skin/extras/BigIcons/Key.png</texture>
                     <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(8)">Conditional</animation>
                     <include>Objects_ShutdownMenuIcon</include>
                     <visible>System.HasLocks</visible>

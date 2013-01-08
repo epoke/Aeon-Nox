@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window id="1115" type="dialog">
     <defaultcontrol>40</defaultcontrol>
     <backgroundcolor>backgroundcolor</backgroundcolor>
+    <onload condition="!IsEmpty(Window(home).Property(FeaturedSetup))">ActivateWindow(1128)</onload>
     <onload condition="ControlGroup(5000).HasFocus">AlarmClock(Tile,Control.Move(5002,1),00:04,silent,loop)</onload>
     <onload condition="ControlGroup(5000).HasFocus">AlarmClock(TileTwo,Control.Move(5003,1),00:07,silent,loop)</onload>
     <onload condition="ControlGroup(6000).HasFocus">AlarmClock(Tile,Control.Move(6002,1),00:04,silent,loop)</onload>
@@ -9,9 +10,6 @@
     <onload condition="ControlGroup(7000).HasFocus">AlarmClock(Tile,Control.Move(7002,1),00:04,silent,loop)</onload>
     <onload condition="ControlGroup(8000).HasFocus">AlarmClock(Tile,Control.Move(8002,1),00:04,silent,loop)</onload>
     <onload condition="ControlGroup(9000).HasFocus">AlarmClock(Tile,Control.Move(9002,1),00:04,silent,loop)</onload>
-    <onload condition="ControlGroup(10000).HasFocus">AlarmClock(Tile,Control.Move(10002,1),00:04,silent,loop)</onload>
-    <onload condition="ControlGroup(11000).HasFocus">AlarmClock(Tile,Control.Move(11002,1),00:04,silent,loop)</onload>
-    <onload condition="ControlGroup(11000).HasFocus">AlarmClock(TileTwo,Control.Move(11003,1),00:07,silent,loop)</onload>
     <onload condition="Window.Previous(home)">SetFocus(5012)</onload>
     <onunload>ClearProperty(InfoDialog,1115)</onunload>
     <onload>SetFocus(9000)</onload>
@@ -19,6 +17,7 @@
     <onunload>CancelAlarm(TileTwo,true)</onunload>
     <onload>SetProperty(DisableWidgets,true,home)</onload>
     <onunload>ClearProperty(DisableWidgets,home)</onunload>
+    <onunload>ClearProperty(FeaturedSetup,home)</onunload>
     <onunload condition="Window.IsActive(1147)">Action(PreviousMenu)</onunload>
     <coordinates>
         <system>1</system>
@@ -30,7 +29,7 @@
         <control type="grouplist" id="40">
             <posx>-135</posx>
             <posy>105</posy>
-             <animation effect="slide" end="0,300" time="0" condition="Window.IsActive(1147)">Conditional</animation>
+            <animation effect="slide" end="0,300" time="0" condition="Window.IsActive(1147)">Conditional</animation>
             <width>2325</width>
             <height>780</height>
             <scrolltime tween="cubic" easing="inout">500</scrolltime>
@@ -121,8 +120,8 @@
                         <posy>451</posy>
                         <width>200</width>
                         <height>200</height>
-                        <texture>featured/icons/DefaultSearch.png</texture>
-                        <colordiffuse>broken_white</colordiffuse>
+                        <texture>common/DefaultSearch.png</texture>
+                        <colordiffuse>white</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>21</posx>
@@ -396,7 +395,6 @@
                             <width>746</width>
                             <height>40</height>
                             <font>Font_Reg15</font>
-                            <textcolor>FFe5e5e5</textcolor>
                             <label>$INFO[Container(5002).ListItem.Label2,,: ]$INFO[Container(5002).ListItem.Property(EpisodeNo),, - ]$INFO[Container(5002).ListItem.Label]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
@@ -559,7 +557,6 @@
                             <width>272</width>
                             <height>40</height>
                             <font>Font_Reg15</font>
-                            <textcolor>FFe5e5e5</textcolor>
                             <label>$INFO[Container(5003).ListItem.Label]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
@@ -818,7 +815,6 @@
                             <width>746</width>
                             <height>40</height>
                             <font>Font_Reg15</font>
-                            <textcolor>FFe5e5e5</textcolor>
                             <label>$INFO[Container(6002).ListItem.Label]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
@@ -970,7 +966,6 @@
                             <width>272</width>
                             <height>40</height>
                             <font>Font_Reg15</font>
-                            <textcolor>FFe5e5e5</textcolor>
                             <label>$INFO[Container(6003).ListItem.Label]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
@@ -1221,7 +1216,6 @@
                             <width>746</width>
                             <height>40</height>
                             <font>Font_Reg15</font>
-                            <textcolor>FFe5e5e5</textcolor>
                             <label>$INFO[Container(7002).ListItem.Label2,,: ]$INFO[Container(7002).ListItem.Property(EpisodeNumber),, - ]$INFO[Container(7002).ListItem.Label]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
@@ -1258,17 +1252,22 @@
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Icon]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
                                     <bordersize>5</bordersize>
-                                    <colordiffuse>DD27292b</colordiffuse>
+                                </control>
+                                <control type="image">
+                                    <width>376</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
                                 </control>
                                 <control type="group">
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="80" start="100" time="0" condition="true">Conditional</animation>
                                     <posy>5</posy>
                                     <control type="label">
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -1277,7 +1276,7 @@
                                         <width>360</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Property(NextNumber),, - ]$INFO[ListItem.Property(NextTitle)]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -1286,7 +1285,7 @@
                                         <width>360</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label2]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -1299,79 +1298,53 @@
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Icon]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
                                     <bordersize>5</bordersize>
-                                    <colordiffuse>DD27292b</colordiffuse>
+                                </control>
+                                <control type="image">
+                                    <width>376</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
                                 </control>
                                 <control type="group">
+                                    <animation effect="fade" end="80" start="100" time="0" condition="!Control.HasFocus(7003)">Conditional</animation>
+                                    <posy>5</posy>
+                                    <control type="label">
+                                        <posy>5</posy>
+                                        <width>360</width>
+                                        <height>45</height>
+                                        <font>Font_Reg15</font>
+                                        <textcolor>white2</textcolor>
+                                        <label>$INFO[ListItem.Label]</label>
+                                        <textoffsetx>15</textoffsetx>
+                                    </control>
+                                    <control type="label">
+                                        <posy>40</posy>
+                                        <width>360</width>
+                                        <height>45</height>
+                                        <font>Font_Reg15</font>
+                                        <textcolor>white2</textcolor>
+                                        <label>$INFO[ListItem.Property(NextNumber),, - ]$INFO[ListItem.Property(NextTitle)]</label>
+                                        <textoffsetx>15</textoffsetx>
+                                    </control>
+                                    <control type="label">
+                                        <posy>75</posy>
+                                        <width>360</width>
+                                        <height>45</height>
+                                        <font>Font_Reg15</font>
+                                        <textcolor>white2</textcolor>
+                                        <label>$INFO[ListItem.Label2]</label>
+                                        <textoffsetx>15</textoffsetx>
+                                    </control>
+                                </control>
+                                <control type="image">
+                                    <posy>-5</posy>
+                                    <width>376</width>
+                                    <height>140</height>
+                                    <texture>common/blank.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <bordertexture border="5">views/addonwall_select.png</bordertexture>
+                                    <bordersize>5</bordersize>
                                     <visible>Control.HasFocus(7003)</visible>
-                                    <posy>5</posy>
-                                    <control type="image">
-                                        <posy>-5</posy>
-                                        <width>376</width>
-                                        <height>140</height>
-                                        <texture>common/blank.png</texture>
-                                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                        <bordertexture border="5">views/addonwall_select.png</bordertexture>
-                                        <bordersize>5</bordersize>
-                                    </control>
-                                    <control type="label">
-                                        <posy>5</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>40</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Property(NextNumber),, - ]$INFO[ListItem.Property(NextTitle)]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>75</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                </control>
-                                <control type="group">
-                                    <visible>!Control.HasFocus(7003)</visible>
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                    <posy>5</posy>
-                                    <control type="label">
-                                        <posy>5</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>40</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Property(NextNumber),, - ]$INFO[ListItem.Property(NextTitle)]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>75</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -1531,17 +1504,22 @@
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Icon]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
                                     <bordersize>5</bordersize>
-                                    <colordiffuse>DD27292b</colordiffuse>
+                                </control>
+                                <control type="image">
+                                    <width>376</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
                                 </control>
                                 <control type="group">
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="80" start="100" time="0" condition="true">Conditional</animation>
                                     <posy>5</posy>
                                     <control type="label">
                                         <posy>5</posy>
                                         <width>360</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label2]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -1550,7 +1528,7 @@
                                         <width>360</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -1559,7 +1537,7 @@
                                         <width>360</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -1572,81 +1550,55 @@
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Icon]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
                                     <bordersize>5</bordersize>
-                                    <colordiffuse>DD27292b</colordiffuse>
+                                </control>
+                                <control type="image">
+                                    <width>376</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
                                 </control>
                                 <control type="group">
+                                    <animation effect="fade" end="80" start="100" time="0" condition="!Control.HasFocus(7003)">Conditional</animation>
+                                    <posy>5</posy>
+                                    <control type="label">
+                                        <posy>5</posy>
+                                        <width>360</width>
+                                        <height>45</height>
+                                        <font>Font_Reg15</font>
+                                        <textcolor>white2</textcolor>
+                                        <scroll>true</scroll>
+                                        <label>$INFO[ListItem.Label2]</label>
+                                        <textoffsetx>15</textoffsetx>
+                                    </control>
+                                    <control type="label">
+                                        <posy>40</posy>
+                                        <width>360</width>
+                                        <height>45</height>
+                                        <font>Font_Reg15</font>
+                                        <textcolor>white2</textcolor>
+                                        <scroll>true</scroll>
+                                        <label>$INFO[ListItem.Label]</label>
+                                        <textoffsetx>15</textoffsetx>
+                                    </control>
+                                    <control type="label">
+                                        <posy>75</posy>
+                                        <width>360</width>
+                                        <height>45</height>
+                                        <font>Font_Reg15</font>
+                                        <textcolor>white2</textcolor>
+                                        <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
+                                        <textoffsetx>15</textoffsetx>
+                                    </control>
+                                </control>
+                                <control type="image">
+                                    <posy>-5</posy>
+                                    <width>376</width>
+                                    <height>140</height>
+                                    <texture>common/blank.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <bordertexture border="5">views/addonwall_select.png</bordertexture>
+                                    <bordersize>5</bordersize>
                                     <visible>Control.HasFocus(7003)</visible>
-                                    <posy>5</posy>
-                                    <control type="image">
-                                        <posy>-5</posy>
-                                        <width>376</width>
-                                        <height>140</height>
-                                        <texture>common/blank.png</texture>
-                                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                        <bordertexture border="5">views/addonwall_select.png</bordertexture>
-                                        <bordersize>5</bordersize>
-                                    </control>
-                                    <control type="label">
-                                        <posy>5</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <scroll>true</scroll>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>40</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <scroll>true</scroll>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>75</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                </control>
-                                <control type="group">
-                                    <visible>!Control.HasFocus(7003)</visible>
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                    <posy>5</posy>
-                                    <control type="label">
-                                        <posy>5</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>40</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>75</posy>
-                                        <width>360</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -1993,7 +1945,6 @@
                             <width>402</width>
                             <height>40</height>
                             <font>Font_Reg15</font>
-                            <textcolor>FFe5e5e5</textcolor>
                             <label>$INFO[Container(8002).ListItem.Label]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
@@ -2029,17 +1980,22 @@
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Thumb]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
                                     <bordersize>5</bordersize>
-                                    <colordiffuse>DD27292b</colordiffuse>
+                                </control>
+                                <control type="image">
+                                    <width>720</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
                                 </control>
                                 <control type="group">
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="80" start="100" time="0" condition="true">Conditional</animation>
                                     <posy>5</posy>
                                     <control type="label">
                                         <posy>5</posy>
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2048,7 +2004,7 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label2]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2057,7 +2013,7 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Property(Year)]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2069,11 +2025,16 @@
                                     <height>140</height>
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Thumb]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
-                                    <colordiffuse>DD27292b</colordiffuse>
                                     <bordersize>5</bordersize>
                                 </control>
+                                <control type="image">
+                                    <width>720</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
+                                </control>
                                 <control type="group">
-                                    <visible>Control.HasFocus(8003)</visible>
+                                    <animation effect="fade" end="80" start="100" time="0" condition="!Control.HasFocus(8003)">Conditional</animation>
                                     <posy>5</posy>
                                     <control type="image">
                                         <posy>-5</posy>
@@ -2083,13 +2044,14 @@
                                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                         <bordertexture border="5">views/addonwall_select.png</bordertexture>
                                         <bordersize>5</bordersize>
+                                        <visible>Control.HasFocus(8003)</visible>
                                     </control>
                                     <control type="label">
                                         <posy>5</posy>
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2098,7 +2060,7 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label2]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2107,39 +2069,7 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Property(Year)]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                </control>
-                                <control type="group">
-                                    <visible>!Control.HasFocus(8003)</visible>
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                    <posy>5</posy>
-                                    <control type="label">
-                                        <posy>5</posy>
-                                        <width>710</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>40</posy>
-                                        <width>710</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>75</posy>
-                                        <width>710</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Property(Year)]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2375,7 +2305,7 @@
                                     <width>550</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="80" start="100" time="50" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -2474,7 +2404,6 @@
                             <width>402</width>
                             <height>40</height>
                             <font>Font_Reg15</font>
-                            <textcolor>FFe5e5e5</textcolor>
                             <label>$INFO[Container(9002).ListItem.Label]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
@@ -2509,17 +2438,22 @@
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Thumb]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
                                     <bordersize>5</bordersize>
-                                    <colordiffuse>DD27292b</colordiffuse>
+                                </control>
+                                <control type="image">
+                                    <width>720</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
                                 </control>
                                 <control type="group">
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="80" start="100" time="0" condition="true">Conditional</animation>
                                     <posy>5</posy>
                                     <control type="label">
                                         <posy>5</posy>
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2528,7 +2462,7 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label2]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2537,8 +2471,8 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
+                                        <textcolor>white2</textcolor>
+                                        <label>$INFO[ListItem.Property(Year)]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
                                 </control>
@@ -2549,27 +2483,23 @@
                                     <height>140</height>
                                     <texture fallback="XBMC_Logo.png">$INFO[ListItem.Thumb]</texture>
                                     <aspectratio aligny="center">scale</aspectratio>
-                                    <colordiffuse>DD27292b</colordiffuse>
                                     <bordersize>5</bordersize>
                                 </control>
+                                <control type="image">
+                                    <width>720</width>
+                                    <height>140</height>
+                                    <texture fallback="XBMC_Logo.png">common/bgcolor.png</texture>
+                                    <colordiffuse>60FFFFFF</colordiffuse>
+                                </control>
                                 <control type="group">
-                                    <visible>Control.HasFocus(9003)</visible>
+                                    <animation effect="fade" end="80" start="100" time="0" condition="!Control.HasFocus(9003)">Conditional</animation>
                                     <posy>5</posy>
-                                    <control type="image">
-                                        <posy>-5</posy>
-                                        <width>720</width>
-                                        <height>140</height>
-                                        <texture>common/blank.png</texture>
-                                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                        <bordertexture border="5">views/addonwall_select.png</bordertexture>
-                                        <bordersize>5</bordersize>
-                                    </control>
                                     <control type="label">
                                         <posy>5</posy>
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2578,7 +2508,7 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
+                                        <textcolor>white2</textcolor>
                                         <label>$INFO[ListItem.Label2]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
@@ -2587,42 +2517,20 @@
                                         <width>710</width>
                                         <height>45</height>
                                         <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
+                                        <textcolor>white2</textcolor>
+                                        <label>$INFO[ListItem.Property(Year)]</label>
                                         <textoffsetx>15</textoffsetx>
                                     </control>
                                 </control>
-                                <control type="group">
-                                    <visible>!Control.HasFocus(9003)</visible>
-                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-                                    <posy>5</posy>
-                                    <control type="label">
-                                        <posy>5</posy>
-                                        <width>710</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>40</posy>
-                                        <width>710</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label2]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
-                                    <control type="label">
-                                        <posy>75</posy>
-                                        <width>710</width>
-                                        <height>45</height>
-                                        <font>Font_Reg15</font>
-                                        <textcolor>FFe5e5e5</textcolor>
-                                        <label>$INFO[ListItem.Label]</label>
-                                        <textoffsetx>15</textoffsetx>
-                                    </control>
+                                <control type="image">
+                                    <posy>-5</posy>
+                                    <width>720</width>
+                                    <height>140</height>
+                                    <texture>common/blank.png</texture>
+                                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                                    <bordertexture border="5">views/addonwall_select.png</bordertexture>
+                                    <bordersize>5</bordersize>
+                                    <visible>Control.HasFocus(9003)</visible>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -2782,6 +2690,7 @@
         </control>
         <control type="group">
             <posx>315</posx>
+            <animation effect="slide" end="0,300" time="0" condition="Window.IsActive(1147)">Conditional</animation>
             <posy>105</posy>
             <animation type="Conditional" condition="!IsEmpty(Window(1115).Property(InfoDialog))" reversible="false">
                 <effect type="rotatey" center="960" end="-90" time="550" tween="cubic" easing="in" />
@@ -2855,7 +2764,7 @@
                     <height>304</height>
                     <font>Font_Reg19</font>
                     <label>$VAR[FeaturedInfoDialogPlotVar]</label>
-                    <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
             <control type="group">
@@ -2897,7 +2806,7 @@
                     <height>304</height>
                     <font>Font_Reg19</font>
                     <label>$VAR[FeaturedInfoDialogPlotVar]</label>
-                    <autoscroll delay="8000" time="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
             <control type="grouplist" id="5005">
@@ -2913,7 +2822,6 @@
                 <ondown>190</ondown>
                 <onback>ClearProperty(InfoDialog,1115)</onback>
                 <onback>SetFocus(40)</onback>
-                <onback>ActivateWindow(1115)</onback>
                 <animation effect="slide" end="190" condition="![SubString(Window(1115).Property(InfoDialog),50) | SubString(Window(1115).Property(InfoDialog),60)]">Conditional</animation>
                 <control type="button" id="1">
                     <include>WidgetMenuLabel</include>
@@ -2929,7 +2837,7 @@
                     <onclick condition="StringCompare(Window(1115).Property(InfoDialog),9003)">$INFO[Container(9003).ListItem.Property(Path)]</onclick>
                     <onclick>ClearProperty(InfoDialog,1115)</onclick>
                     <onclick>SetFocus(40)</onclick>
-                    <onclick>Action(Close)</onclick>
+                    <onclick condition="Window.IsActive(home)">Action(Close)</onclick>
                     <visible>!StringCompare(Window(1115).Property(InfoDialog),9002)</visible>
                 </control>
                 <control type="button" id="2">
@@ -2941,6 +2849,7 @@
                 <control type="button" id="3">
                     <include>WidgetMenuLabel</include>
                     <label>$LOCALIZE[20410]</label>
+                    <onclick condition="Window.IsActive(home)">Action(Close)</onclick>
                     <onclick condition="StringCompare(Window(1115).Property(InfoDialog),6002)">PlayMedia($ESCINFO[Container(6002).ListItem.Property(Trailer)])</onclick>
                     <onclick condition="StringCompare(Window(1115).Property(InfoDialog),6003)">PlayMedia($ESCINFO[Container(6003).ListItem.Property(Trailer)])</onclick>
                     <onclick>SetFocus(40)</onclick>
@@ -3000,28 +2909,24 @@
                         <label>$LOCALIZE[31502]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(6000).HasFocus">Conditional</animation>
                         <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(6000).HasFocus">Conditional</animation>
-
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[31503]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(7000).HasFocus">Conditional</animation>
                         <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(7000).HasFocus">Conditional</animation>
-
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[132]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
                         <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(8000).HasFocus">Conditional</animation>
-
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[31501]</label>
                         <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
                         <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-
                     </control>
                 </control>
             </control>

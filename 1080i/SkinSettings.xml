@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <backgroundcolor>backgroundcolor</backgroundcolor>
@@ -110,12 +110,6 @@
                         <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
                         <selected>Skin.HasSetting(AutoScroll)</selected>
                     </control>
-                    <control type="radiobutton" id="127">
-                        <label>42284</label>
-                        <include>Default_SettingRadioButton</include>
-                        <onclick>Skin.ToggleSetting(trailerincontextmenu)</onclick>
-                        <selected>Skin.HasSetting(trailerincontextmenu)</selected>
-                    </control>
                     <control type="radiobutton" id="298">
                         <label>31279</label>
                         <include>Default_SettingRadioButton</include>
@@ -159,7 +153,7 @@
                         <label>- $LOCALIZE[559]:</label>
                         <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(Startup_Playlist_Path)][/COLOR]</label2>
                         <include>Default_SettingRadioButton</include>
-                        <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u|.xsp,t:\playlists\music\)</onclick>
+                        <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
                         <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
                     </control>
                 </control>
@@ -200,8 +194,8 @@
                     <control type="button" id="455">
                         <label>$LOCALIZE[42100]</label>
                         <include>Default_SettingButton</include>
+                        <onclick>SetProperty(FeaturedSetup,true,home)</onclick>
                         <onclick>ActivateWindow(1147)</onclick>
-                        <onclick>ActivateWindow(1128)</onclick>
                     </control>
                     <control type="button" id="454">
                         <label>$LOCALIZE[42101]</label>
@@ -324,20 +318,6 @@
                         <include>Default_SettingRadioButtonShort</include>
                         <onclick>Addon.OpenSettings(script.metadata.actors)</onclick>
                         <visible>System.HasAddon(script.metadata.actors)</visible>
-                    </control>
-                    <control type="button" id="430">
-                        <label>weather.google</label>
-                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Notification($LOCALIZE[42002],$LOCALIZE[42271])</onclick>
-                        <visible>!System.HasAddon(weather.google)</visible>
-                    </control>
-                    <control type="button" id="431">
-                        <label>weather.google</label>
-                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Addon.OpenSettings(weather.google)</onclick>
-                        <visible>System.HasAddon(weather.google)</visible>
                     </control>
                     <control type="button" id="432">
                         <label>script.artistslideshow</label>
@@ -534,7 +514,7 @@
                         <selected>!Skin.HasSetting(DisableShowCaseVL)</selected>
                     </control>
                     <control type="radiobutton" id="481">
-                        <label>$LOCALIZE[31028] (Episodes,Addons)</label>
+                        <label>$LOCALIZE[31028] ($LOCALIZE[20360],$LOCALIZE[24001])</label>
                         <include>Default_SettingRadioButtonShort</include>
                         <onclick>Skin.ToggleSetting(DisableShowCaseSquareVL)</onclick>
                         <selected>!Skin.HasSetting(DisableShowCaseSquareVL)</selected>
