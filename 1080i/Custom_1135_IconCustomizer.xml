@@ -7,11 +7,6 @@
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Label,$INFO[Skin.String(ItemToEdit.Label)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Path,$INFO[Skin.String(ItemToEdit.Path)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Icon,$INFO[Skin.String(ItemToEdit.Icon)])</onunload>
-    <onunload>Skin.Reset(ItemToEdit.Label)</onunload>
-    <onunload>Skin.Reset(ItemToEdit.MultiFanart)</onunload>
-    <onunload>Skin.Reset(ItemToEdit.Path)</onunload>
-    <onunload>Skin.Reset(ItemToEdit.Type)</onunload>
-    <onunload>Skin.Reset(ItemToEdit.Icon)</onunload>
     <controls>
         <control type="group">
             <visible>!Window.IsActive(1137) + !Window.IsActive(1133) + !Window.IsActive(1138) + !Window.IsActive(1142) + !Window.IsActive(1143) + !Window.IsActive(1144) + !Window.IsActive(1145)</visible>
@@ -29,10 +24,10 @@
             <control type="image">
                 <posx>456</posx>
                 <posy>200</posy>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 <width>1010</width>
                 <height>442</height>
                 <texture>osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="group">
                 <control type="grouplist">
@@ -46,37 +41,37 @@
                     <visible>!Window.IsActive(1134)</visible>
                     <include>Animation_VisibleChange200</include>
                     <control type="button">
-                        <include>Objects_CustomizerInfoButton</include>
-                        <label>$LOCALIZE[564]:</label>
+                        <label>$LOCALIZE[31008]:</label>
                         <label2>[COLOR white]$VAR[CustomItemTypeNameVar][/COLOR]</label2>
+                        <include>Objects_CustomizerInfoButton</include>
                     </control>
                     <control type="button">
-                        <include>Objects_CustomizerInfoButton</include>
-                        <label>$LOCALIZE[41154]:</label>
+                        <label>$LOCALIZE[31954]:</label>
                         <label2>[COLOR white]$INFO[Skin.String(ItemToEdit.Path)][/COLOR]</label2>
+                        <include>Objects_CustomizerInfoButton</include>
                     </control>
                     <control type="button">
-                        <include>Objects_CustomizerInfoButton</include>
-                        <label>$LOCALIZE[41158]:</label>
+                        <label>$LOCALIZE[31958]:</label>
                         <label2>[COLOR white]$INFO[Skin.String(ItemToEdit.Label)][/COLOR]</label2>
+                        <include>Objects_CustomizerInfoButton</include>
                     </control>
                     <control type="image">
                         <posx>100</posx>
-                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <width>600</width>
                         <height>100</height>
                         <align>center</align>
                         <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <colordiffuse>FFFFFFFF</colordiffuse>
                         <visible>!Substring(Skin.String(ItemToEdit.Icon),/BigIcons/)</visible>
                     </control>
                     <control type="image">
                         <posx>100</posx>
-                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <width>600</width>
                         <height>100</height>
                         <align>center</align>
                         <aspectratio>keep</aspectratio>
+                        <texture>$INFO[Skin.String(ItemToEdit.Icon)]</texture>
                         <colordiffuse>white</colordiffuse>
                         <visible>Substring(Skin.String(ItemToEdit.Icon),/BigIcons/)</visible>
                     </control>
@@ -93,23 +88,23 @@
                         <visible>!Window.IsActive(1134)</visible>
                         <include>Animation_VisibleChange200</include>
                         <control type="button" id="20">
-                            <label>$LOCALIZE[41156]</label>
+                            <label>$LOCALIZE[31956]</label>
                             <include>Objects_CustomizerSettingsButton</include>
                             <onclick>ActivateWindow(1142)</onclick>
                         </control>
                         <control type="button" id="8">
-                            <include>Objects_CustomizerSettingsButton</include>
                             <label>$LOCALIZE[31679]</label>
+                            <include>Objects_CustomizerSettingsButton</include>
                             <onclick>Skin.SetString(ItemToEdit.Label)</onclick>
                         </control>
                         <control type="button" id="9">
+                            <label>$LOCALIZE[31960]</label>
                             <include>Objects_CustomizerSettingsButton</include>
-                            <label>$LOCALIZE[41160]</label>
                             <onclick>Skin.SetImage(ItemToEdit.Icon)</onclick>
                         </control>
                         <control type="button" id="10">
-                            <include>Objects_CustomizerSettingsButton</include>
                             <label>$LOCALIZE[31027]</label>
+                            <include>Objects_CustomizerSettingsButton</include>
                             <onclick>Skin.Reset(ItemToEdit.Type)</onclick>
                             <onclick>Skin.Reset(ItemToEdit.Label)</onclick>
                             <onclick>Skin.Reset(ItemToEdit.Icon)</onclick>

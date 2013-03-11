@@ -7,9 +7,9 @@
         <include>CommonSettingsBackground</include>
         <include>CommonMediaPlayingBackground</include>
         <control type="image">
+            <texture>common/bgcolor.png</texture>
             <include>FullscreenDimensions</include>
             <colordiffuse>$INFO[Skin.String(BackgroundDarkness)]</colordiffuse>
-            <texture>common/bgcolor.png</texture>
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             <include>Animation_VisibleChange400</include>
         </control>
@@ -28,33 +28,33 @@
                 <texture>views/showcase_vignette.png</texture>
                 <colordiffuse>vignette</colordiffuse>
                 <animation type="WindowOpen">
-                    <effect type="fade" end="100" time="400" easing="inout" tween="cubic" />
-                    <effect type="slide" start="-696,0" end="0,0" time="400" easing="inout" tween="cubic" />
+                    <effect type="fade" end="100" time="320" easing="inout" tween="cubic" />
+                    <effect type="slide" start="-696,0" end="0,0" time="320" easing="inout" tween="cubic" />
                 </animation>
                 <animation type="WindowClose">
-                    <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
-                    <effect type="slide" end="-696,0" time="400" easing="inout" tween="cubic" />
+                    <effect type="fade" start="100" end="0" time="320" easing="inout" tween="cubic" />
+                    <effect type="slide" end="-696,0" time="320" easing="inout" tween="cubic" />
                 </animation>
             </control>
             <control type="image">
                 <posx>1329</posx>
                 <width>696</width>
                 <height>1080</height>
-                <colordiffuse>vignette</colordiffuse>
                 <texture flipx="true">views/showcase_vignette.png</texture>
+                <colordiffuse>vignette</colordiffuse>
                 <animation type="WindowOpen">
-                    <effect type="fade" end="100" time="400" easing="inout" tween="cubic" />
-                    <effect type="slide" start="696,0" end="0,0" time="400" easing="inout" tween="cubic" />
+                    <effect type="fade" end="100" time="320" easing="inout" tween="cubic" />
+                    <effect type="slide" start="696,0" end="0,0" time="320" easing="inout" tween="cubic" />
                 </animation>
                 <animation type="WindowClose">
-                    <effect type="fade" start="100" end="0" time="400" easing="inout" tween="cubic" />
-                    <effect type="slide" end="696,0" time="400" easing="inout" tween="cubic" />
+                    <effect type="fade" start="100" end="0" time="320" easing="inout" tween="cubic" />
+                    <effect type="slide" end="696,0" time="320" easing="inout" tween="cubic" />
                 </animation>
             </control>
             <control type="image">
+                <posy>874</posy>
                 <width>1920</width>
                 <height>206</height>
-                <posy>874</posy>
                 <texture>views/panel_spot.png</texture>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
             </control>
@@ -64,8 +64,8 @@
             <posy>270</posy>
             <width>930</width>
             <height>970</height>
-            <animation effect="slide" start="-960" end="0" time="300" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="-960" time="300" tween="quadratic" easing="in">WindowClose</animation>
+            <animation effect="slide" start="-960" end="0" time="240" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-960" time="240" tween="quadratic" easing="in">WindowClose</animation>
             <control type="group">
                 <include>FileManagerPanels</include>
                 <control type="label" id="101">
@@ -74,19 +74,19 @@
                     <width>675</width>
                     <height>90</height>
                     <font>Font_Bold22_Caps</font>
-                    <scroll>true</scroll>
                     <textcolor>floor</textcolor>
+                    <scroll>true</scroll>
                 </control>
                 <control type="label">
                     <posx>840</posx>
                     <posy>717</posy>
                     <width>1200</width>
                     <height>90</height>
-                    <font>Font_Bold22_Caps</font>
-                    <scroll>true</scroll>
                     <align>right</align>
                     <label>A</label>
+                    <font>Font_Bold22_Caps</font>
                     <textcolor>floor</textcolor>
+                    <scroll>true</scroll>
                 </control>
             </control>
             <control type="list" id="20">
@@ -102,9 +102,9 @@
                 <scrolltime>200</scrolltime>
                 <itemlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
-                        <texture>osd/osd_settings_buttonnf.png</texture>
+                        <height>60</height>
+                        <texture border="1">osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
                         <posx>30</posx>
@@ -119,23 +119,23 @@
                         <width>128</width>
                         <height>62</height>
                         <align>center</align>
-                        <textcolor>bcicon</textcolor>
                         <label>$INFO[ListItem.Size]</label>
+                        <textcolor>bcicon</textcolor>
                     </control>
                 </itemlayout>
                 <focusedlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
-                        <texture>osd/osd_settings_buttonnf.png</texture>
+                        <height>60</height>
+                        <texture border="1">osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
                         <posx>7</posx>
                         <width>736</width>
                         <height>60</height>
-                        <texture>views/tripanel/listselect_fo.png</texture>
+                        <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <animation effect="fade" time="200" start="100" end="0" reversible="false" condition="!Control.HasFocus(20)">Conditional</animation>
+                        <animation effect="fade" time="160" start="100" end="0" reversible="false" condition="!Control.HasFocus(20)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>30</posx>
@@ -144,16 +144,16 @@
                         <font>Font_Reg20</font>
                         <textcolor>white6</textcolor>
                         <info>ListItem.Label</info>
-                        <animation effect="fade" time="200" start="100" end="50" reversible="false" condition="!Control.HasFocus(20)">Conditional</animation>
+                        <animation effect="fade" time="160" start="100" end="50" reversible="false" condition="!Control.HasFocus(20)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>633</posx>
                         <width>128</width>
                         <height>62</height>
                         <align>center</align>
-                        <textcolor>white6</textcolor>
                         <label>$INFO[ListItem.Size]</label>
-                        <animation effect="fade" time="200" start="100" end="50" reversible="false" condition="!Control.HasFocus(20)">Conditional</animation>
+                        <textcolor>white6</textcolor>
+                        <animation effect="fade" time="160" start="100" end="50" reversible="false" condition="!Control.HasFocus(20)">Conditional</animation>
                     </control>
                 </focusedlayout>
             </control>
@@ -162,6 +162,7 @@
                 <posy>140</posy>
                 <width>46</width>
                 <height>526</height>
+                <include>Animation_VerticalScrollBar</include>
                 <onleft>20</onleft>
                 <onright>21</onright>
                 <ondown>30</ondown>
@@ -173,28 +174,28 @@
             <posy>270</posy>
             <width>930</width>
             <height>970</height>
-            <animation effect="slide" start="960" end="0" time="300" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="960" time="300" tween="quadratic" easing="in">WindowClose</animation>
+            <animation effect="slide" start="960" end="0" time="240" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="960" time="240" tween="quadratic" easing="in">WindowClose</animation>
             <include>FileManagerPanels</include>
             <control type="label" id="102">
                 <posx>840</posx>
                 <posy>717</posy>
                 <width>675</width>
                 <height>90</height>
-                <font>Font_Bold22_Caps</font>
-                <scroll>true</scroll>
                 <align>right</align>
+                <font>Font_Bold22_Caps</font>
                 <textcolor>floor</textcolor>
+                <scroll>true</scroll>
             </control>
             <control type="label">
                 <posx>135</posx>
                 <posy>717</posy>
                 <width>675</width>
                 <height>90</height>
-                <font>Font_Bold22_Caps</font>
-                <scroll>true</scroll>
                 <label>B</label>
+                <font>Font_Bold22_Caps</font>
                 <textcolor>floor</textcolor>
+                <scroll>true</scroll>
             </control>
             <control type="list" id="21">
                 <posx>105</posx>
@@ -209,9 +210,9 @@
                 <scrolltime>200</scrolltime>
                 <itemlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
-                        <texture>osd/osd_settings_buttonnf.png</texture>
+                        <height>60</height>
+                        <texture border="1">osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="label">
                         <posx>30</posx>
@@ -226,23 +227,23 @@
                         <width>128</width>
                         <height>62</height>
                         <align>center</align>
-                        <textcolor>bcicon</textcolor>
                         <label>$INFO[ListItem.Size]</label>
+                        <textcolor>bcicon</textcolor>
                     </control>
                 </itemlayout>
                 <focusedlayout height="58">
                     <control type="image">
-                        <height>60</height>
                         <width>750</width>
-                        <texture>osd/osd_settings_buttonnf.png</texture>
+                        <height>60</height>
+                        <texture border="1">osd/osd_settings_buttonnf.png</texture>
                     </control>
                     <control type="image">
                         <posx>7</posx>
                         <width>736</width>
                         <height>60</height>
+                        <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <texture>views/tripanel/listselect_fo.png</texture>
-                        <animation effect="fade" time="200" start="100" end="0" reversible="false" condition="!Control.HasFocus(21)">Conditional</animation>
+                        <animation effect="fade" time="160" start="100" end="0" reversible="false" condition="!Control.HasFocus(21)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>30</posx>
@@ -251,16 +252,16 @@
                         <font>Font_Reg20</font>
                         <textcolor>white6</textcolor>
                         <info>ListItem.Label</info>
-                        <animation effect="fade" time="200" start="100" end="50" reversible="false" condition="!Control.HasFocus(21)">Conditional</animation>
+                        <animation effect="fade" time="160" start="100" end="50" reversible="false" condition="!Control.HasFocus(21)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>633</posx>
                         <width>128</width>
                         <height>62</height>
                         <align>center</align>
-                        <textcolor>white6</textcolor>
                         <label>$INFO[ListItem.Size]</label>
-                        <animation effect="fade" time="200" start="100" end="50" reversible="false" condition="!Control.HasFocus(21)">Conditional</animation>
+                        <textcolor>white6</textcolor>
+                        <animation effect="fade" time="160" start="100" end="50" reversible="false" condition="!Control.HasFocus(21)">Conditional</animation>
                     </control>
                 </focusedlayout>
             </control>
@@ -269,6 +270,7 @@
                 <posy>140</posy>
                 <width>46</width>
                 <height>526</height>
+                <include>Animation_VerticalScrollBar</include>
                 <onleft>21</onleft>
                 <onright>20</onright>
                 <ondown>31</ondown>
@@ -293,8 +295,8 @@
                 <visible>!IsEmpty(Container.NumItems) + !Skin.HasSetting(ClassicTopBar)</visible>
                 <itemgap>10</itemgap>
                 <orientation>horizontal</orientation>
-                <animation effect="fade" time="400" delay="400">Visible</animation>
-                <animation effect="fade" time="400">Hidden</animation>
+                <animation effect="fade" time="320" delay="320">Visible</animation>
+                <animation effect="fade" time="320">Hidden</animation>
                 <control type="image">
                     <width>34</width>
                     <height>42</height>

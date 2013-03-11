@@ -28,10 +28,10 @@
             <posy>503</posy>
             <width>74</width>
             <height>74</height>
-            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             <texture>loader.gif</texture>
+            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             <visible>!IntegerGreaterThan(Container(100).NumPages,0) | ![Container(100).OnNext | Container(100).OnPrevious]</visible>
-            <animation effect="fade" time="200" delay="500" reversible="false">Visible</animation>
+            <animation effect="fade" time="160" delay="400" reversible="false">Visible</animation>
         </control>
         <control type="wraplist" id="100">
             <description>List of Images</description>
@@ -49,8 +49,8 @@
                     <posy>0</posy>
                     <width>1920</width>
                     <height>1080</height>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <visible>!Control.IsVisible(103)</visible>
                 </control>
                 <control type="largeimage">
@@ -59,8 +59,8 @@
                     <posy>0</posy>
                     <width>1920</width>
                     <height>1080</height>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <visible>Control.IsVisible(103)</visible>
                 </control>
             </itemlayout>
@@ -71,8 +71,8 @@
                     <posy>0</posy>
                     <width>1920</width>
                     <height>1080</height>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <aspectratio>scale</aspectratio>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <visible>!Control.IsVisible(103)</visible>
                 </control>
                 <control type="largeimage">
@@ -81,24 +81,24 @@
                     <posy>0</posy>
                     <width>1920</width>
                     <height>1080</height>
-                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.Icon]</texture>
                     <visible>Control.IsVisible(103)</visible>
                 </control>
                 <control type="group">
                     <description>Group for the description</description>
                     <visible>Control.IsVisible(102)</visible>
                     <animation type="Focus">
-                        <effect type="fade" start="0" end="100" time="100" delay="2000" />
-                        <effect type="fade" condition="VisibleChange" time="100" delay="2000" />
+                        <effect type="fade" start="0" end="100" time="80" delay="1600" />
+                        <effect type="fade" condition="VisibleChange" time="80" delay="1600" />
                     </animation>
                     <control type="image">
                         <description>Description background</description>
                         <posy>780</posy>
                         <width>1920</width>
                         <height>651</height>
-                        <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
                         <texture>views/lowlist_panelback.png</texture>
+                        <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                     </control>
                     <control type="textbox">
                         <description>Description text</description>
@@ -106,13 +106,12 @@
                         <posy>840</posy>
                         <width>1860</width>
                         <height>220</height>
-                        <font>Font_Reg18</font>
                         <align>left</align>
                         <aligny>top</aligny>
-                        <autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Control.HasFocus(100)</autoscroll>
-                        <wrapmultiline>true</wrapmultiline>
                         <label>$INFO[ListItem.Label2]</label>
+                        <font>Font_Reg18</font>
                         <textcolor>white</textcolor>
+                        <autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Control.HasFocus(100)</autoscroll>
                     </control>
                 </control>
             </focusedlayout>
@@ -120,21 +119,21 @@
         <control type="group">
             <description>Group for controls which are hidden and shown via info-key</description>
             <visible>Control.IsVisible(102)</visible>
-            <animation effect="fade" time="200">VisibleChange</animation>
+            <animation effect="fade" time="160">VisibleChange</animation>
             <control type="group">
                 <control type="image">
                     <width>1920</width>
                     <height>87</height>
-                    <visible>Skin.HasSetting(altbreadcrumbstexture)</visible>
                     <texture flipy="true">home/nav_back.png</texture>
+                    <visible>Skin.HasSetting(altbreadcrumbstexture)</visible>
                     <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
                 </control>
                 <control type="image">
+                    <posy>-40</posy>
                     <width>1920</width>
                     <height>115</height>
-                    <posy>-40</posy>
-                    <visible>!Skin.HasSetting(altbreadcrumbstexture)</visible>
                     <texture>views/logo_tagline_gradient.png</texture>
+                    <visible>!Skin.HasSetting(altbreadcrumbstexture)</visible>
                 </control>
                 <control type="group">
                     <visible>!Skin.HasSetting(altbreadcrumbstexture)</visible>
@@ -149,27 +148,27 @@
             <control type="grouplist">
                 <posx>10</posx>
                 <posy>0</posy>
-                <itemgap>10</itemgap>
                 <width>1500</width>
+                <itemgap>10</itemgap>
                 <orientation>horizontal</orientation>
                 <control type="label">
                     <description>Label for source title</description>
-                    <include>BreadcrumbsLabel</include>
                     <label>$INFO[Container(100).ListItem.Property(Album)]</label>
+                    <include>BreadcrumbsLabel</include>
                 </control>
                 <control type="label">
                     <description>Label for album or picture title</description>
-                    <include>BreadcrumbsLabel</include>
                     <label>$INFO[Container(100).ListItem.Label]</label>
+                    <include>BreadcrumbsLabel</include>
                     <scroll>true</scroll>
                 </control>
             </control>
             <control type="label">
                 <description>Label TYPE: (CurrentPage/NumPages)</description>
-                <include>BreadcrumbsLabel</include>
                 <posx>1910</posx>
                 <align>right</align>
                 <label>$INFO[Window.Property(Category)] ($INFO[Container(100).CurrentPage]/$INFO[Container(100).NumPages])</label>
+                <include>BreadcrumbsLabel</include>
                 <visible>IntegerGreaterThan(Container(100).NumPages,0)</visible>
             </control>
             <control type="image">
@@ -192,6 +191,7 @@
             </control>
         </control>
         <control type="label">
+            <label></label>
             <description>TEST label</description>
             <posx>240</posx>
             <posy>200</posy>
@@ -199,9 +199,8 @@
             <height>20</height>
             <align>center</align>
             <aligny>center</aligny>
-            <label></label>
-            <textcolor>FFFFFFFF</textcolor>
             <font>Font_Bold20</font>
+            <textcolor>FFFFFFFF</textcolor>
         </control>
     </controls>
 </window>
