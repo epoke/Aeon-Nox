@@ -3,7 +3,7 @@
   id="skin.aeon.nox.korean"
   version="4.1.9"
   name="Aeon Nox Korean"
-  provider-name="Big_Noid|phil65">
+  provider-name="XBMC-Korea">
   <requires>
     <import addon="xbmc.gui" version="4.0.0"/>
     <import addon="script.favourites" version="3.2.4"/>

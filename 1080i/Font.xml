@@ -53,7 +53,6 @@
             <name>Font_Reg33_Caps</name>
             <filename>NanumGothic.ttf</filename>
             <style>uppercase</style>
-            <aspect>0.90</aspect>
             <size>33</size>
         </font>
         <font>
@@ -165,7 +164,6 @@
         </font>
         <font>
             <name>Font_ShowcaseMainLabel2</name>
-            <aspect>0.75</aspect>
             <filename>NanumGothic.ttf</filename>
             <style>uppercase bold</style>
             <size>49</size>
@@ -179,7 +177,6 @@
             <name>Font_Reg40</name>
             <filename>NanumGothic.ttf</filename>
             <size>40</size>
-            <aspect>0.95</aspect>
         </font>
         <font>
             <name>Font_Reg38</name>
@@ -249,20 +246,17 @@
         <font>
             <name>Font_BigPause</name>
             <filename>NanumGothic.ttf</filename>
-            <aspect>0.67</aspect>
             <style>bold uppercase</style>
             <size>555</size>
         </font>
         <font>
             <name>Font_OSDClassic2</name>
-            <aspect>0.67</aspect>
             <style>bold uppercase</style>
             <filename>NanumGothic.ttf</filename>
             <size>52</size>
         </font>
         <font>
             <name>Font_OSDClassic</name>
-            <aspect>0.67</aspect>
             <style>bold uppercase</style>
             <filename>NanumGothic.ttf</filename>
             <size>75</size>
@@ -277,12 +271,14 @@
             <name>Font_MainClassic3</name>
             <filename>NanumGothic.ttf</filename>
             <style>bold uppercase</style>
+            <aspect>0.67</aspect>
             <size>65</size>
         </font>
         <font>
             <name>Font_MainClassic2</name>
             <filename>NanumGothic.ttf</filename>
             <style>bold uppercase</style>
+            <aspect>0.67</aspect>
             <size>80</size>
         </font>
         <font>
@@ -299,7 +295,6 @@
         </font>
         <font>
             <name>Font_OSDTitle2</name>
-            <aspect>0.67</aspect>
             <style>bold</style>
             <filename>NanumGothic.ttf</filename>
             <size>61</size>
@@ -361,6 +356,367 @@
         <font>
             <name>font13</name>
             <filename>NanumGothic.ttf</filename>
+            <size>31</size>
+        </font>
+        <!--Aeon Nox-->
+        <!--CAPS-->
+    </fontset>
+    <fontset id="Roboto NanumGothic" unicode="true">
+        <font>
+            <name>Font_Reg57_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>57</size>
+        </font>
+        <font>
+            <name>Font_ShowcaseMainLabel2_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>49</size>
+        </font>
+        <font>
+            <name>Font_Reg42_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>42</size>
+        </font>
+        <font>
+            <name>Font_Reg40_Caps</name>
+            <style>uppercase</style>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>40</size>
+        </font>
+        <font>
+            <name>Font_Reg37_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>37</size>
+        </font>
+        <font>
+            <name>Font_Reg36_Caps</name>
+            <style>uppercase</style>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>36</size>
+        </font>
+        <font>
+            <name>Font_Reg34_Caps_Info</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>34</size>
+        </font>
+        <font>
+            <name>Font_Reg34_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>34</size>
+        </font>
+        <font>
+            <name>Font_Reg33_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>33</size>
+        </font>
+        <font>
+            <name>Font_Reg31_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>31</size>
+        </font>
+        <font>
+            <name>Font_Reg30_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>30</size>
+        </font>
+        <font>
+            <name>Font_Reg28_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>28</size>
+        </font>
+        <font>
+            <name>Font_Reg26_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>26</size>
+        </font>
+        <font>
+            <name>Font_Reg22_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>22</size>
+        </font>
+        <font>
+            <name>Font_Reg19_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase</style>
+            <size>19</size>
+        </font>
+        <font>
+            <name>Font_OSDTitle2_Caps</name>
+            <style>uppercase</style>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>57</size>
+        </font>
+        <font>
+            <name>Font_Bold49_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>49</size>
+        </font>
+        <font>
+            <name>Font_Bold46_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>46</size>
+        </font>
+        <font>
+            <name>Font_Bold42_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>42</size>
+        </font>
+        <font>
+            <name>Font_Bold37_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>37</size>
+        </font>
+        <font>
+            <name>Font_Bold34_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>34</size>
+        </font>
+        <font>
+            <name>Font_Bold30</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>30</size>
+            <style>bold</style>
+        </font>
+        <font>
+            <name>Font_Bold30_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>30</size>
+        </font>
+        <font>
+            <name>Font_Bold28_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>28</size>
+        </font>
+        <font>
+            <name>Font_Bold26_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>26</size>
+        </font>
+        <font>
+            <name>Font_Bold22_Caps</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>22</size>
+        </font>
+        <font>
+            <name>Font_Reg57</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>57</size>
+        </font>
+        <font>
+            <name>Font_ShowcaseMainLabel2</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>uppercase bold</style>
+            <size>49</size>
+        </font>
+        <font>
+            <name>Font_Reg42</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>42</size>
+        </font>
+        <font>
+            <name>Font_Reg40</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>40</size>
+        </font>
+        <font>
+            <name>Font_Reg38</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>38</size>
+        </font>
+        <font>
+            <name>Font_Reg35</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>35</size>
+        </font>
+        <font>
+            <name>Font_Reg32</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
+            <name>Font_Reg30_2</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>Font_Reg30</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>Font_Reg29</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>29</size>
+        </font>
+        <font>
+            <name>Font_Reg28</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>Font_Reg28_2</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>Font_Info</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>Font_Reg26</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
+            <name>Font_Reg25</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>25</size>
+        </font>
+        <font>
+            <name>Font_Reg22</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>22</size>
+        </font>
+        <font>
+            <name>Font_Reg17</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>17</size>
+        </font>
+        <font>
+            <name>Font_BigPause</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>555</size>
+        </font>
+        <font>
+            <name>Font_OSDClassic2</name>
+            <style>bold uppercase</style>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>52</size>
+        </font>
+        <font>
+            <name>Font_OSDClassic</name>
+            <style>bold uppercase</style>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>75</size>
+        </font>
+        <font>
+            <name>Font_MainClassic4</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>52</size>
+        </font>
+        <font>
+            <name>Font_MainClassic3</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <aspect>0.67</aspect>
+            <size>65</size>
+        </font>
+        <font>
+            <name>Font_MainClassic2</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <aspect>0.67</aspect>
+            <size>80</size>
+        </font>
+        <font>
+            <name>Font_MainClassic</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>80</size>
+        </font>
+        <font>
+            <name>Font_MainMenu</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold uppercase</style>
+            <size>80</size>
+        </font>
+        <font>
+            <name>Font_OSDTitle2</name>
+            <style>bold</style>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <size>61</size>
+        </font>
+        <font>
+            <name>Font_Bold56</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>56</size>
+        </font>
+        <font>
+            <name>Font_Bold49</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>49</size>
+        </font>
+        <font>
+            <name>Font_Bold46</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>46</size>
+        </font>
+        <font>
+            <name>Font_Bold42</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>42</size>
+        </font>
+        <font>
+            <name>Font_Bold40</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>40</size>
+        </font>
+        <font>
+            <name>Font_Bold37</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>37</size>
+        </font>
+        <font>
+            <name>Font_Bold34</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>34</size>
+        </font>
+        <font>
+            <name>Font_Bold33</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>33</size>
+        </font>
+        <font>
+            <name>Font_Bold28</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
+            <style>bold</style>
+            <size>28</size>
+        </font>
+        <font>
+            <name>font13</name>
+            <filename>Roboto-NanumGothic-Regular.ttf</filename>
             <size>31</size>
         </font>
         <!--Aeon Nox-->
