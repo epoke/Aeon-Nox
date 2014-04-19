@@ -1,38 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--========================================================================-->
+<!--   ###    ########  #######  ##    ##    ##    ##  #######  ##     ##	-->
+<!--  ## ##   ##       ##     ## ###   ##    ###   ## ##     ##  ##   ##	-->
+<!--##    ##  ##       ##     ## ####  ##    ####  ## ##     ##   ## ##		-->
+<!--##     ## ######   ##     ## ## ## ##    ## ## ## ##     ##    ###		-->
+<!--######### ##       ##     ## ##  ####    ##  #### ##     ##   ## ##		-->
+<!--##     ## ##       ##     ## ##   ###    ##   ### ##     ##  ##   ##	-->
+<!--##     ## ########  #######  ##    ##    ##    ##  #######  ##     ##	-->
+<!--========================================================================-->
 <window>
     <defaultcontrol>61</defaultcontrol>
     <controls>
         <control type="group">
-            <include>DialogBackFade</include>
-            <include>Furniture_SettingsBackPanel</include>
-            <control type="label" id="1">
-                <posx>358</posx>
-                <posy>120</posy>
-                <width>1491</width>
-                <align>center</align>
-                <label>$INFO[ListItem.Property(Addon.Name),$LOCALIZE[24003] - ]</label>
-                <font>Font_ShowcaseMainLabel2</font>
+			<include>WindowSettingsFadeEffect</include>            
+			<posy>128</posy>
+			<include condition="![Window.IsActive(addonbrowser) | Window.IsActive(programs)]">SystemRightPanel</include>
+			<control type="label" id="1">
+                <description>header label</description>
+                <include>HiddenObject</include>            
             </control>
             <control type="textbox" id="5">
-                <posx>432</posx>
-                <posy>180</posy>
-                <width>1344</width>
-                <height>789</height>
-                <label>-</label>
-                <font>Font_Reg32</font>
-                <shadowcolor>black</shadowcolor>
+                <description>textarea</description>
+                <posx>552</posx>
+                <posy>32</posy>
+                <width>1256</width>
+                <height>840</height>
+                <font>font15_textbox</font>
+                <align>left</align>
+                <textcolor>grey2</textcolor>
                 <pagecontrol>61</pagecontrol>
             </control>
             <control type="scrollbar" id="61">
-                <posx>1815</posx>
-                <posy>180</posy>
-                <width>46</width>
-                <height>795</height>
-                <texturesliderbackground>views/scrollbarbacklist.png</texturesliderbackground>
-                <onleft>61</onleft>
-                <onright>61</onright>
+                <posx>1838</posx>
+                <posy>32</posy>
+                <width>14</width>
+                <height>840</height>
+                <onleft>Dialog.Close(textviewer)</onleft>
+                <onright>Dialog.Close(textviewer)</onright>
                 <ondown>61</ondown>
                 <onup>61</onup>
+                <showonepage>false</showonepage>
+                <texturesliderbackground>-</texturesliderbackground>
+                <texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+                <texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+                <orientation>vertical</orientation>
             </control>
         </control>
     </controls>

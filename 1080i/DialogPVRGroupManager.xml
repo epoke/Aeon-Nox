@@ -1,326 +1,326 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">29</defaultcontrol>
-    <coordinates>
-        <posx>0</posx>
-        <posy>0</posy>
-        <system>1</system>
-    </coordinates>
-    <controls>
+	<coordinates>
+		<system>1</system>
+		<posx>9</posx>
+		<posy>210</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
         <control type="group">
-            <visible>!Window.IsVisible(FileBrowser)</visible>
-            <animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
-            <control type="group">
-                <animation effect="fade" delay="320" end="100" time="160">WindowOpen</animation>
-                <animation effect="fade" start="100" end="0" time="160">WindowClose</animation>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1902</width>
+				<height>660</height>
+				<texture border="40">dialogs/default/bg.png</texture>
+			</control>
+			<control type="image">
+				<posx>30</posx>
+				<posy>86</posy>
+				<width>497</width>
+				<height>542</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
+			<control type="image">
+				<posx>541</posx>
+				<posy>86</posy>
+				<width>497</width>
+				<height>542</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
+			<control type="image">
+				<posx>1052</posx>
+				<posy>86</posy>
+				<width>497</width>
+				<height>542</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
+			<control type="group">
                 <control type="group">
-                    <posx>387</posx>
-                    <posy>0</posy>
+                    <description>Group list</description>
                     <control type="label">
-                        <posy>120</posy>
-                        <width>489</width>
-                        <height>60</height>
-                        <textoffsetx>15</textoffsetx>
-                        <label>31103</label>
-                        <font>Font_Bold37_Caps</font>
-                    </control>
+                        <description>name label</description>
+						<posx>31</posx>
+						<posy>32</posy>
+						<width>1519</width>
+						<height>40</height>
+						<font>font15</font>
+                        <textcolor>dialogheader</textcolor>
+						<textoffsetx>15</textoffsetx>
+						<label>31506</label>
+					</control>
                     <control type="list" id="13">
-                        <posx>0</posx>
-                        <posy>180</posy>
-                        <width>489</width>
-                        <height>741</height>
-                        <onup>13</onup>
+						<posx>31</posx>
+						<posy>88</posy>
+						<width>495</width>
+						<height>540</height>
+						<onup>13</onup>
                         <ondown>13</ondown>
-                        <onleft>9000</onleft>
-                        <onright>11</onright>
-                        <scrolltime>200</scrolltime>
-                        <itemlayout height="74">
+                        <onleft>29</onleft>
+                        <onright>73</onright>
+                        <pagecontrol>73</pagecontrol>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<orientation>vertical</orientation>
+                        <itemlayout height="60">
                             <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture>settings/settings_radiobuttonoff.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            </control>
+                                <width>495</width>
+                                <height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
                             <control type="label">
-                                <posx>0</posx>
-                                <width>489</width>
-                                <height>74</height>
-                                <textoffsetx>30</textoffsetx>
-                                <align>center</align>
-                                <font>Font_Reg32</font>
+                                <width>495</width>
+                                <height>60</height>
+                                <font>font14</font>
+								<textoffsetx>15</textoffsetx>
                                 <textcolor>grey2</textcolor>
                                 <selectedcolor>selected</selectedcolor>
                                 <info>ListItem.Label</info>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="74">
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture border="8">views/tripanel/listselect_fo.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                <animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(13)">Conditional</animation>
-                            </control>
+                        <focusedlayout height="60">
+							<control type="image">
+								<width>495</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="image">
+                                <width>495</width>
+                                <height>60</height>
+								<texture border="4">listselect_fo.png</texture>
+								<visible>Control.HasFocus(13)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
                             <control type="label">
-                                <posx>0</posx>
-                                <width>489</width>
-                                <height>74</height>
-                                <textoffsetx>30</textoffsetx>
-                                <align>center</align>
-                                <font>Font_Reg32</font>
-                                <selectedcolor>selected</selectedcolor>
+                                <width>495</width>
+                                <height>60</height>
+                                <font>font14</font>
+								<textoffsetx>15</textoffsetx>
+								<selectedcolor>selected</selectedcolor>
                                 <info>ListItem.Label</info>
-                            </control>
+								<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(13)">Conditional</animation>
+							</control>
                         </focusedlayout>
+                    </control>
+                    <control type="scrollbar" id="73">
+						<posx>525</posx>
+						<posy>88</posy>
+						<width>8</width>
+						<height>540</height>
+						<texturesliderbackground>-</texturesliderbackground>
+						<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+						<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+						<onleft>13</onleft>
+                        <onright>11</onright>
+                        <ondown>73</ondown>
+                        <onup>73</onup>
+                        <showonepage>false</showonepage>
+                        <orientation>vertical</orientation>
                     </control>
                 </control>
                 <control type="group">
-                    <posx>876</posx>
-                    <posy>0</posy>
+                    <description>Channels list</description>
                     <control type="label" id="21">
-                        <posy>120</posy>
-                        <width>489</width>
-                        <height>60</height>
-                        <textoffsetx>15</textoffsetx>
-                        <font>Font_Bold34_Caps</font>
-                    </control>
+                        <description>name label</description>
+						<posx>31</posx>
+						<posy>32</posy>
+						<width>1519</width>
+						<height>40</height>
+						<font>font15</font>
+						<align>center</align>
+						<textcolor>dialogheader</textcolor>
+						<textoffsetx>15</textoffsetx>
+						<label>31506</label>
+					</control>
                     <control type="list" id="11">
-                        <posx>0</posx>
-                        <posy>180</posy>
-                        <width>489</width>
-                        <height>741</height>
+                        <posx>542</posx>
+                        <posy>88</posy>
+                        <width>495</width>
+                        <height>540</height>
                         <onup>11</onup>
                         <ondown>11</ondown>
-                        <onleft>13</onleft>
-                        <onright>12</onright>
+                        <onleft>73</onleft>
+                        <onright>71</onright>
+                        <pagecontrol>71</pagecontrol>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="74">
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture>settings/settings_radiobuttonoff.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            </control>
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>74</width>
-                                <height>74</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                                <bordersize>8</bordersize>
-                                <colordiffuse>88FFFFFF</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <posx>74</posx>
-                                <posy>0</posy>
-                                <width>415</width>
-                                <height>74</height>
-                                <textoffsetx>15</textoffsetx>
-                                <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <font>Font_Reg32</font>
-                                <textcolor>grey2</textcolor>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout height="74">
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture>settings/settings_radiobuttonoff.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                <visible>!Control.HasFocus(11)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture border="8">views/tripanel/listselect_fo.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                <visible>Control.HasFocus(11)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>74</width>
-                                <height>74</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                                <bordersize>8</bordersize>
-                            </control>
-                            <control type="label">
-                                <posx>74</posx>
-                                <posy>0</posy>
-                                <width>415</width>
-                                <height>74</height>
-                                <textoffsetx>15</textoffsetx>
-                                <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <font>Font_Reg32</font>
-                            </control>
-                        </focusedlayout>
+						<itemlayout height="60">
+							<control type="image">
+								<width>495</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>495</width>
+								<height>60</height>
+								<font>font14</font>
+								<textoffsetx>15</textoffsetx>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Label</info>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60">
+							<control type="image">
+								<width>495</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="image">
+								<width>495</width>
+								<height>60</height>
+								<texture border="4">listselect_fo.png</texture>
+								<visible>Control.HasFocus(11)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+							<control type="label">
+								<width>495</width>
+								<height>60</height>
+								<font>font14</font>
+								<textoffsetx>15</textoffsetx>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Label</info>
+								<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(11)">Conditional</animation>
+							</control>
+						</focusedlayout>
+					</control>
+                    <control type="scrollbar" id="71">
+						<posx>1036</posx>
+						<posy>88</posy>
+						<width>8</width>
+						<height>540</height>
+						<texturesliderbackground>-</texturesliderbackground>
+						<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+						<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+						<onleft>11</onleft>
+                        <onright>12</onright>
+                        <ondown>71</ondown>
+                        <onup>71</onup>
+                        <showonepage>false</showonepage>
+                        <orientation>vertical</orientation>
                     </control>
                 </control>
                 <control type="group">
-                    <posx>1365</posx>
-                    <posy>0</posy>
+                    <description>Grouped Channels list</description>
                     <control type="label" id="22">
-                        <posy>120</posy>
-                        <width>489</width>
-                        <height>60</height>
-                        <textoffsetx>15</textoffsetx>
-                        <font>Font_Bold34_Caps</font>
-                    </control>
+                        <description>name label</description>
+						<posx>1550</posx>
+						<posy>32</posy>
+						<width>1519</width>
+						<height>40</height>
+						<font>font15</font>
+						<textcolor>dialogheader</textcolor>
+						<align>right</align>
+						<textoffsetx>15</textoffsetx>
+						<label>31506</label>
+					</control>
                     <control type="list" id="12">
-                        <posx>0</posx>
-                        <posy>180</posy>
-                        <width>489</width>
-                        <height>741</height>
+                        <posx>1053</posx>
+                        <posy>88</posy>
+                        <width>495</width>
+                        <height>540</height>
                         <onup>12</onup>
                         <ondown>12</ondown>
-                        <onleft>11</onleft>
-                        <onright>9000</onright>
+                        <onleft>71</onleft>
+                        <onright>72</onright>
+                        <pagecontrol>72</pagecontrol>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="74">
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture>settings/settings_radiobuttonoff.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                            </control>
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>74</width>
-                                <height>74</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                                <bordersize>8</bordersize>
-                                <colordiffuse>88FFFFFF</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <posx>74</posx>
-                                <posy>0</posy>
-                                <width>415</width>
-                                <height>74</height>
-                                <textoffsetx>15</textoffsetx>
-                                <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <font>Font_Reg32</font>
-                                <textcolor>grey2</textcolor>
-                            </control>
-                        </itemlayout>
-                        <focusedlayout height="74">
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture>settings/settings_radiobuttonoff.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                <visible>!Control.HasFocus(12)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>489</width>
-                                <height>74</height>
-                                <texture border="8">views/tripanel/listselect_fo.png</texture>
-                                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                <visible>Control.HasFocus(12)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>0</posx>
-                                <posy>0</posy>
-                                <width>74</width>
-                                <height>74</height>
-                                <aspectratio>keep</aspectratio>
-                                <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                                <bordersize>8</bordersize>
-                            </control>
-                            <control type="label">
-                                <posx>74</posx>
-                                <posy>0</posy>
-                                <width>415</width>
-                                <height>74</height>
-                                <textoffsetx>15</textoffsetx>
-                                <label>$INFO[ListItem.ChannelNumber,, - ]$INFO[ListItem.ChannelName]</label>
-                                <font>Font_Reg32</font>
-                            </control>
-                        </focusedlayout>
-                    </control>
-                </control>
-                <control type="grouplist" id="9000">
-                    <posx>63</posx>
-                    <posy>180</posy>
-                    <width>326</width>
-                    <height>768</height>
-                    <onleft>13</onleft>
-                    <onright>12</onright>
-                    <onup>9000</onup>
-                    <ondown>9000</ondown>
-                    <control type="button" id="26">
-                        <width>334</width>
-                        <height>74</height>
-                        <textoffsetx>20</textoffsetx>
-                        <textoffsety>18</textoffsety>
-                        <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>-</texturenofocus>
-                        <label>31012</label>
-                        <font>Font_Bold34</font>
-                        <textcolor>grey</textcolor>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <focusedcolor>white2</focusedcolor>
-                    </control>
-                    <control type="button" id="27">
-                        <width>334</width>
-                        <height>74</height>
-                        <textoffsetx>20</textoffsetx>
-                        <textoffsety>18</textoffsety>
-                        <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>-</texturenofocus>
-                        <label>31013</label>
-                        <font>Font_Bold34</font>
-                        <textcolor>grey</textcolor>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <focusedcolor>white2</focusedcolor>
-                    </control>
-                    <control type="button" id="28">
-                        <width>334</width>
-                        <height>74</height>
-                        <textoffsetx>20</textoffsetx>
-                        <textoffsety>18</textoffsety>
-                        <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>-</texturenofocus>
-                        <label>31014</label>
-                        <font>Font_Bold34</font>
-                        <textcolor>grey</textcolor>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <focusedcolor>white2</focusedcolor>
-                    </control>
-                    <control type="button" id="29">
-                        <width>334</width>
-                        <height>74</height>
-                        <textoffsetx>20</textoffsetx>
-                        <textoffsety>18</textoffsety>
-                        <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>-</texturenofocus>
-                        <label>186</label>
-                        <font>Font_Bold34</font>
-                        <textcolor>grey</textcolor>
-                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <focusedcolor>white2</focusedcolor>
+						<itemlayout height="60">
+							<control type="image">
+								<width>495</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>495</width>
+								<height>60</height>
+								<font>font14</font>
+								<textoffsetx>15</textoffsetx>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Label</info>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60">
+							<control type="image">
+								<width>495</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="image">
+								<width>495</width>
+								<height>60</height>
+								<texture border="4">listselect_fo.png</texture>
+								<visible>Control.HasFocus(12)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+							<control type="label">
+								<width>495</width>
+								<height>60</height>
+								<font>font14</font>
+								<textoffsetx>15</textoffsetx>
+								<selectedcolor>selected</selectedcolor>
+								<info>ListItem.Label</info>
+								<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(12)">Conditional</animation>
+							</control>
+						</focusedlayout>
+					</control>
+                    <control type="scrollbar" id="72">
+						<posx>1547</posx>
+						<posy>88</posy>
+						<width>8</width>
+						<height>540</height>
+						<texturesliderbackground>-</texturesliderbackground>
+						<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+						<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+						<onleft>12</onleft>
+                        <onright>26</onright>
+                        <ondown>72</ondown>
+                        <onup>72</onup>
+                        <showonepage>false</showonepage>
+                        <orientation>vertical</orientation>
                     </control>
                 </control>
             </control>
-        </control>
+			<!-- right group -->
+			<control type="group">
+				<posx>1562</posx>
+				<posy>88</posy>
+				<control type="image">
+					<posx>-1</posx>
+					<posy>-2</posy>
+					<width>312</width>
+					<height>542</height>
+					<texture border="5">dialogs/default/inner.png</texture>
+				</control>
+				<control type="grouplist" id="9000">
+					<onleft>72</onleft>
+					<onright>13</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<control type="button" id="29">
+						<description>OK</description>
+						<width>310</width>
+						<label>186</label>
+					</control>
+					<control type="button" id="26">
+						<description>Add Group</description>
+						<width>310</width>
+						<label>31503</label>
+					</control>
+					<control type="button" id="27">
+						<description>Rename Group</description>
+						<width>310</width>
+						<label>31504</label>
+					</control>
+					<control type="button" id="28">
+						<description>Delete Group</description>
+						<width>310</width>
+						<label>31505</label>
+					</control>
+				</control>
+			</control>
+		</control>
     </controls>
 </window>

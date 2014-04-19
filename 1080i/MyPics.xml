@@ -1,71 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <backgroundcolor>backgroundcolor</backgroundcolor>
-    <views>50,509,500,501,505,511,512,517,560</views>
-    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
-    <onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
+	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	<views>50,501</views>
     <controls>
-        <control type="multiimage">
-            <aspectratio align="center" aligny="top">scale</aspectratio>
-            <imagepath background="true">$VAR[PicturesFanartVar]</imagepath>
-            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-            <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-        </control>
-        <control type="image">
-            <texture background="true">$INFO[ListItem.FilenameAndPath]</texture>
-            <include>CommonFanartVarsSingle</include>
-            <visible>!Listitem.Isfolder</visible>
-        </control>
-        <control type="multiimage">
-            <imagepath background="true">$INFO[ListItem.FolderPath]</imagepath>
-            <include>CommonFanartVarsSingle</include>
-            <visible>Listitem.Isfolder + !IsEmpty(Container.FolderPath) + !Stringcompare(ListItem.Label,..) + !substring(Container.FolderPath,plugin://)</visible>
-        </control>
-        <include>VideoBackground</include>
-        <include>Furniture_Glow</include>
+        <include>CommonBackground</include>
         <control type="group">
-            <visible>!Control.IsVisible(517)</visible>
-            <include>Furniture_Showcase</include>
+            <include>Window_OpenClose_Animation</include>
+            <include>PictureList</include>
+            <!-- view id = 50 -->
+            <include>PictureWall</include>
+            <!-- view id = 500 -->
         </control>
-        <include>WallPanel</include>
-        <control type="group">
-            <animation effect="slide" end="0,650" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
-            <control type="group">
-                <visible>!Substring(Container.FolderPath,\comics\)</visible>
-                <!-- view id = 50 -->
-                <include>ShowcaseQuadrate</include>
-                <!-- view id = 51 -->
-                <include>Stripshow</include>
-            </control>
-            <include>CommonRootView</include>
-            <include>Viewtype_Wall</include>
-            <include>AddonWall</include>
-            <control type="group">
-                <visible>Substring(Container.FolderPath,\comics\)</visible>
-                <!-- view id = 500 -->
-                <include>Showcase</include>
-            </control>
-            <control type="button" id="7000">
-                <include>HiddenObject</include>
-                <onfocus>SetFocus(9000)</onfocus>
-                <visible>Control.IsVisible(509) | Control.IsVisible(517) | Control.IsVisible(501)</visible>
-            </control>
-            <include>FloorLabels</include>
-            <control type="group">
-                <visible>!Control.IsVisible(517)</visible>
-                <include>Furniture_DarkGradient</include>
+        <include>ScrollOffsetLabel</include>
+		<include>Topbar</include>
+		<control type="group">
+			<posx>-440</posx>
+			<include>SideBladeLeft</include>
+            <control type="grouplist" id="9050">
+				<include>MediaMenuTop</include>
+				<control type="edit" id="19">
+                    <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+                    <description>Filter</description>
+                    <textwidth>345</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>587</label>
+                </control>
+                <control type="radiobutton" id="20">
+                    <visible>Container.CanFilterAdvanced</visible>
+                    <description>Filter</description>
+                    <include>ButtonCommonValues</include>
+                    <label>587</label>
+                    <onclick>right</onclick>
+                    <onclick>Filter</onclick>
+                </control>
+				<control type="button" id="201">
+					<description>View options</description>
+					<textwidth>352</textwidth>
+					<font>font13_title</font>
+					<include>ButtonCommonValues</include>
+					<label>31026</label>
+					<enable>no</enable>
+					<disabledcolor>themecolor</disabledcolor>
+				</control>
+				<control type="button" id="6">
+                    <description>Slideshow</description>
+                    <textwidth>352</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>108</label>
+                </control>
+                <control type="button" id="7">
+                    <description>Recersive Slideshow</description>
+                    <textwidth>352</textwidth>
+                    <include>ButtonCommonValues</include>
+                    <label>361</label>
+                </control>
+                <control type="radiobutton" id="9">
+                    <description>Randomize Toggle</description>
+                    <include>ButtonCommonValues</include>
+                    <label>13319</label>
+                </control>
             </control>
         </control>
-        <control type="group">
-            <include>Animation_HideBreadCrumbs</include>
-            <include>Breadcrumbs_BackBar</include>
-            <include>BreadcrumbsContent</include>
-            <include>Breadcrumbs_Furniture</include>
-        </control>
-        <include>Furniture_NowPlayingWidget</include>
-        <include>Media_Menu</include>
-        <include>ContextMenuOverlay</include>
     </controls>
 </window>

@@ -1,115 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol always="true">5</defaultcontrol>
-    <coordinates>
-        <posx>550</posx>
-        <posy>15</posy>
-        <system>1</system>
-    </coordinates>
-    <include>Animation_DialogPopup</include>
-    <controls>
-        <control type="image">
-            <posx>23</posx>
-            <width>744</width>
-            <height>650</height>
-            <texture border="50">dialogs/dialog_back_shadow.png</texture>
-            <include>PanelGlowFade</include>
-            <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-        </control>
-        <control type="image">
-            <posx>23</posx>
-            <width>744</width>
-            <height>650</height>
-            <texture border="50">dialogs/dialog_back.png</texture>
-            <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-        </control>
-        <control type="grouplist" id="5">
-            <posx>42</posx>
-            <posy>75</posy>
-            <width>706</width>
-            <height>540</height>
-            <pagecontrol>6</pagecontrol>
-            <onup>9001</onup>
-            <ondown>9001</ondown>
-            <onleft>9001</onleft>
-            <onright>6</onright>
-        </control>
-        <control type="button" id="7">
-            <height>50</height>
-            <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
-            <texturenofocus border="5">button-nofocus.png</texturenofocus>
-            <font>Font_Reg29</font>
-            <textcolor>grey2</textcolor>
-            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-        </control>
-        <control type="radiobutton" id="8">
-            <height>50</height>
-            <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
-            <texturenofocus border="5">button-nofocus.png</texturenofocus>
-            <font>Font_Reg29</font>
-            <textcolor>grey2</textcolor>
-            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-        </control>
-        <control type="spincontrolex" id="9">
-            <height>50</height>
-            <aligny>center</aligny>
-            <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
-            <texturenofocus border="5">button-nofocus.png</texturenofocus>
-            <font>Font_Reg29</font>
-            <textcolor>grey2</textcolor>
-        </control>
-        <control type="sliderex" id="10">
-            <height>50</height>
-            <textoffsetx>10</textoffsetx>
-            <aligny>center</aligny>
-            <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
-            <texturenofocus border="5">button-nofocus.png</texturenofocus>
-            <font>Font_Reg29</font>
-            <textcolor>grey2</textcolor>
-        </control>
-        <control type="edit" id="12">
-            <height>50</height>
-            <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
-            <texturenofocus border="5">button-nofocus.png</texturenofocus>
-            <font>Font_Reg29</font>
-            <textcolor>grey2</textcolor>
-            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-        </control>
-        <control type="group" id="9001">
-            <posx>95</posx>
-            <posy>540</posy>
-            <control type="button" id="28">
-                <width>300</width>
-                <height>60</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
-                <texturenofocus border="5">button-nofocus.png</texturenofocus>
-                <label>186</label>
-                <font>font12_title</font>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <onup>5</onup>
-                <onleft>27</onleft>
-                <onright>27</onright>
-                <ondown>5</ondown>
-            </control>
-            <control type="button" id="27">
-                <posx>315</posx>
-                <width>300</width>
-                <height>60</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
-                <texturenofocus border="5">button-nofocus.png</texturenofocus>
-                <label>192</label>
-                <font>font12_title</font>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <onup>5</onup>
-                <onleft>28</onleft>
-                <onright>28</onright>
-                <ondown>5</ondown>
-            </control>
-        </control>
-    </controls>
+	<defaultcontrol always="true">5</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>199</posx>
+		<posy>210</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1522</width>
+			<height>660</height>
+			<texture border="40">dialogs/default/bg.png</texture>
+		</control>
+		<control type="label" id="2">
+			<description>header label</description>
+			<posx>30</posx>
+			<posy>32</posy>
+			<width>1462</width>
+			<height>40</height>
+			<font>font15_title</font>
+			<label>587</label>
+			<align>center</align>
+			<textcolor>dialogheader</textcolor>
+		</control>
+		<control type="image">
+			<posx>30</posx>
+			<posy>86</posy>
+			<width>1140</width>
+			<height>542</height>
+			<texture border="5">dialogs/default/inner.png</texture>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>31</posx>
+			<posy>88</posy>
+			<width>1138</width>
+			<height>540</height>
+			<itemgap>0</itemgap>
+			<pagecontrol>6</pagecontrol>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<onleft>9001</onleft>
+			<onright>6</onright>
+		</control>
+		<control type="scrollbar" id="6">
+			<posx>1170</posx>
+			<posy>88</posy>
+			<width>8</width>
+			<height>540</height>
+			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+			<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+			<onleft>5</onleft>
+			<onright>9001</onright>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="button" id="7">
+			<description>Default Button</description>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Default RadioButton</description>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default SpinControlex</description>
+			<reverse>yes</reverse>
+		</control>
+		<control type="sliderex" id="10">
+			<description>Default Slider</description>
+		</control>
+		<control type="edit" id="12">
+			<description>Default Edit</description>
+		</control>
+		<!-- right group -->
+		<control type="group">
+			<posx>1182</posx>
+			<posy>88</posy>
+			<control type="image">
+				<posx>-1</posx>
+				<posy>-2</posy>
+				<width>312</width>
+				<height>542</height>
+				<texture border="5">dialogs/default/inner.png</texture>
+			</control>
+			<control type="grouplist" id="9001">
+				<onup>9001</onup>
+				<onleft>6</onleft>
+				<onright>5</onright>
+				<ondown>9001</ondown>
+				<control type="button" id="28">
+					<description>Ok Button</description>
+					<width>310</width>
+					<label>186</label>
+				</control>
+				<control type="button" id="27">
+					<description>Clear Button</description>
+					<width>310</width>
+					<label>192</label>
+				</control>
+			</control>
+		</control>
+	</controls>
 </window>

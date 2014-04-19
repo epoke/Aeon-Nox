@@ -1,174 +1,351 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <allowoverlay>no</allowoverlay>
+	<onload>SetProperty(Window.HasSettings,True,home)</onload>
+	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+	<allowoverlay>no</allowoverlay>
     <controls>
-        <control type="group">
-            <animation effect="fade" time="200">WindowOpen</animation>
-            <animation effect="fade" time="200">WindowClose</animation>
-            <control type="group">
-                <control type="multiimage">
-                    <aspectratio>scale</aspectratio>
-                    <imagepath background="true" fallback="special://skin/backgrounds/tvguide/">$VAR[TVGuideInfoFanart]</imagepath>
-                    <fadetime>500</fadetime>
-                    <include>FullscreenDimensions</include>
-                    <include>Animation_VisibleChange400</include>
+		<include>CommonBackground</include>
+		<control type="group">
+			<posx>0</posx>
+			<posy>128</posy>
+			<include>Window_OpenClose_Animation</include>
+			<include>SystemLeftPanel</include>
+			<control type="list" id="9000">
+				<posx>82</posx>
+				<posy>32</posy>
+				<width>356</width>
+				<height>720</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>8</onleft>
+				<onright condition="Container(9000).HasFocus(1)">200</onright>
+				<onright condition="Container(9000).HasFocus(2)">201</onright>
+				<onright condition="Container(9000).HasFocus(3)">202</onright>
+				<onright condition="Container(9000).HasFocus(4)">203</onright>
+				<onright condition="Container(9000).HasFocus(5)">204</onright>
+				<onright condition="Container(9000).HasFocus(6)">205</onright>
+				<onright condition="Container(9000).HasFocus(7)">206</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime tween="quadratic">300</scrolltime>
+				<itemlayout height="90" width="356">
+					<control type="image">
+						<posy>30</posy>
+						<width>356</width>
+						<height>60</height>
+						<texture border="1">separator2.png</texture>
+					</control>
+					<control type="group">
+						<visible>!StringCompare(System.Date(ddd),ListItem.Property(day))</visible>
+						<control type="label">
+							<width>356</width>
+							<height>90</height>
+							<font>font15_bold</font>
+							<textoffsetx>20</textoffsetx>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>356</posx>
+							<posy>0</posy>
+							<width>356</width>
+							<height>90</height>
+							<font>font15</font>
+							<textoffsetx>20</textoffsetx>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</control>
+					<control type="group">
+						<visible>StringCompare(System.Date(ddd),ListItem.Property(day))</visible>
+						<control type="label">
+							<width>356</width>
+							<height>90</height>
+							<font>font15_bold</font>
+							<textoffsetx>20</textoffsetx>
+							<textcolor>selected</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>356</posx>
+							<posy>0</posy>
+							<width>356</width>
+							<height>90</height>
+							<font>font15</font>
+							<textoffsetx>20</textoffsetx>
+							<textcolor>selected</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="356">
+					<control type="image">
+						<posy>30</posy>
+						<width>356</width>
+						<height>60</height>
+						<texture border="1">separator2.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>356</width>
+						<height>90</height>
+						<texture border="4">listselect_fo.png</texture>
+						<visible>Control.HasFocus(9000)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="group">
+						<visible>!StringCompare(System.Date(ddd),ListItem.Property(day))</visible>
+						<control type="label">
+							<width>356</width>
+							<height>90</height>
+							<font>font15_bold</font>
+							<textoffsetx>20</textoffsetx>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>356</posx>
+							<posy>0</posy>
+							<width>356</width>
+							<height>90</height>
+							<font>font15</font>
+							<textoffsetx>20</textoffsetx>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</control>
+					<control type="group">
+						<visible>StringCompare(System.Date(ddd),ListItem.Property(day))</visible>
+						<control type="label">
+							<width>356</width>
+							<height>90</height>
+							<font>font15_bold</font>
+							<textoffsetx>20</textoffsetx>
+							<textcolor>selected</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>356</posx>
+							<posy>0</posy>
+							<width>356</width>
+							<height>90</height>
+							<font>font15</font>
+							<textoffsetx>20</textoffsetx>
+							<textcolor>selected</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$INFO[Container(200).NumItems,$LOCALIZE[41] (,)]</label>
+						<label2>$INFO[Window(Home).Property(NextAired.1.Date)]</label2>
+						<property name="day">$LOCALIZE[41]</property>
+						<onclick>-</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="2">
+						<label>$INFO[Container(201).NumItems,$LOCALIZE[42] (,)]</label>
+						<label2>$INFO[Window(Home).Property(NextAired.2.Date)]</label2>
+						<property name="day">$LOCALIZE[42]</property>
+						<onclick>-</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="3">
+						<label>$INFO[Container(202).NumItems,$LOCALIZE[43] (,)]</label>
+						<label2>$INFO[Window(Home).Property(NextAired.3.Date)]</label2>
+						<property name="day">$LOCALIZE[43]</property>
+						<onclick>-</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="4">
+						<label>$INFO[Container(203).NumItems,$LOCALIZE[44] (,)]</label>
+						<label2>$INFO[Window(Home).Property(NextAired.4.Date)]</label2>
+						<property name="day">$LOCALIZE[44]</property>
+						<onclick>-</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="5">
+						<label>$INFO[Container(204).NumItems,$LOCALIZE[45] (,)]</label>
+						<label2>$INFO[Window(Home).Property(NextAired.5.Date)]</label2>
+						<property name="day">$LOCALIZE[45]</property>
+						<onclick>-</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="6">
+						<label>$INFO[Container(205).NumItems,$LOCALIZE[46] (,)]</label>
+						<label2>$INFO[Window(Home).Property(NextAired.6.Date)]</label2>
+						<property name="day">$LOCALIZE[46]</property>
+						<onclick>-</onclick>
+						<icon>-</icon>
+					</item>
+					<item id="7">
+						<label>$INFO[Container(206).NumItems,$LOCALIZE[47] (,)]</label>
+						<label2>$INFO[Window(Home).Property(NextAired.7.Date)]</label2>
+						<property name="day">$LOCALIZE[47]</property>
+						<onclick>-</onclick>
+						<icon>-</icon>
+					</item>
+				</content>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<posx>82</posx>
+				<posy>752</posy>
+				<width>356</width>
+				<height>120</height>
+				<aspectratio>keep</aspectratio>
+				<texture>aeon-nox-logo.png</texture>
+			</control>
+			<include>SystemRightPanel</include>
+			<control type="group" id="9001">
+				<control type="scrollbar" id="60">
+					<posx>522</posx>
+					<posy>18</posy>
+					<width>1316</width>
+					<height>12</height>
+					<onup>9001</onup>
+					<ondown condition="Container(9000).HasFocus(1)">200</ondown>
+					<ondown condition="Container(9000).HasFocus(2)">201</ondown>
+					<ondown condition="Container(9000).HasFocus(3)">202</ondown>
+					<ondown condition="Container(9000).HasFocus(4)">203</ondown>
+					<ondown condition="Container(9000).HasFocus(5)">204</ondown>
+					<ondown condition="Container(9000).HasFocus(6)">205</ondown>
+					<ondown condition="Container(9000).HasFocus(7)">206</ondown>
+					<onleft>9000</onleft>
+					<texturesliderbackground border="1">-</texturesliderbackground>
+					<texturesliderbar border="6,0,6,0">scrollbar/texturesliderbar_hor.png</texturesliderbar>
+					<texturesliderbarfocus border="6,0,6,0">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
+					<textureslidernib>-</textureslidernib>
+					<textureslidernibfocus>-</textureslidernibfocus>
+					<showonepage>false</showonepage>
+					<orientation>horizontal</orientation>
+					<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+				</control>
+				<control type="panel" id="200">
+					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(1)] | Control.HasFocus(200) | [Container(9000).HasFocus(1) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>200</onright>
+					<include>TVNextAiredListCommonLayout</include>				
+				</control>
+				<control type="panel" id="201">
+					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(2)] | Control.HasFocus(201) | [Container(9000).HasFocus(2) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>201</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="202">
+					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(3)] | Control.HasFocus(202) | [Container(9000).HasFocus(3) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>202</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="203">
+					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(4)] | Control.HasFocus(203) | [Container(9000).HasFocus(4) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>203</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="204">
+					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(5)] | Control.HasFocus(204) | [Container(9000).HasFocus(5) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>204</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="205">
+					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(6)] | Control.HasFocus(205) | [Container(9000).HasFocus(6) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>205</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+				<control type="panel" id="206">
+					<visible allowhiddenfocus="true">[Control.HasFocus(9000) + Container(9000).HasFocus(7)] | Control.HasFocus(206) | [Container(9000).HasFocus(7) + Control.HasFocus(60)]</visible>
+					<include>SettingsFadeEffect</include>
+					<onright>206</onright>
+					<include>TVNextAiredListCommonLayout</include>
+				</control>
+			</control>
+		</control>
+		<include>Topbar</include>
+		<control type="group">
+			<posx>-440</posx>
+			<animation effect="slide" start="440,0" end="0,0" time="400" tween="quadratic" easing="out" condition="IsEmpty(Window(home).Property(MediaMenu))">Conditional</animation>
+			<control type="image">
+				<width>432</width>
+				<height>1080</height>
+				<texture border="40">mediamenu_back.png</texture>
+			</control>
+			<control type="button" id="8999">
+				<description>Close Window button</description>
+				<posx>350</posx>
+				<posy>0</posy>
+				<width>64</width>
+				<height>48</height>
+				<label></label>
+				<font>CloseButton</font>
+				<textcolor>grey</textcolor>
+				<focusedcolor>themecolor</focusedcolor>
+				<onclick>ClearProperty(MediaMenu,Home)</onclick>
+				<onclick>SetFocus(50)</onclick>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="image">
+				<description>LOGO</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>120</height>
+				<aspectratio>keep</aspectratio>
+				<texture>aeon-nox-logo.png</texture>
+			</control>
+			<control type="grouplist" id="9050">
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>400</width>
+				<height>1080</height>
+				<itemgap>0</itemgap>
+				<control type="label" id="20001">
+					<width>400</width>
+					<height>52</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font13_title</font>
+					<label>$INFO[System.AddonTitle(script.tv.show.next.aired)]</label>
+					<textcolor>themecolor</textcolor>
+					<aligny>center</aligny>
+				</control>
+				<control type="button" id="8">
+                    <description>Settings</description>
+                    <textwidth>352</textwidth>
+					<onright>ClearProperty(MediaMenu,Home)</onright>
+					<onup>8</onup>
+					<ondown>8</ondown>
+					<onback>ClearProperty(MediaMenu,Home)</onback>
+					<onback>2000</onback>
+					<include>ButtonCommonValues</include>
+                    <label>5</label>
+                    <onright>2000</onright>
                 </control>
             </control>
-            <include>CommonMediaPlayingBackground</include>
-        </control>
-        <control type="group">
-            <include>Animation_OpenClose_Furniture</include>
-            <control type="image">
-                <posy>472</posy>
-                <width>1920</width>
-                <height>608</height>
-                <texture>views/showcase_floor.png</texture>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-            </control>
-            <control type="image">
-                <posy>-207</posy>
-                <width>1920</width>
-                <height>1080</height>
-                <texture>common/bgcolor.png</texture>
-                <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-                <animation effect="fade" end="100" time="440" delay="160">Visible</animation>
-                <animation effect="fade" start="100" end="0" time="80">Hidden</animation>
-                <visible>Skin.HasSetting(darkinfopane)</visible>
-            </control>
-            <control type="image">
-                <posx>-105</posx>
-                <width>696</width>
-                <height>1080</height>
-                <texture>views/showcase_vignette.png</texture>
-                <colordiffuse>vignette</colordiffuse>
-            </control>
-            <control type="image">
-                <posx>1329</posx>
-                <width>696</width>
-                <height>1080</height>
-                <texture flipx="true">views/showcase_vignette.png</texture>
-                <colordiffuse>vignette</colordiffuse>
-            </control>
-            <include>PanelSpot</include>
-            <include>Neon_Floor</include>
-        </control>
-        <include condition="Skin.HasSetting(ClassicNextAired)">NextAired_Layout1</include>
-        <include condition="!Skin.HasSetting(ClassicNextAired)">NextAired_Layout2</include>
-        <control type="image">
-            <posy>1012</posy>
-            <width>1920</width>
-            <height>72</height>
-            <texture>views/showcase_gradient.png</texture>
-        </control>
-        <control type="group">
-            <include>Animation_HideBreadCrumbs</include>
-            <include>Breadcrumbs_BackBar</include>
-            <include>BreadcrumbsContent</include>
-            <control type="grouplist">
-                <width>1920</width>
-                <align>center</align>
-                <aligny>center</aligny>
-                <itemgap>10</itemgap>
-                <orientation>horizontal</orientation>
-                <visible>!Skin.HasSetting(ClassicTopBar)</visible>
-                <animation effect="fade" time="320" delay="320">Visible</animation>
-                <animation effect="fade" time="320">Hidden</animation>
-                <control type="image">
-                    <width>34</width>
-                    <height>42</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture>breadcrumbs/items.png</texture>
-                    <colordiffuse>$VAR[TitleColorVar]</colordiffuse>
-                    <include>Animation_WindowFade200</include>
-                    <animation effect="slide" end="0,-2" time="0" condition="true">Conditional</animation>
-                </control>
-                <control type="label">
-                    <label>$INFO[Window(Home).Property(NextAired.Total),, $LOCALIZE[20343]]</label>
-                    <include>BreadcrumbsLabel</include>
-                </control>
-            </control>
-            <include>Breadcrumbs_Furniture</include>
-        </control>
-        <include>Furniture_NowPlayingWidget</include>
-        <!---MEDIA MENU-->
-        <control type="group" id="9000">
-            <visible>!Skin.HasSetting(kioskmode)</visible>
-            <animation type="Conditional" condition="Window.IsActive(1128) | Window.IsActive(1127)">
-                <effect type="slide" end="-600" time="320" easing="in" tween="cubic" />
-            </animation>
-            <include>Media_Menu_Furniture</include>
-            <control type="group">
-                <include>Animation_MediaMenuSlide2</include>
-                <control type="grouplist" id="9003">
-                    <width>450</width>
-                    <height>1080</height>
-                    <orientation>vertical</orientation>
-                    <scroll>true</scroll>
-                    <onleft>9001</onleft>
-                    <onright>9001</onright>
-                    <onup>9003</onup>
-                    <ondown>9003</ondown>
-                    <onback>9001</onback>
-                    <control type="button" id="8">
-                        <label>5</label>
-                        <include>Objects_MediaMenuButtonAlt</include>
-                    </control>
-                    <control type="button" id="1601">
-                        <label>$LOCALIZE[31383]</label>
-                        <font>Font_Bold26_Caps</font>
-                        <disabledcolor>$VAR[FontColorVar]</disabledcolor>
-                        <include>Objects_MediaMenuButtonAlt</include>
-                        <enable>no</enable>
-                        <visible>!Skin.HasSetting(hideoptions) + Skin.HasSetting(DisableGlowbar)</visible>
-                    </control>
-                    <control type="radiobutton" id="1663">
-                        <label>$LOCALIZE[31387]</label>
-                        <include>Objects_MediaMenuButtonAlt</include>
-                        <onclick>Skin.ToggleSetting(darkinfopane)</onclick>
-                        <selected>Skin.HasSetting(darkinfopane)</selected>
-                        <visible>!Skin.HasSetting(hideoptions) + Skin.HasSetting(DisableGlowbar)</visible>
-                    </control>
-                    <control type="button" id="1604">
-                        <label>$LOCALIZE[31185]</label>
-                        <font>Font_Bold26_Caps</font>
-                        <disabledcolor>$VAR[FontColorVar]</disabledcolor>
-                        <include>Objects_MediaMenuButtonAlt</include>
-                        <enable>no</enable>
-                    </control>
-                    <control type="button" id="1637">
-                        <label>$LOCALIZE[31272]:</label>
-                        <label2>[COLOR $VAR[FontColorVar]]$VAR[NextAiredLayoutVar][/COLOR]</label2>
-                        <include>Objects_MediaMenuButtonAlt</include>
-                        <onclick>Skin.ToggleSetting(ClassicNextAired)</onclick>
-                        <onclick>SetProperty(activewindow,tvguide,home)</onclick>
-                        <onclick>ActivateWindow(1141)</onclick>
-                        <onclick>RunAddon(script.tv.show.next.aired)</onclick>
-                    </control>
-                    <control type="button" id="1603">
-                        <label>$LOCALIZE[31176]</label>
-                        <include>Objects_MediaMenuButtonAlt</include>
-                        <enable>no</enable>
-                    </control>
-                    <control type="button" id="1664">
-                        <label>31298</label>
-                        <include>Objects_MediaMenuButtonAlt</include>
-                        <onclick>ActivateWindow(1128)</onclick>
-                    </control>
-                </control>
-                <include>QuickNavLabel</include>
-            </control>
-        </control>
-        <control type="button" id="9000">
-            <include>HiddenObject</include>
-            <enable>Skin.HasSetting(kioskmode)</enable>
-            <visible>Skin.HasSetting(kioskmode)</visible>
-            <onfocus>SetFocus(50)</onfocus>
-        </control>
-        <control type="button">
-            <include>HiddenObject</include>
-            <visible>!Skin.HasSetting(kioskmode)</visible>
-            <hitrect x="-1" y="0" w="50" h="1080" />
-            <onfocus>SetFocus(9000)</onfocus>
         </control>
     </controls>
 </window>
